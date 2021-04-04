@@ -1,12 +1,12 @@
 ###############################################################################
 #
-# IAR ELF Linker V8.40.2.214/W32 for ARM                  04/Apr/2021  18:29:30
+# IAR ELF Linker V8.40.2.214/W32 for ARM                  04/Apr/2021  21:25:06
 # Copyright 2007-2019 IAR Systems AB.
 #
 #    Output file  =  E:\Git\POIP\Kursovoy\code\Debug\Exe\iarproject.out
 #    Map file     =  E:\Git\POIP\Kursovoy\code\Debug\List\iarproject.map
 #    Command line =
-#        -f C:\Users\D9F8~1\AppData\Local\Temp\EWCDDA.tmp
+#        -f C:\Users\D9F8~1\AppData\Local\Temp\EW9357.tmp
 #        (E:\Git\POIP\Kursovoy\code\Debug\Obj\croutine.o
 #        E:\Git\POIP\Kursovoy\code\Debug\Obj\event_groups.o
 #        E:\Git\POIP\Kursovoy\code\Debug\Obj\list.o
@@ -259,15 +259,15 @@ USARTDriver<Usart2>::USARTDriver()
                          0x800'0431    0xc  Code  Gb  startupF411RE.o [1]
 Uart::interruptHandler()
                          0x800'0825   0x10  Code  Gb  startupF411RE.o [1]
-Usart<USART2, usartDriver>::InterruptDisable()
+Usart<USART2>::InterruptDisable()
                          0x800'07a1    0x8  Code  Gb  startupF411RE.o [1]
-Usart<USART2, usartDriver>::InterruptEnable()
+Usart<USART2>::InterruptEnable()
                          0x800'062d    0x8  Code  Gb  main.o [1]
-Usart<USART2, usartDriver>::TransmitDisable()
+Usart<USART2>::TransmitDisable()
                          0x800'0799    0x8  Code  Gb  startupF411RE.o [1]
-Usart<USART2, usartDriver>::TransmitEnable()
+Usart<USART2>::TransmitEnable()
                          0x800'0625    0x8  Code  Gb  main.o [1]
-Usart<USART2, usartDriver>::WriteByte(unsigned char)
+Usart<USART2>::WriteByte(unsigned char)
                          0x800'061b    0xa  Code  Gb  startupF411RE.o [1]
 __aeabi_assert           0x800'05f1   0x24  Code  Gb  ABIassert.o [6]
 __aeabi_memcpy           0x800'02ad         Code  Gb  ABImemcpy.o [5]

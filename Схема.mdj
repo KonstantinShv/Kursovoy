@@ -4318,7 +4318,7 @@
 											"top": 564,
 											"width": 274.94873046875,
 											"height": 13,
-											"text": "-usart: UART&",
+											"text": "-uart: UART&",
 											"horizontalAlignment": 0
 										}
 									],
@@ -4386,7 +4386,7 @@
 											"top": 617,
 											"width": 274.94873046875,
 											"height": 13,
-											"text": "+UARTDriver(_usart: UART&)",
+											"text": "+UARTDriver(_uart: UART&)",
 											"horizontalAlignment": 0
 										}
 									],
@@ -8857,18 +8857,18 @@
 												"$ref": "AAAAAAF4TjAIf27hbv0="
 											},
 											"font": "Arial;13;0",
-											"left": 619.25341796875,
+											"left": 631.06640625,
 											"top": 709,
-											"width": 139.927734375,
+											"width": 128.11474609375,
 											"height": 13,
 											"text": "TUSARTReg: typename",
 											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
-									"left": 614.25341796875,
+									"left": 626.06640625,
 									"top": 704,
-									"width": 149.927734375,
+									"width": 138.11474609375,
 									"height": 23
 								}
 							],
@@ -10694,7 +10694,7 @@
 											"_parent": {
 												"$ref": "AAAAAAF4Ti2/xFGAAIo="
 											},
-											"name": "usart",
+											"name": "uart",
 											"visibility": "private",
 											"type": "UART&"
 										}
@@ -10761,7 +10761,7 @@
 													"_parent": {
 														"$ref": "AAAAAAF4lpLIbk541Cw="
 													},
-													"name": "_usart",
+													"name": "_uart",
 													"type": "UART&"
 												}
 											]

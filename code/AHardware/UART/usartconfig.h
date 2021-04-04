@@ -6,6 +6,6 @@
 class Usart2;
 
 inline USARTDriver <Usart2> usartDriver;
-class Usart2: public Usart < USART2, usartDriver>
+class Usart2: public Usart < USART2>
 {
 };

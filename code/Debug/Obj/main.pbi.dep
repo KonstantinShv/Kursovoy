@@ -9,7 +9,6 @@ main.pbi: \
   E:\Git\POIP\Kursovoy\code\AHardware\UARTDriver\USARTDriver.h \
   E:\Git\POIP\Kursovoy\code\AHardware\Registers\STM32F411\FieldValues\usart2fieldvalues.hpp \
   E:\Git\POIP\Kursovoy\code\AHardware\Registers\STM32F411\usart2registers.hpp \
-  E:\Git\POIP\Kursovoy\code\AHardware\ITransmit\Itransmit.h \
   E:\Git\POIP\Kursovoy\code\AHardware\UART\usart.h \
   E:\Git\POIP\Kursovoy\code\AHardware\UART\usartconfig.h \
   E:\Git\POIP\Kursovoy\code\Rtos\wrapper\Event.hpp \

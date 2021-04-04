@@ -26947,13 +26947,43 @@
     "scope": null
   },
   {
+    "ID": "c:@S@ITransmit",
+    "What": "Class",
+    "defdec": "Def",
+    "display": "ITransmit",
+    "location": {
+      "column": "7",
+      "line": "10",
+      "path": "E:\\Git\\POIP\\Kursovoy\\code\\AHardware\\UARTDriver\\USARTDriver.h"
+    },
+    "members": [
+      {
+        "ID": "c:@S@ITransmit@F@OnNextByteTransmit#",
+        "What": "CXXMethod",
+        "defdec": "Dec",
+        "display": "void OnNextByteTransmit(void)",
+        "location": {
+          "column": "16",
+          "line": "13",
+          "path": "E:\\Git\\POIP\\Kursovoy\\code\\AHardware\\UARTDriver\\USARTDriver.h"
+        },
+        "name": "OnNextByteTransmit",
+        "origin": "user_include",
+        "scope": "ITransmit"
+      }
+    ],
+    "name": "ITransmit",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
     "ID": "c:@ST>1#T@USARTDriver",
     "What": "ClassTemplate",
     "defdec": "Def",
     "display": "USARTDriver<TUsart>",
     "location": {
       "column": "7",
-      "line": "8",
+      "line": "17",
       "path": "E:\\Git\\POIP\\Kursovoy\\code\\AHardware\\UARTDriver\\USARTDriver.h"
     },
     "members": [
@@ -26963,8 +26993,8 @@
         "defdec": "Dec",
         "display": "void OnNextByteTransmit(void)",
         "location": {
-          "column": "8",
-          "line": "11",
+          "column": "9",
+          "line": "23",
           "path": "E:\\Git\\POIP\\Kursovoy\\code\\AHardware\\UARTDriver\\USARTDriver.h"
         },
         "name": "OnNextByteTransmit",
@@ -26977,8 +27007,8 @@
         "defdec": "Dec",
         "display": "void SendMessage(const char *, int)",
         "location": {
-          "column": "8",
-          "line": "21",
+          "column": "9",
+          "line": "33",
           "path": "E:\\Git\\POIP\\Kursovoy\\code\\AHardware\\UARTDriver\\USARTDriver.h"
         },
         "name": "SendMessage",
@@ -26992,7 +27022,7 @@
         "display": "i",
         "location": {
           "column": "15",
-          "line": "34",
+          "line": "46",
           "path": "E:\\Git\\POIP\\Kursovoy\\code\\AHardware\\UARTDriver\\USARTDriver.h"
         },
         "name": "i",
@@ -27006,7 +27036,7 @@
         "display": "TransmitBuffer",
         "location": {
           "column": "33",
-          "line": "35",
+          "line": "47",
           "path": "E:\\Git\\POIP\\Kursovoy\\code\\AHardware\\UARTDriver\\USARTDriver.h"
         },
         "name": "TransmitBuffer",
@@ -27019,8 +27049,8 @@
         "defdec": "Def",
         "display": "size",
         "location": {
-          "column": "11",
-          "line": "36",
+          "column": "10",
+          "line": "48",
           "path": "E:\\Git\\POIP\\Kursovoy\\code\\AHardware\\UARTDriver\\USARTDriver.h"
         },
         "name": "size",

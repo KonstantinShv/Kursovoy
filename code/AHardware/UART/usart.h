@@ -1,49 +1,56 @@
 #pragma once
 
 #include <cstdint>
-#include "Itransmit.h"
+//#include "ITransmit.h"
 #include "usart2registers.hpp"
-
-template<typename TUSARTReg, auto& aTransmitter>
+#include "USARTDriver.h"
+template<typename TUSARTReg>
 
 class Usart
 {
+  
   public: 
-    static void WriteByte(std::uint8_t byte)
+  Usart(ITransmit& aITransmit): iTransmit(aITransmit)
+    {
+      
+    }
+    
+   static void WriteByte(std::uint8_t byte)
   {
     TUSARTReg::DR::Write(byte);
   }
   
-  static void InterruptHandler()
+    void InterruptHandler()
   {
     if(TUSARTReg::SR::TXE::DataRegisterEmpty::IsSet() &&  TUSARTReg::CR1::TXEIE::InterruptWhenTXE::IsSet())
     {
-      aTransmitter.OnNextByteTransmit();
+      iTransmit.OnNextByteTransmit();
     }   
     
   }
 
-  static void TransmitEnable()
+   static void TransmitEnable()
   {
     TUSARTReg::CR1::TE::Enable::Set();
       
   }
   
-  static void InterruptEnable()
+   static void InterruptEnable()
   {
     TUSARTReg::CR1::TXEIE::InterruptWhenTXE::Set();      
   }
   
-  static void InterruptDisable()
+   static void InterruptDisable()
   {
     TUSARTReg::CR1::TXEIE::InterruptInhibited::Set();
       
   }
   
-  static void TransmitDisable()
+   static void TransmitDisable()
   {
     TUSARTReg::CR1::RE::Disable::Set();
   }
-  
+private:
+  ITransmit& iTransmit;
 
 };

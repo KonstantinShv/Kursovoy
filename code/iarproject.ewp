@@ -2184,9 +2184,6 @@
         </group>
         <group>
             <name>ITransmit</name>
-            <file>
-                <name>$PROJ_DIR$\AHardware\ITransmit\Itransmit.h</name>
-            </file>
         </group>
         <group>
             <name>LCDDriver</name>
