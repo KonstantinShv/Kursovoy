@@ -1,0 +1,7 @@
+port.pbi: \
+  E:\Git\POIP\Kursovoy\code\Rtos\FreeRtos\portable\IAR\ARM_CM4F\port.c \
+  D:\Папка\Универ\7\ семак\IAR\arm\inc\c\intrinsics.h \
+  D:\Папка\Универ\7\ семак\IAR\arm\inc\c\iccarm_builtin.h \
+  D:\Папка\Универ\7\ семак\IAR\arm\inc\c\yvals.h \
+  D:\Папка\Универ\7\ семак\IAR\arm\inc\c\DLib_Defaults.h \
+  D:\Папка\Универ\7\ семак\IAR\arm\inc\c\DLib_Product.h
