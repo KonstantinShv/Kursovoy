@@ -1,6 +1,6 @@
 #include "rtos.hpp"         // for Rtos
 
-     
+#include  "Button.hpp"
 #include "rccregisters.hpp" // for RCC
 #include <gpioaregisters.hpp>  // for GPIOA
 #include <gpiocregisters.hpp>  // for GPIOC
@@ -32,6 +32,8 @@ int __low_level_init(void)
   //Switch on clock on PortA a
   RCC::AHB1ENR::GPIOAEN::Enable::Set() ;
   
+  RCC::AHB1ENR::GPIOCEN::Enable::Set() ;
+  
   RCC::APB1ENRPack<
     RCC::APB1ENR::TIM2EN::Enable, 
     RCC::APB1ENR::USART2EN::Enable
@@ -47,28 +49,16 @@ int __low_level_init(void)
     GPIOA::AFRL::AFRL3::Af7  // Uart2 RX
     >::Set() ;
   
-    USART2::BRR::Write(UartSpeed9600) ;
-    USART2::CR1::UE::Enable::Set() ;
-
-    
+    USART2::BRR::Write(UartSpeed9600);
+    USART2::CR1::UE::Enable::Set();    
     NVIC::ISER1::Write(1<<6);
-     
-
-  
-  // TIM2
-  TIM2::PSC::Write(16000) ;     
-  TIM2::ARR::Write(1000) ;
-  TIM2::SR::UIF::NoInterruptPending::Set();
-  TIM2::CNT::Write(0);
-  TIM2::CR1::CEN::Enable::Set() ; 
-  return 1;
-  
+ 
   return 1;
 }
 };
 
-
-
+int i = 0;
+Button<GPIOC, 13> button;
 int main()
 {
   const char* message = "Hello World \n";
@@ -76,6 +66,11 @@ int main()
   
   for(;;)
   {
+    
+    if(button.IsPressed())
+    {
+      i++;
+    }
     usartDriver.SendMessage(message, strlen(message));
     while(TIM2::SR::UIF::NoInterruptPending::IsSet()) ;
     TIM2::SR::UIF::NoInterruptPending::Set();

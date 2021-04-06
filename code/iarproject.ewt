@@ -2819,6 +2819,9 @@
         </group>
         <group>
             <name>Timer</name>
+            <file>
+                <name>$PROJ_DIR$\AHardware\Timer\Timer.hpp</name>
+            </file>
         </group>
         <group>
             <name>UART</name>

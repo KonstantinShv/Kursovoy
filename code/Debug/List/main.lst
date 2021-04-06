@@ -1,13 +1,13 @@
 ###############################################################################
 #
-# IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM         04/Apr/2021  21:25:05
+# IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM         06/Apr/2021  20:47:06
 # Copyright 1999-2019 IAR Systems AB.
 #
 #    Cpu mode     =  
 #    Endian       =  little
 #    Source file  =  E:\Git\POIP\Kursovoy\code\main.cpp
 #    Command line =
-#        -f C:\Users\D9F8~1\AppData\Local\Temp\EW8A7B.tmp
+#        -f C:\Users\D9F8~1\AppData\Local\Temp\EW94BC.tmp
 #        (E:\Git\POIP\Kursovoy\code\main.cpp -lC
 #        E:\Git\POIP\Kursovoy\code\Debug\List -lA
 #        E:\Git\POIP\Kursovoy\code\Debug\List -o
@@ -112,8 +112,7 @@ E:\Git\POIP\Kursovoy\code\main.cpp
    \                     _ZNSt6chrono12steady_clock9is_steadyE:
    \        0x0   0x01               DC8 1
       2          
-      3               
-      4          #include "rccregisters.hpp" // for RCC
+      3          #include  "Button.hpp"
 
    \                                 In section .text, align 4
    \   __interwork __vfp void FieldValueBase<RCC_CR_HSION_Values<RCC::CR, 0U, 1U, ReadWriteMode, RCC::RCCCRBase>, RCC::RCCCRBase, 1U>::Set<ReadWriteMode, void>()
@@ -150,36 +149,26 @@ E:\Git\POIP\Kursovoy\code\main.cpp
    \        0xC   0x4002'3830        DC32     0x40023830
 
    \                                 In section .text, align 4
+   \   __interwork __vfp void FieldValueBase<RCC_AHB1ENR_GPIOCEN_Values<RCC::AHB1ENR, 2U, 1U, ReadWriteMode, RCC::RCCAHB1ENRBase>, RCC::RCCAHB1ENRBase, 1U>::Set<ReadWriteMode, void>()
+   \                     _ZN14FieldValueBaseI26RCC_AHB1ENR_GPIOCEN_ValuesIN3RCC7AHB1ENRELj2ELj1E13ReadWriteModeNS1_14RCCAHB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv: (+1)
+   \        0x0   0x4902             LDR.N    R1,??Set_3       ;; 0x40023830
+   \        0x2   0x6808             LDR      R0,[R1, #+0]
+   \        0x4   0xF050 0x0004      ORRS     R0,R0,#0x4
+   \        0x8   0x6008             STR      R0,[R1, #+0]
+   \        0xA   0x4770             BX       LR               ;; return
+   \                     ??Set_3:
+   \        0xC   0x4002'3830        DC32     0x40023830
+
+   \                                 In section .text, align 4
    \   __interwork __vfp void FieldValueBase<USART2_CR1_UE_Values<USART2::CR1, 13U, 1U, ReadWriteMode, USART2::USART2CR1Base>, USART2::USART2CR1Base, 1U>::Set<ReadWriteMode, void>()
    \                     _ZN14FieldValueBaseI20USART2_CR1_UE_ValuesIN6USART23CR1ELj13ELj1E13ReadWriteModeNS1_13USART2CR1BaseEES4_Lj1EE3SetIS3_vEEvv: (+1)
-   \        0x0   0x4902             LDR.N    R1,??Set_3       ;; 0x4000440c
+   \        0x0   0x4902             LDR.N    R1,??Set_4       ;; 0x4000440c
    \        0x2   0x6808             LDR      R0,[R1, #+0]
    \        0x4   0xF450 0x5000      ORRS     R0,R0,#0x2000
    \        0x8   0x6008             STR      R0,[R1, #+0]
    \        0xA   0x4770             BX       LR               ;; return
-   \                     ??Set_3:
-   \        0xC   0x4000'440C        DC32     0x4000440c
-
-   \                                 In section .text, align 4
-   \   __interwork __vfp void FieldValueBase<TIM2_SR_UIF_Values<TIM2::SR, 0U, 1U, ReadWriteMode, TIM2::TIM2SRBase>, TIM2::TIM2SRBase, 0U>::Set<ReadWriteMode, void>()
-   \                     _ZN14FieldValueBaseI18TIM2_SR_UIF_ValuesIN4TIM22SRELj0ELj1E13ReadWriteModeNS1_10TIM2SRBaseEES4_Lj0EE3SetIS3_vEEvv: (+1)
-   \        0x0   0x4902             LDR.N    R1,??Set_4       ;; 0x40000010
-   \        0x2   0x6808             LDR      R0,[R1, #+0]
-   \        0x4   0x0840             LSRS     R0,R0,#+1
-   \        0x6   0x0040             LSLS     R0,R0,#+1
-   \        0x8   0x6008             STR      R0,[R1, #+0]
-   \        0xA   0x4770             BX       LR               ;; return
    \                     ??Set_4:
-   \        0xC   0x4000'0010        DC32     0x40000010
-
-   \                                 In section .text, align 2
-   \   __interwork __vfp void FieldValueBase<TIM2_CR1_CEN_Values<TIM2::CR1, 0U, 1U, ReadWriteMode, TIM2::TIM2CR1Base>, TIM2::TIM2CR1Base, 1U>::Set<ReadWriteMode, void>()
-   \                     _ZN14FieldValueBaseI19TIM2_CR1_CEN_ValuesIN4TIM23CR1ELj0ELj1E13ReadWriteModeNS1_11TIM2CR1BaseEES4_Lj1EE3SetIS3_vEEvv: (+1)
-   \        0x0   0xF05F 0x4180      MOVS     R1,#+1073741824
-   \        0x4   0x6808             LDR      R0,[R1, #+0]
-   \        0x6   0xF050 0x0001      ORRS     R0,R0,#0x1
-   \        0xA   0x6008             STR      R0,[R1, #+0]
-   \        0xC   0x4770             BX       LR               ;; return
+   \        0xC   0x4000'440C        DC32     0x4000440c
 
    \                                 In section .text, align 4
    \   __interwork __vfp void FieldValueBase<USART2_CR1_TE_Values<USART2::CR1, 3U, 1U, ReadWriteMode, USART2::USART2CR1Base>, USART2::USART2CR1Base, 1U>::Set<ReadWriteMode, void>()
@@ -202,6 +191,18 @@ E:\Git\POIP\Kursovoy\code\main.cpp
    \        0xA   0x4770             BX       LR               ;; return
    \                     ??Set_6:
    \        0xC   0x4000'440C        DC32     0x4000440c
+
+   \                                 In section .text, align 4
+   \   __interwork __vfp void FieldValueBase<TIM2_SR_UIF_Values<TIM2::SR, 0U, 1U, ReadWriteMode, TIM2::TIM2SRBase>, TIM2::TIM2SRBase, 0U>::Set<ReadWriteMode, void>()
+   \                     _ZN14FieldValueBaseI18TIM2_SR_UIF_ValuesIN4TIM22SRELj0ELj1E13ReadWriteModeNS1_10TIM2SRBaseEES4_Lj0EE3SetIS3_vEEvv: (+1)
+   \        0x0   0x4902             LDR.N    R1,??Set_7       ;; 0x40000010
+   \        0x2   0x6808             LDR      R0,[R1, #+0]
+   \        0x4   0x0840             LSRS     R0,R0,#+1
+   \        0x6   0x0040             LSLS     R0,R0,#+1
+   \        0x8   0x6008             STR      R0,[R1, #+0]
+   \        0xA   0x4770             BX       LR               ;; return
+   \                     ??Set_7:
+   \        0xC   0x4000'0010        DC32     0x40000010
 
    \                                 In section .text, align 4
    \   __interwork __vfp bool FieldValueBase<RCC_CR_HSIRDY_Values<RCC::CR, 1U, 1U, ReadMode, RCC::RCCCRBase>, RCC::RCCCRBase, 1U>::IsSet<ReadMode, void>()
@@ -274,72 +275,52 @@ E:\Git\POIP\Kursovoy\code\main.cpp
    \        0x8   0xE000'E104        DC32     0xe000e104
 
    \                                 In section .text, align 4
-   \   __interwork __vfp void RegisterBase<1073741860U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
-   \                     _ZN12RegisterBaseILj1073741860ELj32E13ReadWriteModeE5WriteIS0_vEEvj: (+1)
-   \        0x0   0x4901             LDR.N    R1,??Write_3     ;; 0x40000024
-   \        0x2   0x6008             STR      R0,[R1, #+0]
+   \   __interwork __vfp uint32_t RegisterBase<1073874960U, 32U, ReadMode>::Get<ReadMode, void>()
+   \                     _ZN12RegisterBaseILj1073874960ELj32E8ReadModeE3GetIS0_vEEjv: (+1)
+   \        0x0   0x4801             LDR.N    R0,??Get_0       ;; 0x40020810
+   \        0x2   0x6800             LDR      R0,[R0, #+0]
    \        0x4   0x4770             BX       LR               ;; return
    \        0x6   0xBF00             Nop      
-   \                     ??Write_3:
-   \        0x8   0x4000'0024        DC32     0x40000024
-
-   \                                 In section .text, align 4
-   \   __interwork __vfp void RegisterBase<1073741864U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
-   \                     _ZN12RegisterBaseILj1073741864ELj32E13ReadWriteModeE5WriteIS0_vEEvj: (+1)
-   \        0x0   0x4901             LDR.N    R1,??Write_4     ;; 0x40000028
-   \        0x2   0x6008             STR      R0,[R1, #+0]
-   \        0x4   0x4770             BX       LR               ;; return
-   \        0x6   0xBF00             Nop      
-   \                     ??Write_4:
-   \        0x8   0x4000'0028        DC32     0x40000028
-
-   \                                 In section .text, align 4
-   \   __interwork __vfp void RegisterBase<1073741868U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
-   \                     _ZN12RegisterBaseILj1073741868ELj32E13ReadWriteModeE5WriteIS0_vEEvj: (+1)
-   \        0x0   0x4901             LDR.N    R1,??Write_5     ;; 0x4000002c
-   \        0x2   0x6008             STR      R0,[R1, #+0]
-   \        0x4   0x4770             BX       LR               ;; return
-   \        0x6   0xBF00             Nop      
-   \                     ??Write_5:
-   \        0x8   0x4000'002C        DC32     0x4000002c
+   \                     ??Get_0:
+   \        0x8   0x4002'0810        DC32     0x40020810
 
    \                                 In section .text, align 4
    \   __interwork __vfp void Register<1073887296U, 32U, ReadWriteMode, RCC::RCCAPB1ENRBase, RCC_AHB1ENR_DMA2EN_Values<RCC::APB1ENR, 0U, 1U, ReadWriteMode, RCC::RCCAPB1ENRBase>::Enable, RCC_AHB1ENR_DMA2EN_Values<RCC::APB1ENR, 17U, 1U, ReadWriteMode, RCC::RCCAPB1ENRBase>::Enable>::Set<ReadWriteMode, void>()
    \                     _ZN8RegisterILj1073887296ELj32E13ReadWriteModeN3RCC14RCCAPB1ENRBaseEJ10FieldValueI25RCC_AHB1ENR_DMA2EN_ValuesINS1_7APB1ENRELj0ELj1ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj17ELj1ES0_S2_ES2_Lj1EvEEE3SetIS0_vEEvv: (+1)
-   \        0x0   0x4A04             LDR.N    R2,??Set_7       ;; 0x40023840
+   \        0x0   0x4A04             LDR.N    R2,??Set_8       ;; 0x40023840
    \        0x2   0x6811             LDR      R1,[R2, #+0]
-   \        0x4   0x4804             LDR.N    R0,??Set_7+0x4   ;; 0xfffdfffe
+   \        0x4   0x4804             LDR.N    R0,??Set_8+0x4   ;; 0xfffdfffe
    \        0x6   0x4001             ANDS     R1,R0,R1
    \        0x8   0xF441 0x3100      ORR      R1,R1,#0x20000
    \        0xC   0xF051 0x0101      ORRS     R1,R1,#0x1
    \       0x10   0x6011             STR      R1,[R2, #+0]
    \       0x12   0x4770             BX       LR               ;; return
-   \                     ??Set_7:
+   \                     ??Set_8:
    \       0x14   0x4002'3840        DC32     0x40023840
    \       0x18   0xFFFD'FFFE        DC32     0xfffdfffe
 
    \                                 In section .text, align 4
    \   __interwork __vfp void Register<1073872896U, 32U, ReadWriteMode, GPIOA::GPIOAMODERBase, GPIOA_MODER_MODER15_Values<GPIOA::MODER, 4U, 2U, ReadWriteMode, GPIOA::GPIOAMODERBase>::Alternate, GPIOA_MODER_MODER15_Values<GPIOA::MODER, 6U, 2U, ReadWriteMode, GPIOA::GPIOAMODERBase>::Alternate>::Set<ReadWriteMode, void>()
    \                     _ZN8RegisterILj1073872896ELj32E13ReadWriteModeN5GPIOA14GPIOAMODERBaseEJ10FieldValueI26GPIOA_MODER_MODER15_ValuesINS1_5MODERELj4ELj2ES0_S2_ES2_Lj2EvES3_IS4_IS5_Lj6ELj2ES0_S2_ES2_Lj2EvEEE3SetIS0_vEEvv: (+1)
-   \        0x0   0x4903             LDR.N    R1,??Set_8       ;; 0x40020000
+   \        0x0   0x4903             LDR.N    R1,??Set_9       ;; 0x40020000
    \        0x2   0x6808             LDR      R0,[R1, #+0]
    \        0x4   0xF030 0x00F0      BICS     R0,R0,#0xF0
    \        0x8   0xF050 0x00A0      ORRS     R0,R0,#0xA0
    \        0xC   0x6008             STR      R0,[R1, #+0]
    \        0xE   0x4770             BX       LR               ;; return
-   \                     ??Set_8:
+   \                     ??Set_9:
    \       0x10   0x4002'0000        DC32     0x40020000
 
    \                                 In section .text, align 4
    \   __interwork __vfp void Register<1073872928U, 32U, ReadWriteMode, GPIOA::GPIOAAFRLBase, GPIOA_AFRL_AFRL7_Values<GPIOA::AFRL, 8U, 4U, ReadWriteMode, GPIOA::GPIOAAFRLBase>::Af7, GPIOA_AFRL_AFRL7_Values<GPIOA::AFRL, 12U, 4U, ReadWriteMode, GPIOA::GPIOAAFRLBase>::Af7>::Set<ReadWriteMode, void>()
    \                     _ZN8RegisterILj1073872928ELj32E13ReadWriteModeN5GPIOA13GPIOAAFRLBaseEJ10FieldValueI23GPIOA_AFRL_AFRL7_ValuesINS1_4AFRLELj8ELj4ES0_S2_ES2_Lj7EvES3_IS4_IS5_Lj12ELj4ES0_S2_ES2_Lj7EvEEE3SetIS0_vEEvv: (+1)
-   \        0x0   0x4903             LDR.N    R1,??Set_9       ;; 0x40020020
+   \        0x0   0x4903             LDR.N    R1,??Set_10      ;; 0x40020020
    \        0x2   0x6808             LDR      R0,[R1, #+0]
    \        0x4   0xF430 0x407F      BICS     R0,R0,#0xFF00
    \        0x8   0xF450 0x40EE      ORRS     R0,R0,#0x7700
    \        0xC   0x6008             STR      R0,[R1, #+0]
    \        0xE   0x4770             BX       LR               ;; return
-   \                     ??Set_9:
+   \                     ??Set_10:
    \       0x10   0x4002'0020        DC32     0x40020020
 
    \                                 In section .rodata, align 4
@@ -371,6 +352,18 @@ E:\Git\POIP\Kursovoy\code\main.cpp
    \   __absolute unsigned int const value
    \                     _ZZN8RegisterILj1073872928ELj32E13ReadWriteModeN5GPIOA13GPIOAAFRLBaseEJ10FieldValueI23GPIOA_AFRL_AFRL7_ValuesINS1_4AFRLELj8ELj4ES0_S2_ES2_Lj7EvES3_IS4_IS5_Lj12ELj4ES0_S2_ES2_Lj7EvEEE3SetIS0_vEEvvE5value:
    \        0x0   0x0000'7700        DC32 30'464
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp bool Button<GPIOC, 13>::IsPressed()
+   \                     _ZN6ButtonI5GPIOCLi13EE9IsPressedEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....'....        BL       _ZN12RegisterBaseILj1073874960ELj32E8ReadModeE3GetIS0_vEEjv
+   \        0x6   0x0B40             LSRS     R0,R0,#+13
+   \        0x8   0xF010 0x0001      ANDS     R0,R0,#0x1
+   \        0xC   0xF090 0x0001      EORS     R0,R0,#0x1
+   \       0x10   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \       0x12   0xBD02             POP      {R1,PC}          ;; return
+      4          #include "rccregisters.hpp" // for RCC
       5          #include <gpioaregisters.hpp>  // for GPIOA
       6          #include <gpiocregisters.hpp>  // for GPIOC
       7          #include "Event.hpp"  // for Event
@@ -508,100 +501,110 @@ E:\Git\POIP\Kursovoy\code\main.cpp
      33            RCC::AHB1ENR::GPIOAEN::Enable::Set() ;
    \       0x1A   0x....'....        BL       _ZN14FieldValueBaseI26RCC_AHB1ENR_GPIOAEN_ValuesIN3RCC7AHB1ENRELj0ELj1E13ReadWriteModeNS1_14RCCAHB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv
      34            
-     35            RCC::APB1ENRPack<
-     36              RCC::APB1ENR::TIM2EN::Enable, 
-     37              RCC::APB1ENR::USART2EN::Enable
-     38              >::Set() ;
-   \       0x1E   0x....'....        BL       _ZN8RegisterILj1073887296ELj32E13ReadWriteModeN3RCC14RCCAPB1ENRBaseEJ10FieldValueI25RCC_AHB1ENR_DMA2EN_ValuesINS1_7APB1ENRELj0ELj1ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj17ELj1ES0_S2_ES2_Lj1EvEEE3SetIS0_vEEvv
-     39            
-     40            GPIOA::MODERPack<
-     41              GPIOA::MODER::MODER2::Alternate, // Uart2 TX
-     42              GPIOA::MODER::MODER3::Alternate  // Uart2 RX
-     43              >::Set() ;
-   \       0x22   0x....'....        BL       _ZN8RegisterILj1073872896ELj32E13ReadWriteModeN5GPIOA14GPIOAMODERBaseEJ10FieldValueI26GPIOA_MODER_MODER15_ValuesINS1_5MODERELj4ELj2ES0_S2_ES2_Lj2EvES3_IS4_IS5_Lj6ELj2ES0_S2_ES2_Lj2EvEEE3SetIS0_vEEvv
-     44            
-     45            GPIOA::AFRLPack <
-     46              GPIOA::AFRL::AFRL2::Af7, // Uart2 TX
-     47              GPIOA::AFRL::AFRL3::Af7  // Uart2 RX
-     48              >::Set() ;
-   \       0x26   0x....'....        BL       _ZN8RegisterILj1073872928ELj32E13ReadWriteModeN5GPIOA13GPIOAAFRLBaseEJ10FieldValueI23GPIOA_AFRL_AFRL7_ValuesINS1_4AFRLELj8ELj4ES0_S2_ES2_Lj7EvES3_IS4_IS5_Lj12ELj4ES0_S2_ES2_Lj7EvEEE3SetIS0_vEEvv
-     49            
-     50              USART2::BRR::Write(UartSpeed9600) ;
-   \       0x2A   0xF240 0x6082      MOVW     R0,#+1666
-   \       0x2E   0x....'....        BL       _ZN12RegisterBaseILj1073759240ELj32E13ReadWriteModeE5WriteIS0_vEEvj
-     51              USART2::CR1::UE::Enable::Set() ;
-   \       0x32   0x....'....        BL       _ZN14FieldValueBaseI20USART2_CR1_UE_ValuesIN6USART23CR1ELj13ELj1E13ReadWriteModeNS1_13USART2CR1BaseEES4_Lj1EE3SetIS3_vEEvv
-     52          
-     53              
-     54              NVIC::ISER1::Write(1<<6);
-   \       0x36   0x2040             MOVS     R0,#+64
-   \       0x38   0x....'....        BL       _ZN12RegisterBaseILj3758153988ELj32E13ReadWriteModeE5WriteIS0_vEEvj
-     55               
-     56          
-     57            
-     58            // TIM2
-     59            TIM2::PSC::Write(16000) ;     
-   \       0x3C   0xF44F 0x507A      MOV      R0,#+16000
-   \       0x40   0x....'....        BL       _ZN12RegisterBaseILj1073741864ELj32E13ReadWriteModeE5WriteIS0_vEEvj
-     60            TIM2::ARR::Write(1000) ;
-   \       0x44   0xF44F 0x707A      MOV      R0,#+1000
-   \       0x48   0x....'....        BL       _ZN12RegisterBaseILj1073741868ELj32E13ReadWriteModeE5WriteIS0_vEEvj
-     61            TIM2::SR::UIF::NoInterruptPending::Set();
-   \       0x4C   0x....'....        BL       _ZN14FieldValueBaseI18TIM2_SR_UIF_ValuesIN4TIM22SRELj0ELj1E13ReadWriteModeNS1_10TIM2SRBaseEES4_Lj0EE3SetIS3_vEEvv
-     62            TIM2::CNT::Write(0);
-   \       0x50   0x2000             MOVS     R0,#+0
-   \       0x52   0x....'....        BL       _ZN12RegisterBaseILj1073741860ELj32E13ReadWriteModeE5WriteIS0_vEEvj
-     63            TIM2::CR1::CEN::Enable::Set() ; 
-   \       0x56   0x....'....        BL       _ZN14FieldValueBaseI19TIM2_CR1_CEN_ValuesIN4TIM23CR1ELj0ELj1E13ReadWriteModeNS1_11TIM2CR1BaseEES4_Lj1EE3SetIS3_vEEvv
-     64            return 1;
-   \       0x5A   0x2001             MOVS     R0,#+1
-   \       0x5C   0xBD02             POP      {R1,PC}          ;; return
-     65            
-     66            return 1;
-                   ^
-Warning[Pe111]: statement is unreachable
-     67          }
-     68          };
-     69          
-     70          
-     71          
+     35            RCC::AHB1ENR::GPIOCEN::Enable::Set() ;
+   \       0x1E   0x....'....        BL       _ZN14FieldValueBaseI26RCC_AHB1ENR_GPIOCEN_ValuesIN3RCC7AHB1ENRELj2ELj1E13ReadWriteModeNS1_14RCCAHB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv
+     36            
+     37            RCC::APB1ENRPack<
+     38              RCC::APB1ENR::TIM2EN::Enable, 
+     39              RCC::APB1ENR::USART2EN::Enable
+     40              >::Set() ;
+   \       0x22   0x....'....        BL       _ZN8RegisterILj1073887296ELj32E13ReadWriteModeN3RCC14RCCAPB1ENRBaseEJ10FieldValueI25RCC_AHB1ENR_DMA2EN_ValuesINS1_7APB1ENRELj0ELj1ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj17ELj1ES0_S2_ES2_Lj1EvEEE3SetIS0_vEEvv
+     41            
+     42            GPIOA::MODERPack<
+     43              GPIOA::MODER::MODER2::Alternate, // Uart2 TX
+     44              GPIOA::MODER::MODER3::Alternate  // Uart2 RX
+     45              >::Set() ;
+   \       0x26   0x....'....        BL       _ZN8RegisterILj1073872896ELj32E13ReadWriteModeN5GPIOA14GPIOAMODERBaseEJ10FieldValueI26GPIOA_MODER_MODER15_ValuesINS1_5MODERELj4ELj2ES0_S2_ES2_Lj2EvES3_IS4_IS5_Lj6ELj2ES0_S2_ES2_Lj2EvEEE3SetIS0_vEEvv
+     46            
+     47            GPIOA::AFRLPack <
+     48              GPIOA::AFRL::AFRL2::Af7, // Uart2 TX
+     49              GPIOA::AFRL::AFRL3::Af7  // Uart2 RX
+     50              >::Set() ;
+   \       0x2A   0x....'....        BL       _ZN8RegisterILj1073872928ELj32E13ReadWriteModeN5GPIOA13GPIOAAFRLBaseEJ10FieldValueI23GPIOA_AFRL_AFRL7_ValuesINS1_4AFRLELj8ELj4ES0_S2_ES2_Lj7EvES3_IS4_IS5_Lj12ELj4ES0_S2_ES2_Lj7EvEEE3SetIS0_vEEvv
+     51            
+     52              USART2::BRR::Write(UartSpeed9600) ;
+   \       0x2E   0xF240 0x6082      MOVW     R0,#+1666
+   \       0x32   0x....'....        BL       _ZN12RegisterBaseILj1073759240ELj32E13ReadWriteModeE5WriteIS0_vEEvj
+     53              USART2::CR1::UE::Enable::Set() ;
+   \       0x36   0x....'....        BL       _ZN14FieldValueBaseI20USART2_CR1_UE_ValuesIN6USART23CR1ELj13ELj1E13ReadWriteModeNS1_13USART2CR1BaseEES4_Lj1EE3SetIS3_vEEvv
+     54          
+     55              
+     56              NVIC::ISER1::Write(1<<6);
+   \       0x3A   0x2040             MOVS     R0,#+64
+   \       0x3C   0x....'....        BL       _ZN12RegisterBaseILj3758153988ELj32E13ReadWriteModeE5WriteIS0_vEEvj
+     57               
+     58          
+     59            
+     60            // TIM2
+     61          
+     62            
+     63            return 1;
+   \       0x40   0x2001             MOVS     R0,#+1
+   \       0x42   0xBD02             POP      {R1,PC}          ;; return
+     64          }
+     65          };
+     66          
+
+   \                                 In section .bss, align 4
+     67          int i = 0;
+   \                     i:
+   \        0x0                      DS8 4
+
+   \                                 In section .bss, align 1
+     68          Button<GPIOC, 13> button;
+   \                     button:
+   \        0x0                      DS8 1
 
    \                                 In section .text, align 2, keep-with-next
-     72          int main()
-     73          {
+     69          int main()
+     70          {
    \                     main: (+1)
    \        0x0   0xB510             PUSH     {R4,LR}
-     74            const char* message = "Hello World \n";
+     71            const char* message = "Hello World \n";
    \        0x2   0x....             LDR.N    R4,??DataTable1_2
-     75          
-     76            
-     77            for(;;)
-     78            {
-     79              usartDriver.SendMessage(message, strlen(message));
+     72          
+     73            
+     74            for(;;)
+     75            {
+     76              
+     77              if(button.IsPressed())
    \                     ??main_0: (+1)
-   \        0x4   0x0020             MOVS     R0,R4
-   \        0x6   0x....'....        BL       strlen
-   \        0xA   0x0002             MOVS     R2,R0
-   \        0xC   0x0021             MOVS     R1,R4
-   \        0xE   0x....             LDR.N    R0,??DataTable1_1
-   \       0x10   0x....'....        BL       _ZN11USARTDriverI6Usart2E11SendMessageEPKcj
-     80              while(TIM2::SR::UIF::NoInterruptPending::IsSet()) ;
+   \        0x4   0x....             LDR.N    R0,??DataTable1_3
+   \        0x6   0x....'....        BL       _ZN6ButtonI5GPIOCLi13EE9IsPressedEv
+   \        0xA   0x2800             CMP      R0,#+0
+   \        0xC   0xD003             BEQ.N    ??main_1
+     78              {
+     79                i++;
+   \        0xE   0x....             LDR.N    R0,??DataTable1_4
+   \       0x10   0x6801             LDR      R1,[R0, #+0]
+   \       0x12   0x1C49             ADDS     R1,R1,#+1
+   \       0x14   0x6001             STR      R1,[R0, #+0]
+     80              }
+     81              usartDriver.SendMessage(message, strlen(message));
    \                     ??main_1: (+1)
-   \       0x14   0x....'....        BL       _ZN14FieldValueBaseI18TIM2_SR_UIF_ValuesIN4TIM22SRELj0ELj1E13ReadWriteModeNS1_10TIM2SRBaseEES4_Lj0EE5IsSetIS3_vEEbv
-   \       0x18   0x2800             CMP      R0,#+0
-   \       0x1A   0xD1FB             BNE.N    ??main_1
-     81              TIM2::SR::UIF::NoInterruptPending::Set();
-   \       0x1C   0x....'....        BL       _ZN14FieldValueBaseI18TIM2_SR_UIF_ValuesIN4TIM22SRELj0ELj1E13ReadWriteModeNS1_10TIM2SRBaseEES4_Lj0EE3SetIS3_vEEvv
-   \       0x20   0xE7F0             B.N      ??main_0
-     82          
-     83            }
-     84            return 0;
+   \       0x16   0x0020             MOVS     R0,R4
+   \       0x18   0x....'....        BL       strlen
+   \       0x1C   0x0002             MOVS     R2,R0
+   \       0x1E   0x0021             MOVS     R1,R4
+   \       0x20   0x....             LDR.N    R0,??DataTable1_1
+   \       0x22   0x....'....        BL       _ZN11USARTDriverI6Usart2E11SendMessageEPKcj
+     82              while(TIM2::SR::UIF::NoInterruptPending::IsSet()) ;
+   \                     ??main_2: (+1)
+   \       0x26   0x....'....        BL       _ZN14FieldValueBaseI18TIM2_SR_UIF_ValuesIN4TIM22SRELj0ELj1E13ReadWriteModeNS1_10TIM2SRBaseEES4_Lj0EE5IsSetIS3_vEEbv
+   \       0x2A   0x2800             CMP      R0,#+0
+   \       0x2C   0xD1FB             BNE.N    ??main_2
+     83              TIM2::SR::UIF::NoInterruptPending::Set();
+   \       0x2E   0x....'....        BL       _ZN14FieldValueBaseI18TIM2_SR_UIF_ValuesIN4TIM22SRELj0ELj1E13ReadWriteModeNS1_10TIM2SRBaseEES4_Lj0EE3SetIS3_vEEvv
+   \       0x32   0xE7E7             B.N      ??main_0
+     84          
+     85            }
+     86            return 0;
                    ^
 Warning[Pe111]: statement is unreachable
 Warning[Ms014]: some characters could not be correctly encoded in
           "E:\Git\POIP\Kursovoy\code\Debug\List\main.s", and have been replaced
           with '@'. The first such character has unicode code point 0x41f ("@")
-     85          }
+     87          }
 
    \                                 In section .text, align 4, keep-with-next
    \                     ??DataTable1:
@@ -614,6 +617,14 @@ Warning[Ms014]: some characters could not be correctly encoded in
    \                                 In section .text, align 4, keep-with-next
    \                     ??DataTable1_2:
    \        0x0   0x....'....        DC32     ?_0
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_3:
+   \        0x0   0x....'....        DC32     button
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_4:
+   \        0x0   0x....'....        DC32     i
 
    \                                 In section .rodata, align 4
    \                     ?_0:
@@ -630,12 +641,14 @@ Warning[Ms014]: some characters could not be correctly encoded in
 
    .cstack Function
    ------- --------
+       8   Button<GPIOC, 13>::IsPressed()
+         8   -> RegisterBase<1073874960U, 32U, ReadMode>::Get<ReadMode, void>()
        0   FieldValueBase<RCC_AHB1ENR_GPIOAEN_Values<RCC::AHB1ENR, 0U, 1U, ReadWriteMode, RCC::RCCAHB1ENRBase>, RCC::RCCAHB1ENRBase, 1U>::Set<ReadWriteMode, void>()
+       0   FieldValueBase<RCC_AHB1ENR_GPIOCEN_Values<RCC::AHB1ENR, 2U, 1U, ReadWriteMode, RCC::RCCAHB1ENRBase>, RCC::RCCAHB1ENRBase, 1U>::Set<ReadWriteMode, void>()
        0   FieldValueBase<RCC_CFGR_SWS_Values<RCC::CFGR, 2U, 2U, ReadMode, RCC::RCCCFGRBase>, RCC::RCCCFGRBase, 0U>::IsSet<ReadMode, void>()
        0   FieldValueBase<RCC_CFGR_SW_Values<RCC::CFGR, 0U, 2U, ReadWriteMode, RCC::RCCCFGRBase>, RCC::RCCCFGRBase, 0U>::Set<ReadWriteMode, void>()
        0   FieldValueBase<RCC_CR_HSION_Values<RCC::CR, 0U, 1U, ReadWriteMode, RCC::RCCCRBase>, RCC::RCCCRBase, 1U>::Set<ReadWriteMode, void>()
        0   FieldValueBase<RCC_CR_HSIRDY_Values<RCC::CR, 1U, 1U, ReadMode, RCC::RCCCRBase>, RCC::RCCCRBase, 1U>::IsSet<ReadMode, void>()
-       0   FieldValueBase<TIM2_CR1_CEN_Values<TIM2::CR1, 0U, 1U, ReadWriteMode, TIM2::TIM2CR1Base>, TIM2::TIM2CR1Base, 1U>::Set<ReadWriteMode, void>()
        0   FieldValueBase<TIM2_SR_UIF_Values<TIM2::SR, 0U, 1U, ReadWriteMode, TIM2::TIM2SRBase>, TIM2::TIM2SRBase, 0U>::IsSet<ReadWriteMode, void>()
        0   FieldValueBase<TIM2_SR_UIF_Values<TIM2::SR, 0U, 1U, ReadWriteMode, TIM2::TIM2SRBase>, TIM2::TIM2SRBase, 0U>::Set<ReadWriteMode, void>()
        0   FieldValueBase<USART2_CR1_TE_Values<USART2::CR1, 3U, 1U, ReadWriteMode, USART2::USART2CR1Base>, USART2::USART2CR1Base, 1U>::Set<ReadWriteMode, void>()
@@ -644,11 +657,9 @@ Warning[Ms014]: some characters could not be correctly encoded in
        0   Register<1073872896U, 32U, ReadWriteMode, GPIOA::GPIOAMODERBase, GPIOA_MODER_MODER15_Values<GPIOA::MODER, 4U, 2U, ReadWriteMode, GPIOA::GPIOAMODERBase>::Alternate, GPIOA_MODER_MODER15_Values<GPIOA::MODER, 6U, 2U, ReadWriteMode, GPIOA::GPIOAMODERBase>::Alternate>::Set<ReadWriteMode, void>()
        0   Register<1073872928U, 32U, ReadWriteMode, GPIOA::GPIOAAFRLBase, GPIOA_AFRL_AFRL7_Values<GPIOA::AFRL, 8U, 4U, ReadWriteMode, GPIOA::GPIOAAFRLBase>::Af7, GPIOA_AFRL_AFRL7_Values<GPIOA::AFRL, 12U, 4U, ReadWriteMode, GPIOA::GPIOAAFRLBase>::Af7>::Set<ReadWriteMode, void>()
        0   Register<1073887296U, 32U, ReadWriteMode, RCC::RCCAPB1ENRBase, RCC_AHB1ENR_DMA2EN_Values<RCC::APB1ENR, 0U, 1U, ReadWriteMode, RCC::RCCAPB1ENRBase>::Enable, RCC_AHB1ENR_DMA2EN_Values<RCC::APB1ENR, 17U, 1U, ReadWriteMode, RCC::RCCAPB1ENRBase>::Enable>::Set<ReadWriteMode, void>()
-       0   RegisterBase<1073741860U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
-       0   RegisterBase<1073741864U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
-       0   RegisterBase<1073741868U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
        0   RegisterBase<1073759236U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
        0   RegisterBase<1073759240U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
+       0   RegisterBase<1073874960U, 32U, ReadMode>::Get<ReadMode, void>()
        0   RegisterBase<3758153988U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
       24   USARTDriver<Usart2>::SendMessage(char const *, size_t)
         24   -> Usart<USART2>::InterruptEnable()
@@ -668,24 +679,21 @@ Warning[Ms014]: some characters could not be correctly encoded in
          8   -> RegisterBase<1073759236U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
        8   __low_level_init
          8   -> FieldValueBase<RCC_AHB1ENR_GPIOAEN_Values<RCC::AHB1ENR, 0U, 1U, ReadWriteMode, RCC::RCCAHB1ENRBase>, RCC::RCCAHB1ENRBase, 1U>::Set<ReadWriteMode, void>()
+         8   -> FieldValueBase<RCC_AHB1ENR_GPIOCEN_Values<RCC::AHB1ENR, 2U, 1U, ReadWriteMode, RCC::RCCAHB1ENRBase>, RCC::RCCAHB1ENRBase, 1U>::Set<ReadWriteMode, void>()
          8   -> FieldValueBase<RCC_CFGR_SWS_Values<RCC::CFGR, 2U, 2U, ReadMode, RCC::RCCCFGRBase>, RCC::RCCCFGRBase, 0U>::IsSet<ReadMode, void>()
          8   -> FieldValueBase<RCC_CFGR_SW_Values<RCC::CFGR, 0U, 2U, ReadWriteMode, RCC::RCCCFGRBase>, RCC::RCCCFGRBase, 0U>::Set<ReadWriteMode, void>()
          8   -> FieldValueBase<RCC_CR_HSION_Values<RCC::CR, 0U, 1U, ReadWriteMode, RCC::RCCCRBase>, RCC::RCCCRBase, 1U>::Set<ReadWriteMode, void>()
          8   -> FieldValueBase<RCC_CR_HSIRDY_Values<RCC::CR, 1U, 1U, ReadMode, RCC::RCCCRBase>, RCC::RCCCRBase, 1U>::IsSet<ReadMode, void>()
-         8   -> FieldValueBase<TIM2_CR1_CEN_Values<TIM2::CR1, 0U, 1U, ReadWriteMode, TIM2::TIM2CR1Base>, TIM2::TIM2CR1Base, 1U>::Set<ReadWriteMode, void>()
-         8   -> FieldValueBase<TIM2_SR_UIF_Values<TIM2::SR, 0U, 1U, ReadWriteMode, TIM2::TIM2SRBase>, TIM2::TIM2SRBase, 0U>::Set<ReadWriteMode, void>()
          8   -> FieldValueBase<USART2_CR1_UE_Values<USART2::CR1, 13U, 1U, ReadWriteMode, USART2::USART2CR1Base>, USART2::USART2CR1Base, 1U>::Set<ReadWriteMode, void>()
          8   -> Register<1073872896U, 32U, ReadWriteMode, GPIOA::GPIOAMODERBase, GPIOA_MODER_MODER15_Values<GPIOA::MODER, 4U, 2U, ReadWriteMode, GPIOA::GPIOAMODERBase>::Alternate, GPIOA_MODER_MODER15_Values<GPIOA::MODER, 6U, 2U, ReadWriteMode, GPIOA::GPIOAMODERBase>::Alternate>::Set<ReadWriteMode, void>()
          8   -> Register<1073872928U, 32U, ReadWriteMode, GPIOA::GPIOAAFRLBase, GPIOA_AFRL_AFRL7_Values<GPIOA::AFRL, 8U, 4U, ReadWriteMode, GPIOA::GPIOAAFRLBase>::Af7, GPIOA_AFRL_AFRL7_Values<GPIOA::AFRL, 12U, 4U, ReadWriteMode, GPIOA::GPIOAAFRLBase>::Af7>::Set<ReadWriteMode, void>()
          8   -> Register<1073887296U, 32U, ReadWriteMode, RCC::RCCAPB1ENRBase, RCC_AHB1ENR_DMA2EN_Values<RCC::APB1ENR, 0U, 1U, ReadWriteMode, RCC::RCCAPB1ENRBase>::Enable, RCC_AHB1ENR_DMA2EN_Values<RCC::APB1ENR, 17U, 1U, ReadWriteMode, RCC::RCCAPB1ENRBase>::Enable>::Set<ReadWriteMode, void>()
-         8   -> RegisterBase<1073741860U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
-         8   -> RegisterBase<1073741864U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
-         8   -> RegisterBase<1073741868U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
          8   -> RegisterBase<1073759240U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
          8   -> RegisterBase<3758153988U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
        8   __sti__routine()
          8   -> USARTDriver<Usart2>::USARTDriver()
        8   main
+         8   -> Button<GPIOC, 13>::IsPressed()
          8   -> FieldValueBase<TIM2_SR_UIF_Values<TIM2::SR, 0U, 1U, ReadWriteMode, TIM2::TIM2SRBase>, TIM2::TIM2SRBase, 0U>::IsSet<ReadWriteMode, void>()
          8   -> FieldValueBase<TIM2_SR_UIF_Values<TIM2::SR, 0U, 1U, ReadWriteMode, TIM2::TIM2SRBase>, TIM2::TIM2SRBase, 0U>::Set<ReadWriteMode, void>()
          8   -> USARTDriver<Usart2>::SendMessage(char const *, size_t)
@@ -701,13 +709,16 @@ Warning[Ms014]: some characters could not be correctly encoded in
        4  ??DataTable1
        4  ??DataTable1_1
        4  ??DataTable1_2
+       4  ??DataTable1_3
+       4  ??DataTable1_4
       16  ?_0
+      20  Button<GPIOC, 13>::IsPressed()
       16  FieldValueBase<RCC_AHB1ENR_GPIOAEN_Values<RCC::AHB1ENR, 0U, 1U, ReadWriteMode, RCC::RCCAHB1ENRBase>, RCC::RCCAHB1ENRBase, 1U>::Set<ReadWriteMode, void>()
+      16  FieldValueBase<RCC_AHB1ENR_GPIOCEN_Values<RCC::AHB1ENR, 2U, 1U, ReadWriteMode, RCC::RCCAHB1ENRBase>, RCC::RCCAHB1ENRBase, 1U>::Set<ReadWriteMode, void>()
       24  FieldValueBase<RCC_CFGR_SWS_Values<RCC::CFGR, 2U, 2U, ReadMode, RCC::RCCCFGRBase>, RCC::RCCCFGRBase, 0U>::IsSet<ReadMode, void>()
       16  FieldValueBase<RCC_CFGR_SW_Values<RCC::CFGR, 0U, 2U, ReadWriteMode, RCC::RCCCFGRBase>, RCC::RCCCFGRBase, 0U>::Set<ReadWriteMode, void>()
       16  FieldValueBase<RCC_CR_HSION_Values<RCC::CR, 0U, 1U, ReadWriteMode, RCC::RCCCRBase>, RCC::RCCCRBase, 1U>::Set<ReadWriteMode, void>()
       16  FieldValueBase<RCC_CR_HSIRDY_Values<RCC::CR, 1U, 1U, ReadMode, RCC::RCCCRBase>, RCC::RCCCRBase, 1U>::IsSet<ReadMode, void>()
-      14  FieldValueBase<TIM2_CR1_CEN_Values<TIM2::CR1, 0U, 1U, ReadWriteMode, TIM2::TIM2CR1Base>, TIM2::TIM2CR1Base, 1U>::Set<ReadWriteMode, void>()
       20  FieldValueBase<TIM2_SR_UIF_Values<TIM2::SR, 0U, 1U, ReadWriteMode, TIM2::TIM2SRBase>, TIM2::TIM2SRBase, 0U>::IsSet<ReadWriteMode, void>()
       16  FieldValueBase<TIM2_SR_UIF_Values<TIM2::SR, 0U, 1U, ReadWriteMode, TIM2::TIM2SRBase>, TIM2::TIM2SRBase, 0U>::Set<ReadWriteMode, void>()
       16  FieldValueBase<USART2_CR1_TE_Values<USART2::CR1, 3U, 1U, ReadWriteMode, USART2::USART2CR1Base>, USART2::USART2CR1Base, 1U>::Set<ReadWriteMode, void>()
@@ -716,20 +727,20 @@ Warning[Ms014]: some characters could not be correctly encoded in
       20  Register<1073872896U, 32U, ReadWriteMode, GPIOA::GPIOAMODERBase, GPIOA_MODER_MODER15_Values<GPIOA::MODER, 4U, 2U, ReadWriteMode, GPIOA::GPIOAMODERBase>::Alternate, GPIOA_MODER_MODER15_Values<GPIOA::MODER, 6U, 2U, ReadWriteMode, GPIOA::GPIOAMODERBase>::Alternate>::Set<ReadWriteMode, void>()
       20  Register<1073872928U, 32U, ReadWriteMode, GPIOA::GPIOAAFRLBase, GPIOA_AFRL_AFRL7_Values<GPIOA::AFRL, 8U, 4U, ReadWriteMode, GPIOA::GPIOAAFRLBase>::Af7, GPIOA_AFRL_AFRL7_Values<GPIOA::AFRL, 12U, 4U, ReadWriteMode, GPIOA::GPIOAAFRLBase>::Af7>::Set<ReadWriteMode, void>()
       28  Register<1073887296U, 32U, ReadWriteMode, RCC::RCCAPB1ENRBase, RCC_AHB1ENR_DMA2EN_Values<RCC::APB1ENR, 0U, 1U, ReadWriteMode, RCC::RCCAPB1ENRBase>::Enable, RCC_AHB1ENR_DMA2EN_Values<RCC::APB1ENR, 17U, 1U, ReadWriteMode, RCC::RCCAPB1ENRBase>::Enable>::Set<ReadWriteMode, void>()
-      12  RegisterBase<1073741860U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
-      12  RegisterBase<1073741864U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
-      12  RegisterBase<1073741868U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
       12  RegisterBase<1073759236U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
       12  RegisterBase<1073759240U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
+      12  RegisterBase<1073874960U, 32U, ReadMode>::Get<ReadMode, void>()
       12  RegisterBase<3758153988U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
       96  USARTDriver<Usart2>::SendMessage(char const *, size_t)
       12  USARTDriver<Usart2>::USARTDriver()
        8  Usart<USART2>::InterruptEnable()
        8  Usart<USART2>::TransmitEnable()
       10  Usart<USART2>::WriteByte(uint8_t)
-      94  __low_level_init
+      68  __low_level_init
       22  __sti__routine()
-      34  main
+       1  button
+       4  i
+      52  main
        4  mask
        4  mask
        4  mask
@@ -745,14 +756,14 @@ Warning[Ms014]: some characters could not be correctly encoded in
      105  -- Other
 
  
- 265 bytes in section .bss
+ 270 bytes in section .bss
    4 bytes in section .init_array
  143 bytes in section .rodata
- 628 bytes in section .text
+ 626 bytes in section .text
  
- 166 bytes of CODE  memory (+ 466 bytes shared)
+ 166 bytes of CODE  memory (+ 464 bytes shared)
   16 bytes of CONST memory (+ 127 bytes shared)
-   0 bytes of DATA  memory (+ 265 bytes shared)
+   5 bytes of DATA  memory (+ 265 bytes shared)
 
 Errors: none
-Warnings: 3
+Warnings: 2
