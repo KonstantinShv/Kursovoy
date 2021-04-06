@@ -2,7 +2,6 @@
 #include "event.hpp"
 #include "Timer.hpp"
 #include "Button.hpp"
-//#ifndef REGISTERS_BUTTONPOLL_HPP
 #define REGISTERS_BUTTONPOLL_HPP
 
 using namespace OsWrapper;
