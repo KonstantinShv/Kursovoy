@@ -5,22 +5,20 @@
 #include "rccregisters.hpp"
 #include "tim2registers.hpp"
 
-template<typename TIMX>
-
 class Timer
 {
   public:
-    void Start()
+  static void Start()
     {
-      RCC::APB1ENR::TIMX::Enable::Set();
-      TIMX::PSC::Write(7999U);
-      TIMX::ARR::Write(Period);
-      TIMX::CNT::Write(0U);
+      RCC::APB1ENR::TIM2EN::Enable::Set();
+      TIM2::PSC::Write(7999U);
+      TIM2::ARR::Write(19999);
+      TIM2::CNT::Write(0U);
       NVIC::ISER0::Write(1U << 28U);
-      TIMX::DIER::UIE::Value1::Set();
-      TIMX::SR::UIF::NoInterruptPending::Set();
-      TIMX::CR1::CEN::Enable::Set();
-      TIMX::CR1::URS::OverflowEvent::Set();
+      TIM2::DIER::UIE::Enable::Set();
+      TIM2::SR::UIF::NoInterruptPending::Set();
+      TIM2::CR1::CEN::Enable::Set();
+      TIM2::CR1::URS::OverflowEvent::Set();
     }
    
 };

@@ -2,18 +2,13 @@
 #include "rccregisters.hpp"
 #include "gpiocregisters.hpp"
 
-template<typename PortX, int PinX>
+
 class Button
 {
 public:
-  bool IsPressed() 
+  static bool IsPressed() 
   {
-    return !(PortX::IDR::Get() & (1 << PinX));
+    return !(GPIOC::IDR::Get() && (1 << 13));
   }
 
-//  void ButtonInitialization()
-//  {
-//    PortX::MODER::MODER13::Input::Set();
-//    
-//  }
 };

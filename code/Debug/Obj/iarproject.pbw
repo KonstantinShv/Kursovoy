@@ -26616,7 +26616,7 @@
     "scope": null
   },
   {
-    "ID": "c:main.cpp@1248@F@__low_level_init@UartSpeed9600",
+    "ID": "c:main.cpp@1250@F@__low_level_init@UartSpeed9600",
     "What": "Variable",
     "defdec": "Def",
     "display": "UartSpeed9600",
@@ -26630,58 +26630,16 @@
     "scope": null
   },
   {
-    "ID": "c:@i",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "i",
-    "location": {
-      "column": "5",
-      "line": "60",
-      "path": "E:\\Git\\POIP\\Kursovoy\\code\\main.cpp"
-    },
-    "name": "i",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@button",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "button",
-    "location": {
-      "column": "19",
-      "line": "61",
-      "path": "E:\\Git\\POIP\\Kursovoy\\code\\main.cpp"
-    },
-    "name": "button",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
     "ID": "c:@F@main#",
     "What": "Function",
     "defdec": "Def",
     "display": "int main(void)",
     "location": {
       "column": "5",
-      "line": "62",
+      "line": "63",
       "path": "E:\\Git\\POIP\\Kursovoy\\code\\main.cpp"
     },
     "name": "main",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:main.cpp@1437@F@main#@message",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "message",
-    "location": {
-      "column": "15",
-      "line": "64",
-      "path": "E:\\Git\\POIP\\Kursovoy\\code\\main.cpp"
-    },
-    "name": "message",
     "origin": "project_file",
     "scope": null
   },
@@ -26737,7 +26695,7 @@
     "display": "void __iar_program_start(void)",
     "location": {
       "column": "17",
-      "line": "8",
+      "line": "9",
       "path": "E:\\Git\\POIP\\Kursovoy\\code\\startupF411RE.cpp"
     },
     "name": "__iar_program_start",
@@ -26751,7 +26709,7 @@
     "display": "void xPortPendSVHandler(void)",
     "location": {
       "column": "17",
-      "line": "9",
+      "line": "10",
       "path": "E:\\Git\\POIP\\Kursovoy\\code\\startupF411RE.cpp"
     },
     "name": "xPortPendSVHandler",
@@ -26765,7 +26723,7 @@
     "display": "Uart",
     "location": {
       "column": "7",
-      "line": "12",
+      "line": "13",
       "path": "E:\\Git\\POIP\\Kursovoy\\code\\startupF411RE.cpp"
     },
     "members": [
@@ -26776,7 +26734,7 @@
         "display": "void interruptHandler(void)",
         "location": {
           "column": "15",
-          "line": "15",
+          "line": "16",
           "path": "E:\\Git\\POIP\\Kursovoy\\code\\startupF411RE.cpp"
         },
         "name": "interruptHandler",
@@ -26795,7 +26753,7 @@
     "display": "DummyModule",
     "location": {
       "column": "7",
-      "line": "22",
+      "line": "23",
       "path": "E:\\Git\\POIP\\Kursovoy\\code\\startupF411RE.cpp"
     },
     "members": [
@@ -26806,7 +26764,7 @@
         "display": "void handler(void)",
         "location": {
           "column": "17",
-          "line": "25",
+          "line": "26",
           "path": "E:\\Git\\POIP\\Kursovoy\\code\\startupF411RE.cpp"
         },
         "name": "handler",
@@ -26825,7 +26783,7 @@
     "display": "tIntFunct",
     "location": {
       "column": "7",
-      "line": "28",
+      "line": "29",
       "path": "E:\\Git\\POIP\\Kursovoy\\code\\startupF411RE.cpp"
     },
     "name": "tIntFunct",
@@ -26839,7 +26797,7 @@
     "display": "tIntVectItem",
     "location": {
       "column": "7",
-      "line": "30",
+      "line": "31",
       "path": "E:\\Git\\POIP\\Kursovoy\\code\\startupF411RE.cpp"
     },
     "name": "tIntVectItem",
@@ -26853,7 +26811,7 @@
     "display": "",
     "location": {
       "column": "22",
-      "line": "30",
+      "line": "31",
       "path": "E:\\Git\\POIP\\Kursovoy\\code\\startupF411RE.cpp"
     },
     "members": [
@@ -26864,12 +26822,12 @@
         "display": "__fun",
         "location": {
           "column": "39",
-          "line": "30",
+          "line": "31",
           "path": "E:\\Git\\POIP\\Kursovoy\\code\\startupF411RE.cpp"
         },
         "name": "__fun",
         "origin": "project_file",
-        "scope": "_anonymous_startupF411RE_cpp_30_22"
+        "scope": "_anonymous_startupF411RE_cpp_31_22"
       },
       {
         "ID": "c:@UA@tIntVectItem@FI@__ptr",
@@ -26878,12 +26836,12 @@
         "display": "__ptr",
         "location": {
           "column": "53",
-          "line": "30",
+          "line": "31",
           "path": "E:\\Git\\POIP\\Kursovoy\\code\\startupF411RE.cpp"
         },
         "name": "__ptr",
         "origin": "project_file",
-        "scope": "_anonymous_startupF411RE_cpp_30_22"
+        "scope": "_anonymous_startupF411RE_cpp_31_22"
       }
     ],
     "name": "",
@@ -26897,7 +26855,7 @@
     "display": "__vector_table",
     "location": {
       "column": "31",
-      "line": "42",
+      "line": "43",
       "path": "E:\\Git\\POIP\\Kursovoy\\code\\startupF411RE.cpp"
     },
     "name": "__vector_table",
@@ -26911,7 +26869,7 @@
     "display": "void handler(void)",
     "location": {
       "column": "19",
-      "line": "150",
+      "line": "151",
       "path": "E:\\Git\\POIP\\Kursovoy\\code\\startupF411RE.cpp"
     },
     "name": "handler",
@@ -26925,7 +26883,7 @@
     "display": "void __cmain(void)",
     "location": {
       "column": "17",
-      "line": "152",
+      "line": "153",
       "path": "E:\\Git\\POIP\\Kursovoy\\code\\startupF411RE.cpp"
     },
     "name": "__cmain",
@@ -26939,7 +26897,7 @@
     "display": "void __iar_init_core(void)",
     "location": {
       "column": "24",
-      "line": "153",
+      "line": "154",
       "path": "E:\\Git\\POIP\\Kursovoy\\code\\startupF411RE.cpp"
     },
     "name": "__iar_init_core",
@@ -26953,7 +26911,7 @@
     "display": "void __iar_init_vfp(void)",
     "location": {
       "column": "24",
-      "line": "154",
+      "line": "155",
       "path": "E:\\Git\\POIP\\Kursovoy\\code\\startupF411RE.cpp"
     },
     "name": "__iar_init_vfp",
@@ -26967,7 +26925,7 @@
     "display": "void __iar_program_start(void)",
     "location": {
       "column": "6",
-      "line": "157",
+      "line": "158",
       "path": "E:\\Git\\POIP\\Kursovoy\\code\\startupF411RE.cpp"
     },
     "name": "__iar_program_start",

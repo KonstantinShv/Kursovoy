@@ -1,6 +1,6 @@
 #include "rtos.hpp"         // for Rtos
 
-#include  "Button.hpp"
+#include "ButtonPoll.hpp"
 #include "rccregisters.hpp" // for RCC
 #include <gpioaregisters.hpp>  // for GPIOA
 #include <gpiocregisters.hpp>  // for GPIOC
@@ -32,7 +32,7 @@ int __low_level_init(void)
   //Switch on clock on PortA a
   RCC::AHB1ENR::GPIOAEN::Enable::Set() ;
   
-  RCC::AHB1ENR::GPIOCEN::Enable::Set() ;
+  RCC::AHB1ENR::GPIOCEN::Enable::Set();
   
   RCC::APB1ENRPack<
     RCC::APB1ENR::TIM2EN::Enable, 
@@ -57,23 +57,20 @@ int __low_level_init(void)
 }
 };
 
-int i = 0;
-Button<GPIOC, 13> button;
+
+
+
 int main()
 {
-  const char* message = "Hello World \n";
+  //const char* message = "Hello World \n";
 
   
   for(;;)
   {
     
-    if(button.IsPressed())
-    {
-      i++;
-    }
-    usartDriver.SendMessage(message, strlen(message));
-    while(TIM2::SR::UIF::NoInterruptPending::IsSet()) ;
-    TIM2::SR::UIF::NoInterruptPending::Set();
+    ButtonPoll::ButtonPollInitialization();
+   // usartDriver.SendMessage(message, strlen(message));
+    
 
   }
   return 0;

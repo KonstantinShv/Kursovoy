@@ -2,8 +2,9 @@
 #pragma language = extended
 #pragma segment = "CSTACK"
 #include "USARTDriver.h"
-#include "Rtos/wrapper/rtos.hpp"
+
 #include "usartconfig.h"
+#include "ButtonPoll.cpp"
 
 extern "C" void __iar_program_start( void );
 extern "C" void xPortPendSVHandler(void);
@@ -87,7 +88,7 @@ extern "C" const tIntVectItem __vector_table[] =
   DummyModule::handler,         //TIM10/TIM1 Update interrupt
   DummyModule::handler,         //TIM11/TIM1 Trigger/Commutation interrupts
   DummyModule::handler,		//TIM1 Capture Compare interrupt
-  DummyModule::handler,         //TIM2  	
+  ButtonPoll::InterruptHandler,         //TIM2  	
   DummyModule::handler,         //TIM3
   DummyModule::handler,         //TIM4
   DummyModule::handler,         //I2C1 Event
