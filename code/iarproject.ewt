@@ -2375,9 +2375,18 @@
         <name>AHardware</name>
         <group>
             <name>Button</name>
+            <file>
+                <name>$PROJ_DIR$\AHardware\Button\Button.hpp</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\AHardware\Button\IButton.hpp</name>
+            </file>
         </group>
         <group>
             <name>ButtonPoll</name>
+            <file>
+                <name>$PROJ_DIR$\AHardware\ButtonPoll\ButtonPoll.cpp</name>
+            </file>
             <file>
                 <name>$PROJ_DIR$\AHardware\ButtonPoll\ButtonPoll.hpp</name>
             </file>

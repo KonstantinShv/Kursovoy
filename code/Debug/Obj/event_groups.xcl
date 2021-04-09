@@ -130,6 +130,8 @@ E:\Git\POIP\Kursovoy\code\Application\Temp\Units
 -I
 E:\Git\POIP\Kursovoy\code\AHardware\InterruptHandler
 -I
+E:\Git\POIP\Kursovoy\code
+-I
 D:\Папка\Универ\7 семак\IAR\arm\inc
 -I
 D:\Папка\Универ\7 семак\IAR\arm\inc\c
@@ -253,6 +255,8 @@ E:\Git\POIP\Kursovoy\code\Application\Temp\Temp
 E:\Git\POIP\Kursovoy\code\Application\Temp\Units
 -I
 E:\Git\POIP\Kursovoy\code\AHardware\InterruptHandler
+-I
+E:\Git\POIP\Kursovoy\code
 -D__CHAR_BITS__=8
 -D__CHAR_MAX__=0xff
 -D__CHAR_MIN__=0

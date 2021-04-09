@@ -4,6 +4,10 @@
 #include "gpioaregisters.hpp"
 #include "rccregisters.hpp"
 #include "tim2registers.hpp"
+#include "ButtonPoll.hpp"
+
+#define REGISTERS_BUTTONPOLL_HPP
+
 
 class Timer
 {
@@ -20,5 +24,9 @@ class Timer
       TIM2::CR1::CEN::Enable::Set();
       TIM2::CR1::URS::OverflowEvent::Set();
     }
+ static void InterruptHandler()
+{
+  buttonPoll.Poll();
+}
    
 };

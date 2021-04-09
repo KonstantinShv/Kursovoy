@@ -1,14 +1,19 @@
 #pragma once
 #include "rccregisters.hpp"
 #include "gpiocregisters.hpp"
+#include "IButton.hpp"
+
+template<typename PortX, int PinX>
 
 
-class Button
+
+class Button: public IButton
 {
 public:
-  static bool IsPressed() 
+  
+  bool IsPressed() override 
   {
-    return !(GPIOC::IDR::Get() && (1 << 13));
+    return !(PortX::IDR::Get() && (1 << PinX));
   }
 
 };

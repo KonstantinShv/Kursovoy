@@ -1,5 +1,5 @@
 #include "rtos.hpp"         // for Rtos
-
+#include "Button.hpp"
 #include "ButtonPoll.hpp"
 #include "rccregisters.hpp" // for RCC
 #include <gpioaregisters.hpp>  // for GPIOA
@@ -58,6 +58,9 @@ int __low_level_init(void)
 };
 
 
+Button<GPIOC, 13> button;
+Event event(1000ms, 1);
+inline ButtonPoll buttonPoll(button, event);
 
 
 int main()
@@ -68,7 +71,7 @@ int main()
   for(;;)
   {
     
-    ButtonPoll::ButtonPollInitialization();
+    buttonPoll.ButtonPollInitialization();
    // usartDriver.SendMessage(message, strlen(message));
     
 

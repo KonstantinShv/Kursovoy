@@ -2,18 +2,18 @@
 #include <iostream>
 
 
-ButtonPoll::ButtonPoll(Event& iButtonPressEvent): ButtonPressEvent(iButtonPressEvent)
+ButtonPoll::ButtonPoll(IButton& aButton, Event& iButtonPressEvent): button(aButton), ButtonPressEvent(iButtonPressEvent)
 {
 }
 
-void ButtonPoll::ButtonPollInitialization()
+void ButtonPollInitialization()
 {
   Timer::Start();
 }
 
-void ButtonPoll::InterruptHandler()
+ void ButtonPoll::Poll()
 {
-  if(Button::IsPressed())
+  if(button.IsPressed())
   {
     std::cout << " Amogus : "  << std::endl;
     //event.Signal();

@@ -831,7 +831,7 @@
             <IarPane-34096>
                 <expressions>
                     <item>i</item>
-                    <item></item>
+                    <item />
                 </expressions>
                 <col-names>
                     <item>Expression</item>

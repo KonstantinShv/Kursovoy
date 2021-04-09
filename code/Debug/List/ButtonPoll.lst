@@ -1,14 +1,15 @@
 ###############################################################################
 #
-# IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM         09/Apr/2021  22:24:43
+# IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM         09/Apr/2021  22:24:42
 # Copyright 1999-2019 IAR Systems AB.
 #
 #    Cpu mode     =  
 #    Endian       =  little
-#    Source file  =  E:\Git\POIP\Kursovoy\code\main.cpp
+#    Source file  =
+#        E:\Git\POIP\Kursovoy\code\AHardware\ButtonPoll\ButtonPoll.cpp
 #    Command line =
-#        -f C:\Users\D9F8~1\AppData\Local\Temp\EW7DF7.tmp
-#        (E:\Git\POIP\Kursovoy\code\main.cpp -lC
+#        -f C:\Users\D9F8~1\AppData\Local\Temp\EW79C2.tmp
+#        (E:\Git\POIP\Kursovoy\code\AHardware\ButtonPoll\ButtonPoll.cpp -lC
 #        E:\Git\POIP\Kursovoy\code\Debug\List -lA
 #        E:\Git\POIP\Kursovoy\code\Debug\List -o
 #        E:\Git\POIP\Kursovoy\code\Debug\Obj --no_cse --no_unroll --no_inline
@@ -78,99 +79,38 @@
 #        E:\Git\POIP\Kursovoy\code\AHardware\InterruptHandler\ -I
 #        E:\Git\POIP\Kursovoy\code\ -Ol --c++ --no_exceptions --no_rtti)
 #    Locale       =  C
-#    List file    =  E:\Git\POIP\Kursovoy\code\Debug\List\main.lst
-#    Object file  =  E:\Git\POIP\Kursovoy\code\Debug\Obj\main.o
+#    List file    =  E:\Git\POIP\Kursovoy\code\Debug\List\ButtonPoll.lst
+#    Object file  =  E:\Git\POIP\Kursovoy\code\Debug\Obj\ButtonPoll.o
 #
 ###############################################################################
 
-E:\Git\POIP\Kursovoy\code\main.cpp
-      1          #include "rtos.hpp"         // for Rtos
-      2          #include "Button.hpp"
-      3          #include "ButtonPoll.hpp"
+E:\Git\POIP\Kursovoy\code\AHardware\ButtonPoll\ButtonPoll.cpp
+      1          #include "ButtonPoll.hpp"
 
     buttonPoll.Poll();
     ^
 "E:\Git\POIP\Kursovoy\code\AHardware\Timer\Timer.hpp",29  Error[Pe020]: 
           identifier "buttonPoll" is undefined
-      4          #include "rccregisters.hpp" // for RCC
-      5          #include <gpioaregisters.hpp>  // for GPIOA
-      6          #include <gpiocregisters.hpp>  // for GPIOC
-      7          #include "Event.hpp"  // for Event
-      8          #include "usartconfig.h"
-      9          #include "nvicregisters.hpp"   //for NVIC
-     10          #include "tim2registers.hpp"   //for TIM2
-     11          
-     12          
+      2          #include <iostream>
+      3          
+      4          
+      5          ButtonPoll::ButtonPoll(IButton& aButton, Event& iButtonPressEvent): button(aButton), ButtonPressEvent(iButtonPressEvent)
+      6          {
+      7          }
+      8          
+      9          void ButtonPollInitialization()
+     10          {
+     11            Timer::Start();
+     12          }
      13          
-     14          constexpr std::uint32_t UartSpeed9600 = std::uint32_t(16000000U / 9600U) ;
-     15          
-     16          extern "C" {
-     17          int __low_level_init(void)
-     18          {
-     19            //Switch on external 16 MHz oscillator
-     20            RCC::CR::HSION::On::Set() ;
-     21            while (!RCC::CR::HSIRDY::Ready::IsSet())
-     22            {
-     23          
-     24            }
-     25            //Switch system clock on external oscillator
-     26            RCC::CFGR::SW::Hsi::Set() ;
-     27            while (!RCC::CFGR::SWS::Hsi::IsSet())
-     28            {
-     29          
-     30            }
-     31              
-     32            //Switch on clock on PortA a
-     33            RCC::AHB1ENR::GPIOAEN::Enable::Set() ;
-     34            
-     35            RCC::AHB1ENR::GPIOCEN::Enable::Set();
-     36            
-     37            RCC::APB1ENRPack<
-     38              RCC::APB1ENR::TIM2EN::Enable, 
-     39              RCC::APB1ENR::USART2EN::Enable
-     40              >::Set() ;
-     41            
-     42            GPIOA::MODERPack<
-     43              GPIOA::MODER::MODER2::Alternate, // Uart2 TX
-     44              GPIOA::MODER::MODER3::Alternate  // Uart2 RX
-     45              >::Set() ;
-     46            
-     47            GPIOA::AFRLPack <
-     48              GPIOA::AFRL::AFRL2::Af7, // Uart2 TX
-     49              GPIOA::AFRL::AFRL3::Af7  // Uart2 RX
-     50              >::Set() ;
-     51            
-     52              USART2::BRR::Write(UartSpeed9600);
-     53              USART2::CR1::UE::Enable::Set();    
-     54              NVIC::ISER1::Write(1<<6);
-     55           
-     56            return 1;
-     57          }
-     58          };
-     59          
-     60          
-     61          Button<GPIOC, 13> button;
-     62          Event event(1000ms, 1);
-     63          inline ButtonPoll buttonPoll(button, event);
-     64          
-     65          
-     66          int main()
-     67          {
-     68            //const char* message = "Hello World \n";
-     69          
-     70            
-     71            for(;;)
-     72            {
-     73              
-     74              buttonPoll.ButtonPollInitialization();
-     75             // usartDriver.SendMessage(message, strlen(message));
-     76              
-     77          
-     78            }
-     79            return 0;
-                   ^
-Warning[Pe111]: statement is unreachable
-     80          }
+     14           void ButtonPoll::Poll()
+     15          {
+     16            if(button.IsPressed())
+     17            {
+     18              std::cout << " Amogus : "  << std::endl;
+     19              //event.Signal();
+     20            }
+     21          }
 
 Errors: 1
-Warnings: 1
+Warnings: none

@@ -1,0 +1,11 @@
+ButtonPoll.pbi: \
+  E:\Git\POIP\Kursovoy\code\AHardware\ButtonPoll\ButtonPoll.cpp \
+  E:\Git\POIP\Kursovoy\code\AHardware\ButtonPoll/ButtonPoll.hpp \
+  E:\Git\POIP\Kursovoy\code\Rtos\wrapper\event.hpp \
+  E:\Git\POIP\Kursovoy\code\Rtos\wrapper\FreeRtos\rtosdefs.hpp \
+  E:\Git\POIP\Kursovoy\code\Rtos\FreeRtos\include\FreeRtos.h \
+  D:\Папка\Универ\7\ семак\IAR\arm\inc\c\stddef.h \
+  D:\Папка\Универ\7\ семак\IAR\arm\inc\c\ycheck.h \
+  D:\Папка\Универ\7\ семак\IAR\arm\inc\c\yvals.h \
+  D:\Папка\Универ\7\ семак\IAR\arm\inc\c\DLib_Defaults.h \
+  D:\Папка\Универ\7\ семак\IAR\arm\inc\c\DLib_Product.h

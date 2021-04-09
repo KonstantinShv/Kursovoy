@@ -2,16 +2,20 @@
 #include "event.hpp"
 #include "Timer.hpp"
 #include "Button.hpp"
-#define REGISTERS_BUTTONPOLL_HPP
+#include "IButton.hpp"
+//#define REGISTERS_BUTTONPOLL_HPP
+
+
 
 using namespace OsWrapper;
 class ButtonPoll
 {
 public:
-  ButtonPoll(Event& iButtonPressEvent);
-  static void ButtonPollInitialization();
-  static void InterruptHandler();
+  ButtonPoll(IButton& aButton, Event& iButtonPressEvent);
+  void ButtonPollInitialization();
+  void Poll();
   
 private:
   Event& ButtonPressEvent;
+  IButton& button;
 };

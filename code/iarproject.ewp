@@ -405,6 +405,7 @@
                     <state>$PROJ_DIR$\Application\Temp\Temp</state>
                     <state>$PROJ_DIR$\Application\Temp\Units</state>
                     <state>$PROJ_DIR$\AHardware\InterruptHandler</state>
+                    <state>$PROJ_DIR$</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -2172,9 +2173,18 @@
         <name>AHardware</name>
         <group>
             <name>Button</name>
+            <file>
+                <name>$PROJ_DIR$\AHardware\Button\Button.hpp</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\AHardware\Button\IButton.hpp</name>
+            </file>
         </group>
         <group>
             <name>ButtonPoll</name>
+            <file>
+                <name>$PROJ_DIR$\AHardware\ButtonPoll\ButtonPoll.cpp</name>
+            </file>
             <file>
                 <name>$PROJ_DIR$\AHardware\ButtonPoll\ButtonPoll.hpp</name>
             </file>
