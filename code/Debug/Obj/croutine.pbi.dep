@@ -1,7 +1,23 @@
-croutine.pbi: E:\Git\POIP\Kursovoy\code\Rtos\FreeRtos\croutine.c \
-  E:\Git\POIP\Kursovoy\code\Rtos\FreeRtos\include\FreeRTOS.h \
-  D:\Папка\Универ\7\ семак\IAR\arm\inc\c\stddef.h \
-  D:\Папка\Универ\7\ семак\IAR\arm\inc\c\ycheck.h \
-  D:\Папка\Универ\7\ семак\IAR\arm\inc\c\yvals.h \
-  D:\Папка\Универ\7\ семак\IAR\arm\inc\c\DLib_Defaults.h \
-  D:\Папка\Универ\7\ семак\IAR\arm\inc\c\DLib_Product.h
+croutine.pbi: \
+  C:\Users\Студент\Desktop\KKurs\Kursovoy-main\code\Rtos\FreeRtos\croutine.c \
+  C:\Users\Студент\Desktop\KKurs\Kursovoy-main\code\Rtos\FreeRtos\include\FreeRTOS.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\stddef.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\ycheck.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\yvals.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\DLib_Defaults.h \
+  C:\\Program\ Files\ (x86)\\IAR\ Systems\\Embedded\ Workbench\ 8.3\\arm\\inc\\c\\DLib_Config_Normal.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\DLib_Product.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\ysizet.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\stdint.h \
+  C:\Users\Студент\Desktop\KKurs\Kursovoy-main\code\Rtos\FreeRtos\include/..\FreeRTOSConfig.h \
+  C:\Users\Студент\Desktop\KKurs\Kursovoy-main\code\Rtos\FreeRtos\include/projdefs.h \
+  C:\Users\Студент\Desktop\KKurs\Kursovoy-main\code\Rtos\FreeRtos\include/portable.h \
+  C:\Users\Студент\Desktop\KKurs\Kursovoy-main\code\Rtos\FreeRtos\include/deprecated_definitions.h \
+  C:\Users\Студент\Desktop\KKurs\Kursovoy-main\code\Rtos\FreeRtos\portable\IAR\ARM_CM4F\portmacro.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\intrinsics.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\iccarm_builtin.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\iar_intrinsics_common.h \
+  C:\Users\Студент\Desktop\KKurs\Kursovoy-main\code\Rtos\FreeRtos\include/mpu_wrappers.h \
+  C:\Users\Студент\Desktop\KKurs\Kursovoy-main\code\Rtos\FreeRtos\include\task.h \
+  C:\Users\Студент\Desktop\KKurs\Kursovoy-main\code\Rtos\FreeRtos\include/list.h \
+  C:\Users\Студент\Desktop\KKurs\Kursovoy-main\code\Rtos\FreeRtos\include\croutine.h

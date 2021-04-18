@@ -12,6 +12,7 @@
 class Timer
 {
   public:
+ 
   static void Start()
     {
       RCC::APB1ENR::TIM2EN::Enable::Set();
@@ -24,9 +25,10 @@ class Timer
       TIM2::CR1::CEN::Enable::Set();
       TIM2::CR1::URS::OverflowEvent::Set();
     }
- static void InterruptHandler()
-{
-  buttonPoll.Poll();
-}
-   
+ static void InterruptHandler();
+
+
+  
 };
+
+extern ButtonPoll<Timer> buttonPoll;

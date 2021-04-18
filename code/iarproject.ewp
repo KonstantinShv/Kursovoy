@@ -406,6 +406,8 @@
                     <state>$PROJ_DIR$\Application\Temp\Units</state>
                     <state>$PROJ_DIR$\AHardware\InterruptHandler</state>
                     <state>$PROJ_DIR$</state>
+                    <state>$PROJ_DIR$\AHardware\Temp</state>
+                    <state>$PROJ_DIR$\Common</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -2176,27 +2178,18 @@
             <file>
                 <name>$PROJ_DIR$\AHardware\Button\Button.hpp</name>
             </file>
-            <file>
-                <name>$PROJ_DIR$\AHardware\Button\IButton.hpp</name>
-            </file>
         </group>
         <group>
             <name>ButtonPoll</name>
-            <file>
-                <name>$PROJ_DIR$\AHardware\ButtonPoll\ButtonPoll.cpp</name>
-            </file>
             <file>
                 <name>$PROJ_DIR$\AHardware\ButtonPoll\ButtonPoll.hpp</name>
             </file>
         </group>
         <group>
-            <name>InterruptHandler</name>
-            <file>
-                <name>$PROJ_DIR$\AHardware\InterruptHandler\interrupthandler.hpp</name>
-            </file>
-        </group>
-        <group>
             <name>ITransmit</name>
+            <file>
+                <name>$PROJ_DIR$\AHardware\ITransmit\Itransmit.h</name>
+            </file>
         </group>
         <group>
             <name>LCDDriver</name>
@@ -2620,15 +2613,39 @@
         </group>
         <group>
             <name>SMBus</name>
+            <file>
+                <name>$PROJ_DIR$\AHardware\SMBus\SMBus.hpp</name>
+            </file>
         </group>
         <group>
             <name>SPIx</name>
+        </group>
+        <group>
+            <name>Temp</name>
+            <file>
+                <name>$PROJ_DIR$\AHardware\Temp\Celsius.hpp</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\AHardware\Temp\Fahrenheit.hpp</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\AHardware\Temp\IUnits.hpp</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\AHardware\Temp\Kelvin.hpp</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\AHardware\Temp\Temp.hpp</name>
+            </file>
         </group>
         <group>
             <name>TempSens</name>
         </group>
         <group>
             <name>Timer</name>
+            <file>
+                <name>$PROJ_DIR$\AHardware\Timer\Timer.cpp</name>
+            </file>
             <file>
                 <name>$PROJ_DIR$\AHardware\Timer\Timer.hpp</name>
             </file>
@@ -2675,6 +2692,15 @@
                 <name>Units</name>
             </group>
         </group>
+    </group>
+    <group>
+        <name>Common</name>
+        <file>
+            <name>$PROJ_DIR$\Common\susudefs.hpp</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Common\utils.hpp</name>
+        </file>
     </group>
     <group>
         <name>Rtos</name>

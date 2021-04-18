@@ -1,19 +1,18 @@
 #pragma once
 #include "rccregisters.hpp"
 #include "gpiocregisters.hpp"
-#include "IButton.hpp"
+
 
 template<typename PortX, int PinX>
-
-
-
-class Button: public IButton
+class Button
 {
 public:
   
-  bool IsPressed() override 
+  bool IsPressed()  
   {
-    return !(PortX::IDR::Get() && (1 << PinX));
+    return !(PortX::IDR::Get() & (1 << PinX));
   }
-
 };
+
+using UserButton = Button<GPIOC,13>;
+

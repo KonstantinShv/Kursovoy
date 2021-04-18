@@ -1,101 +1,284 @@
 ###############################################################################
 #
-# IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM         09/Apr/2021  22:24:43
+# IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM         17/Apr/2021  14:23:43
 # Copyright 1999-2019 IAR Systems AB.
 #
 #    Cpu mode     =  
 #    Endian       =  little
-#    Source file  =  E:\Git\POIP\Kursovoy\code\startupF411RE.cpp
+#    Source file  =
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\startupF411RE.cpp
 #    Command line =
-#        -f C:\Users\D9F8~1\AppData\Local\Temp\EW7E29.tmp
-#        (E:\Git\POIP\Kursovoy\code\startupF411RE.cpp -lC
-#        E:\Git\POIP\Kursovoy\code\Debug\List -lA
-#        E:\Git\POIP\Kursovoy\code\Debug\List -o
-#        E:\Git\POIP\Kursovoy\code\Debug\Obj --no_cse --no_unroll --no_inline
-#        --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug
-#        --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config
-#        "D:\@@@@@\@@@@@@\7
-#        @@@@@\IAR\arm\inc\c\DLib_Config_Normal.h" -I
-#        E:\Git\POIP\Kursovoy\code\Rtos\ -I
-#        E:\Git\POIP\Kursovoy\code\Rtos\wrapper\ -I
-#        E:\Git\POIP\Kursovoy\code\Rtos\wrapper\FreeRtos\ -I
-#        E:\Git\POIP\Kursovoy\code\Rtos\FreeRtos\ -I
-#        E:\Git\POIP\Kursovoy\code\Rtos\FreeRtos\include\ -I
-#        E:\Git\POIP\Kursovoy\code\Rtos\FreeRtos\portable\ -I
-#        E:\Git\POIP\Kursovoy\code\Rtos\FreeRtos\portable\Common\ -I
-#        E:\Git\POIP\Kursovoy\code\Rtos\FreeRtos\portable\IAR\ -I
-#        E:\Git\POIP\Kursovoy\code\Rtos\FreeRtos\portable\IAR\ARM_CM4F\ -I
-#        E:\Git\POIP\Kursovoy\code\Rtos\FreeRtos\portable\MemMang\ -I
-#        E:\Git\POIP\Kursovoy\code\MyTasks\ -I
-#        E:\Git\POIP\Kursovoy\code\Common\ -I E:\Git\POIP\Kursovoy\code\CMSIS\
-#        -I E:\Git\POIP\Kursovoy\code\Application\ -I
-#        E:\Git\POIP\Kursovoy\code\Application\Diagnostic\ -I
-#        E:\Git\POIP\Kursovoy\code\AHardware\ -I
-#        E:\Git\POIP\Kursovoy\code\AHardware\GpioPort\ -I
-#        E:\Git\POIP\Kursovoy\code\AHardware\IrqController\ -I
-#        E:\Git\POIP\Kursovoy\code\..\CortexLib\AbstractHardware\Pin\ -I
-#        E:\Git\POIP\Kursovoy\code\..\CortexLib\AbstractHardware\Registers\STM32F411\FieldValues\
+#        -f C:\Users\BA60~1\AppData\Local\Temp\EWD781.tmp
+#        (C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\startupF411RE.cpp
+#        -lC
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\Debug\List
+#        -lA
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\Debug\List -o
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\Debug\Obj
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
+#        --no_clustering --no_scheduling --debug --endian=little
+#        --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C:\Program Files
+#        (x86)\IAR Systems\Embedded Workbench
+#        8.3\arm\inc\c\DLib_Config_Normal.h" -I
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\Rtos\ -I
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\Rtos\wrapper\
 #        -I
-#        E:\Git\POIP\Kursovoy\code\..\CortexLib\AbstractHardware\Registers\STM32F411\
-#        -I E:\Git\POIP\Kursovoy\code\..\CortexLib\AbstractHardware\Registers\
-#        -I E:\Git\POIP\Kursovoy\code\..\CortexLib\AbstractHardware\Port\ -I
-#        E:\Git\POIP\Kursovoy\code\..\CortexLib\AbstractHardware\Atomic\ -I
-#        E:\Git\POIP\Kursovoy\code\..\CortexLib\Common\ -I
-#        E:\Git\POIP\Kursovoy\code\..\CortexLib\Common\Singleton\ -I
-#        E:\Git\POIP\Kursovoy\code\..\CortexLib\Common\RomObject\ -I
-#        E:\Git\POIP\Kursovoy\code\AHardware\Registers\ -I
-#        E:\Git\POIP\Kursovoy\code\AHardware\Registers\CortexM4\ -I
-#        E:\Git\POIP\Kursovoy\code\AHardware\Registers\CortexM4\FieldValues\ -I
-#        E:\Git\POIP\Kursovoy\code\AHardware\Registers\STM32F411\FieldValues\
-#        -I E:\Git\POIP\Kursovoy\code\Common\ -I
-#        E:\Git\POIP\Kursovoy\code\AHardware\Atomic\ -I
-#        E:\Git\POIP\Kursovoy\code\AHardware\USART\ -I
-#        E:\Git\POIP\Kursovoy\code\Tasks\ -I
-#        E:\Git\POIP\Kursovoy\code\Application\Button\ -I
-#        E:\Git\POIP\Kursovoy\code\Application\ -I
-#        E:\Git\POIP\Kursovoy\code\AHardware\Timer\ -I
-#        E:\Git\POIP\Kursovoy\code\AHardware\ -I
-#        E:\Git\POIP\Kursovoy\code\AHardware\Registers\STM32F411\ -I
-#        E:\Git\POIP\Kursovoy\code\AHardware\Registers\IrqController\ -I
-#        E:\Git\POIP\Kursovoy\code\AHardware\Button\ -I
-#        E:\Git\POIP\Kursovoy\code\AHardware\ButtonPoll\ -I
-#        E:\Git\POIP\Kursovoy\code\AHardware\ITransmit\ -I
-#        E:\Git\POIP\Kursovoy\code\AHardware\LCDDriver\ -I
-#        E:\Git\POIP\Kursovoy\code\AHardware\SMBus\ -I
-#        E:\Git\POIP\Kursovoy\code\AHardware\SPIx\ -I
-#        E:\Git\POIP\Kursovoy\code\AHardware\TempSens\ -I
-#        E:\Git\POIP\Kursovoy\code\AHardware\Timer\ -I
-#        E:\Git\POIP\Kursovoy\code\AHardware\UART\ -I
-#        E:\Git\POIP\Kursovoy\code\AHardware\UARTDriver\ -I
-#        E:\Git\POIP\Kursovoy\code\Application\Filter\ -I
-#        E:\Git\POIP\Kursovoy\code\Application\Tasks\ -I
-#        E:\Git\POIP\Kursovoy\code\Application\Tasks\BlueToothTask\ -I
-#        E:\Git\POIP\Kursovoy\code\Application\Tasks\ScreenTask\ -I
-#        E:\Git\POIP\Kursovoy\code\Application\Tasks\TemperatureTask\ -I
-#        E:\Git\POIP\Kursovoy\code\Application\Temp\ -I
-#        E:\Git\POIP\Kursovoy\code\Application\Temp\Temp\ -I
-#        E:\Git\POIP\Kursovoy\code\Application\Temp\Units\ -I
-#        E:\Git\POIP\Kursovoy\code\AHardware\InterruptHandler\ -I
-#        E:\Git\POIP\Kursovoy\code\ -Ol --c++ --no_exceptions --no_rtti)
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\Rtos\wrapper\FreeRtos\
+#        -I
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\Rtos\FreeRtos\
+#        -I
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\Rtos\FreeRtos\include\
+#        -I
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\Rtos\FreeRtos\portable\
+#        -I
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\Rtos\FreeRtos\portable\Common\
+#        -I
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\Rtos\FreeRtos\portable\IAR\
+#        -I
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\Rtos\FreeRtos\portable\IAR\ARM_CM4F\
+#        -I
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\Rtos\FreeRtos\portable\MemMang\
+#        -I C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\MyTasks\
+#        -I C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\Common\ -I
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\CMSIS\ -I
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\Application\
+#        -I
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\Application\Diagnostic\
+#        -I C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\AHardware\
+#        -I
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\AHardware\GpioPort\
+#        -I
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\AHardware\IrqController\
+#        -I
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\..\CortexLib\AbstractHardware\Pin\
+#        -I
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\..\CortexLib\AbstractHardware\Registers\STM32F411\FieldValues\
+#        -I
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\..\CortexLib\AbstractHardware\Registers\STM32F411\
+#        -I
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\..\CortexLib\AbstractHardware\Registers\
+#        -I
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\..\CortexLib\AbstractHardware\Port\
+#        -I
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\..\CortexLib\AbstractHardware\Atomic\
+#        -I
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\..\CortexLib\Common\
+#        -I
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\..\CortexLib\Common\Singleton\
+#        -I
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\..\CortexLib\Common\RomObject\
+#        -I
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\AHardware\Registers\
+#        -I
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\AHardware\Registers\CortexM4\
+#        -I
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\AHardware\Registers\CortexM4\FieldValues\
+#        -I
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\AHardware\Registers\STM32F411\FieldValues\
+#        -I C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\Common\ -I
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\AHardware\Atomic\
+#        -I
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\AHardware\USART\
+#        -I C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\Tasks\ -I
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\Application\Button\
+#        -I
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\Application\
+#        -I
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\AHardware\Timer\
+#        -I C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\AHardware\
+#        -I
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\AHardware\Registers\STM32F411\
+#        -I
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\AHardware\Registers\IrqController\
+#        -I
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\AHardware\Button\
+#        -I
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\AHardware\ButtonPoll\
+#        -I
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\AHardware\ITransmit\
+#        -I
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\AHardware\LCDDriver\
+#        -I
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\AHardware\SMBus\
+#        -I
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\AHardware\SPIx\
+#        -I
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\AHardware\TempSens\
+#        -I
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\AHardware\Timer\
+#        -I
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\AHardware\UART\
+#        -I
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\AHardware\UARTDriver\
+#        -I
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\Application\Filter\
+#        -I
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\Application\Tasks\
+#        -I
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\Application\Tasks\BlueToothTask\
+#        -I
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\Application\Tasks\ScreenTask\
+#        -I
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\Application\Tasks\TemperatureTask\
+#        -I
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\Application\Temp\
+#        -I
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\Application\Temp\Temp\
+#        -I
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\Application\Temp\Units\
+#        -I
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\AHardware\InterruptHandler\
+#        -I C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\ -I
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\AHardware\Temp\
+#        -I C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\Common\
+#        -Ol --c++ --no_exceptions --no_rtti)
 #    Locale       =  C
-#    List file    =  E:\Git\POIP\Kursovoy\code\Debug\List\startupF411RE.lst
-#    Object file  =  E:\Git\POIP\Kursovoy\code\Debug\Obj\startupF411RE.o
+#    List file    =
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\Debug\List\startupF411RE.lst
+#    Object file  =
+#        C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\Debug\Obj\startupF411RE.o
 #
 ###############################################################################
 
-E:\Git\POIP\Kursovoy\code\startupF411RE.cpp
+C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\startupF411RE.cpp
       1          
+Warning[Ms014]: some characters could not be correctly encoded in
+          "C:\Users\@@@@@@@\Desktop\KKurs\Kursovoy-main\code\Debug\List\startu
+          pF411RE.s", and have been replaced with '@'. The first such character
+          has unicode code point 0x421 ("@")
       2          #pragma language = extended
       3          #pragma segment = "CSTACK"
       4          #include "USARTDriver.h"
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp uint8_t & std::array<uint8_t, 255U>::operator[](size_t)
+   \                     _ZNSt5arrayIhLj255EEixEj: (+1)
+   \        0x0   0x4408             ADD      R0,R0,R1
+   \        0x2   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 2
+   \   __code __interwork __vfp USARTDriver<Usart2>::USARTDriver()
+   \                     _ZN11USARTDriverI6Usart2EC1Ev: (+1)
+   \        0x0   0x2100             MOVS     R1,#+0
+   \        0x2   0x6001             STR      R1,[R0, #+0]
+   \        0x4   0x2100             MOVS     R1,#+0
+   \        0x6   0xF8C0 0x1104      STR      R1,[R0, #+260]
+   \        0xA   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp void USARTDriver<Usart2>::OnNextByteTransmit()
+   \                     _ZN11USARTDriverI6Usart2E18OnNextByteTransmitEv: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x6821             LDR      R1,[R4, #+0]
+   \        0x6   0x1C48             ADDS     R0,R1,#+1
+   \        0x8   0x6020             STR      R0,[R4, #+0]
+   \        0xA   0x1D20             ADDS     R0,R4,#+4
+   \        0xC   0x....'....        BL       _ZNSt5arrayIhLj255EEixEj
+   \       0x10   0x7800             LDRB     R0,[R0, #+0]
+   \       0x12   0x....'....        BL       _ZN5UsartI6USART2E9WriteByteEh
+   \       0x16   0x6820             LDR      R0,[R4, #+0]
+   \       0x18   0xF8D4 0x1104      LDR      R1,[R4, #+260]
+   \       0x1C   0x4288             CMP      R0,R1
+   \       0x1E   0xD305             BCC.N    ??OnNextByteTransmit_0
+   \       0x20   0x....'....        BL       _ZN5UsartI6USART2E15TransmitDisableEv
+   \       0x24   0x....'....        BL       _ZN5UsartI6USART2E16InterruptDisableEv
+   \       0x28   0x2000             MOVS     R0,#+0
+   \       0x2A   0x6020             STR      R0,[R4, #+0]
+   \                     ??OnNextByteTransmit_0: (+1)
+   \       0x2C   0xBD10             POP      {R4,PC}          ;; return
       5          
       6          #include "usartconfig.h"
+
+   \                                 In section .text, align 4
+   \   __interwork __vfp void FieldValueBase<USART2_CR1_RE_Values<USART2::CR1, 2U, 1U, ReadWriteMode, USART2::USART2CR1Base>, USART2::USART2CR1Base, 0U>::Set<ReadWriteMode, void>()
+   \                     _ZN14FieldValueBaseI20USART2_CR1_RE_ValuesIN6USART23CR1ELj2ELj1E13ReadWriteModeNS1_13USART2CR1BaseEES4_Lj0EE3SetIS3_vEEvv: (+1)
+   \        0x0   0x4902             LDR.N    R1,??Set_0       ;; 0x4000440c
+   \        0x2   0x6808             LDR      R0,[R1, #+0]
+   \        0x4   0xF030 0x0004      BICS     R0,R0,#0x4
+   \        0x8   0x6008             STR      R0,[R1, #+0]
+   \        0xA   0x4770             BX       LR               ;; return
+   \                     ??Set_0:
+   \        0xC   0x4000'440C        DC32     0x4000440c
+
+   \                                 In section .text, align 4
+   \   __interwork __vfp void FieldValueBase<USART2_CR1_TXEIE_Values<USART2::CR1, 7U, 1U, ReadWriteMode, USART2::USART2CR1Base>, USART2::USART2CR1Base, 0U>::Set<ReadWriteMode, void>()
+   \                     _ZN14FieldValueBaseI23USART2_CR1_TXEIE_ValuesIN6USART23CR1ELj7ELj1E13ReadWriteModeNS1_13USART2CR1BaseEES4_Lj0EE3SetIS3_vEEvv: (+1)
+   \        0x0   0x4902             LDR.N    R1,??Set_1       ;; 0x4000440c
+   \        0x2   0x6808             LDR      R0,[R1, #+0]
+   \        0x4   0xF030 0x0080      BICS     R0,R0,#0x80
+   \        0x8   0x6008             STR      R0,[R1, #+0]
+   \        0xA   0x4770             BX       LR               ;; return
+   \                     ??Set_1:
+   \        0xC   0x4000'440C        DC32     0x4000440c
+
+   \                                 In section .text, align 4
+   \   __interwork __vfp void RegisterBase<1073759236U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
+   \                     _ZN12RegisterBaseILj1073759236ELj32E13ReadWriteModeE5WriteIS0_vEEvj: (+1)
+   \        0x0   0x4901             LDR.N    R1,??Write_0     ;; 0x40004404
+   \        0x2   0x6008             STR      R0,[R1, #+0]
+   \        0x4   0x4770             BX       LR               ;; return
+   \        0x6   0xBF00             Nop      
+   \                     ??Write_0:
+   \        0x8   0x4000'4404        DC32     0x40004404
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp void Usart<USART2>::WriteByte(uint8_t)
+   \                     _ZN5UsartI6USART2E9WriteByteEh: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \        0x4   0x....'....        BL       _ZN12RegisterBaseILj1073759236ELj32E13ReadWriteModeE5WriteIS0_vEEvj
+   \        0x8   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp void Usart<USART2>::InterruptDisable()
+   \                     _ZN5UsartI6USART2E16InterruptDisableEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....'....        BL       _ZN14FieldValueBaseI23USART2_CR1_TXEIE_ValuesIN6USART23CR1ELj7ELj1E13ReadWriteModeNS1_13USART2CR1BaseEES4_Lj0EE3SetIS3_vEEvv
+   \        0x6   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp void Usart<USART2>::TransmitDisable()
+   \                     _ZN5UsartI6USART2E15TransmitDisableEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....'....        BL       _ZN14FieldValueBaseI20USART2_CR1_RE_ValuesIN6USART23CR1ELj2ELj1E13ReadWriteModeNS1_13USART2CR1BaseEES4_Lj0EE3SetIS3_vEEvv
+   \        0x6   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .text, align 2, keep-with-next
+   \   static __intrinsic __interwork __vfp void __sti__routine()
+   \                     __sti__routine: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....             LDR.N    R1,??DataTable0
+   \        0x4   0x7808             LDRB     R0,[R1, #+0]
+   \        0x6   0x2800             CMP      R0,#+0
+   \        0x8   0xD104             BNE.N    ??__sti__routine_0
+   \        0xA   0x2001             MOVS     R0,#+1
+   \        0xC   0x7008             STRB     R0,[R1, #+0]
+   \        0xE   0x....             LDR.N    R0,??DataTable0_1
+   \       0x10   0x....'....        BL       _ZN11USARTDriverI6Usart2EC1Ev
+   \                     ??__sti__routine_0: (+1)
+   \       0x14   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .bss, align 4
+   \   __absolute USARTDriver<Usart2> usartDriver
+   \                     usartDriver:
+   \        0x0                      DS8 264
       7          #include "Timer.hpp"
 
-    buttonPoll.Poll();
-    ^
-"E:\Git\POIP\Kursovoy\code\AHardware\Timer\Timer.hpp",29  Error[Pe020]: 
-          identifier "buttonPoll" is undefined
+   \                                 In section .rodata, align 1
+   \   __absolute bool const std::chrono::system_clock::is_steady
+   \                     _ZNSt6chrono12system_clock9is_steadyE:
+   \        0x0   0x00               DC8 0
+
+   \                                 In section .rodata, align 1
+   \   __absolute bool const std::chrono::system_clock::is_monotonic
+   \                     _ZNSt6chrono12system_clock12is_monotonicE:
+   \        0x0   0x00               DC8 0
+
+   \                                 In section .rodata, align 1
+   \   __absolute bool const std::chrono::steady_clock::is_steady
+   \                     _ZNSt6chrono12steady_clock9is_steadyE:
+   \        0x0   0x01               DC8 1
       8          
       9          extern "C" void __iar_program_start( void );
      10          extern "C" void xPortPendSVHandler(void);
@@ -104,10 +287,20 @@ E:\Git\POIP\Kursovoy\code\startupF411RE.cpp
      13          class Uart
      14          {
      15          public:
+
+   \                                 In section .text, align 4
      16            static void interruptHandler()
      17            {
+   \                     _ZN4Uart16interruptHandlerEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
      18              usartDriver.OnNextByteTransmit();
+   \        0x2   0x4802             LDR.N    R0,??interruptHandler_0
+   \        0x4   0x....'....        BL       _ZN11USARTDriverI6Usart2E18OnNextByteTransmitEv
      19            }
+   \        0x8   0xBD01             POP      {R0,PC}          ;; return
+   \        0xA   0xBF00             Nop      
+   \                     ??interruptHandler_0:
+   \        0xC   0x....'....        DC32     usartDriver
      20          };
      21          
      22          
@@ -131,7 +324,112 @@ E:\Git\POIP\Kursovoy\code\startupF411RE.cpp
      40          
      41          #pragma location = ".intvec"
      42          //cstat !MISRAC++2008-0-1-4_b !MISRAC++2008-9-5-1
+
+   \                                 In section .intvec, align 4
      43          extern "C" const tIntVectItem __vector_table[] =
+   \                     __vector_table:
+   \        0x0   0x....'....        DC32 SFE(CSTACK), __iar_program_start, _ZN11DummyModule7handlerEv
+   \              0x....'....  
+   \              0x....'....  
+   \        0xC   0x....'....        DC32 _ZN11DummyModule7handlerEv, _ZN11DummyModule7handlerEv
+   \              0x....'....  
+   \       0x14   0x....'....        DC32 _ZN11DummyModule7handlerEv, _ZN11DummyModule7handlerEv, 0x0, 0x0
+   \              0x....'....  
+   \              0x0000'0000  
+   \              0x0000'0000  
+   \       0x24   0x0000'0000        DC32 0x0, 0x0, _ZN11DummyModule7handlerEv, _ZN11DummyModule7handlerEv
+   \              0x0000'0000  
+   \              0x....'....  
+   \              0x....'....  
+   \       0x34   0x0000'0000        DC32 0x0, _ZN11DummyModule7handlerEv, _ZN11DummyModule7handlerEv
+   \              0x....'....  
+   \              0x....'....  
+   \       0x40   0x....'....        DC32 _ZN11DummyModule7handlerEv, _ZN11DummyModule7handlerEv
+   \              0x....'....  
+   \       0x48   0x....'....        DC32 _ZN11DummyModule7handlerEv, _ZN11DummyModule7handlerEv
+   \              0x....'....  
+   \       0x50   0x....'....        DC32 _ZN11DummyModule7handlerEv, _ZN11DummyModule7handlerEv
+   \              0x....'....  
+   \       0x58   0x....'....        DC32 _ZN11DummyModule7handlerEv, _ZN11DummyModule7handlerEv
+   \              0x....'....  
+   \       0x60   0x....'....        DC32 _ZN11DummyModule7handlerEv, _ZN11DummyModule7handlerEv
+   \              0x....'....  
+   \       0x68   0x....'....        DC32 _ZN11DummyModule7handlerEv, _ZN11DummyModule7handlerEv
+   \              0x....'....  
+   \       0x70   0x....'....        DC32 _ZN11DummyModule7handlerEv, _ZN11DummyModule7handlerEv
+   \              0x....'....  
+   \       0x78   0x....'....        DC32 _ZN11DummyModule7handlerEv, _ZN11DummyModule7handlerEv
+   \              0x....'....  
+   \       0x80   0x....'....        DC32 _ZN11DummyModule7handlerEv, _ZN11DummyModule7handlerEv
+   \              0x....'....  
+   \       0x88   0x....'....        DC32 _ZN11DummyModule7handlerEv, 0x0, 0x0, 0x0, 0x0
+   \              0x0000'0000  
+   \              0x0000'0000  
+   \              0x0000'0000  
+   \              0x0000'0000  
+   \       0x9C   0x....'....        DC32 _ZN11DummyModule7handlerEv, _ZN11DummyModule7handlerEv
+   \              0x....'....  
+   \       0xA4   0x....'....        DC32 _ZN11DummyModule7handlerEv, _ZN11DummyModule7handlerEv
+   \              0x....'....  
+   \       0xAC   0x....'....        DC32 _ZN11DummyModule7handlerEv, _ZN5Timer16InterruptHandlerEv
+   \              0x....'....  
+   \       0xB4   0x....'....        DC32 _ZN11DummyModule7handlerEv, _ZN11DummyModule7handlerEv
+   \              0x....'....  
+   \       0xBC   0x....'....        DC32 _ZN11DummyModule7handlerEv, _ZN11DummyModule7handlerEv
+   \              0x....'....  
+   \       0xC4   0x....'....        DC32 _ZN11DummyModule7handlerEv, _ZN11DummyModule7handlerEv
+   \              0x....'....  
+   \       0xCC   0x....'....        DC32 _ZN11DummyModule7handlerEv, _ZN11DummyModule7handlerEv
+   \              0x....'....  
+   \       0xD4   0x....'....        DC32 _ZN11DummyModule7handlerEv, _ZN4Uart16interruptHandlerEv, 0x0
+   \              0x....'....  
+   \              0x0000'0000  
+   \       0xE0   0x....'....        DC32 _ZN11DummyModule7handlerEv, _ZN11DummyModule7handlerEv
+   \              0x....'....  
+   \       0xE8   0x....'....        DC32 _ZN11DummyModule7handlerEv, 0x0, 0x0, 0x0, 0x0
+   \              0x0000'0000  
+   \              0x0000'0000  
+   \              0x0000'0000  
+   \              0x0000'0000  
+   \       0xFC   0x....'....        DC32 _ZN11DummyModule7handlerEv, 0x0, _ZN11DummyModule7handlerEv
+   \              0x0000'0000  
+   \              0x....'....  
+   \      0x108   0x....'....        DC32 _ZN11DummyModule7handlerEv, _ZN11DummyModule7handlerEv, 0x0, 0x0
+   \              0x....'....  
+   \              0x0000'0000  
+   \              0x0000'0000  
+   \      0x118   0x0000'0000        DC32 0x0, 0x0, _ZN11DummyModule7handlerEv, _ZN11DummyModule7handlerEv
+   \              0x0000'0000  
+   \              0x....'....  
+   \              0x....'....  
+   \      0x128   0x....'....        DC32 _ZN11DummyModule7handlerEv, _ZN11DummyModule7handlerEv
+   \              0x....'....  
+   \      0x130   0x....'....        DC32 _ZN11DummyModule7handlerEv, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0
+   \              0x0000'0000  
+   \              0x0000'0000  
+   \              0x0000'0000  
+   \              0x0000'0000  
+   \              0x0000'0000  
+   \              0x0000'0000  
+   \      0x14C   0x....'....        DC32 _ZN11DummyModule7handlerEv, _ZN11DummyModule7handlerEv
+   \              0x....'....  
+   \      0x154   0x....'....        DC32 _ZN11DummyModule7handlerEv, _ZN11DummyModule7handlerEv
+   \              0x....'....  
+   \      0x15C   0x....'....        DC32 _ZN11DummyModule7handlerEv, _ZN11DummyModule7handlerEv
+   \              0x....'....  
+   \      0x164   0x....'....        DC32 _ZN11DummyModule7handlerEv, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0
+   \              0x0000'0000  
+   \              0x0000'0000  
+   \              0x0000'0000  
+   \              0x0000'0000  
+   \              0x0000'0000  
+   \              0x0000'0000  
+   \              0x0000'0000  
+   \      0x184   0x....'....        DC32 _ZN11DummyModule7handlerEv, 0x0, 0x0, _ZN11DummyModule7handlerEv
+   \              0x0000'0000  
+   \              0x0000'0000  
+   \              0x....'....  
+   \      0x194   0x....'....        DC32 _ZN11DummyModule7handlerEv
      44          {
      45            { .__ptr = __sfe( "CSTACK" ) },
      46            __iar_program_start,
@@ -239,20 +537,110 @@ E:\Git\POIP\Kursovoy\code\startupF411RE.cpp
     148            DummyModule::handler		//SPI 5 global interrupt
     149          };
     150          
+
+   \                                 In section .text, align 2, keep-with-next
     151          void DummyModule::handler()   { for(;;) {} } ;
+   \                     _ZN11DummyModule7handlerEv: (+1)
+   \                     ??handler_0: (+1)
+   \        0x0   0xE7FE             B.N      ??handler_0
     152          
     153          extern "C" void __cmain( void );
     154          extern "C" __weak void __iar_init_core( void );
     155          extern "C" __weak void __iar_init_vfp( void );
     156          
     157          #pragma required=__vector_table
+
+   \                                 In section .text, align 2, keep-with-next
     158          void __iar_program_start( void )
     159          {
+   \                     __iar_program_start: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
     160            __iar_init_core();
+   \        0x2   0x....'....        BL       __iar_init_core
     161            __iar_init_vfp();
+   \        0x6   0x....'....        BL       __iar_init_vfp
     162            __cmain();
+   \        0xA   0x....'....        BL       __cmain
     163          }
+   \        0xE   0xBD01             POP      {R0,PC}          ;; return
+   \       0x10                      REQUIRE __vector_table
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable0:
+   \        0x0   0x....'....        DC32     _ZGV11usartDriver
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable0_1:
+   \        0x0   0x....'....        DC32     usartDriver
     164          
 
-Errors: 1
-Warnings: none
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       0   DummyModule::handler()
+       0   FieldValueBase<USART2_CR1_RE_Values<USART2::CR1, 2U, 1U, ReadWriteMode, USART2::USART2CR1Base>, USART2::USART2CR1Base, 0U>::Set<ReadWriteMode, void>()
+       0   FieldValueBase<USART2_CR1_TXEIE_Values<USART2::CR1, 7U, 1U, ReadWriteMode, USART2::USART2CR1Base>, USART2::USART2CR1Base, 0U>::Set<ReadWriteMode, void>()
+       0   RegisterBase<1073759236U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
+       8   USARTDriver<Usart2>::OnNextByteTransmit()
+         8   -> Usart<USART2>::InterruptDisable()
+         8   -> Usart<USART2>::TransmitDisable()
+         8   -> Usart<USART2>::WriteByte(uint8_t)
+         8   -> std::array<uint8_t, 255U>::operator[](size_t)
+       0   USARTDriver<Usart2>::USARTDriver()
+       8   Uart::interruptHandler()
+         8   -> USARTDriver<Usart2>::OnNextByteTransmit()
+       8   Usart<USART2>::InterruptDisable()
+         8   -> FieldValueBase<USART2_CR1_TXEIE_Values<USART2::CR1, 7U, 1U, ReadWriteMode, USART2::USART2CR1Base>, USART2::USART2CR1Base, 0U>::Set<ReadWriteMode, void>()
+       8   Usart<USART2>::TransmitDisable()
+         8   -> FieldValueBase<USART2_CR1_RE_Values<USART2::CR1, 2U, 1U, ReadWriteMode, USART2::USART2CR1Base>, USART2::USART2CR1Base, 0U>::Set<ReadWriteMode, void>()
+       8   Usart<USART2>::WriteByte(uint8_t)
+         8   -> RegisterBase<1073759236U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
+       8   __iar_program_start
+         8   -> __cmain
+         8   -> __iar_init_core
+         8   -> __iar_init_vfp
+       8   __sti__routine()
+         8   -> USARTDriver<Usart2>::USARTDriver()
+       0   std::array<uint8_t, 255U>::operator[](size_t)
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable0
+       4  ??DataTable0_1
+       2  DummyModule::handler()
+      16  FieldValueBase<USART2_CR1_RE_Values<USART2::CR1, 2U, 1U, ReadWriteMode, USART2::USART2CR1Base>, USART2::USART2CR1Base, 0U>::Set<ReadWriteMode, void>()
+      16  FieldValueBase<USART2_CR1_TXEIE_Values<USART2::CR1, 7U, 1U, ReadWriteMode, USART2::USART2CR1Base>, USART2::USART2CR1Base, 0U>::Set<ReadWriteMode, void>()
+      12  RegisterBase<1073759236U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
+      46  USARTDriver<Usart2>::OnNextByteTransmit()
+      12  USARTDriver<Usart2>::USARTDriver()
+      16  Uart::interruptHandler()
+       8  Usart<USART2>::InterruptDisable()
+       8  Usart<USART2>::TransmitDisable()
+      10  Usart<USART2>::WriteByte(uint8_t)
+      16  __iar_program_start
+      22  __sti__routine()
+     408  __vector_table
+       4  std::array<uint8_t, 255U>::operator[](size_t)
+       1  std::chrono::steady_clock::is_steady
+       1  std::chrono::system_clock::is_monotonic
+       1  std::chrono::system_clock::is_steady
+     264  usartDriver
+      49  -- Other
+
+ 
+ 265 bytes in section .bss
+   4 bytes in section .init_array
+ 408 bytes in section .intvec
+  47 bytes in section .rodata
+ 196 bytes in section .text
+ 
+  52 bytes of CODE  memory (+ 148 bytes shared)
+ 408 bytes of CONST memory (+  47 bytes shared)
+   0 bytes of DATA  memory (+ 265 bytes shared)
+
+Errors: none
+Warnings: 1

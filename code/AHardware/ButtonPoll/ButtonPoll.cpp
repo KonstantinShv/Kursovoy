@@ -1,14 +1,19 @@
 #include "ButtonPoll.hpp"
+#include "timer.hpp"  //for Timer
 #include <iostream>
 
 
-ButtonPoll::ButtonPoll(IButton& aButton, Event& iButtonPressEvent): button(aButton), ButtonPressEvent(iButtonPressEvent)
+
+ButtonPoll::ButtonPoll(UserButton& aButton, Event& iButtonPressEvent): 
+  button(aButton),
+  ButtonPressEvent(iButtonPressEvent)  
 {
 }
 
-void ButtonPollInitialization()
+template<typename TTimer>
+void ButtonPoll::ButtonPollInitialization()
 {
-  Timer::Start();
+  TTimer::Start();
 }
 
  void ButtonPoll::Poll()

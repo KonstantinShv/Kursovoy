@@ -1,21 +1,39 @@
 #pragma once
 #include "event.hpp"
-#include "Timer.hpp"
-#include "Button.hpp"
-#include "IButton.hpp"
+#include "Button.hpp"  //for UserButton
+#include <iostream>
+
 //#define REGISTERS_BUTTONPOLL_HPP
 
 
 
 using namespace OsWrapper;
+
+template<typename TTimer>
 class ButtonPoll
 {
 public:
-  ButtonPoll(IButton& aButton, Event& iButtonPressEvent);
-  void ButtonPollInitialization();
-  void Poll();
+  ButtonPoll(UserButton& aButton, Event& iButtonPressEvent): 
+  button(aButton),
+  ButtonPressEvent(iButtonPressEvent)  
+  {
+  }  
+  
+  void ButtonPollInitialization()
+  {
+    TTimer::Start();
+  }
+  
+   void Poll()
+  {
+    if(button.IsPressed())
+      {
+        std::cout << " Amogus : "  << std::endl;
+    //event.Signal();
+      }
+  }
   
 private:
   Event& ButtonPressEvent;
-  IButton& button;
+  UserButton& button;
 };
