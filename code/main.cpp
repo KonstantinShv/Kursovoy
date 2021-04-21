@@ -14,6 +14,7 @@
 #include "i2c1registers.hpp" //for I2C1
 #include "i2c2registers.hpp" //for I2C2
 #include <iostream>
+#include "SMBus.hpp"
 
 using namespace std;
 
@@ -44,24 +45,39 @@ int __low_level_init(void)
     GPIOB::MODER::MODER9::Alternate,
     >::Set();
   
-  
-    GPIOB::AFRH::AFRH8::Af4::Set(); // i2c
-    GPIOB::AFRH::AFRH9::Af4::Set();  //  i2c
-    
-    
+
+   
   
   
   RCC::APB1ENR::I2C1EN::Enable::Set();//ПОдали тактирование на I2C
-  I2C1::CR1::PE::Disable::Set();
-  //I2C1::CR1::ENPEC::Enable::Set();
-  I2C1::CR2::FREQ::Set(8U);             // 2MHz
-  I2C1::CCR::F_S::StandartMode::Set();
-  I2C1::CCR::CCRField::Set(90U);
-  I2C1::TRISE::TRISEField::Set(3);
+  
+  I2C1::CR1::SMBUS::SmBusMode::Set();
+              // 2MHz
+  //I2C1::CCR::F_S::StandartMode::Set();
+  I2C1::CCR::CCR::Set(0xC8U);
+  I2C1::CR2::FREQ::Set(0x10); 
+  I2C1::TRISE::Write(0x11);
   I2C1::CR1::PE::Enable::Set();
-  I2C1::OAR1::ADD7::Set(0x00);
-  I2C1::CR1::START::Enable::Set();
+  //I2C1::OAR1::ADD7::Set(0x00);
+  //I2C1::CR1::START::Enable::Set();
   //the fourth function I2C
+  
+  
+  
+  GPIOB::AFRH::AFRH8::Af4::Set(); // i2c
+  GPIOB::AFRH::AFRH9::Af4::Set();  //  i2c
+    
+  GPIOB::OTYPER::OT8::OutputOpenDrain::Set();
+  GPIOB::OTYPER::OT9::OutputOpenDrain::Set();
+  
+  GPIOB::OSPEEDR::OSPEEDR8::HighSpeed::Set() ;
+  GPIOB::OSPEEDR::OSPEEDR9::HighSpeed::Set() ;
+  
+  GPIOB::PUPDR::PUPDR8::PullUp::Set() ;
+  GPIOB::PUPDR::PUPDR9::PullUp::Set() ;
+  
+  
+  
   RCC::AHB1ENR::GPIOCEN::Enable::Set();
   
   RCC::APB1ENRPack<
@@ -95,19 +111,21 @@ UserButton button;
 ButtonPoll<Timer> buttonPoll(button,event);
 
 Temp temp;
+SMBus smbus;
+
 
 
 int main()
 {
   //const char* message = "Hello World \n";
 
-
+  
   //buttonPoll.ButtonPollInitialization();
   for(;;)
   {
-  
-  std::cout << temp.GetTempInCurrentUnits(32.20F) << temp.GetUnits()<< std::endl;
-  temp.SetNextUnits();
+   smbus.ReadWord(0x07);
+  //std::cout << value << std::endl;
+  //temp.SetNextUnits();
   
    // usartDriver.SendMessage(message, strlen(message));
     
