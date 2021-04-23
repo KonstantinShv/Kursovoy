@@ -52,10 +52,10 @@ int __low_level_init(void)
   RCC::APB1ENR::I2C1EN::Enable::Set();//ПОдали тактирование на I2C
   
   I2C1::CR1::SMBUS::SmBusMode::Set();
-              // 2MHz
+              
   //I2C1::CCR::F_S::StandartMode::Set();
   I2C1::CCR::CCR::Set(0xC8U);
-  I2C1::CR2::FREQ::Set(0x10); 
+  I2C1::CR2::FREQ::Set(0x10);//2MHz 
   I2C1::TRISE::Write(0x11);
   I2C1::CR1::PE::Enable::Set();
   //I2C1::OAR1::ADD7::Set(0x00);
@@ -123,7 +123,7 @@ int main()
   //buttonPoll.ButtonPollInitialization();
   for(;;)
   {
-   smbus.ReadWord(0x07);
+   smbus.ReadWord(0x00);
   //std::cout << value << std::endl;
   //temp.SetNextUnits();
   

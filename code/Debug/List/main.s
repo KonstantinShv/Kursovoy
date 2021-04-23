@@ -1,13 +1,13 @@
 ///////////////////////////////////////////////////////////////////////////////
 //
-// IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM        21/Apr/2021  20:16:36
+// IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM        24/Apr/2021  00:34:11
 // Copyright 1999-2019 IAR Systems AB.
 //
 //    Cpu mode     =  
 //    Endian       =  little
 //    Source file  =  E:\Git\POIP\Kursovoy\code\main.cpp
 //    Command line =
-//        -f C:\Users\D9F8~1\AppData\Local\Temp\EW3735.tmp
+//        -f C:\Users\D9F8~1\AppData\Local\Temp\EWD053.tmp
 //        (E:\Git\POIP\Kursovoy\code\main.cpp -lC
 //        E:\Git\POIP\Kursovoy\code\Debug\List -lA
 //        E:\Git\POIP\Kursovoy\code\Debug\List -o
@@ -92,7 +92,7 @@
         RTMODEL "__dlib_file_descriptor", "0"
         RTMODEL "__dlib_full_locale_support", "0"
         RTMODEL "__dlib_version", "6"
-        RTMODEL "__iar_require _Printf", "flags,qualifiers"
+        RTMODEL "__iar_require _Printf", "flags,floats,hex_floats,qualifiers,widths"
         AAPCS BASE,INTERWORK,VFP
         PRESERVE8
         REQUIRE8
@@ -113,12 +113,14 @@
         EXTERN __aeabi_cdcmpeq
         EXTERN __aeabi_cdcmple
         EXTERN __aeabi_cdrcmple
+        EXTERN __aeabi_dadd
         EXTERN __aeabi_ddiv
         EXTERN __aeabi_dmul
         EXTERN __aeabi_ldivmod
         EXTERN __aeabi_memcpy
         EXTERN __aeabi_memmove
         EXTERN __aeabi_memset
+        EXTERN __aeabi_ui2d
         EXTERN __dso_handle
         EXTWEAK __iar_EmptyStepPoint
         EXTERN __iar_Raise_bad_alloc
@@ -212,7 +214,7 @@
         PUBLIC _ZNKSt5ctypeIcE5widenEc
         PUBLIC _ZNKSt6chrono8durationIjSt5ratioILx10ELx1000EEE5countEv
         PUBLIC _ZNKSt6chrono8durationIxSt5ratioILx1ELx1000EEE5countEv
-        PUBLIC _ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES3_RSt8ios_basecm
+        PUBLIC _ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES3_RSt8ios_basecd
         PUBLIC _ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE4_PutES3_PKcj
         PUBLIC _ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE4_RepES3_cj
         PUBLIC _ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE5_FfmtEPccNSt5_IosbIiE9_FmtflagsE
@@ -266,7 +268,7 @@
         PUBLIC _ZNSo6sentryC1ERSo
         PUBLIC _ZNSo6sentryD1Ev
         PUBLIC _ZNSolsEPFRSoS_E
-        PUBLIC _ZNSolsEt
+        PUBLIC _ZNSolsEd
         PUBLIC _ZNSs10_Assign_rvEOSs
         PUBLIC _ZNSs4_EosEj
         PUBLIC _ZNSs5_CopyEjj
@@ -1461,7 +1463,7 @@ __low_level_init:
 //   54   I2C1::CR1::SMBUS::SmBusMode::Set();
           CFI FunCall _ZN14FieldValueBaseI21I2C1_CR1_SMBUS_ValuesIN4I2C13CR1ELj1ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
         BL       _ZN14FieldValueBaseI21I2C1_CR1_SMBUS_ValuesIN4I2C13CR1ELj1ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
-//   55               // 2MHz
+//   55               
 //   56   //I2C1::CCR::F_S::StandartMode::Set();
 //   57   I2C1::CCR::CCR::Set(0xC8U);
         MOVS     R0,#+200
@@ -1619,9 +1621,9 @@ main:
 //  123   //buttonPoll.ButtonPollInitialization();
 //  124   for(;;)
 //  125   {
-//  126    smbus.ReadWord(0x07);
+//  126    smbus.ReadWord(0x00);
 ??main_0:
-        MOVS     R0,#+7
+        MOVS     R0,#+0
           CFI FunCall _ZN5SMBus8ReadWordEh
         BL       _ZN5SMBus8ReadWordEh
         B.N      ??main_0
@@ -5036,24 +5038,23 @@ _ZNSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEEC2Ev:
           CFI EndBlock cfiBlock148
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES3_RSt8ios_basecm
+        SECTION_GROUP _ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES3_RSt8ios_basecd
           CFI Block cfiBlock149 Using cfiCommon0
-          CFI Function _ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES3_RSt8ios_basecm
+          CFI Function _ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES3_RSt8ios_basecd
         THUMB
-// __interwork __vfp std::ostream::_Iter std::num_put<char, std::ostream::_Iter>::put(std::ostream::_Iter, std::ios_base &, char, unsigned long) const
-_ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES3_RSt8ios_basecm:
+// __interwork __vfp std::ostream::_Iter std::num_put<char, std::ostream::_Iter>::put(std::ostream::_Iter, std::ios_base &, char, double) const
+_ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES3_RSt8ios_basecd:
         PUSH     {R0-R4,LR}
           CFI R14 Frame(CFA, -4)
           CFI R4 Frame(CFA, -8)
           CFI CFA R13+24
-        LDR      R4,[SP, #+32]
-        STR      R4,[SP, #+8]
+        VSTR     D0,[SP, #+8]
         LDRB     R4,[SP, #+28]
         STR      R4,[SP, #+4]
         LDR      R4,[SP, #+24]
         STR      R4,[SP, #+0]
         LDR      R4,[R1, #+0]
-        LDR      R4,[R4, #+16]
+        LDR      R4,[R4, #+28]
           CFI FunCall
         BLX      R4
         POP      {R0-R4,PC}       ;; return
@@ -7319,27 +7320,30 @@ _ZNSolsEPFRSoS_E:
           CFI EndBlock cfiBlock182
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZNSolsEt
+        SECTION_GROUP _ZNSolsEd
           CFI Block cfiBlock183 Using cfiCommon0
-          CFI Function _ZNSolsEt
+          CFI Function _ZNSolsEd
         THUMB
-// __interwork __vfp std::ostream &std::ostream::operator<<(unsigned short)
-_ZNSolsEt:
-        PUSH     {R3-R7,LR}
+// __interwork __vfp std::ostream &std::ostream::operator<<(double)
+_ZNSolsEd:
+        PUSH     {R4-R6,LR}
           CFI R14 Frame(CFA, -4)
-          CFI R7 Frame(CFA, -8)
-          CFI R6 Frame(CFA, -12)
-          CFI R5 Frame(CFA, -16)
-          CFI R4 Frame(CFA, -20)
+          CFI R6 Frame(CFA, -8)
+          CFI R5 Frame(CFA, -12)
+          CFI R4 Frame(CFA, -16)
+          CFI CFA R13+16
+        VPUSH    {D8}
+          CFI D8 Frame(CFA, -24)
           CFI CFA R13+24
         SUB      SP,SP,#+48
           CFI CFA R13+72
         MOVS     R4,R0
-        MOVS     R5,R1
+        VMOV.F32 S16,S0
+        VMOV.F32 S17,S1
         MOVS     R0,#+0
-        STRB     R0,[SP, #+12]
+        STRB     R0,[SP, #+8]
         MOVS     R1,R4
-        ADD      R0,SP,#+16
+        ADD      R0,SP,#+12
           CFI FunCall _ZNSo6sentryC1ERSo
         BL       _ZNSo6sentryC1ERSo
           CFI FunCall _ZNKSo13_Flush_sentrycvbEv
@@ -7348,61 +7352,64 @@ _ZNSolsEt:
         BEQ.N    `??operator<<_0`
           CFI FunCall _ZSt9use_facetISt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEEERKT_v
         BL       _ZSt9use_facetISt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEEERKT_v
-        MOVS     R6,R0
+        MOVS     R5,R0
         LDR      R0,[R4, #+0]
         LDR      R0,[R0, #-12]
         ADD      R0,R4,R0
           CFI FunCall _ZNKSt9basic_iosIcSt11char_traitsIcEE4fillEv
         BL       _ZNKSt9basic_iosIcSt11char_traitsIcEE4fillEv
-        MOVS     R7,R0
+        MOVS     R6,R0
         LDR      R0,[R4, #+0]
         LDR      R0,[R0, #-12]
         ADD      R0,R4,R0
           CFI FunCall _ZNKSt9basic_iosIcSt11char_traitsIcEE5rdbufEv
         BL       _ZNKSt9basic_iosIcSt11char_traitsIcEE5rdbufEv
         MOVS     R1,R0
-        ADD      R0,SP,#+40
+        ADD      R0,SP,#+36
           CFI FunCall _ZNSt19ostreambuf_iteratorIcSt11char_traitsIcEEC1EPSt15basic_streambufIcS1_E
         BL       _ZNSt19ostreambuf_iteratorIcSt11char_traitsIcEEC1EPSt15basic_streambufIcS1_E
-        UXTH     R5,R5            ;; ZeroExt  R5,R5,#+16,#+16
-        STR      R5,[SP, #+8]
-        UXTB     R7,R7            ;; ZeroExt  R7,R7,#+24,#+24
-        STR      R7,[SP, #+4]
+        UXTB     R6,R6            ;; ZeroExt  R6,R6,#+24,#+24
+        STR      R6,[SP, #+4]
         LDR      R1,[R4, #+0]
         LDR      R1,[R1, #-12]
         ADD      R1,R4,R1
         STR      R1,[SP, #+0]
+        VMOV.F32 S0,S16
+        VMOV.F32 S1,S17
         LDRD     R2,R3,[R0, #+0]
-        MOVS     R1,R6
-        ADD      R0,SP,#+24
-          CFI FunCall _ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES3_RSt8ios_basecm
-        BL       _ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES3_RSt8ios_basecm
-        LDRD     R0,R1,[SP, #+24]
-        STRD     R0,R1,[SP, #+32]
-        ADD      R0,SP,#+32
+        MOVS     R1,R5
+        ADD      R0,SP,#+20
+          CFI FunCall _ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES3_RSt8ios_basecd
+        BL       _ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES3_RSt8ios_basecd
+        LDRD     R0,R1,[SP, #+20]
+        STRD     R0,R1,[SP, #+28]
+        ADD      R0,SP,#+28
           CFI FunCall _ZNKSt19ostreambuf_iteratorIcSt11char_traitsIcEE6failedEv
         BL       _ZNKSt19ostreambuf_iteratorIcSt11char_traitsIcEE6failedEv
         CMP      R0,#+0
         BEQ.N    `??operator<<_0`
         MOVS     R1,#+4
-        ADD      R0,SP,#+12
+        ADD      R0,SP,#+8
           CFI FunCall _ZStoRRNSt5_IosbIiE8_IostateES1_
         BL       _ZStoRRNSt5_IosbIiE8_IostateES1_
 `??operator<<_0`:
         MOVS     R2,#+0
-        LDRB     R1,[SP, #+12]
+        LDRB     R1,[SP, #+8]
         LDR      R0,[R4, #+0]
         LDR      R0,[R0, #-12]
         ADD      R0,R4,R0
           CFI FunCall _ZNSt9basic_iosIcSt11char_traitsIcEE8setstateENSt5_IosbIiE8_IostateEb
         BL       _ZNSt9basic_iosIcSt11char_traitsIcEE8setstateENSt5_IosbIiE8_IostateEb
-        ADD      R0,SP,#+16
+        ADD      R0,SP,#+12
           CFI FunCall _ZNSo6sentryD1Ev
         BL       _ZNSo6sentryD1Ev
         MOVS     R0,R4
-        ADD      SP,SP,#+52
-          CFI CFA R13+20
-        POP      {R4-R7,PC}       ;; return
+        ADD      SP,SP,#+48
+          CFI CFA R13+24
+        VPOP     {D8}
+          CFI D8 SameValue
+          CFI CFA R13+16
+        POP      {R4-R6,PC}       ;; return
           CFI EndBlock cfiBlock183
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
@@ -8647,10 +8654,11 @@ _ZN10Fahrenheit9CalculateEf:
         THUMB
 // __interwork __vfp uint16_t SMBus::ReadWord(uint8_t)
 _ZN5SMBus8ReadWordEh:
-        PUSH     {R4,LR}
+        PUSH     {R3-R5,LR}
           CFI R14 Frame(CFA, -4)
-          CFI R4 Frame(CFA, -8)
-          CFI CFA R13+8
+          CFI R5 Frame(CFA, -8)
+          CFI R4 Frame(CFA, -12)
+          CFI CFA R13+16
         MOVS     R4,R0
           CFI FunCall _ZN14FieldValueBaseI21I2C1_CR1_START_ValuesIN4I2C13CR1ELj8ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
         BL       _ZN14FieldValueBaseI21I2C1_CR1_START_ValuesIN4I2C13CR1ELj8ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
@@ -8677,7 +8685,7 @@ _ZN5SMBus8ReadWordEh:
         BL       _ZN12RegisterBaseILj1073763348ELj32E13ReadWriteModeE3GetIS0_vEEjv
           CFI FunCall _ZN12RegisterBaseILj1073763352ELj32E8ReadModeE3GetIS0_vEEjv
         BL       _ZN12RegisterBaseILj1073763352ELj32E8ReadModeE3GetIS0_vEEjv
-        MOVS     R0,#+0
+        MOVS     R0,#+7
           CFI FunCall _ZN12RegisterBaseILj1073763344ELj32E13ReadWriteModeE5WriteIS0_vEEvj
         BL       _ZN12RegisterBaseILj1073763344ELj32E13ReadWriteModeE5WriteIS0_vEEvj
 ??ReadWord_3:
@@ -8722,19 +8730,46 @@ _ZN5SMBus8ReadWordEh:
         MOVS     R4,R0
           CFI FunCall _ZN14FieldValueBaseI20I2C1_CR1_STOP_ValuesIN4I2C13CR1ELj9ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
         BL       _ZN14FieldValueBaseI20I2C1_CR1_STOP_ValuesIN4I2C13CR1ELj9ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
-        MOVS     R1,R4
-        UXTH     R1,R1            ;; ZeroExt  R1,R1,#+16,#+16
-        LDR.N    R0,??ReadWord_0
-          CFI FunCall _ZNSolsEt
-        BL       _ZNSolsEt
-        LDR.N    R1,??ReadWord_0+0x4
+        LSLS     R4,R4,#+8
+        ANDS     R4,R4,#0x7F00
+        UXTB     R5,R5            ;; ZeroExt  R5,R5,#+24,#+24
+        ORRS     R5,R5,R4
+        UXTH     R5,R5            ;; ZeroExt  R5,R5,#+16,#+16
+        MOVS     R0,R5
+          CFI FunCall __aeabi_ui2d
+        BL       __aeabi_ui2d
+        VMOV     D0,R0,R1
+        VMOV     R2,R3,D0
+        LDR.N    R0,??ReadWord_0  ;; 0x47ae147b
+        LDR.N    R1,??ReadWord_0+0x4  ;; 0x3f947ae1
+          CFI FunCall __aeabi_dmul
+        BL       __aeabi_dmul
+        LDR.N    R2,??ReadWord_0  ;; 0x47ae147b
+        LDR.N    R3,??ReadWord_0+0x8  ;; 0xbf847ae1
+          CFI FunCall __aeabi_dadd
+        BL       __aeabi_dadd
+        VMOV     D0,R0,R1
+        VMOV     R2,R3,D0
+        MOVS     R0,#+1717986918
+        LDR.N    R1,??ReadWord_0+0xC  ;; 0xc0711266
+          CFI FunCall __aeabi_dadd
+        BL       __aeabi_dadd
+        VMOV     D0,R0,R1
+        LDR.N    R0,??ReadWord_0+0x10
+          CFI FunCall _ZNSolsEd
+        BL       _ZNSolsEd
+        LDR.N    R1,??ReadWord_0+0x14
           CFI FunCall _ZNSolsEPFRSoS_E
         BL       _ZNSolsEPFRSoS_E
-        POP      {R4,PC}          ;; return
+        POP      {R1,R4,R5,PC}    ;; return
         Nop      
         DATA
 ??ReadWord_0:
         DATA32
+        DC32     0x47ae147b
+        DC32     0x3f947ae1
+        DC32     0xbf847ae1
+        DC32     0xc0711266
         DC32     _ZSt4cout
         DC32     _ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_
           CFI EndBlock cfiBlock243
@@ -8992,17 +9027,17 @@ _ZN5SMBus8ReadWordEh:
         DC32    0
         DC32    0
 
-        SECTION `.iar_vfe_vcallinfo_ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES3_RSt8ios_basecm`:DATA:NOALLOC:NOROOT(2)
+        SECTION `.iar_vfe_vcallinfo_ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES3_RSt8ios_basecd`:DATA:NOALLOC:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
-        SECTION_GROUP _ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES3_RSt8ios_basecm
+        SECTION_GROUP _ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES3_RSt8ios_basecd
         DATA
-        DC32    _ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES3_RSt8ios_basecm
+        DC32    _ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES3_RSt8ios_basecd
         DC32    0
         DC32    0
         DC32    1
         DC32    _ZTISt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
         DC32    1
-        DC32    16
+        DC32    128
         DC32    0
         DC32    0
 
@@ -9072,11 +9107,11 @@ _ZN5SMBus8ReadWordEh:
 //    20 bytes in section .data
 //     4 bytes in section .init_array
 // 1'023 bytes in section .rodata
-// 8'944 bytes in section .text
+// 9'038 bytes in section .text
 // 
-// 362 bytes of CODE  memory (+ 8'586 bytes shared)
+// 362 bytes of CODE  memory (+ 8'680 bytes shared)
 //  11 bytes of CONST memory (+ 1'012 bytes shared)
 //  66 bytes of DATA  memory (+   323 bytes shared)
 //
 //Errors: none
-//Warnings: 3
+//Warnings: 4

@@ -10,10 +10,12 @@ public:
   
   static uint16_t ReadWord(std::uint8_t address)
   {
+  														
+	
       //Start
      I2C1::CR1::START::Enable::Set(); 
      I2C1::CR1::ACK::Acknowledge::Set() ;
-     while(I2C1::SR1::SB::Value1::IsSet()) 
+     while(I2C1::SR1::SB::Value1::IsSet()) //wait until start condition 
      {
      }       
      I2C1::SR1::Get();
@@ -21,7 +23,7 @@ public:
      //Set address
      I2C1::DR::Write(address<<1) ; 
 
-     while(I2C1::SR1::ADDR::Value1::IsSet())
+     while(I2C1::SR1::ADDR::Value1::IsSet())//wait until address transmit
      {
      }    
     
@@ -30,8 +32,8 @@ public:
      
      
       //RAM addreess
-     I2C1::DR::Write(0x00) ;   
-     while(I2C1::SR1::TxE::Value1::IsSet())
+     I2C1::DR::Write(0x07) ;   
+     while(I2C1::SR1::TxE::Value1::IsSet())//wait until DR empty
      {
      } ;
       
@@ -62,11 +64,13 @@ public:
      {
      }
   
-        std::uint16_t value = I2C1::DR::Get() ;
+        std::uint16_t temp = I2C1::DR::Get() ;
    
         I2C1::CR1::STOP::Enable::Set() ;
-
-       std::cout << value << std::endl ;
+     
+        
+        
+       std::cout << temp << std::endl ;
        
   }
   

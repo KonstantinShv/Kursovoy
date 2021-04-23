@@ -1,13 +1,13 @@
 ###############################################################################
 #
-# IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM         21/Apr/2021  20:16:36
+# IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM         24/Apr/2021  00:34:11
 # Copyright 1999-2019 IAR Systems AB.
 #
 #    Cpu mode     =  
 #    Endian       =  little
 #    Source file  =  E:\Git\POIP\Kursovoy\code\main.cpp
 #    Command line =
-#        -f C:\Users\D9F8~1\AppData\Local\Temp\EW3735.tmp
+#        -f C:\Users\D9F8~1\AppData\Local\Temp\EWD053.tmp
 #        (E:\Git\POIP\Kursovoy\code\main.cpp -lC
 #        E:\Git\POIP\Kursovoy\code\Debug\List -lA
 #        E:\Git\POIP\Kursovoy\code\Debug\List -o
@@ -2147,17 +2147,16 @@ E:\Git\POIP\Kursovoy\code\main.cpp
    \        0x6   0xBD02             POP      {R1,PC}          ;; return
 
    \                                 In section .text, align 2
-   \   __interwork __vfp std::ostream::_Iter std::num_put<char, std::ostream::_Iter>::put(std::ostream::_Iter, std::ios_base &, char, unsigned long) const
-   \                     _ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES3_RSt8ios_basecm: (+1)
+   \   __interwork __vfp std::ostream::_Iter std::num_put<char, std::ostream::_Iter>::put(std::ostream::_Iter, std::ios_base &, char, double) const
+   \                     _ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES3_RSt8ios_basecd: (+1)
    \        0x0   0xB51F             PUSH     {R0-R4,LR}
-   \        0x2   0x9C08             LDR      R4,[SP, #+32]
-   \        0x4   0x9402             STR      R4,[SP, #+8]
+   \        0x2   0xED8D 0x0B02      VSTR     D0,[SP, #+8]
    \        0x6   0xF89D 0x401C      LDRB     R4,[SP, #+28]
    \        0xA   0x9401             STR      R4,[SP, #+4]
    \        0xC   0x9C06             LDR      R4,[SP, #+24]
    \        0xE   0x9400             STR      R4,[SP, #+0]
    \       0x10   0x680C             LDR      R4,[R1, #+0]
-   \       0x12   0x6924             LDR      R4,[R4, #+16]
+   \       0x12   0x69E4             LDR      R4,[R4, #+28]
    \       0x14   0x47A0             BLX      R4
    \       0x16   0xBD1F             POP      {R0-R4,PC}       ;; return
 
@@ -3865,67 +3864,70 @@ E:\Git\POIP\Kursovoy\code\main.cpp
    \        0x4   0xBD02             POP      {R1,PC}          ;; return
 
    \                                 In section .text, align 2
-   \   __interwork __vfp std::ostream &std::ostream::operator<<(unsigned short)
-   \                     _ZNSolsEt: (+1)
-   \        0x0   0xB5F8             PUSH     {R3-R7,LR}
-   \        0x2   0xB08C             SUB      SP,SP,#+48
-   \        0x4   0x0004             MOVS     R4,R0
-   \        0x6   0x000D             MOVS     R5,R1
-   \        0x8   0x2000             MOVS     R0,#+0
-   \        0xA   0xF88D 0x000C      STRB     R0,[SP, #+12]
-   \        0xE   0x0021             MOVS     R1,R4
-   \       0x10   0xA804             ADD      R0,SP,#+16
-   \       0x12   0x....'....        BL       _ZNSo6sentryC1ERSo
-   \       0x16   0x....'....        BL       _ZNKSo13_Flush_sentrycvbEv
-   \       0x1A   0x2800             CMP      R0,#+0
-   \       0x1C   0xD02F             BEQ.N    `??operator<<_0`
-   \       0x1E   0x....'....        BL       _ZSt9use_facetISt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEEERKT_v
-   \       0x22   0x0006             MOVS     R6,R0
-   \       0x24   0x6820             LDR      R0,[R4, #+0]
-   \       0x26   0xF850 0x0C0C      LDR      R0,[R0, #-12]
-   \       0x2A   0x4420             ADD      R0,R4,R0
-   \       0x2C   0x....'....        BL       _ZNKSt9basic_iosIcSt11char_traitsIcEE4fillEv
-   \       0x30   0x0007             MOVS     R7,R0
-   \       0x32   0x6820             LDR      R0,[R4, #+0]
-   \       0x34   0xF850 0x0C0C      LDR      R0,[R0, #-12]
-   \       0x38   0x4420             ADD      R0,R4,R0
-   \       0x3A   0x....'....        BL       _ZNKSt9basic_iosIcSt11char_traitsIcEE5rdbufEv
-   \       0x3E   0x0001             MOVS     R1,R0
-   \       0x40   0xA80A             ADD      R0,SP,#+40
-   \       0x42   0x....'....        BL       _ZNSt19ostreambuf_iteratorIcSt11char_traitsIcEEC1EPSt15basic_streambufIcS1_E
-   \       0x46   0xB2AD             UXTH     R5,R5            ;; ZeroExt  R5,R5,#+16,#+16
-   \       0x48   0x9502             STR      R5,[SP, #+8]
-   \       0x4A   0xB2FF             UXTB     R7,R7            ;; ZeroExt  R7,R7,#+24,#+24
-   \       0x4C   0x9701             STR      R7,[SP, #+4]
-   \       0x4E   0x6821             LDR      R1,[R4, #+0]
-   \       0x50   0xF851 0x1C0C      LDR      R1,[R1, #-12]
-   \       0x54   0x4421             ADD      R1,R4,R1
-   \       0x56   0x9100             STR      R1,[SP, #+0]
-   \       0x58   0xE9D0 0x2300      LDRD     R2,R3,[R0, #+0]
-   \       0x5C   0x0031             MOVS     R1,R6
-   \       0x5E   0xA806             ADD      R0,SP,#+24
-   \       0x60   0x....'....        BL       _ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES3_RSt8ios_basecm
-   \       0x64   0xE9DD 0x0106      LDRD     R0,R1,[SP, #+24]
-   \       0x68   0xE9CD 0x0108      STRD     R0,R1,[SP, #+32]
-   \       0x6C   0xA808             ADD      R0,SP,#+32
-   \       0x6E   0x....'....        BL       _ZNKSt19ostreambuf_iteratorIcSt11char_traitsIcEE6failedEv
-   \       0x72   0x2800             CMP      R0,#+0
-   \       0x74   0xD003             BEQ.N    `??operator<<_0`
-   \       0x76   0x2104             MOVS     R1,#+4
-   \       0x78   0xA803             ADD      R0,SP,#+12
-   \       0x7A   0x....'....        BL       _ZStoRRNSt5_IosbIiE8_IostateES1_
+   \   __interwork __vfp std::ostream &std::ostream::operator<<(double)
+   \                     _ZNSolsEd: (+1)
+   \        0x0   0xB570             PUSH     {R4-R6,LR}
+   \        0x2   0xED2D 0x8B02      VPUSH    {D8}
+   \        0x6   0xB08C             SUB      SP,SP,#+48
+   \        0x8   0x0004             MOVS     R4,R0
+   \        0xA   0xEEB0 0x8A40      VMOV.F32 S16,S0
+   \        0xE   0xEEF0 0x8A60      VMOV.F32 S17,S1
+   \       0x12   0x2000             MOVS     R0,#+0
+   \       0x14   0xF88D 0x0008      STRB     R0,[SP, #+8]
+   \       0x18   0x0021             MOVS     R1,R4
+   \       0x1A   0xA803             ADD      R0,SP,#+12
+   \       0x1C   0x....'....        BL       _ZNSo6sentryC1ERSo
+   \       0x20   0x....'....        BL       _ZNKSo13_Flush_sentrycvbEv
+   \       0x24   0x2800             CMP      R0,#+0
+   \       0x26   0xD031             BEQ.N    `??operator<<_0`
+   \       0x28   0x....'....        BL       _ZSt9use_facetISt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEEERKT_v
+   \       0x2C   0x0005             MOVS     R5,R0
+   \       0x2E   0x6820             LDR      R0,[R4, #+0]
+   \       0x30   0xF850 0x0C0C      LDR      R0,[R0, #-12]
+   \       0x34   0x4420             ADD      R0,R4,R0
+   \       0x36   0x....'....        BL       _ZNKSt9basic_iosIcSt11char_traitsIcEE4fillEv
+   \       0x3A   0x0006             MOVS     R6,R0
+   \       0x3C   0x6820             LDR      R0,[R4, #+0]
+   \       0x3E   0xF850 0x0C0C      LDR      R0,[R0, #-12]
+   \       0x42   0x4420             ADD      R0,R4,R0
+   \       0x44   0x....'....        BL       _ZNKSt9basic_iosIcSt11char_traitsIcEE5rdbufEv
+   \       0x48   0x0001             MOVS     R1,R0
+   \       0x4A   0xA809             ADD      R0,SP,#+36
+   \       0x4C   0x....'....        BL       _ZNSt19ostreambuf_iteratorIcSt11char_traitsIcEEC1EPSt15basic_streambufIcS1_E
+   \       0x50   0xB2F6             UXTB     R6,R6            ;; ZeroExt  R6,R6,#+24,#+24
+   \       0x52   0x9601             STR      R6,[SP, #+4]
+   \       0x54   0x6821             LDR      R1,[R4, #+0]
+   \       0x56   0xF851 0x1C0C      LDR      R1,[R1, #-12]
+   \       0x5A   0x4421             ADD      R1,R4,R1
+   \       0x5C   0x9100             STR      R1,[SP, #+0]
+   \       0x5E   0xEEB0 0x0A48      VMOV.F32 S0,S16
+   \       0x62   0xEEF0 0x0A68      VMOV.F32 S1,S17
+   \       0x66   0xE9D0 0x2300      LDRD     R2,R3,[R0, #+0]
+   \       0x6A   0x0029             MOVS     R1,R5
+   \       0x6C   0xA805             ADD      R0,SP,#+20
+   \       0x6E   0x....'....        BL       _ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES3_RSt8ios_basecd
+   \       0x72   0xE9DD 0x0105      LDRD     R0,R1,[SP, #+20]
+   \       0x76   0xE9CD 0x0107      STRD     R0,R1,[SP, #+28]
+   \       0x7A   0xA807             ADD      R0,SP,#+28
+   \       0x7C   0x....'....        BL       _ZNKSt19ostreambuf_iteratorIcSt11char_traitsIcEE6failedEv
+   \       0x80   0x2800             CMP      R0,#+0
+   \       0x82   0xD003             BEQ.N    `??operator<<_0`
+   \       0x84   0x2104             MOVS     R1,#+4
+   \       0x86   0xA802             ADD      R0,SP,#+8
+   \       0x88   0x....'....        BL       _ZStoRRNSt5_IosbIiE8_IostateES1_
    \                     `??operator<<_0`: (+1)
-   \       0x7E   0x2200             MOVS     R2,#+0
-   \       0x80   0xF89D 0x100C      LDRB     R1,[SP, #+12]
-   \       0x84   0x6820             LDR      R0,[R4, #+0]
-   \       0x86   0xF850 0x0C0C      LDR      R0,[R0, #-12]
-   \       0x8A   0x4420             ADD      R0,R4,R0
-   \       0x8C   0x....'....        BL       _ZNSt9basic_iosIcSt11char_traitsIcEE8setstateENSt5_IosbIiE8_IostateEb
-   \       0x90   0xA804             ADD      R0,SP,#+16
-   \       0x92   0x....'....        BL       _ZNSo6sentryD1Ev
-   \       0x96   0x0020             MOVS     R0,R4
-   \       0x98   0xB00D             ADD      SP,SP,#+52
-   \       0x9A   0xBDF0             POP      {R4-R7,PC}       ;; return
+   \       0x8C   0x2200             MOVS     R2,#+0
+   \       0x8E   0xF89D 0x1008      LDRB     R1,[SP, #+8]
+   \       0x92   0x6820             LDR      R0,[R4, #+0]
+   \       0x94   0xF850 0x0C0C      LDR      R0,[R0, #-12]
+   \       0x98   0x4420             ADD      R0,R4,R0
+   \       0x9A   0x....'....        BL       _ZNSt9basic_iosIcSt11char_traitsIcEE8setstateENSt5_IosbIiE8_IostateEb
+   \       0x9E   0xA803             ADD      R0,SP,#+12
+   \       0xA0   0x....'....        BL       _ZNSo6sentryD1Ev
+   \       0xA4   0x0020             MOVS     R0,R4
+   \       0xA6   0xB00C             ADD      SP,SP,#+48
+   \       0xA8   0xECBD 0x8B02      VPOP     {D8}
+   \       0xAC   0xBD70             POP      {R4-R6,PC}       ;; return
 
    \                                 In section .text, align 2
    \   __interwork __vfp std::ostream &std::ostream::put(char)
@@ -4840,7 +4842,7 @@ E:\Git\POIP\Kursovoy\code\main.cpp
    \                                 In section .text, align 4
    \   __interwork __vfp uint16_t SMBus::ReadWord(uint8_t)
    \                     _ZN5SMBus8ReadWordEh: (+1)
-   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x0   0xB538             PUSH     {R3-R5,LR}
    \        0x2   0x0004             MOVS     R4,R0
    \        0x4   0x....'....        BL       _ZN14FieldValueBaseI21I2C1_CR1_START_ValuesIN4I2C13CR1ELj8ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
    \        0x8   0x....'....        BL       _ZN14FieldValueBaseI19I2C1_CR1_ACK_ValuesIN4I2C13CR1ELj10ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
@@ -4859,7 +4861,7 @@ E:\Git\POIP\Kursovoy\code\main.cpp
    \       0x28   0xD1FB             BNE.N    ??ReadWord_2
    \       0x2A   0x....'....        BL       _ZN12RegisterBaseILj1073763348ELj32E13ReadWriteModeE3GetIS0_vEEjv
    \       0x2E   0x....'....        BL       _ZN12RegisterBaseILj1073763352ELj32E8ReadModeE3GetIS0_vEEjv
-   \       0x32   0x2000             MOVS     R0,#+0
+   \       0x32   0x2007             MOVS     R0,#+7
    \       0x34   0x....'....        BL       _ZN12RegisterBaseILj1073763344ELj32E13ReadWriteModeE5WriteIS0_vEEvj
    \                     ??ReadWord_3: (+1)
    \       0x38   0x....'....        BL       _ZN14FieldValueBaseI19I2C1_SR1_TxE_ValuesIN4I2C13SR1ELj7ELj1E8ReadModeNS1_11I2C1SR1BaseEES4_Lj1EE5IsSetIS3_vEEbv
@@ -4890,23 +4892,51 @@ E:\Git\POIP\Kursovoy\code\main.cpp
    \       0x7A   0x....'....        BL       _ZN12RegisterBaseILj1073763344ELj32E13ReadWriteModeE3GetIS0_vEEjv
    \       0x7E   0x0004             MOVS     R4,R0
    \       0x80   0x....'....        BL       _ZN14FieldValueBaseI20I2C1_CR1_STOP_ValuesIN4I2C13CR1ELj9ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
-   \       0x84   0x0021             MOVS     R1,R4
-   \       0x86   0xB289             UXTH     R1,R1            ;; ZeroExt  R1,R1,#+16,#+16
-   \       0x88   0x4803             LDR.N    R0,??ReadWord_0
-   \       0x8A   0x....'....        BL       _ZNSolsEt
-   \       0x8E   0x4903             LDR.N    R1,??ReadWord_0+0x4
-   \       0x90   0x....'....        BL       _ZNSolsEPFRSoS_E
+   \       0x84   0x0224             LSLS     R4,R4,#+8
+   \       0x86   0xF414 0x44FE      ANDS     R4,R4,#0x7F00
+
+  	 temp |= temp_lsb;
+  	         ^
+"E:\Git\POIP\Kursovoy\code\AHardware\SMBus\SMBus.hpp",73  Warning[Pe549]: 
+          variable "temp_lsb" is used before its value is set
+   \       0x8A   0xB2ED             UXTB     R5,R5            ;; ZeroExt  R5,R5,#+24,#+24
+   \       0x8C   0x4325             ORRS     R5,R5,R4
+   \       0x8E   0xB2AD             UXTH     R5,R5            ;; ZeroExt  R5,R5,#+16,#+16
+   \       0x90   0x0028             MOVS     R0,R5
+   \       0x92   0x....'....        BL       __aeabi_ui2d
+   \       0x96   0xEC41 0x0B10      VMOV     D0,R0,R1
+   \       0x9A   0xEC53 0x2B10      VMOV     R2,R3,D0
+   \       0x9E   0x480D             LDR.N    R0,??ReadWord_0  ;; 0x47ae147b
+   \       0xA0   0x490D             LDR.N    R1,??ReadWord_0+0x4  ;; 0x3f947ae1
+   \       0xA2   0x....'....        BL       __aeabi_dmul
+   \       0xA6   0x4A0B             LDR.N    R2,??ReadWord_0  ;; 0x47ae147b
+   \       0xA8   0x4B0C             LDR.N    R3,??ReadWord_0+0x8  ;; 0xbf847ae1
+   \       0xAA   0x....'....        BL       __aeabi_dadd
+   \       0xAE   0xEC41 0x0B10      VMOV     D0,R0,R1
+   \       0xB2   0xEC53 0x2B10      VMOV     R2,R3,D0
+   \       0xB6   0xF05F 0x3066      MOVS     R0,#+1717986918
+   \       0xBA   0x4909             LDR.N    R1,??ReadWord_0+0xC  ;; 0xc0711266
+   \       0xBC   0x....'....        BL       __aeabi_dadd
+   \       0xC0   0xEC41 0x0B10      VMOV     D0,R0,R1
+   \       0xC4   0x4807             LDR.N    R0,??ReadWord_0+0x10
+   \       0xC6   0x....'....        BL       _ZNSolsEd
+   \       0xCA   0x4907             LDR.N    R1,??ReadWord_0+0x14
+   \       0xCC   0x....'....        BL       _ZNSolsEPFRSoS_E
 
     }
     ^
-"E:\Git\POIP\Kursovoy\code\AHardware\SMBus\SMBus.hpp",71  Warning[Pe940]: 
+"E:\Git\POIP\Kursovoy\code\AHardware\SMBus\SMBus.hpp",81  Warning[Pe940]: 
           missing return statement at end of non-void function
           "SMBus::ReadWord"
-   \       0x94   0xBD10             POP      {R4,PC}          ;; return
-   \       0x96   0xBF00             Nop      
+   \       0xD0   0xBD32             POP      {R1,R4,R5,PC}    ;; return
+   \       0xD2   0xBF00             Nop      
    \                     ??ReadWord_0:
-   \       0x98   0x....'....        DC32     _ZSt4cout
-   \       0x9C   0x....'....        DC32     _ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_
+   \       0xD4   0x47AE'147B        DC32     0x47ae147b
+   \       0xD8   0x3F94'7AE1        DC32     0x3f947ae1
+   \       0xDC   0xBF84'7AE1        DC32     0xbf847ae1
+   \       0xE0   0xC071'1266        DC32     0xc0711266
+   \       0xE4   0x....'....        DC32     _ZSt4cout
+   \       0xE8   0x....'....        DC32     _ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_
      18          
      19          using namespace std;
      20          
@@ -4963,7 +4993,7 @@ E:\Git\POIP\Kursovoy\code\main.cpp
      53            
      54            I2C1::CR1::SMBUS::SmBusMode::Set();
    \       0x2A   0x....'....        BL       _ZN14FieldValueBaseI21I2C1_CR1_SMBUS_ValuesIN4I2C13CR1ELj1ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
-     55                        // 2MHz
+     55                        
      56            //I2C1::CCR::F_S::StandartMode::Set();
      57            I2C1::CCR::CCR::Set(0xC8U);
    \       0x2E   0x20C8             MOVS     R0,#+200
@@ -5088,9 +5118,9 @@ E:\Git\POIP\Kursovoy\code\main.cpp
     123            //buttonPoll.ButtonPollInitialization();
     124            for(;;)
     125            {
-    126             smbus.ReadWord(0x07);
+    126             smbus.ReadWord(0x00);
    \                     ??main_0: (+1)
-   \        0x2   0x2007             MOVS     R0,#+7
+   \        0x2   0x2000             MOVS     R0,#+0
    \        0x4   0x....'....        BL       _ZN5SMBus8ReadWordEh
    \        0x8   0xE7FB             B.N      ??main_0
     127            //std::cout << value << std::endl;
@@ -5244,21 +5274,24 @@ Warning[Ms014]: some characters could not be correctly encoded in
        8   RegisterField<I2C1::CR2, 0U, 6U, ReadWriteMode>::Set<ReadWriteMode, void>(uint32_t)
          8   -> __aeabi_assert
          8   -> __iar_EmptyStepPoint
-       8   SMBus::ReadWord(uint8_t)
-         8   -> FieldValueBase<I2C1_CR1_ACK_Values<I2C1::CR1, 10U, 1U, ReadWriteMode, I2C1::I2C1CR1Base>, I2C1::I2C1CR1Base, 0U>::Set<ReadWriteMode, void>()
-         8   -> FieldValueBase<I2C1_CR1_ACK_Values<I2C1::CR1, 10U, 1U, ReadWriteMode, I2C1::I2C1CR1Base>, I2C1::I2C1CR1Base, 1U>::Set<ReadWriteMode, void>()
-         8   -> FieldValueBase<I2C1_CR1_START_Values<I2C1::CR1, 8U, 1U, ReadWriteMode, I2C1::I2C1CR1Base>, I2C1::I2C1CR1Base, 1U>::Set<ReadWriteMode, void>()
-         8   -> FieldValueBase<I2C1_CR1_STOP_Values<I2C1::CR1, 9U, 1U, ReadWriteMode, I2C1::I2C1CR1Base>, I2C1::I2C1CR1Base, 1U>::Set<ReadWriteMode, void>()
-         8   -> FieldValueBase<I2C1_SR1_ADDR_Values<I2C1::SR1, 1U, 1U, ReadMode, I2C1::I2C1SR1Base>, I2C1::I2C1SR1Base, 1U>::IsSet<ReadMode, void>()
-         8   -> FieldValueBase<I2C1_SR1_RxNE_Values<I2C1::SR1, 6U, 1U, ReadMode, I2C1::I2C1SR1Base>, I2C1::I2C1SR1Base, 1U>::IsSet<ReadMode, void>()
-         8   -> FieldValueBase<I2C1_SR1_SB_Values<I2C1::SR1, 0U, 1U, ReadMode, I2C1::I2C1SR1Base>, I2C1::I2C1SR1Base, 1U>::IsSet<ReadMode, void>()
-         8   -> FieldValueBase<I2C1_SR1_TxE_Values<I2C1::SR1, 7U, 1U, ReadMode, I2C1::I2C1SR1Base>, I2C1::I2C1SR1Base, 1U>::IsSet<ReadMode, void>()
-         8   -> RegisterBase<1073763344U, 32U, ReadWriteMode>::Get<ReadWriteMode, void>()
-         8   -> RegisterBase<1073763344U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
-         8   -> RegisterBase<1073763348U, 32U, ReadWriteMode>::Get<ReadWriteMode, void>()
-         8   -> RegisterBase<1073763352U, 32U, ReadMode>::Get<ReadMode, void>()
-         8   -> std::ostream::operator<<(std::ostream &(*)(std::ostream &))
-         8   -> std::ostream::operator<<(unsigned short)
+      16   SMBus::ReadWord(uint8_t)
+        16   -> FieldValueBase<I2C1_CR1_ACK_Values<I2C1::CR1, 10U, 1U, ReadWriteMode, I2C1::I2C1CR1Base>, I2C1::I2C1CR1Base, 0U>::Set<ReadWriteMode, void>()
+        16   -> FieldValueBase<I2C1_CR1_ACK_Values<I2C1::CR1, 10U, 1U, ReadWriteMode, I2C1::I2C1CR1Base>, I2C1::I2C1CR1Base, 1U>::Set<ReadWriteMode, void>()
+        16   -> FieldValueBase<I2C1_CR1_START_Values<I2C1::CR1, 8U, 1U, ReadWriteMode, I2C1::I2C1CR1Base>, I2C1::I2C1CR1Base, 1U>::Set<ReadWriteMode, void>()
+        16   -> FieldValueBase<I2C1_CR1_STOP_Values<I2C1::CR1, 9U, 1U, ReadWriteMode, I2C1::I2C1CR1Base>, I2C1::I2C1CR1Base, 1U>::Set<ReadWriteMode, void>()
+        16   -> FieldValueBase<I2C1_SR1_ADDR_Values<I2C1::SR1, 1U, 1U, ReadMode, I2C1::I2C1SR1Base>, I2C1::I2C1SR1Base, 1U>::IsSet<ReadMode, void>()
+        16   -> FieldValueBase<I2C1_SR1_RxNE_Values<I2C1::SR1, 6U, 1U, ReadMode, I2C1::I2C1SR1Base>, I2C1::I2C1SR1Base, 1U>::IsSet<ReadMode, void>()
+        16   -> FieldValueBase<I2C1_SR1_SB_Values<I2C1::SR1, 0U, 1U, ReadMode, I2C1::I2C1SR1Base>, I2C1::I2C1SR1Base, 1U>::IsSet<ReadMode, void>()
+        16   -> FieldValueBase<I2C1_SR1_TxE_Values<I2C1::SR1, 7U, 1U, ReadMode, I2C1::I2C1SR1Base>, I2C1::I2C1SR1Base, 1U>::IsSet<ReadMode, void>()
+        16   -> RegisterBase<1073763344U, 32U, ReadWriteMode>::Get<ReadWriteMode, void>()
+        16   -> RegisterBase<1073763344U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
+        16   -> RegisterBase<1073763348U, 32U, ReadWriteMode>::Get<ReadWriteMode, void>()
+        16   -> RegisterBase<1073763352U, 32U, ReadMode>::Get<ReadMode, void>()
+        16   -> __aeabi_dadd
+        16   -> __aeabi_dmul
+        16   -> __aeabi_ui2d
+        16   -> std::ostream::operator<<(double)
+        16   -> std::ostream::operator<<(std::ostream &(*)(std::ostream &))
        0   USARTDriver<Usart2>::USARTDriver()
        8   __low_level_init
          8   -> FieldValueBase<GPIOB_AFRL_AFRL7_Values<GPIOB::AFRH, 0U, 4U, ReadWriteMode, GPIOB::GPIOBAFRHBase>, GPIOB::GPIOBAFRHBase, 4U>::Set<ReadWriteMode, void>()
@@ -5582,7 +5615,7 @@ Warning[Ms014]: some characters could not be correctly encoded in
        104   -> sprintf
        104   -> std::num_put<char, std::ostream::_Iter>::_Iput(std::ostream::_Iter, std::ios_base &, char, char *, size_t) const
        0   std::num_put<char, std::ostream::_Iter>::num_put()
-      24   std::num_put<char, std::ostream::_Iter>::put(std::ostream::_Iter, std::ios_base &, char, unsigned long) const
+      24   std::num_put<char, std::ostream::_Iter>::put(std::ostream::_Iter, std::ios_base &, char, double) const
         24   -- Indirect call
        8   std::num_put<char, std::ostream::_Iter>::subobject num_put()
          8   -> std::num_put<char, std::ostream::_Iter>::num_put()
@@ -5668,13 +5701,11 @@ Warning[Ms014]: some characters could not be correctly encoded in
         16   -> std::ostream::_Flush_sentry::operator bool() const
         16   -> std::ostream::_Flush_sentry::~_Flush_sentry()
         16   -> std::streambuf::pubsync()
-       8   std::ostream::operator<<(std::ostream &(*)(std::ostream &))
-         8   -- Indirect call
-      72   std::ostream::operator<<(unsigned short)
+      72   std::ostream::operator<<(double)
         72   -> std::ios::fill() const
         72   -> std::ios::rdbuf() const
         72   -> std::ios::setstate(std::ios_base::iostate, bool)
-        72   -> std::num_put<char, std::ostream::_Iter>::put(std::ostream::_Iter, std::ios_base &, char, unsigned long) const
+        72   -> std::num_put<char, std::ostream::_Iter>::put(std::ostream::_Iter, std::ios_base &, char, double) const
         72   -> std::operator|=(std::ios_base::iostate &, std::ios_base::iostate)
         72   -> std::ostream::_Flush_sentry::operator bool() const
         72   -> std::ostream::sentry::sentry(std::ostream &)
@@ -5682,6 +5713,8 @@ Warning[Ms014]: some characters could not be correctly encoded in
         72   -> std::ostreambuf_iterator<char, std::char_traits<char>>::failed() const
         72   -> std::ostreambuf_iterator<char, std::char_traits<char>>::ostreambuf_iterator(std::streambuf *)
         72   -> std::use_facet<std::ostream::_Nput>()
+       8   std::ostream::operator<<(std::ostream &(*)(std::ostream &))
+         8   -- Indirect call
       32   std::ostream::put(char)
         32   -> std::char_traits<char>::eq_int_type(int const &, int const &)
         32   -> std::ios::rdbuf() const
@@ -5928,7 +5961,7 @@ Warning[Ms014]: some characters could not be correctly encoded in
       12  RegisterBase<1073763360U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
       12  RegisterBase<3758153988U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
       48  RegisterField<I2C1::CR2, 0U, 6U, ReadWriteMode>::Set<ReadWriteMode, void>(uint32_t)
-     160  SMBus::ReadWord(uint8_t)
+     236  SMBus::ReadWord(uint8_t)
       12  USARTDriver<Usart2>::USARTDriver()
        4  _MyFacet
        4  _MyFacet
@@ -6056,7 +6089,7 @@ Warning[Ms014]: some characters could not be correctly encoded in
       88  std::num_put<char, std::ostream::_Iter>::do_put(std::ostream::_Iter, std::ios_base &, char, unsigned long) const
       60  std::num_put<char, std::ostream::_Iter>::do_put(std::ostream::_Iter, std::ios_base &, char, void const *) const
       12  std::num_put<char, std::ostream::_Iter>::num_put()
-      24  std::num_put<char, std::ostream::_Iter>::put(std::ostream::_Iter, std::ios_base &, char, unsigned long) const
+      24  std::num_put<char, std::ostream::_Iter>::put(std::ostream::_Iter, std::ios_base &, char, double) const
        8  std::num_put<char, std::ostream::_Iter>::subobject num_put()
        2  std::num_put<char, std::ostream::_Iter>::~num_put()
       26  std::numpunct<char>::_Getvals<char>(char)
@@ -6094,8 +6127,8 @@ Warning[Ms014]: some characters could not be correctly encoded in
        8  std::ostream::_Sentry_base::subobject ~_Sentry_base()
       70  std::ostream::_Sentry_base::~_Sentry_base()
       84  std::ostream::flush()
+     174  std::ostream::operator<<(double)
        6  std::ostream::operator<<(std::ostream &(*)(std::ostream &))
-     156  std::ostream::operator<<(unsigned short)
      118  std::ostream::put(char)
      114  std::ostream::sentry::sentry(std::ostream &)
       14  std::ostream::sentry::~sentry()
@@ -6151,11 +6184,11 @@ Warning[Ms014]: some characters could not be correctly encoded in
     20 bytes in section .data
      4 bytes in section .init_array
  1'023 bytes in section .rodata
- 8'944 bytes in section .text
+ 9'038 bytes in section .text
  
- 362 bytes of CODE  memory (+ 8'586 bytes shared)
+ 362 bytes of CODE  memory (+ 8'680 bytes shared)
   11 bytes of CONST memory (+ 1'012 bytes shared)
   66 bytes of DATA  memory (+   323 bytes shared)
 
 Errors: none
-Warnings: 4
+Warnings: 5
