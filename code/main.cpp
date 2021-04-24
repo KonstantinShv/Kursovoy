@@ -49,6 +49,7 @@ int __low_level_init(void)
 
    
   
+ //==================I2C========================================================
   
   RCC::APB1ENR::I2C1EN::Enable::Set();//ПОдали тактирование на I2C
   RCC::AHB1ENR::GPIOCEN::Enable::Set();
@@ -59,12 +60,9 @@ int __low_level_init(void)
   I2C1::CR2::FREQ::Set(0x10);//2MHz
   I2C1::TRISE::Write(0x11);
   I2C1::CR1::PE::Enable::Set();
-  //I2C1::OAR1::ADD7::Set(0x00);
-  //I2C1::CR1::START::Enable::Set();
-  //the fourth function I2C
-  
-  
-  
+
+  //the fourth function I2C 
+
   GPIOB::AFRH::AFRH8::Af4::Set(); // i2c
   GPIOB::AFRH::AFRH9::Af4::Set(); //  i2c
     
@@ -76,6 +74,10 @@ int __low_level_init(void)
 //  
 //  GPIOB::PUPDR::PUPDR8::PullUp::Set() ;
 //  GPIOB::PUPDR::PUPDR9::PullUp::Set() ;
+//============================================================================== 
+  
+  
+  
   
     //spi 
   SPI2::CR1Pack<
