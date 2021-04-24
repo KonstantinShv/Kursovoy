@@ -23,9 +23,9 @@
 
 if ($debugfile -eq "")
 {
-& "D:\Папка\Универ\7 семак\IAR\common\bin\cspybat" -f "E:\Git\POIP\Kursovoy\code\settings\iarproject.Debug.general.xcl" --backend -f "E:\Git\POIP\Kursovoy\code\settings\iarproject.Debug.driver.xcl" 
+& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "C:\Users\Студент\Desktop\K\Kursovoy-main\code\settings\iarproject.Debug.general.xcl" --backend -f "C:\Users\Студент\Desktop\K\Kursovoy-main\code\settings\iarproject.Debug.driver.xcl" 
 }
 else
 {
-& "D:\Папка\Универ\7 семак\IAR\common\bin\cspybat" -f "E:\Git\POIP\Kursovoy\code\settings\iarproject.Debug.general.xcl" --debug_file=$debugfile --backend -f "E:\Git\POIP\Kursovoy\code\settings\iarproject.Debug.driver.xcl" 
+& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "C:\Users\Студент\Desktop\K\Kursovoy-main\code\settings\iarproject.Debug.general.xcl" --debug_file=$debugfile --backend -f "C:\Users\Студент\Desktop\K\Kursovoy-main\code\settings\iarproject.Debug.driver.xcl" 
 }

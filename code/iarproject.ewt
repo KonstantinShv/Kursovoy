@@ -2875,12 +2875,21 @@
             <name>Tasks</name>
             <group>
                 <name>BlueToothTask</name>
+                <file>
+                    <name>$PROJ_DIR$\Application\Tasks\BlueToothTask\BlueToothTask.hpp</name>
+                </file>
             </group>
             <group>
                 <name>ScreenTask</name>
+                <file>
+                    <name>$PROJ_DIR$\Application\Tasks\ScreenTask\ScreenTask.hpp</name>
+                </file>
             </group>
             <group>
                 <name>TemperatureTask</name>
+                <file>
+                    <name>$PROJ_DIR$\Application\Tasks\TemperatureTask\TemperatureTask.hpp</name>
+                </file>
             </group>
         </group>
         <group>

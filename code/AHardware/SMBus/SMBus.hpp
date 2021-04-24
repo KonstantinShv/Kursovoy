@@ -13,15 +13,16 @@ public:
   														
 	
       //Start
+     
      I2C1::CR1::START::Enable::Set(); 
      I2C1::CR1::ACK::Acknowledge::Set() ;
-     while(I2C1::SR1::SB::Value1::IsSet()) //wait until start condition 
+     while(!I2C1::SR1::SB::Value1::IsSet()) //wait until start condition 
      {
      }       
      I2C1::SR1::Get();
      
      //Set address
-     I2C1::DR::Write(address<<1) ; 
+     I2C1::DR::Write(0) ; 
 
      while(I2C1::SR1::ADDR::Value1::IsSet())//wait until address transmit
      {
@@ -32,7 +33,7 @@ public:
      
      
       //RAM addreess
-     I2C1::DR::Write(0x07) ;   
+     I2C1::DR::Write(address) ;   
      while(I2C1::SR1::TxE::Value1::IsSet())//wait until DR empty
      {
      } ;
@@ -44,13 +45,14 @@ public:
      I2C1::CR1::START::Enable::Set(); // Set the START bit in the I2C_CR1 register to generate a Start condition
       
      
-     while(I2C1::SR1::SB::Value1::IsSet()) 
+     while(!I2C1::SR1::SB::Value1::IsSet()) 
      {
      }
      I2C1::SR1::Get();
       //Set readonly address
      I2C1::DR::Write((address<<1)) ; 
-   
+     I2C1::DR::Write(1) ;
+     
      while(I2C1::SR1::ADDR::Value1::IsSet())
      {
      }

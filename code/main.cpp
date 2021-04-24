@@ -15,6 +15,7 @@
 #include "i2c2registers.hpp" //for I2C2
 #include <iostream>
 #include "SMBus.hpp"
+#include "spi2registers.hpp"
 
 using namespace std;
 
@@ -50,12 +51,12 @@ int __low_level_init(void)
   
   
   RCC::APB1ENR::I2C1EN::Enable::Set();//ПОдали тактирование на I2C
-  
+  RCC::AHB1ENR::GPIOCEN::Enable::Set();
   I2C1::CR1::SMBUS::SmBusMode::Set();
               
   //I2C1::CCR::F_S::StandartMode::Set();
-  I2C1::CCR::CCR::Set(0xC8U);
-  I2C1::CR2::FREQ::Set(0x10);//2MHz 
+  I2C1::CCR::CCR::Set(0xC8);
+  I2C1::CR2::FREQ::Set(0x10);//2MHz
   I2C1::TRISE::Write(0x11);
   I2C1::CR1::PE::Enable::Set();
   //I2C1::OAR1::ADD7::Set(0x00);
@@ -65,20 +66,33 @@ int __low_level_init(void)
   
   
   GPIOB::AFRH::AFRH8::Af4::Set(); // i2c
-  GPIOB::AFRH::AFRH9::Af4::Set();  //  i2c
+  GPIOB::AFRH::AFRH9::Af4::Set(); //  i2c
     
-  GPIOB::OTYPER::OT8::OutputOpenDrain::Set();
-  GPIOB::OTYPER::OT9::OutputOpenDrain::Set();
+//  GPIOB::OTYPER::OT8::OutputOpenDrain::Set();
+//  GPIOB::OTYPER::OT9::OutputOpenDrain::Set();
+//  
+//  GPIOB::OSPEEDR::OSPEEDR8::HighSpeed::Set() ;
+//  GPIOB::OSPEEDR::OSPEEDR9::HighSpeed::Set() ;
+//  
+//  GPIOB::PUPDR::PUPDR8::PullUp::Set() ;
+//  GPIOB::PUPDR::PUPDR9::PullUp::Set() ;
   
-  GPIOB::OSPEEDR::OSPEEDR8::HighSpeed::Set() ;
-  GPIOB::OSPEEDR::OSPEEDR9::HighSpeed::Set() ;
+    //spi 
+  SPI2::CR1Pack<
+ 	SPI2::CR1::MSTR::Master, //SPI2 master
+ 	SPI2::CR1::BIDIMODE::Unidirectional2Line,
+ 	SPI2::CR1::DFF::Data8bit,
+ 	SPI2::CR1::CPOL::High,
+ 	SPI2::CR1::CPHA::Phase2edge,
+ 	SPI2::CR1::SSM::NssSoftwareEnable,
+ 	SPI2::CR1::SSI::Value1,
+ 	SPI2::CR1::BR::PclockDiv2,
+ 	SPI2::CR1::LSBFIRST::MsbFisrt,
+ 	SPI2::CR1::CRCEN::CrcCalcDisable
+ 	
+>::Set() ;
   
-  GPIOB::PUPDR::PUPDR8::PullUp::Set() ;
-  GPIOB::PUPDR::PUPDR9::PullUp::Set() ;
-  
-  
-  
-  RCC::AHB1ENR::GPIOCEN::Enable::Set();
+
   
   RCC::APB1ENRPack<
     RCC::APB1ENR::TIM2EN::Enable, 
@@ -112,7 +126,6 @@ ButtonPoll<Timer> buttonPoll(button,event);
 
 Temp temp;
 SMBus smbus;
-
 
 
 int main()
