@@ -21,10 +21,10 @@ public:
      }       
      I2C1::SR1::Get();
      
-     //Set address
+    
      I2C1::DR::Write(0) ; 
 
-     while(I2C1::SR1::ADDR::Value1::IsSet())//wait until address transmit
+     while(!I2C1::SR1::ADDR::Value1::IsSet())//wait until address transmit
      {
      }    
     
@@ -34,9 +34,9 @@ public:
      
       //RAM addreess
      I2C1::DR::Write(address) ;   
-     while(I2C1::SR1::TxE::Value1::IsSet())//wait until DR empty
+     while(!I2C1::SR1::TxE::Value1::IsSet())//wait until DR empty
      {
-     } ;
+     } 
       
      
      I2C1::CR1::STOP::Enable::Set() ;
@@ -53,20 +53,20 @@ public:
      I2C1::DR::Write((address<<1)) ; 
      I2C1::DR::Write(1) ;
      
-     while(I2C1::SR1::ADDR::Value1::IsSet())
+     while(!I2C1::SR1::ADDR::Value1::IsSet())
      {
      }
-     I2C1::CR1::ACK::NoAcknowledge::Set() ;
+     
   
      I2C1::SR1::Get();
      I2C1::SR2::Get();
    
      
-     while (I2C1::SR1::RxNE::Value1::IsSet())
+     while (!I2C1::SR1::RxNE::Value1::IsSet())
      {
      }
-  
-        std::uint16_t temp = I2C1::DR::Get() ;
+      I2C1::CR1::ACK::NoAcknowledge::Set() ;
+        std::uint16_t temp = I2C1::DR::Get()<<8 ;
    
         I2C1::CR1::STOP::Enable::Set() ;
      

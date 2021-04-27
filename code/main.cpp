@@ -49,33 +49,34 @@ int __low_level_init(void)
 
    
   
- //==================I2C========================================================
   
   RCC::APB1ENR::I2C1EN::Enable::Set();//ПОдали тактирование на I2C
-  RCC::AHB1ENR::GPIOCEN::Enable::Set();
-  I2C1::CR1::SMBUS::SmBusMode::Set();
-              
-  //I2C1::CCR::F_S::StandartMode::Set();
-  I2C1::CCR::CCR::Set(0xC8);
-  I2C1::CR2::FREQ::Set(0x10);//2MHz
-  I2C1::TRISE::Write(0x11);
-  I2C1::CR1::PE::Enable::Set();
-
-  //the fourth function I2C 
-
-  GPIOB::AFRH::AFRH8::Af4::Set(); // i2c
-  GPIOB::AFRH::AFRH9::Af4::Set(); //  i2c
-    
-//  GPIOB::OTYPER::OT8::OutputOpenDrain::Set();
-//  GPIOB::OTYPER::OT9::OutputOpenDrain::Set();
-//  
-//  GPIOB::OSPEEDR::OSPEEDR8::HighSpeed::Set() ;
-//  GPIOB::OSPEEDR::OSPEEDR9::HighSpeed::Set() ;
-//  
-//  GPIOB::PUPDR::PUPDR8::PullUp::Set() ;
-//  GPIOB::PUPDR::PUPDR9::PullUp::Set() ;
-//============================================================================== 
+ 
+  I2C1::CR1::SMBUS::SmBusMode::Set(); //Включение интерфейса SMBus.
+  I2C1::CR1::SMBTYPE::Device::Set(); //Тип устройства в режиме.
+  I2C1::CCR::F_S::StandartMode::Set(); 
+  I2C1::CCR::CCR::Set(0xC8U) ;
+  I2C1::CR2::FREQ::Set(0x10) ;
+  I2C1::TRISE::Write(0x11) ;  
+  I2C1::CR1::PE::Enable::Set() ;
+ 
+  GPIOB::ODR::ODR8::High::Set() ;
   
+  //for I2C1 or SMBus
+  GPIOB::MODER::MODER8::Alternate::Set(); //Alternate moder 8
+  GPIOB::MODER::MODER9::Alternate::Set(); //Alternate moder 9
+  
+  GPIOB::AFRH::AFRH8::Af4::Set();  //scl
+  GPIOB::AFRH::AFRH9::Af4::Set();  //sda
+  
+  GPIOB::OTYPER::OT8::OutputOpenDrain::Set();
+  GPIOB::OTYPER::OT9::OutputOpenDrain::Set();
+  
+  GPIOB::OSPEEDR::OSPEEDR8::HighSpeed::Set() ;
+  GPIOB::OSPEEDR::OSPEEDR9::HighSpeed::Set() ;
+  
+  GPIOB::PUPDR::PUPDR8::PullUp::Set() ;
+  GPIOB::PUPDR::PUPDR9::PullUp::Set() ;
   
   
   
