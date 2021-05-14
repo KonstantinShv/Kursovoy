@@ -16,7 +16,7 @@
         <ShowSource>1</ShowSource>
     </Trace1>
     <DebugChecksum>
-        <Checksum>2487463852</Checksum>
+        <Checksum>1307168181</Checksum>
     </DebugChecksum>
     <Disassembly>
         <InstrCount>0</InstrCount>
@@ -75,6 +75,9 @@
         <ITMportsLogFile>0</ITMportsLogFile>
         <ITMlogFile>$PROJ_DIR$\ITM.log</ITMlogFile>
     </SWOTraceHWSettings>
+    <watch_formats>
+        <Fmt0>{W}1:temp_lsb	3	0</Fmt0>
+    </watch_formats>
     <Trace2>
         <Enabled>0</Enabled>
         <ShowSource>0</ShowSource>
@@ -151,7 +154,8 @@
     </Breakpoints2>
     <Aliases>
         <A0>_ "C:\Users\Студент\Desktop\K\Kursovoy-main\code\AHardware\Button\Button.hpp" "E:\Git\POIP\Kursovoy\code\AHardware\Button\Button.hpp"</A0>
-        <Count>1</Count>
+        <A1>_ "E:\Git\POIP\Kursovoy\code\AHardware\Button\Button.hpp" "D:\Git\POIP\Kursovoy\code\AHardware\Button\Button.hpp"</A1>
+        <Count>2</Count>
         <SuppressDialog>0</SuppressDialog>
     </Aliases>
 </settings>

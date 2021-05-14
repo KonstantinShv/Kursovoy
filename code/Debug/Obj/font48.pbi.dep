@@ -1,0 +1,8 @@
+font48.pbi: \
+  D:\Git\POIP\Kursovoy\code\AHardware\LCDDriver\Fonts\font48.cpp \
+  D:\Git\POIP\Kursovoy\code\AHardware\LCDDriver\Fonts/font.hpp \
+  D:\IAR\arm\inc\cpp\cstdint D:\IAR\arm\inc\c\stdint.h \
+  D:\IAR\arm\inc\c\ycheck.h D:\IAR\arm\inc\c\yvals.h \
+  D:\IAR\arm\inc\c\DLib_Defaults.h \
+  D:\\IAR\\arm\\inc\\c\\DLib_Config_Normal.h \
+  D:\IAR\arm\inc\c\DLib_Product.h

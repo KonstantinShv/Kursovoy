@@ -408,6 +408,10 @@
                     <state>$PROJ_DIR$</state>
                     <state>$PROJ_DIR$\AHardware\Temp</state>
                     <state>$PROJ_DIR$\Common</state>
+                    <state>$PROJ_DIR$\AHardware\LCDDriver\Fonts</state>
+                    <state>$PROJ_DIR$\AHardware\Pin</state>
+                    <state>$PROJ_DIR$\AHardware\Port</state>
+                    <state>$PROJ_DIR$\AHardware\Atomic</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -2174,6 +2178,12 @@
     <group>
         <name>AHardware</name>
         <group>
+            <name>Atomic</name>
+            <file>
+                <name>$PROJ_DIR$\AHardware\Atomic\atomicutils.hpp</name>
+            </file>
+        </group>
+        <group>
             <name>Button</name>
             <file>
                 <name>$PROJ_DIR$\AHardware\Button\Button.hpp</name>
@@ -2193,6 +2203,51 @@
         </group>
         <group>
             <name>LCDDriver</name>
+            <group>
+                <name>Fonts</name>
+                <file>
+                    <name>$PROJ_DIR$\AHardware\LCDDriver\Fonts\font.h</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\AHardware\LCDDriver\Fonts\font.hpp</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\AHardware\LCDDriver\Fonts\font24.cpp</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\AHardware\LCDDriver\Fonts\font48.cpp</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\AHardware\LCDDriver\Fonts\font_segoeUISemibold_24pt.h</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\AHardware\LCDDriver\Fonts\font_segoeUISemibold_48pt.h</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\AHardware\LCDDriver\Fonts\segoeUISemibold_24pt.h</name>
+                </file>
+            </group>
+            <file>
+                <name>$PROJ_DIR$\AHardware\LCDDriver\Display.hpp</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\CortexLib\AbstractHardware\EdpElink\elinkdriver.hpp</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\AHardware\LCDDriver\systemclock.hpp</name>
+            </file>
+        </group>
+        <group>
+            <name>Pin</name>
+            <file>
+                <name>$PROJ_DIR$\AHardware\Pin\pin.hpp</name>
+            </file>
+        </group>
+        <group>
+            <name>Port</name>
+            <file>
+                <name>$PROJ_DIR$\AHardware\Port\port.hpp</name>
+            </file>
         </group>
         <group>
             <name>Registers</name>
@@ -2619,6 +2674,9 @@
         </group>
         <group>
             <name>SPIx</name>
+            <file>
+                <name>$PROJ_DIR$\AHardware\SPIx\spi.hpp</name>
+            </file>
         </group>
         <group>
             <name>Temp</name>

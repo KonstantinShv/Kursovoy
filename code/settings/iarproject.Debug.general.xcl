@@ -1,14 +1,14 @@
-"D:\Папка\Универ\7 семак\IAR\arm\bin\armproc.dll" 
+"D:\IAR\arm\bin\armproc.dll" 
 
-"D:\Папка\Универ\7 семак\IAR\arm\bin\armstlink2.dll" 
+"D:\IAR\arm\bin\armstlink2.dll" 
 
-"E:\Git\POIP\Kursovoy\code\Debug\Exe\iarproject.out" 
+"D:\Git\POIP\Kursovoy\code\Debug\Exe\iarproject.out" 
 
---plugin="D:\Папка\Универ\7 семак\IAR\arm\bin\armbat.dll" 
+--plugin="D:\IAR\arm\bin\armbat.dll" 
 
---device_macro="D:\Папка\Универ\7 семак\IAR\arm\config\debugger\ST\STM32F4xx.dmac" 
+--device_macro="D:\IAR\arm\config\debugger\ST\STM32F4xx.dmac" 
 
---flash_loader="D:\Папка\Универ\7 семак\IAR\arm\config\flashloader\ST\FlashSTM32F411xE.board" 
+--flash_loader="D:\IAR\arm\config\flashloader\ST\FlashSTM32F411xE.board" 
 
 
 

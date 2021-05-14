@@ -16,7 +16,11 @@
 #include <iostream>
 #include "SMBus.hpp"
 #include "spi2registers.hpp"
-
+#include "elinkdriver.hpp"    //for ElinkDriver
+#include "display.hpp"        //for Display
+#include "pin.hpp"
+#include "port.hpp"
+#include "spi.hpp"
 using namespace std;
 
 constexpr std::uint32_t UartSpeed9600 = std::uint32_t(16000000U / 9600U) ;
@@ -40,6 +44,7 @@ int __low_level_init(void)
   //Switch on clock on PortA a
   RCC::AHB1ENR::GPIOAEN::Enable::Set();
   RCC::AHB1ENR::GPIOBEN::Enable::Set();
+  RCC::AHB1ENR::GPIOCEN::Enable::Set();
   
   GPIOB::MODERPack<
     GPIOB::MODER::MODER8::Alternate,
@@ -79,24 +84,45 @@ int __low_level_init(void)
   GPIOB::PUPDR::PUPDR9::PullUp::Set() ;
   
   
-  
-    //spi 
-  SPI2::CR1Pack<
- 	SPI2::CR1::MSTR::Master, //SPI2 master
- 	SPI2::CR1::BIDIMODE::Unidirectional2Line,
- 	SPI2::CR1::DFF::Data8bit,
- 	SPI2::CR1::CPOL::High,
- 	SPI2::CR1::CPHA::Phase2edge,
- 	SPI2::CR1::SSM::NssSoftwareEnable,
- 	SPI2::CR1::SSI::Value1,
- 	SPI2::CR1::BR::PclockDiv2,
- 	SPI2::CR1::LSBFIRST::MsbFisrt,
- 	SPI2::CR1::CRCEN::CrcCalcDisable
- 	
->::Set() ;
-  
 
+//SPI
+  // PortB.13 - SPI3_CLK, PortB.15 - SPI2_MOSI, PB1 -CS, PB2- DC, PB8 -Reset
+GPIOA::MODERPack<
+        GPIOA::MODER::MODER4::Output,         //CS
+        GPIOA::MODER::MODER2::Output,         //DC
+        GPIOA::MODER::MODER1::Output,
+        GPIOA::MODER::MODER3::Output,
+        
+    >::Set() ;
+
+GPIOB::MODERPack<
+        GPIOB::MODER::MODER13::Alternate,			//PortC.3 scl
+        GPIOB::MODER::MODER15::Alternate			//PortC.2 sda
+>::Set() ;
+
+ GPIOB::AFRHPack<
+        GPIOB::AFRH::AFRH13::Af5,
+        GPIOB::AFRH::AFRH15::Af5
+    >::Set() ;
+     GPIOB::BSRR::BS1::High::Write() ; 
+     
+      SPI2::CR1Pack<
+        SPI2::CR1::MSTR::Master,   //SPI2 master
+        SPI2::CR1::BIDIMODE::Unidirectional2Line,
+        SPI2::CR1::DFF::Data8bit,
+        SPI2::CR1::CPOL::High,
+        SPI2::CR1::CPHA::Phase2edge,
+        SPI2::CR1::SSM::NssSoftwareEnable,
+        SPI2::CR1::SSI::Value1,
+        SPI2::CR1::BR::PclockDiv2,
+        SPI2::CR1::LSBFIRST::MsbFisrt,
+        SPI2::CR1::CRCEN::CrcCalcDisable
+    >::Set() ;
   
+      SPI2::CRCPR::CRCPOLY::Set(10U) ;
+    SPI2::CR1::SPE::Enable::Set() ;
+
+//USART  
   RCC::APB1ENRPack<
     RCC::APB1ENR::TIM2EN::Enable, 
     RCC::APB1ENR::USART2EN::Enable
@@ -120,10 +146,18 @@ int __low_level_init(void)
 }
 };
 
+//using ResetPin = Pin<Port<GPIOA>, 1U, PinWriteable> ;
+//using DcPin = Pin<Port<GPIOA>, 2U, PinWriteable> ;
+//using CsPin = Pin<Port<GPIOA>, 4U, PinWriteable> ;
+//using BusyPin = Pin<Port<GPIOA>, 3U, PinReadable> ;
 
-//Button<GPIOC, 13> button;
+
+//using LcdDriverSpi = Spi<SPI2> ;
+//using LcdDriver = ElinkDriver<LcdDriverSpi, ResetPin, DcPin, CsPin, BusyPin, Attributes<BlackAndWhite>> ;
+
+Button<GPIOC, 13> button;
 Event event(1000ms, 1);
-UserButton button;
+//UserButton button;
 
 ButtonPoll<Timer> buttonPoll(button,event);
 
@@ -135,11 +169,11 @@ int main()
 {
   //const char* message = "Hello World \n";
 
-  
+  //LcdDriver::Init();
   //buttonPoll.ButtonPollInitialization();
   for(;;)
   {
-   smbus.ReadWord(0x00);
+   smbus.ReadWord(0x07);
   //std::cout << value << std::endl;
   //temp.SetNextUnits();
   

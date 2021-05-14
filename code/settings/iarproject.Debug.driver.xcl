@@ -6,7 +6,7 @@
 
 "-p" 
 
-"D:\Папка\Универ\7 семак\IAR\arm\CONFIG\debugger\ST\STM32F411RE.ddf" 
+"D:\IAR\arm\CONFIG\debugger\ST\STM32F411RE.ddf" 
 
 "--semihosting" 
 
