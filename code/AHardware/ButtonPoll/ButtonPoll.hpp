@@ -28,7 +28,7 @@ public:
   {
     if(button.IsPressed())
       {
-        std::cout << " Amogus : "  << std::endl;
+        
     //event.Signal();
       }
   }

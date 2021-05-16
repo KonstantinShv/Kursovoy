@@ -412,6 +412,8 @@
                     <state>$PROJ_DIR$\AHardware\Pin</state>
                     <state>$PROJ_DIR$\AHardware\Port</state>
                     <state>$PROJ_DIR$\AHardware\Atomic</state>
+                    <state>$PROJ_DIR$\AHardware\LCDDriver</state>
+                    <state>$PROJ_DIR$\AHardware\Filter</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -2193,6 +2195,12 @@
             <name>ButtonPoll</name>
             <file>
                 <name>$PROJ_DIR$\AHardware\ButtonPoll\ButtonPoll.hpp</name>
+            </file>
+        </group>
+        <group>
+            <name>Filter</name>
+            <file>
+                <name>$PROJ_DIR$\AHardware\Filter\filter.hpp</name>
             </file>
         </group>
         <group>

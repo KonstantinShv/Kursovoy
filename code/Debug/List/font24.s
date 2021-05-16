@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //
-// IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM        13/May/2021  18:24:26
+// IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM        15/May/2021  18:17:34
 // Copyright 1999-2019 IAR Systems AB.
 //
 //    Cpu mode     =  
@@ -8,7 +8,7 @@
 //    Source file  =
 //        D:\Git\POIP\Kursovoy\code\AHardware\LCDDriver\Fonts\font24.cpp
 //    Command line =
-//        -f C:\Users\KONSTA~1\AppData\Local\Temp\EW9597.tmp
+//        -f C:\Users\KONSTA~1\AppData\Local\Temp\EW7C4.tmp
 //        (D:\Git\POIP\Kursovoy\code\AHardware\LCDDriver\Fonts\font24.cpp -lC
 //        D:\Git\POIP\Kursovoy\code\Debug\List -lA
 //        D:\Git\POIP\Kursovoy\code\Debug\List -o
@@ -83,7 +83,9 @@
 //        D:\Git\POIP\Kursovoy\code\AHardware\LCDDriver\Fonts\ -I
 //        D:\Git\POIP\Kursovoy\code\AHardware\Pin\ -I
 //        D:\Git\POIP\Kursovoy\code\AHardware\Port\ -I
-//        D:\Git\POIP\Kursovoy\code\AHardware\Atomic\ -Ol --c++ --no_exceptions
+//        D:\Git\POIP\Kursovoy\code\AHardware\Atomic\ -I
+//        D:\Git\POIP\Kursovoy\code\AHardware\LCDDriver\ -I
+//        D:\Git\POIP\Kursovoy\code\AHardware\Filter\ -Ol --c++ --no_exceptions
 //        --no_rtti)
 //    Locale       =  C
 //    List file    =  D:\Git\POIP\Kursovoy\code\Debug\List\font24.s

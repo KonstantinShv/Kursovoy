@@ -1,4 +1,5 @@
-main.pbi: D:\Git\POIP\Kursovoy\code\AHardware\SPIx\spi.hpp \
+main.pbi: D:\Git\POIP\Kursovoy\code\AHardware\TempSens\TempSens.hpp \
+  D:\Git\POIP\Kursovoy\code\AHardware\SPIx\spi.hpp \
   D:\Git\POIP\Kursovoy\code\AHardware\Atomic\atomicutils.hpp \
   D:\IAR\arm\inc\c\ycheck.h D:\IAR\arm\inc\c\assert.h \
   D:\IAR\arm\inc\cpp\cassert \

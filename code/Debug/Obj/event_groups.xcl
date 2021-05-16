@@ -144,6 +144,10 @@ D:\Git\POIP\Kursovoy\code\AHardware\Port
 -I
 D:\Git\POIP\Kursovoy\code\AHardware\Atomic
 -I
+D:\Git\POIP\Kursovoy\code\AHardware\LCDDriver
+-I
+D:\Git\POIP\Kursovoy\code\AHardware\Filter
+-I
 D:\IAR\arm\inc
 -I
 D:\IAR\arm\inc\c
@@ -281,6 +285,10 @@ D:\Git\POIP\Kursovoy\code\AHardware\Pin
 D:\Git\POIP\Kursovoy\code\AHardware\Port
 -I
 D:\Git\POIP\Kursovoy\code\AHardware\Atomic
+-I
+D:\Git\POIP\Kursovoy\code\AHardware\LCDDriver
+-I
+D:\Git\POIP\Kursovoy\code\AHardware\Filter
 -D__CHAR_BITS__=8
 -D__CHAR_MAX__=0xff
 -D__CHAR_MIN__=0

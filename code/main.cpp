@@ -21,6 +21,7 @@
 #include "pin.hpp"
 #include "port.hpp"
 #include "spi.hpp"
+#include "TempSens.hpp"
 using namespace std;
 
 constexpr std::uint32_t UartSpeed9600 = std::uint32_t(16000000U / 9600U) ;
@@ -45,13 +46,49 @@ int __low_level_init(void)
   RCC::AHB1ENR::GPIOAEN::Enable::Set();
   RCC::AHB1ENR::GPIOBEN::Enable::Set();
   RCC::AHB1ENR::GPIOCEN::Enable::Set();
-  
-  GPIOB::MODERPack<
-    GPIOB::MODER::MODER8::Alternate,
-    GPIOB::MODER::MODER9::Alternate,
-    >::Set();
-  
+  RCC::APB1ENR::SPI2EN::Enable::Set();
 
+  
+GPIOB::MODERPack<
+        GPIOB::MODER::MODER1::Output,         //CS
+        GPIOB::MODER::MODER2::Output,         //DC
+        GPIOB::MODER::MODER8::Output,
+        GPIOB::MODER::MODER9::Output,
+        GPIOB::MODER::MODER13::Alternate,			//PortC.3 scl
+        GPIOB::MODER::MODER15::Alternate			//PortC.2 sda
+    >::Set() ;
+
+    GPIOB::AFRHPack<
+        GPIOB::AFRH::AFRH13::Af5,
+        GPIOB::AFRH::AFRH15::Af5
+    >::Set() ;
+
+    GPIOB::BSRR::BS1::High::Write();
+    
+    GPIOC::MODERPack<
+        GPIOC::MODER::MODER5::Output,
+        GPIOC::MODER::MODER8::Output,
+        GPIOC::MODER::MODER9::Output,
+				GPIOC::MODER::MODER2::Input, //Busy
+				GPIOC::MODER::MODER3::Output //Reset
+    >::Set() ;
+
+     
+      SPI2::CR1Pack<
+        SPI2::CR1::MSTR::Master,   //SPI2 master
+        SPI2::CR1::BIDIMODE::Unidirectional2Line,
+        SPI2::CR1::DFF::Data8bit,
+        SPI2::CR1::CPOL::High,
+        SPI2::CR1::CPHA::Phase2edge,
+        SPI2::CR1::SSM::NssSoftwareEnable,
+        SPI2::CR1::SSI::Value1,
+        SPI2::CR1::BR::PclockDiv2,
+        SPI2::CR1::LSBFIRST::MsbFisrt,
+        SPI2::CR1::CRCEN::CrcCalcDisable
+    >::Set() ;
+  
+      SPI2::CRCPR::CRCPOLY::Set(10U) ;
+    SPI2::CR1::SPE::Enable::Set() ;
    
   
   
@@ -87,40 +124,7 @@ int __low_level_init(void)
 
 //SPI
   // PortB.13 - SPI3_CLK, PortB.15 - SPI2_MOSI, PB1 -CS, PB2- DC, PB8 -Reset
-GPIOA::MODERPack<
-        GPIOA::MODER::MODER4::Output,         //CS
-        GPIOA::MODER::MODER2::Output,         //DC
-        GPIOA::MODER::MODER1::Output,
-        GPIOA::MODER::MODER3::Output,
-        
-    >::Set() ;
 
-GPIOB::MODERPack<
-        GPIOB::MODER::MODER13::Alternate,			//PortC.3 scl
-        GPIOB::MODER::MODER15::Alternate			//PortC.2 sda
->::Set() ;
-
- GPIOB::AFRHPack<
-        GPIOB::AFRH::AFRH13::Af5,
-        GPIOB::AFRH::AFRH15::Af5
-    >::Set() ;
-     GPIOB::BSRR::BS1::High::Write() ; 
-     
-      SPI2::CR1Pack<
-        SPI2::CR1::MSTR::Master,   //SPI2 master
-        SPI2::CR1::BIDIMODE::Unidirectional2Line,
-        SPI2::CR1::DFF::Data8bit,
-        SPI2::CR1::CPOL::High,
-        SPI2::CR1::CPHA::Phase2edge,
-        SPI2::CR1::SSM::NssSoftwareEnable,
-        SPI2::CR1::SSI::Value1,
-        SPI2::CR1::BR::PclockDiv2,
-        SPI2::CR1::LSBFIRST::MsbFisrt,
-        SPI2::CR1::CRCEN::CrcCalcDisable
-    >::Set() ;
-  
-      SPI2::CRCPR::CRCPOLY::Set(10U) ;
-    SPI2::CR1::SPE::Enable::Set() ;
 
 //USART  
   RCC::APB1ENRPack<
@@ -146,14 +150,14 @@ GPIOB::MODERPack<
 }
 };
 
-//using ResetPin = Pin<Port<GPIOA>, 1U, PinWriteable> ;
-//using DcPin = Pin<Port<GPIOA>, 2U, PinWriteable> ;
-//using CsPin = Pin<Port<GPIOA>, 4U, PinWriteable> ;
-//using BusyPin = Pin<Port<GPIOA>, 3U, PinReadable> ;
+using ResetPin = Pin<Port<GPIOC>, 3U, PinWriteable> ;
+using DcPin = Pin<Port<GPIOB>, 2U, PinWriteable> ;
+using CsPin = Pin<Port<GPIOB>, 1U, PinWriteable> ;
+using BusyPin = Pin<Port<GPIOC>, 2U, PinReadable> ;
 
 
-//using LcdDriverSpi = Spi<SPI2> ;
-//using LcdDriver = ElinkDriver<LcdDriverSpi, ResetPin, DcPin, CsPin, BusyPin, Attributes<BlackAndWhite>> ;
+using LcdDriverSpi = Spi<SPI2> ;
+using LcdDriver = ElinkDriver<LcdDriverSpi, ResetPin, DcPin, CsPin, BusyPin, Attributes<BlackAndWhite>> ;
 
 Button<GPIOC, 13> button;
 Event event(1000ms, 1);
@@ -161,23 +165,34 @@ Event event(1000ms, 1);
 
 ButtonPoll<Timer> buttonPoll(button,event);
 
+
 Temp temp;
 SMBus smbus;
 
-
+Filter filter(10.0F,100.0F);
+TempSens tempSens(filter);
 int main()
 {
-  //const char* message = "Hello World \n";
+  const char* message = "Hello World \n";
 
-  //LcdDriver::Init();
+//  LcdDriver::Init();
+//  LcdDriver::Clear();
+//  
+//  Point point{130U, 10U};
+//  Display<400,300>::DrawString(point, "GodFather") ;
+//  LcdDriver::UpdatePartialWindow(Display<400, 300>::image.data(), 0, 0, 400, 300) ;
+//  point.y = 130 ;
+//  point.x = 100 ;
+
+  
   //buttonPoll.ButtonPollInitialization();
   for(;;)
   {
-   smbus.ReadWord(0x07);
-  //std::cout << value << std::endl;
+    float value = tempSens.TakeMeas();
+  std::cout << value << std::endl;
   //temp.SetNextUnits();
   
-   // usartDriver.SendMessage(message, strlen(message));
+   usartDriver.SendMessage(message, strlen(message));
     
 
   }

@@ -65,12 +65,13 @@ public:
      {
      }
       I2C1::CR1::STOP::Enable::Set(); 
-        std::uint16_t temp = I2C1::DR::Get();
-        temp = temp + (I2C1::DR::Get()<<8);
-        float value = float(temp)*0.02F - 273.15F;
+        std::uint16_t value = I2C1::DR::Get();
+        value = value + (I2C1::DR::Get()<<8);
+        return value;
+//      float temp = float(value)*0.02F - 273.15F;
+//        std::cout << temp << "aboba" << std::endl;
         
-        
-       std::cout << value << std::endl ;
+       
        
   }
   
