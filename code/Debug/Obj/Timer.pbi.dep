@@ -86,4 +86,5 @@ Timer.pbi: D:\Git\POIP\Kursovoy\code\AHardware\Timer\Timer.cpp \
   D:\IAR\arm\inc\cpp\typeinfo D:\IAR\arm\inc\cpp\xlocinfo \
   D:\IAR\arm\inc\cpp\cctype D:\IAR\arm\inc\c\ctype.h \
   D:\IAR\arm\inc\cpp\system_error D:\IAR\arm\inc\cpp\cerrno \
-  D:\IAR\arm\inc\c\errno.h
+  D:\IAR\arm\inc\c\errno.h \
+  D:\Git\POIP\Kursovoy\code\Rtos\wrapper\interruptentry.hpp

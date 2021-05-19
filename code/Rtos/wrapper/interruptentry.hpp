@@ -9,22 +9,21 @@
 
 #ifndef INTERRUPTENTRY_HPP
 #define INTERRUPTENTRY_HPP
-
+#include "rtoswrapper.hpp" //for RtosWrapper
 namespace OsWrapper
 {
-  extern void wEnterInterrupt() ;
-  extern void wLeaveInterrupt() ;
+ 
   
   class InterruptEntry
   {
     public:
       inline InterruptEntry()
       {
-        wEnterInterrupt() ;
+        RtosWrapper::wEnterInterrupt() ;
       }	  
       inline ~InterruptEntry()
       {
-        wLeaveInterrupt() ;
+        RtosWrapper::wLeaveInterrupt() ;
       }
   } ;
 } ;

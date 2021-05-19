@@ -1,13 +1,13 @@
 ///////////////////////////////////////////////////////////////////////////////
 //
-// IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM        15/May/2021  19:04:32
+// IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM        19/May/2021  21:13:57
 // Copyright 1999-2019 IAR Systems AB.
 //
 //    Cpu mode     =  
 //    Endian       =  little
 //    Source file  =  D:\Git\POIP\Kursovoy\code\startupF411RE.cpp
 //    Command line =
-//        -f C:\Users\KONSTA~1\AppData\Local\Temp\EW499.tmp
+//        -f C:\Users\KONSTA~1\AppData\Local\Temp\EWE50B.tmp
 //        (D:\Git\POIP\Kursovoy\code\startupF411RE.cpp -lC
 //        D:\Git\POIP\Kursovoy\code\Debug\List -lA
 //        D:\Git\POIP\Kursovoy\code\Debug\List -o
@@ -112,6 +112,9 @@
         EXTERN __cmain
         EXTWEAK __iar_init_core
         EXTWEAK __iar_init_vfp
+        EXTERN vPortSVCHandler
+        EXTERN xPortPendSVHandler
+        EXTERN xPortSysTickHandler
 
         PUBLIC _ZGV11usartDriver
         PUBLIC _ZN11DummyModule7handlerEv
@@ -124,6 +127,10 @@
         PUBLIC _ZN5UsartI6USART2E15TransmitDisableEv
         PUBLIC _ZN5UsartI6USART2E16InterruptDisableEv
         PUBLIC _ZN5UsartI6USART2E9WriteByteEh
+        PUBLIC _ZN9OsWrapper11RtosWrapper19wHandleSvcInterruptEv
+        PUBLIC _ZN9OsWrapper11RtosWrapper23wHandleSysTickInterruptEv
+        PUBLIC _ZN9OsWrapper4Rtos18HandleSvcInterruptEv
+        PUBLIC _ZN9OsWrapper4Rtos22HandleSysTickInterruptEv
         PUBLIC _ZNSt5arrayIhLj255EEixEj
         PUBLIC _ZNSt6chrono12steady_clock9is_steadyE
         PUBLIC _ZNSt6chrono12system_clock12is_monotonicE
@@ -297,7 +304,7 @@ _ZNSt6chrono12system_clock12is_monotonicE:
 _ZNSt6chrono12steady_clock9is_steadyE:
         DATA8
         DC8 1
-//    8 
+//    8 #include "rtos.hpp"
 //    9 extern "C" void __iar_program_start( void );
 //   10 extern "C" void xPortPendSVHandler(void);
 //   11 
@@ -341,8 +348,9 @@ __vector_table:
         DC32 SFE(CSTACK), __iar_program_start, _ZN11DummyModule7handlerEv
         DC32 _ZN11DummyModule7handlerEv, _ZN11DummyModule7handlerEv
         DC32 _ZN11DummyModule7handlerEv, _ZN11DummyModule7handlerEv, 0x0, 0x0
-        DC32 0x0, 0x0, _ZN11DummyModule7handlerEv, _ZN11DummyModule7handlerEv
-        DC32 0x0, _ZN11DummyModule7handlerEv, _ZN11DummyModule7handlerEv
+        DC32 0x0, 0x0, _ZN9OsWrapper4Rtos18HandleSvcInterruptEv
+        DC32 _ZN11DummyModule7handlerEv, 0x0, xPortPendSVHandler
+        DC32 _ZN9OsWrapper4Rtos22HandleSysTickInterruptEv
         DC32 _ZN11DummyModule7handlerEv, _ZN11DummyModule7handlerEv
         DC32 _ZN11DummyModule7handlerEv, _ZN11DummyModule7handlerEv
         DC32 _ZN11DummyModule7handlerEv, _ZN11DummyModule7handlerEv
@@ -355,8 +363,8 @@ __vector_table:
         DC32 _ZN11DummyModule7handlerEv, 0x0, 0x0, 0x0, 0x0
         DC32 _ZN11DummyModule7handlerEv, _ZN11DummyModule7handlerEv
         DC32 _ZN11DummyModule7handlerEv, _ZN11DummyModule7handlerEv
-        DC32 _ZN11DummyModule7handlerEv, _ZN5Timer16InterruptHandlerEv
-        DC32 _ZN11DummyModule7handlerEv, _ZN11DummyModule7handlerEv
+        DC32 _ZN5Timer16InterruptHandlerEv, _ZN5Timer16InterruptHandlerEv
+        DC32 _ZN5Timer16InterruptHandlerEv, _ZN11DummyModule7handlerEv
         DC32 _ZN11DummyModule7handlerEv, _ZN11DummyModule7handlerEv
         DC32 _ZN11DummyModule7handlerEv, _ZN11DummyModule7handlerEv
         DC32 _ZN11DummyModule7handlerEv, _ZN11DummyModule7handlerEv
@@ -387,11 +395,11 @@ __vector_table:
 //   54   0,
 //   55   0,
 //   56   0,
-//   57   DummyModule::handler,
+//   57   OsWrapper::Rtos::HandleSvcInterrupt,
 //   58   DummyModule::handler,
 //   59   0,
-//   60   DummyModule::handler,
-//   61   DummyModule::handler,
+//   60   xPortPendSVHandler,
+//   61   OsWrapper::Rtos::HandleSysTickInterrupt,
 //   62   //External Interrupts
 //   63   DummyModule::handler,         //Window Watchdog
 //   64   DummyModule::handler,         //PVD through EXTI Line detect/EXTI16
@@ -420,9 +428,9 @@ __vector_table:
 //   87   DummyModule::handler,         //TIM9/TIM1 Break interrupt 
 //   88   DummyModule::handler,         //TIM10/TIM1 Update interrupt
 //   89   DummyModule::handler,         //TIM11/TIM1 Trigger/Commutation interrupts
-//   90   DummyModule::handler,		//TIM1 Capture Compare interrupt
+//   90   Timer::InterruptHandler,		//TIM1 Capture Compare interrupt
 //   91   Timer::InterruptHandler,         //TIM2  	
-//   92   DummyModule::handler,         //TIM3
+//   92   Timer::InterruptHandler,         //TIM3
 //   93   DummyModule::handler,         //TIM4
 //   94   DummyModule::handler,         //I2C1 Event
 //   95   DummyModule::handler,         //I2C1 Error
@@ -675,9 +683,69 @@ _ZN5UsartI6USART2E15TransmitDisableEv:
         POP      {R0,PC}          ;; return
           CFI EndBlock cfiBlock11
 
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZN9OsWrapper11RtosWrapper19wHandleSvcInterruptEv
+          CFI Block cfiBlock12 Using cfiCommon0
+          CFI Function _ZN9OsWrapper11RtosWrapper19wHandleSvcInterruptEv
+        THUMB
+// __interwork __vfp void OsWrapper::RtosWrapper::wHandleSvcInterrupt()
+_ZN9OsWrapper11RtosWrapper19wHandleSvcInterruptEv:
+        PUSH     {R7,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI CFA R13+8
+          CFI FunCall vPortSVCHandler
+        BL       vPortSVCHandler
+        POP      {R0,PC}          ;; return
+          CFI EndBlock cfiBlock12
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZN9OsWrapper11RtosWrapper23wHandleSysTickInterruptEv
+          CFI Block cfiBlock13 Using cfiCommon0
+          CFI Function _ZN9OsWrapper11RtosWrapper23wHandleSysTickInterruptEv
+        THUMB
+// __interwork __vfp void OsWrapper::RtosWrapper::wHandleSysTickInterrupt()
+_ZN9OsWrapper11RtosWrapper23wHandleSysTickInterruptEv:
+        PUSH     {R7,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI CFA R13+8
+          CFI FunCall xPortSysTickHandler
+        BL       xPortSysTickHandler
+        POP      {R0,PC}          ;; return
+          CFI EndBlock cfiBlock13
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZN9OsWrapper4Rtos18HandleSvcInterruptEv
+          CFI Block cfiBlock14 Using cfiCommon0
+          CFI Function _ZN9OsWrapper4Rtos18HandleSvcInterruptEv
+        THUMB
+// __interwork __vfp void OsWrapper::Rtos::HandleSvcInterrupt()
+_ZN9OsWrapper4Rtos18HandleSvcInterruptEv:
+        PUSH     {R7,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI CFA R13+8
+          CFI FunCall _ZN9OsWrapper11RtosWrapper19wHandleSvcInterruptEv
+        BL       _ZN9OsWrapper11RtosWrapper19wHandleSvcInterruptEv
+        POP      {R0,PC}          ;; return
+          CFI EndBlock cfiBlock14
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZN9OsWrapper4Rtos22HandleSysTickInterruptEv
+          CFI Block cfiBlock15 Using cfiCommon0
+          CFI Function _ZN9OsWrapper4Rtos22HandleSysTickInterruptEv
+        THUMB
+// __interwork __vfp void OsWrapper::Rtos::HandleSysTickInterrupt()
+_ZN9OsWrapper4Rtos22HandleSysTickInterruptEv:
+        PUSH     {R7,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI CFA R13+8
+          CFI FunCall _ZN9OsWrapper11RtosWrapper23wHandleSysTickInterruptEv
+        BL       _ZN9OsWrapper11RtosWrapper23wHandleSysTickInterruptEv
+        POP      {R0,PC}          ;; return
+          CFI EndBlock cfiBlock15
+
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN4Uart16interruptHandlerEv
-          CFI Block cfiBlock12 Using cfiCommon0
+          CFI Block cfiBlock16 Using cfiCommon0
           CFI Function _ZN4Uart16interruptHandlerEv
         THUMB
 _ZN4Uart16interruptHandlerEv:
@@ -693,7 +761,7 @@ _ZN4Uart16interruptHandlerEv:
 ??interruptHandler_0:
         DATA32
         DC32     usartDriver
-          CFI EndBlock cfiBlock12
+          CFI EndBlock cfiBlock16
 
         SECTION `.init_array`:CODE:ROOT(2)
         SECTION_TYPE SHT_INIT_ARRAY, 0
@@ -727,9 +795,9 @@ _ZN4Uart16interruptHandlerEv:
 //   4 bytes in section .init_array
 // 408 bytes in section .intvec
 //  47 bytes in section .rodata
-// 196 bytes in section .text
+// 228 bytes in section .text
 // 
-//  52 bytes of CODE  memory (+ 148 bytes shared)
+//  52 bytes of CODE  memory (+ 180 bytes shared)
 // 408 bytes of CONST memory (+  47 bytes shared)
 //   0 bytes of DATA  memory (+ 265 bytes shared)
 //

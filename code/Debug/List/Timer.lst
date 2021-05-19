@@ -1,13 +1,13 @@
 ###############################################################################
 #
-# IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM         15/May/2021  19:04:32
+# IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM         19/May/2021  21:13:57
 # Copyright 1999-2019 IAR Systems AB.
 #
 #    Cpu mode     =  
 #    Endian       =  little
 #    Source file  =  D:\Git\POIP\Kursovoy\code\AHardware\Timer\Timer.cpp
 #    Command line =
-#        -f C:\Users\KONSTA~1\AppData\Local\Temp\EW49A.tmp
+#        -f C:\Users\KONSTA~1\AppData\Local\Temp\EWE6C3.tmp
 #        (D:\Git\POIP\Kursovoy\code\AHardware\Timer\Timer.cpp -lC
 #        D:\Git\POIP\Kursovoy\code\Debug\List -lA
 #        D:\Git\POIP\Kursovoy\code\Debug\List -o
@@ -119,6 +119,42 @@ D:\Git\POIP\Kursovoy\code\AHardware\Timer\Timer.cpp
    \                     _ZNSt6chrono12steady_clock9is_steadyE:
    \        0x0   0x01               DC8 1
 
+   \                                 In section .text, align 4
+   \   __interwork __vfp void OsWrapper::RtosWrapper::wSignalEvent(void * const &, uint32_t)
+   \                     _ZN9OsWrapper11RtosWrapper12wSignalEventERKPvj: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x000A             MOVS     R2,R1
+   \        0x4   0x2100             MOVS     R1,#+0
+   \        0x6   0x9100             STR      R1,[SP, #+0]
+   \        0x8   0x466B             MOV      R3,SP
+   \        0xA   0x6801             LDR      R1,[R0, #+0]
+   \        0xC   0x4808             LDR.N    R0,??wSignalEvent_0
+   \        0xE   0x....'....        BL       xTimerPendFunctionCallFromISR
+   \       0x12   0x2800             CMP      R0,#+0
+   \       0x14   0xD00A             BEQ.N    ??wSignalEvent_1
+   \       0x16   0x9800             LDR      R0,[SP, #+0]
+   \       0x18   0x2800             CMP      R0,#+0
+   \       0x1A   0xD007             BEQ.N    ??wSignalEvent_1
+   \       0x1C   0xF05F 0x5080      MOVS     R0,#+268435456
+   \       0x20   0x4904             LDR.N    R1,??wSignalEvent_0+0x4  ;; 0xe000ed04
+   \       0x22   0x6008             STR      R0,[R1, #+0]
+   \       0x24   0xF3BF 0x8F4F      DSB      SY
+   \       0x28   0xF3BF 0x8F6F      ISB      SY
+   \                     ??wSignalEvent_1: (+1)
+   \       0x2C   0xBD01             POP      {R0,PC}          ;; return
+   \       0x2E   0xBF00             Nop      
+   \                     ??wSignalEvent_0:
+   \       0x30   0x....'....        DC32     vEventGroupSetBitsCallback
+   \       0x34   0xE000'ED04        DC32     0xe000ed04
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp void OsWrapper::Event::Signal()
+   \                     _ZN9OsWrapper5Event6SignalEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x6A01             LDR      R1,[R0, #+32]
+   \        0x4   0x....'....        BL       _ZN9OsWrapper11RtosWrapper12wSignalEventERKPvj
+   \        0x8   0xBD01             POP      {R0,PC}          ;; return
+
    \                                 In section .text, align 2
    \   __interwork __vfp bool Button<GPIOC, 13>::IsPressed()
    \                     _ZN6ButtonI5GPIOCLi13EE9IsPressedEv: (+1)
@@ -133,21 +169,29 @@ D:\Git\POIP\Kursovoy\code\AHardware\Timer\Timer.cpp
    \                                 In section .text, align 2
    \   __interwork __vfp void ButtonPoll<Timer>::Poll()
    \                     _ZN10ButtonPollI5TimerE4PollEv: (+1)
-   \        0x0   0xB580             PUSH     {R7,LR}
-   \        0x2   0x6840             LDR      R0,[R0, #+4]
-   \        0x4   0x....'....        BL       _ZN6ButtonI5GPIOCLi13EE9IsPressedEv
-   \        0x8   0xBD01             POP      {R0,PC}          ;; return
-      2          
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x6860             LDR      R0,[R4, #+4]
+   \        0x6   0x....'....        BL       _ZN6ButtonI5GPIOCLi13EE9IsPressedEv
+   \        0xA   0x2800             CMP      R0,#+0
+   \        0xC   0xD002             BEQ.N    ??Poll_0
+   \        0xE   0x6820             LDR      R0,[R4, #+0]
+   \       0x10   0x....'....        BL       _ZN9OsWrapper5Event6SignalEv
+   \                     ??Poll_0: (+1)
+   \       0x14   0xBD10             POP      {R4,PC}          ;; return
+      2          #include "interruptentry.hpp" //for InterruptEntry
+      3          
 
    \                                 In section .text, align 4, keep-with-next
-      3          void Timer::InterruptHandler()
-      4          {
+      4          void Timer::InterruptHandler()
+      5          {
    \                     _ZN5Timer16InterruptHandlerEv: (+1)
    \        0x0   0xB580             PUSH     {R7,LR}
-      5            buttonPoll.Poll();
+      6            //OsWrapper::InterruptEntry ie;
+      7            buttonPoll.Poll();
    \        0x2   0x4802             LDR.N    R0,??InterruptHandler_0
    \        0x4   0x....'....        BL       _ZN10ButtonPollI5TimerE4PollEv
-      6          }
+      8          }
    \        0x8   0xBD01             POP      {R0,PC}          ;; return
    \        0xA   0xBF00             Nop      
    \                     ??InterruptHandler_0:
@@ -161,6 +205,11 @@ D:\Git\POIP\Kursovoy\code\AHardware\Timer\Timer.cpp
          8   -> RegisterBase<1073874960U, 32U, ReadMode>::Get<ReadMode, void>()
        8   ButtonPoll<Timer>::Poll()
          8   -> Button<GPIOC, 13>::IsPressed()
+         8   -> OsWrapper::Event::Signal()
+       8   OsWrapper::Event::Signal()
+         8   -> OsWrapper::RtosWrapper::wSignalEvent(void * const &, uint32_t)
+       8   OsWrapper::RtosWrapper::wSignalEvent(void * const &, uint32_t)
+         8   -> xTimerPendFunctionCallFromISR
        0   RegisterBase<1073874960U, 32U, ReadMode>::Get<ReadMode, void>()
        8   Timer::InterruptHandler()
          8   -> ButtonPoll<Timer>::Poll()
@@ -171,7 +220,9 @@ D:\Git\POIP\Kursovoy\code\AHardware\Timer\Timer.cpp
    Bytes  Function/Label
    -----  --------------
       20  Button<GPIOC, 13>::IsPressed()
-      10  ButtonPoll<Timer>::Poll()
+      22  ButtonPoll<Timer>::Poll()
+      10  OsWrapper::Event::Signal()
+      56  OsWrapper::RtosWrapper::wSignalEvent(void * const &, uint32_t)
       12  RegisterBase<1073874960U, 32U, ReadMode>::Get<ReadMode, void>()
       16  Timer::InterruptHandler()
        1  std::chrono::steady_clock::is_steady
@@ -180,11 +231,11 @@ D:\Git\POIP\Kursovoy\code\AHardware\Timer\Timer.cpp
       44  -- Other
 
  
- 47 bytes in section .rodata
- 58 bytes in section .text
+  47 bytes in section .rodata
+ 136 bytes in section .text
  
- 16 bytes of CODE  memory (+ 42 bytes shared)
-  0 bytes of CONST memory (+ 47 bytes shared)
+ 16 bytes of CODE  memory (+ 120 bytes shared)
+  0 bytes of CONST memory (+  47 bytes shared)
 
 Errors: none
 Warnings: none

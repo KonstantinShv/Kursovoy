@@ -21,10 +21,14 @@
 #include "pin.hpp"
 #include "port.hpp"
 #include "spi.hpp"
+#include "TemperatureTask.hpp"
 #include "TempSens.hpp"
+#include "stkregisters.hpp"
+#include "scbregisters.hpp"
 using namespace std;
+extern "C" uint32_t SystemCoreClock = 16000000U;
 
-constexpr std::uint32_t UartSpeed9600 = std::uint32_t(16000000U / 9600U) ;
+ constexpr std::uint32_t UartSpeed9600 = std::uint32_t(16000000U / 9600U);
 
 extern "C" {
 int __low_level_init(void)
@@ -41,7 +45,16 @@ int __low_level_init(void)
   {
 
   }
-    
+  STK::LOAD::Write(SystemCoreClock/1000U - 1);
+  STK::VAL::Write(0U);
+  STK::CTRL::CLKSOURCE::CpuClock::Set();
+  STK::CTRL::ENABLE::Enable::Set();
+  while(SCB::ICSR::PENDSTSET::PendingState::IsSet())
+  {
+  }
+
+   //RCC::APB2ENR::SYSCFGEN::Enable::Set(); 
+  
   //Switch on clock on PortA a
   RCC::AHB1ENR::GPIOAEN::Enable::Set();
   RCC::AHB1ENR::GPIOBEN::Enable::Set();
@@ -165,12 +178,13 @@ Event event(1000ms, 1);
 
 ButtonPoll<Timer> buttonPoll(button,event);
 
-
-Temp temp;
-SMBus smbus;
-
 Filter filter(10.0F,100.0F);
 TempSens tempSens(filter);
+Temp temp;
+SMBus smbus;
+TemperatureTask temperatureTask(temp,tempSens,event);
+
+
 int main()
 {
   const char* message = "Hello World \n";
@@ -183,18 +197,20 @@ int main()
 //  LcdDriver::UpdatePartialWindow(Display<400, 300>::image.data(), 0, 0, 400, 300) ;
 //  point.y = 130 ;
 //  point.x = 100 ;
-
   
   //buttonPoll.ButtonPollInitialization();
+  //using namespace OsWrapper;
+   Rtos::CreateThread(temperatureTask, "temperatureTask", ThreadPriority::normal);
+   Rtos::Start();
+  usartDriver.SendMessage(message, strlen(message));
   for(;;)
   {
-    float value = tempSens.TakeMeas();
+   char* value = temperatureTask.GetValue();
   std::cout << value << std::endl;
   //temp.SetNextUnits();
   
-   usartDriver.SendMessage(message, strlen(message));
-    
-
+   
+   
   }
   return 0;
 }

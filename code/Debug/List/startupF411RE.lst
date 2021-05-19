@@ -1,13 +1,13 @@
 ###############################################################################
 #
-# IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM         15/May/2021  19:04:32
+# IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM         19/May/2021  21:13:57
 # Copyright 1999-2019 IAR Systems AB.
 #
 #    Cpu mode     =  
 #    Endian       =  little
 #    Source file  =  D:\Git\POIP\Kursovoy\code\startupF411RE.cpp
 #    Command line =
-#        -f C:\Users\KONSTA~1\AppData\Local\Temp\EW499.tmp
+#        -f C:\Users\KONSTA~1\AppData\Local\Temp\EWE50B.tmp
 #        (D:\Git\POIP\Kursovoy\code\startupF411RE.cpp -lC
 #        D:\Git\POIP\Kursovoy\code\Debug\List -lA
 #        D:\Git\POIP\Kursovoy\code\Debug\List -o
@@ -226,7 +226,35 @@ D:\Git\POIP\Kursovoy\code\startupF411RE.cpp
    \   __absolute bool const std::chrono::steady_clock::is_steady
    \                     _ZNSt6chrono12steady_clock9is_steadyE:
    \        0x0   0x01               DC8 1
-      8          
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp void OsWrapper::RtosWrapper::wHandleSvcInterrupt()
+   \                     _ZN9OsWrapper11RtosWrapper19wHandleSvcInterruptEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....'....        BL       vPortSVCHandler
+   \        0x6   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp void OsWrapper::RtosWrapper::wHandleSysTickInterrupt()
+   \                     _ZN9OsWrapper11RtosWrapper23wHandleSysTickInterruptEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....'....        BL       xPortSysTickHandler
+   \        0x6   0xBD01             POP      {R0,PC}          ;; return
+      8          #include "rtos.hpp"
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp void OsWrapper::Rtos::HandleSvcInterrupt()
+   \                     _ZN9OsWrapper4Rtos18HandleSvcInterruptEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....'....        BL       _ZN9OsWrapper11RtosWrapper19wHandleSvcInterruptEv
+   \        0x6   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp void OsWrapper::Rtos::HandleSysTickInterrupt()
+   \                     _ZN9OsWrapper4Rtos22HandleSysTickInterruptEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....'....        BL       _ZN9OsWrapper11RtosWrapper23wHandleSysTickInterruptEv
+   \        0x6   0xBD01             POP      {R0,PC}          ;; return
       9          extern "C" void __iar_program_start( void );
      10          extern "C" void xPortPendSVHandler(void);
      11          
@@ -284,13 +312,13 @@ D:\Git\POIP\Kursovoy\code\startupF411RE.cpp
    \              0x....'....  
    \              0x0000'0000  
    \              0x0000'0000  
-   \       0x24   0x0000'0000        DC32 0x0, 0x0, _ZN11DummyModule7handlerEv, _ZN11DummyModule7handlerEv
+   \       0x24   0x0000'0000        DC32 0x0, 0x0, _ZN9OsWrapper4Rtos18HandleSvcInterruptEv
    \              0x0000'0000  
    \              0x....'....  
+   \       0x30   0x....'....        DC32 _ZN11DummyModule7handlerEv, 0x0, xPortPendSVHandler
+   \              0x0000'0000  
    \              0x....'....  
-   \       0x34   0x0000'0000        DC32 0x0, _ZN11DummyModule7handlerEv, _ZN11DummyModule7handlerEv
-   \              0x....'....  
-   \              0x....'....  
+   \       0x3C   0x....'....        DC32 _ZN9OsWrapper4Rtos22HandleSysTickInterruptEv
    \       0x40   0x....'....        DC32 _ZN11DummyModule7handlerEv, _ZN11DummyModule7handlerEv
    \              0x....'....  
    \       0x48   0x....'....        DC32 _ZN11DummyModule7handlerEv, _ZN11DummyModule7handlerEv
@@ -318,9 +346,9 @@ D:\Git\POIP\Kursovoy\code\startupF411RE.cpp
    \              0x....'....  
    \       0xA4   0x....'....        DC32 _ZN11DummyModule7handlerEv, _ZN11DummyModule7handlerEv
    \              0x....'....  
-   \       0xAC   0x....'....        DC32 _ZN11DummyModule7handlerEv, _ZN5Timer16InterruptHandlerEv
+   \       0xAC   0x....'....        DC32 _ZN5Timer16InterruptHandlerEv, _ZN5Timer16InterruptHandlerEv
    \              0x....'....  
-   \       0xB4   0x....'....        DC32 _ZN11DummyModule7handlerEv, _ZN11DummyModule7handlerEv
+   \       0xB4   0x....'....        DC32 _ZN5Timer16InterruptHandlerEv, _ZN11DummyModule7handlerEv
    \              0x....'....  
    \       0xBC   0x....'....        DC32 _ZN11DummyModule7handlerEv, _ZN11DummyModule7handlerEv
    \              0x....'....  
@@ -390,11 +418,11 @@ D:\Git\POIP\Kursovoy\code\startupF411RE.cpp
      54            0,
      55            0,
      56            0,
-     57            DummyModule::handler,
+     57            OsWrapper::Rtos::HandleSvcInterrupt,
      58            DummyModule::handler,
      59            0,
-     60            DummyModule::handler,
-     61            DummyModule::handler,
+     60            xPortPendSVHandler,
+     61            OsWrapper::Rtos::HandleSysTickInterrupt,
      62            //External Interrupts
      63            DummyModule::handler,         //Window Watchdog
      64            DummyModule::handler,         //PVD through EXTI Line detect/EXTI16
@@ -423,9 +451,9 @@ D:\Git\POIP\Kursovoy\code\startupF411RE.cpp
      87            DummyModule::handler,         //TIM9/TIM1 Break interrupt 
      88            DummyModule::handler,         //TIM10/TIM1 Update interrupt
      89            DummyModule::handler,         //TIM11/TIM1 Trigger/Commutation interrupts
-     90            DummyModule::handler,		//TIM1 Capture Compare interrupt
+     90            Timer::InterruptHandler,		//TIM1 Capture Compare interrupt
      91            Timer::InterruptHandler,         //TIM2  	
-     92            DummyModule::handler,         //TIM3
+     92            Timer::InterruptHandler,         //TIM3
      93            DummyModule::handler,         //TIM4
      94            DummyModule::handler,         //I2C1 Event
      95            DummyModule::handler,         //I2C1 Error
@@ -528,6 +556,14 @@ D:\Git\POIP\Kursovoy\code\startupF411RE.cpp
        0   DummyModule::handler()
        0   FieldValueBase<USART2_CR1_RE_Values<USART2::CR1, 2U, 1U, ReadWriteMode, USART2::USART2CR1Base>, USART2::USART2CR1Base, 0U>::Set<ReadWriteMode, void>()
        0   FieldValueBase<USART2_CR1_TXEIE_Values<USART2::CR1, 7U, 1U, ReadWriteMode, USART2::USART2CR1Base>, USART2::USART2CR1Base, 0U>::Set<ReadWriteMode, void>()
+       8   OsWrapper::Rtos::HandleSvcInterrupt()
+         8   -> OsWrapper::RtosWrapper::wHandleSvcInterrupt()
+       8   OsWrapper::Rtos::HandleSysTickInterrupt()
+         8   -> OsWrapper::RtosWrapper::wHandleSysTickInterrupt()
+       8   OsWrapper::RtosWrapper::wHandleSvcInterrupt()
+         8   -> OsWrapper::vPortSVCHandler
+       8   OsWrapper::RtosWrapper::wHandleSysTickInterrupt()
+         8   -> OsWrapper::xPortSysTickHandler
        0   RegisterBase<1073759236U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
        8   USARTDriver<Usart2>::OnNextByteTransmit()
          8   -> Usart<USART2>::InterruptDisable()
@@ -561,6 +597,10 @@ D:\Git\POIP\Kursovoy\code\startupF411RE.cpp
        2  DummyModule::handler()
       16  FieldValueBase<USART2_CR1_RE_Values<USART2::CR1, 2U, 1U, ReadWriteMode, USART2::USART2CR1Base>, USART2::USART2CR1Base, 0U>::Set<ReadWriteMode, void>()
       16  FieldValueBase<USART2_CR1_TXEIE_Values<USART2::CR1, 7U, 1U, ReadWriteMode, USART2::USART2CR1Base>, USART2::USART2CR1Base, 0U>::Set<ReadWriteMode, void>()
+       8  OsWrapper::Rtos::HandleSvcInterrupt()
+       8  OsWrapper::Rtos::HandleSysTickInterrupt()
+       8  OsWrapper::RtosWrapper::wHandleSvcInterrupt()
+       8  OsWrapper::RtosWrapper::wHandleSysTickInterrupt()
       12  RegisterBase<1073759236U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
       46  USARTDriver<Usart2>::OnNextByteTransmit()
       12  USARTDriver<Usart2>::USARTDriver()
@@ -583,9 +623,9 @@ D:\Git\POIP\Kursovoy\code\startupF411RE.cpp
    4 bytes in section .init_array
  408 bytes in section .intvec
   47 bytes in section .rodata
- 196 bytes in section .text
+ 228 bytes in section .text
  
-  52 bytes of CODE  memory (+ 148 bytes shared)
+  52 bytes of CODE  memory (+ 180 bytes shared)
  408 bytes of CONST memory (+  47 bytes shared)
    0 bytes of DATA  memory (+ 265 bytes shared)
 

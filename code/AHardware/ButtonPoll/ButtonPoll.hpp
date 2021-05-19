@@ -29,7 +29,7 @@ public:
     if(button.IsPressed())
       {
         
-    //event.Signal();
+      ButtonPressEvent.Signal();
       }
   }
   

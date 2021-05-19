@@ -5,7 +5,7 @@
 
 #include "usartconfig.h"
 #include "Timer.hpp"
-
+#include "rtos.hpp"
 extern "C" void __iar_program_start( void );
 extern "C" void xPortPendSVHandler(void);
 
@@ -54,11 +54,11 @@ extern "C" const tIntVectItem __vector_table[] =
   0,
   0,
   0,
-  DummyModule::handler,
+  OsWrapper::Rtos::HandleSvcInterrupt,
   DummyModule::handler,
   0,
-  DummyModule::handler,
-  DummyModule::handler,
+  xPortPendSVHandler,
+  OsWrapper::Rtos::HandleSysTickInterrupt,
   //External Interrupts
   DummyModule::handler,         //Window Watchdog
   DummyModule::handler,         //PVD through EXTI Line detect/EXTI16
@@ -87,9 +87,9 @@ extern "C" const tIntVectItem __vector_table[] =
   DummyModule::handler,         //TIM9/TIM1 Break interrupt 
   DummyModule::handler,         //TIM10/TIM1 Update interrupt
   DummyModule::handler,         //TIM11/TIM1 Trigger/Commutation interrupts
-  DummyModule::handler,		//TIM1 Capture Compare interrupt
+  Timer::InterruptHandler,		//TIM1 Capture Compare interrupt
   Timer::InterruptHandler,         //TIM2  	
-  DummyModule::handler,         //TIM3
+  Timer::InterruptHandler,         //TIM3
   DummyModule::handler,         //TIM4
   DummyModule::handler,         //I2C1 Event
   DummyModule::handler,         //I2C1 Error

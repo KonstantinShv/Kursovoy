@@ -1,13 +1,13 @@
 ///////////////////////////////////////////////////////////////////////////////
 //
-// IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM        15/May/2021  19:04:32
+// IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM        19/May/2021  21:13:57
 // Copyright 1999-2019 IAR Systems AB.
 //
 //    Cpu mode     =  
 //    Endian       =  little
 //    Source file  =  D:\Git\POIP\Kursovoy\code\AHardware\Timer\Timer.cpp
 //    Command line =
-//        -f C:\Users\KONSTA~1\AppData\Local\Temp\EW49A.tmp
+//        -f C:\Users\KONSTA~1\AppData\Local\Temp\EWE6C3.tmp
 //        (D:\Git\POIP\Kursovoy\code\AHardware\Timer\Timer.cpp -lC
 //        D:\Git\POIP\Kursovoy\code\Debug\List -lA
 //        D:\Git\POIP\Kursovoy\code\Debug\List -o
@@ -105,11 +105,15 @@
 
         EXTERN _ZTVN10__cxxabiv117__class_type_infoE
         EXTERN buttonPoll
+        EXTERN vEventGroupSetBitsCallback
+        EXTERN xTimerPendFunctionCallFromISR
 
         PUBLIC _ZN10ButtonPollI5TimerE4PollEv
         PUBLIC _ZN12RegisterBaseILj1073874960ELj32E8ReadModeE3GetIS0_vEEjv
         PUBLIC _ZN5Timer16InterruptHandlerEv
         PUBLIC _ZN6ButtonI5GPIOCLi13EE9IsPressedEv
+        PUBLIC _ZN9OsWrapper11RtosWrapper12wSignalEventERKPvj
+        PUBLIC _ZN9OsWrapper5Event6SignalEv
         PUBLIC _ZNSt6chrono12steady_clock9is_steadyE
         PUBLIC _ZNSt6chrono12system_clock12is_monotonicE
         PUBLIC _ZNSt6chrono12system_clock9is_steadyE
@@ -242,9 +246,63 @@ _ZNSt6chrono12steady_clock9is_steadyE:
         DATA8
         DC8 1
 
+        SECTION `.text`:CODE:REORDER:NOROOT(2)
+        SECTION_GROUP _ZN9OsWrapper11RtosWrapper12wSignalEventERKPvj
+          CFI Block cfiBlock1 Using cfiCommon0
+          CFI Function _ZN9OsWrapper11RtosWrapper12wSignalEventERKPvj
+        THUMB
+// __interwork __vfp void OsWrapper::RtosWrapper::wSignalEvent(void * const &, uint32_t)
+_ZN9OsWrapper11RtosWrapper12wSignalEventERKPvj:
+        PUSH     {R7,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI CFA R13+8
+        MOVS     R2,R1
+        MOVS     R1,#+0
+        STR      R1,[SP, #+0]
+        MOV      R3,SP
+        LDR      R1,[R0, #+0]
+        LDR.N    R0,??wSignalEvent_0
+          CFI FunCall xTimerPendFunctionCallFromISR
+        BL       xTimerPendFunctionCallFromISR
+        CMP      R0,#+0
+        BEQ.N    ??wSignalEvent_1
+        LDR      R0,[SP, #+0]
+        CMP      R0,#+0
+        BEQ.N    ??wSignalEvent_1
+        MOVS     R0,#+268435456
+        LDR.N    R1,??wSignalEvent_0+0x4  ;; 0xe000ed04
+        STR      R0,[R1, #+0]
+        DSB      SY
+        ISB      SY
+??wSignalEvent_1:
+        POP      {R0,PC}          ;; return
+        Nop      
+        DATA
+??wSignalEvent_0:
+        DATA32
+        DC32     vEventGroupSetBitsCallback
+        DC32     0xe000ed04
+          CFI EndBlock cfiBlock1
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZN9OsWrapper5Event6SignalEv
+          CFI Block cfiBlock2 Using cfiCommon0
+          CFI Function _ZN9OsWrapper5Event6SignalEv
+        THUMB
+// __interwork __vfp void OsWrapper::Event::Signal()
+_ZN9OsWrapper5Event6SignalEv:
+        PUSH     {R7,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI CFA R13+8
+        LDR      R1,[R0, #+32]
+          CFI FunCall _ZN9OsWrapper11RtosWrapper12wSignalEventERKPvj
+        BL       _ZN9OsWrapper11RtosWrapper12wSignalEventERKPvj
+        POP      {R0,PC}          ;; return
+          CFI EndBlock cfiBlock2
+
         SECTION `.text`:CODE:REORDER:NOROOT(1)
         SECTION_GROUP _ZN6ButtonI5GPIOCLi13EE9IsPressedEv
-          CFI Block cfiBlock1 Using cfiCommon0
+          CFI Block cfiBlock3 Using cfiCommon0
           CFI Function _ZN6ButtonI5GPIOCLi13EE9IsPressedEv
         THUMB
 // __interwork __vfp bool Button<GPIOC, 13>::IsPressed()
@@ -259,47 +317,57 @@ _ZN6ButtonI5GPIOCLi13EE9IsPressedEv:
         EORS     R0,R0,#0x1
         UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
         POP      {R1,PC}          ;; return
-          CFI EndBlock cfiBlock1
+          CFI EndBlock cfiBlock3
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
         SECTION_GROUP _ZN10ButtonPollI5TimerE4PollEv
-          CFI Block cfiBlock2 Using cfiCommon0
+          CFI Block cfiBlock4 Using cfiCommon0
           CFI Function _ZN10ButtonPollI5TimerE4PollEv
         THUMB
 // __interwork __vfp void ButtonPoll<Timer>::Poll()
 _ZN10ButtonPollI5TimerE4PollEv:
-        PUSH     {R7,LR}
+        PUSH     {R4,LR}
           CFI R14 Frame(CFA, -4)
+          CFI R4 Frame(CFA, -8)
           CFI CFA R13+8
-        LDR      R0,[R0, #+4]
+        MOVS     R4,R0
+        LDR      R0,[R4, #+4]
           CFI FunCall _ZN6ButtonI5GPIOCLi13EE9IsPressedEv
         BL       _ZN6ButtonI5GPIOCLi13EE9IsPressedEv
-        POP      {R0,PC}          ;; return
-          CFI EndBlock cfiBlock2
-//    2 
+        CMP      R0,#+0
+        BEQ.N    ??Poll_0
+        LDR      R0,[R4, #+0]
+          CFI FunCall _ZN9OsWrapper5Event6SignalEv
+        BL       _ZN9OsWrapper5Event6SignalEv
+??Poll_0:
+        POP      {R4,PC}          ;; return
+          CFI EndBlock cfiBlock4
+//    2 #include "interruptentry.hpp" //for InterruptEntry
+//    3 
 
         SECTION `.text`:CODE:NOROOT(2)
-          CFI Block cfiBlock3 Using cfiCommon0
+          CFI Block cfiBlock5 Using cfiCommon0
           CFI Function _ZN5Timer16InterruptHandlerEv
         THUMB
-//    3 void Timer::InterruptHandler()
-//    4 {
+//    4 void Timer::InterruptHandler()
+//    5 {
 _ZN5Timer16InterruptHandlerEv:
         PUSH     {R7,LR}
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+8
-//    5   buttonPoll.Poll();
+//    6   //OsWrapper::InterruptEntry ie;
+//    7   buttonPoll.Poll();
         LDR.N    R0,??InterruptHandler_0
           CFI FunCall _ZN10ButtonPollI5TimerE4PollEv
         BL       _ZN10ButtonPollI5TimerE4PollEv
-//    6 }
+//    8 }
         POP      {R0,PC}          ;; return
         Nop      
         DATA
 ??InterruptHandler_0:
         DATA32
         DC32     buttonPoll
-          CFI EndBlock cfiBlock3
+          CFI EndBlock cfiBlock5
 
         SECTION `.iar_vfe_header`:DATA:NOALLOC:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
@@ -308,11 +376,11 @@ _ZN5Timer16InterruptHandlerEv:
 
         END
 // 
-// 47 bytes in section .rodata
-// 58 bytes in section .text
+//  47 bytes in section .rodata
+// 136 bytes in section .text
 // 
-// 16 bytes of CODE  memory (+ 42 bytes shared)
-//  0 bytes of CONST memory (+ 47 bytes shared)
+// 16 bytes of CODE  memory (+ 120 bytes shared)
+//  0 bytes of CONST memory (+  47 bytes shared)
 //
 //Errors: none
 //Warnings: none

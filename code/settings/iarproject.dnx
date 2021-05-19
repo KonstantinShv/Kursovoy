@@ -16,7 +16,7 @@
         <ShowSource>1</ShowSource>
     </Trace1>
     <DebugChecksum>
-        <Checksum>836398481</Checksum>
+        <Checksum>869061405</Checksum>
     </DebugChecksum>
     <Disassembly>
         <MixedMode>1</MixedMode>
@@ -150,7 +150,8 @@
     </DisassembleMode>
     <Breakpoints2>
         <Bp0>_ 0 "EMUL_CODE" "{$PROJ_DIR$\AHardware\ButtonPoll\ButtonPoll.cpp}.19.1" 0 0 1 "" 0 "" 0</Bp0>
-        <Count>1</Count>
+        <Bp1>_ 1 "EMUL_CODE" "{$PROJ_DIR$\AHardware\Timer\Timer.cpp}.7.3" 0 0 1 "" 0 "" 0</Bp1>
+        <Count>2</Count>
     </Breakpoints2>
     <Aliases>
         <A0>_ "C:\Users\Студент\Desktop\K\Kursovoy-main\code\AHardware\Button\Button.hpp" "E:\Git\POIP\Kursovoy\code\AHardware\Button\Button.hpp"</A0>

@@ -2285,7 +2285,7 @@
                         <name>$PROJ_DIR$\..\..\Laba_inf\RtosWrapper\AHardware\CortexM4\FieldValues\scbfieldvalues.hpp</name>
                     </file>
                     <file>
-                        <name>$PROJ_DIR$\..\..\Laba_inf\RtosWrapper\AHardware\CortexM4\FieldValues\stkfieldvalues.hpp</name>
+                        <name>$PROJ_DIR$\AHardware\Registers\CortexM4\FieldValues\stkfieldvalues.hpp</name>
                     </file>
                 </group>
                 <file>
@@ -2310,7 +2310,7 @@
                     <name>$PROJ_DIR$\..\..\Laba_inf\RtosWrapper\AHardware\CortexM4\scbregisters.hpp</name>
                 </file>
                 <file>
-                    <name>$PROJ_DIR$\..\..\Laba_inf\RtosWrapper\AHardware\CortexM4\stkregisters.hpp</name>
+                    <name>$PROJ_DIR$\AHardware\Registers\CortexM4\stkregisters.hpp</name>
                 </file>
             </group>
             <group>
@@ -2706,6 +2706,9 @@
         </group>
         <group>
             <name>TempSens</name>
+            <file>
+                <name>$PROJ_DIR$\AHardware\TempSens\TempSens.hpp</name>
+            </file>
         </group>
         <group>
             <name>Timer</name>
