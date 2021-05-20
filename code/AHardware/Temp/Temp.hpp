@@ -39,6 +39,8 @@ public:
      case 2:
        return 'F';
        break;
+     default:
+       return 0;
       
      }
    }

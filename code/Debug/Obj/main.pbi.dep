@@ -1,130 +1,120 @@
-main.pbi: D:\Git\POIP\Kursovoy\code\main.cpp \
-  D:\Git\POIP\Kursovoy\code\Rtos\wrapper\rtos.hpp \
-  D:\Git\POIP\Kursovoy\code\Rtos\wrapper/thread.hpp \
-  D:\IAR\arm\inc\cpp\array D:\IAR\arm\inc\cpp\algorithm \
-  D:\IAR\arm\inc\cpp\xmemory D:\IAR\arm\inc\cpp\xmemory0 \
-  D:\IAR\arm\inc\cpp\cstdint D:\IAR\arm\inc\c\stdint.h \
-  D:\IAR\arm\inc\c\ycheck.h D:\IAR\arm\inc\c\yvals.h \
-  D:\IAR\arm\inc\c\DLib_Defaults.h \
-  D:\\IAR\\arm\\inc\\c\\DLib_Config_Normal.h \
-  D:\IAR\arm\inc\c\DLib_Product.h D:\IAR\arm\inc\cpp\cstdlib \
-  D:\IAR\arm\inc\c\stdlib.h D:\IAR\arm\inc\c\ysizet.h \
-  D:\IAR\arm\inc\c\DLib_Product_stdlib.h D:\IAR\arm\inc\cpp\limits \
-  D:\IAR\arm\inc\cpp\cfloat D:\IAR\arm\inc\c\float.h \
-  D:\IAR\arm\inc\cpp\climits D:\IAR\arm\inc\c\limits.h \
-  D:\IAR\arm\inc\cpp\cmath D:\IAR\arm\inc\c\math.h \
-  D:\IAR\arm\inc\c\DLib_float_setup.h D:\IAR\arm\inc\c\xtgmath.h \
-  D:\IAR\arm\inc\cpp\xtr1common D:\IAR\arm\inc\cpp\cwchar \
-  D:\IAR\arm\inc\c\wchar.h D:\IAR\arm\inc\cpp\xstddef \
-  D:\IAR\arm\inc\cpp\cstddef D:\IAR\arm\inc\c\stddef.h \
-  D:\IAR\arm\inc\cpp\initializer_list D:\IAR\arm\inc\cpp\new \
-  D:\IAR\arm\inc\cpp\exception D:\IAR\arm\inc\cpp\xxexception \
-  D:\IAR\arm\inc\cpp\type_traits D:\IAR\arm\inc\cpp\xutility \
-  D:\IAR\arm\inc\cpp\utility D:\IAR\arm\inc\cpp\iosfwd \
-  D:\IAR\arm\inc\cpp\cstdio D:\IAR\arm\inc\c\stdio.h \
-  D:\IAR\arm\inc\cpp\cstring D:\IAR\arm\inc\c\string.h \
-  D:\IAR\arm\inc\c\DLib_Product_string.h D:\IAR\arm\inc\c\xatomic.h \
-  D:\IAR\arm\inc\cpp\iterator D:\IAR\arm\inc\cpp\istream \
-  D:\IAR\arm\inc\cpp\ostream D:\IAR\arm\inc\cpp\ios \
-  D:\IAR\arm\inc\cpp\xlocnum D:\IAR\arm\inc\cpp\streambuf \
-  D:\IAR\arm\inc\cpp\xiosbase D:\IAR\arm\inc\cpp\xlocale \
-  D:\IAR\arm\inc\cpp\clocale D:\IAR\arm\inc\c\locale.h \
-  D:\IAR\arm\inc\c\xctype.h D:\IAR\arm\inc\c\xlocale_lconv.h \
-  D:\IAR\arm\inc\cpp\cwctype D:\IAR\arm\inc\c\wctype.h \
-  D:\IAR\arm\inc\cpp\stdexcept D:\IAR\arm\inc\cpp\xstring \
-  D:\IAR\arm\inc\cpp\typeinfo D:\IAR\arm\inc\cpp\xlocinfo \
-  D:\IAR\arm\inc\cpp\cctype D:\IAR\arm\inc\c\ctype.h \
-  D:\IAR\arm\inc\cpp\ctime D:\IAR\arm\inc\c\time.h \
-  D:\IAR\arm\inc\c/time32.h D:\IAR\arm\inc\cpp\system_error \
-  D:\IAR\arm\inc\cpp\cerrno D:\IAR\arm\inc\c\errno.h \
-  D:\IAR\arm\inc\cpp\tuple \
-  D:\Git\POIP\Kursovoy\code\Rtos\wrapper\FreeRtos\rtosdefs.hpp \
-  D:\Git\POIP\Kursovoy\code\Rtos\FreeRtos\include\FreeRtos.h \
-  D:\Git\POIP\Kursovoy\code\Rtos\FreeRtos\include/..\FreeRTOSConfig.h \
-  D:\Git\POIP\Kursovoy\code\Rtos\FreeRtos\include/projdefs.h \
-  D:\Git\POIP\Kursovoy\code\Rtos\FreeRtos\include/portable.h \
-  D:\Git\POIP\Kursovoy\code\Rtos\FreeRtos\include/deprecated_definitions.h \
-  D:\Git\POIP\Kursovoy\code\Rtos\FreeRtos\portable\IAR\ARM_CM4F\portmacro.h \
-  D:\IAR\arm\inc\c\intrinsics.h D:\IAR\arm\inc\c\iccarm_builtin.h \
-  D:\IAR\arm\inc\c\iar_intrinsics_common.h \
-  D:\Git\POIP\Kursovoy\code\Rtos\FreeRtos\include/mpu_wrappers.h \
-  D:\Git\POIP\Kursovoy\code\Rtos\FreeRtos\include\task.h \
-  D:\Git\POIP\Kursovoy\code\Rtos\FreeRtos\include/list.h \
-  D:\Git\POIP\Kursovoy\code\Rtos\FreeRtos\include\semphr.h \
-  D:\Git\POIP\Kursovoy\code\Rtos\FreeRtos\include/queue.h \
-  D:\Git\POIP\Kursovoy\code\Rtos\FreeRtos\include\queue.h \
-  D:\Git\POIP\Kursovoy\code\Rtos\FreeRtos\include\timers.h \
-  D:\Git\POIP\Kursovoy\code\Rtos\FreeRtos\include/task.h \
-  D:\Git\POIP\Kursovoy\code\Rtos\FreeRtos\include\event_groups.h \
-  D:\Git\POIP\Kursovoy\code\Rtos\FreeRtos\include/timers.h \
-  D:\Git\POIP\Kursovoy\code\Common\susudefs.hpp \
-  D:\IAR\arm\inc\cpp\cassert D:\IAR\arm\inc\c\assert.h \
-  D:\Git\POIP\Kursovoy\code\Rtos\FreeRtos\FreeRTOSConfig.h \
-  D:\IAR\arm\inc\cpp\chrono D:\IAR\arm\inc\cpp\ratio \
-  D:\Git\POIP\Kursovoy\code\Rtos\wrapper\FreeRtos\rtoswrapper.hpp \
-  D:\Git\POIP\Kursovoy\code\Rtos\wrapper\FreeRtos/rtosdefs.hpp \
-  D:\Git\POIP\Kursovoy\code\Rtos\wrapper\eventmode.hpp \
-  D:\Git\POIP\Kursovoy\code\AHardware\Button\Button.hpp \
-  D:\Git\POIP\Kursovoy\code\AHardware\Registers\STM32F411\rccregisters.hpp \
-  D:\Git\POIP\Kursovoy\code\AHardware\Registers\STM32F411\FieldValues\rccfieldvalues.hpp \
-  D:\Git\POIP\Kursovoy\code\AHardware\Registers\fieldvalue.hpp \
-  D:\Git\POIP\Kursovoy\code\AHardware\Registers/fieldvaluebase.hpp \
-  D:\Git\POIP\Kursovoy\code\AHardware\Registers/accessmode.hpp \
-  D:\Git\POIP\Kursovoy\code\AHardware\Registers/registerfield.hpp \
-  D:\Git\POIP\Kursovoy\code\AHardware\Registers\registerbase.hpp \
-  D:\Git\POIP\Kursovoy\code\AHardware\Registers/registertype.hpp \
-  D:\Git\POIP\Kursovoy\code\AHardware\Registers\register.hpp \
-  D:\Git\POIP\Kursovoy\code\AHardware\Registers/fieldvalue.hpp \
-  D:\Git\POIP\Kursovoy\code\AHardware\Registers\accessmode.hpp \
-  D:\Git\POIP\Kursovoy\code\AHardware\Registers\STM32F411\gpiocregisters.hpp \
-  D:\Git\POIP\Kursovoy\code\AHardware\Registers\STM32F411\FieldValues\gpiocfieldvalues.hpp \
-  D:\Git\POIP\Kursovoy\code\AHardware\ButtonPoll\ButtonPoll.hpp \
-  D:\Git\POIP\Kursovoy\code\Rtos\wrapper\event.hpp \
-  D:\Git\POIP\Kursovoy\code\Rtos\wrapper/eventmode.hpp \
-  D:\IAR\arm\inc\cpp\iostream \
-  D:\Git\POIP\Kursovoy\code\AHardware\Registers\STM32F411\gpioaregisters.hpp \
-  D:\Git\POIP\Kursovoy\code\AHardware\Registers\STM32F411\FieldValues\gpioafieldvalues.hpp \
-  D:\Git\POIP\Kursovoy\code\AHardware\Registers\STM32F411\gpiobregisters.hpp \
-  D:\Git\POIP\Kursovoy\code\AHardware\Registers\STM32F411\FieldValues\gpiobfieldvalues.hpp \
-  D:\Git\POIP\Kursovoy\code\Rtos\wrapper\Event.hpp \
-  D:\Git\POIP\Kursovoy\code\AHardware\UART\usartconfig.h \
-  D:\Git\POIP\Kursovoy\code\AHardware\UART/usart.h \
-  D:\Git\POIP\Kursovoy\code\AHardware\Registers\STM32F411\usart2registers.hpp \
-  D:\Git\POIP\Kursovoy\code\AHardware\Registers\STM32F411\FieldValues\usart2fieldvalues.hpp \
-  D:\Git\POIP\Kursovoy\code\AHardware\UARTDriver\USARTDriver.h \
-  D:\Git\POIP\Kursovoy\code\AHardware\Registers\CortexM4\nvicregisters.hpp \
-  D:\Git\POIP\Kursovoy\code\AHardware\Registers\CortexM4\FieldValues\nvicfieldvalues.hpp \
-  D:\Git\POIP\Kursovoy\code\AHardware\Registers\STM32F411\tim2registers.hpp \
-  D:\Git\POIP\Kursovoy\code\AHardware\Registers\STM32F411\FieldValues\tim2fieldvalues.hpp \
-  D:\Git\POIP\Kursovoy\code\AHardware\Timer\Timer.hpp \
-  D:\Git\POIP\Kursovoy\code\AHardware\Temp\Temp.hpp \
-  D:\Git\POIP\Kursovoy\code\AHardware\Temp/IUnits.hpp \
-  D:\Git\POIP\Kursovoy\code\AHardware\Temp/Celsius.hpp \
-  D:\Git\POIP\Kursovoy\code\AHardware\Temp/Kelvin.hpp \
-  D:\Git\POIP\Kursovoy\code\AHardware\Temp/Fahrenheit.hpp \
-  D:\Git\POIP\Kursovoy\code\AHardware\Registers\STM32F411\i2c1registers.hpp \
-  D:\Git\POIP\Kursovoy\code\AHardware\Registers\STM32F411\FieldValues\i2c1fieldvalues.hpp \
-  D:\Git\POIP\Kursovoy\code\AHardware\Registers\STM32F411\i2c2registers.hpp \
-  D:\Git\POIP\Kursovoy\code\AHardware\Registers\STM32F411\FieldValues\i2c2fieldvalues.hpp \
-  D:\Git\POIP\Kursovoy\code\AHardware\SMBus\SMBus.hpp \
-  D:\Git\POIP\Kursovoy\code\AHardware\Registers\STM32F411\spi2registers.hpp \
-  D:\Git\POIP\Kursovoy\code\AHardware\Registers\STM32F411\FieldValues\spi2fieldvalues.hpp \
-  D:\Git\POIP\Kursovoy\code\AHardware\LCDDriver\elinkdriver.hpp \
-  D:\Git\POIP\Kursovoy\code\AHardware\LCDDriver/systemclock.hpp \
-  D:\Git\POIP\Kursovoy\code\AHardware\LCDDriver\display.hpp \
-  D:\Git\POIP\Kursovoy\code\AHardware\LCDDriver\Fonts\font_segoeUISemibold_48pt.h \
-  D:\Git\POIP\Kursovoy\code\AHardware\LCDDriver\Fonts/font.h \
-  D:\Git\POIP\Kursovoy\code\AHardware\LCDDriver\Fonts\font_segoeUISemibold_24pt.h \
-  D:\Git\POIP\Kursovoy\code\AHardware\Pin\pin.hpp \
-  D:\IAR\arm\inc\cpp\cinttypes D:\IAR\arm\inc\c\inttypes.h \
-  D:\Git\POIP\Kursovoy\code\AHardware\Port\port.hpp \
-  D:\Git\POIP\Kursovoy\code\AHardware\Atomic\atomicutils.hpp \
-  D:\Git\POIP\Kursovoy\code\AHardware\SPIx\spi.hpp \
-  D:\Git\POIP\Kursovoy\code\Application\Tasks\TemperatureTask\TemperatureTask.hpp \
-  D:\Git\POIP\Kursovoy\code\AHardware\TempSens\TempSens.hpp \
-  D:\Git\POIP\Kursovoy\code\AHardware\Filter\filter.hpp \
-  D:\Git\POIP\Kursovoy\code\Rtos\wrapper\thread.hpp \
-  D:\Git\POIP\Kursovoy\code\AHardware\Registers\CortexM4\stkregisters.hpp \
-  D:\Git\POIP\Kursovoy\code\AHardware\Registers\CortexM4\FieldValues\stkfieldvalues.hpp \
+main.pbi: \
+  D:\Git\POIP\Kursovoy\code\AHardware\Registers\CortexM4\FieldValues\scbfieldvalues.hpp \
   D:\Git\POIP\Kursovoy\code\AHardware\Registers\CortexM4\scbregisters.hpp \
-  D:\Git\POIP\Kursovoy\code\AHardware\Registers\CortexM4\FieldValues\scbfieldvalues.hpp
+  D:\Git\POIP\Kursovoy\code\AHardware\Registers\CortexM4\FieldValues\stkfieldvalues.hpp \
+  D:\Git\POIP\Kursovoy\code\AHardware\Registers\CortexM4\stkregisters.hpp \
+  D:\Git\POIP\Kursovoy\code\AHardware\Filter\filter.hpp \
+  D:\Git\POIP\Kursovoy\code\AHardware\TempSens\TempSens.hpp \
+  D:\Git\POIP\Kursovoy\code\Application\Tasks\TemperatureTask\TemperatureTask.hpp \
+  D:\Git\POIP\Kursovoy\code\AHardware\SPIx\spi.hpp \
+  D:\Git\POIP\Kursovoy\code\AHardware\Atomic\atomicutils.hpp \
+  D:\IAR\arm\inc\c\ycheck.h D:\IAR\arm\inc\c\assert.h \
+  D:\IAR\arm\inc\cpp\cassert \
+  D:\Git\POIP\Kursovoy\code\AHardware\Port\port.hpp \
+  D:\IAR\arm\inc\c\inttypes.h D:\IAR\arm\inc\cpp\cinttypes \
+  D:\Git\POIP\Kursovoy\code\AHardware\Pin\pin.hpp \
+  D:\Git\POIP\Kursovoy\code\AHardware\LCDDriver\Fonts\font_segoeUISemibold_24pt.h \
+  D:\Git\POIP\Kursovoy\code\AHardware\LCDDriver\Fonts\font.h \
+  D:\Git\POIP\Kursovoy\code\AHardware\LCDDriver\Fonts\font_segoeUISemibold_48pt.h \
+  D:\Git\POIP\Kursovoy\code\AHardware\LCDDriver\display.hpp \
+  D:\Git\POIP\Kursovoy\code\AHardware\LCDDriver\systemclock.hpp \
+  D:\Git\POIP\Kursovoy\code\AHardware\LCDDriver\elinkdriver.hpp \
+  D:\Git\POIP\Kursovoy\code\AHardware\Registers\STM32F411\FieldValues\spi2fieldvalues.hpp \
+  D:\Git\POIP\Kursovoy\code\AHardware\Registers\STM32F411\spi2registers.hpp \
+  D:\Git\POIP\Kursovoy\code\AHardware\SMBus\SMBus.hpp \
+  D:\Git\POIP\Kursovoy\code\AHardware\Registers\STM32F411\FieldValues\i2c2fieldvalues.hpp \
+  D:\Git\POIP\Kursovoy\code\AHardware\Registers\STM32F411\i2c2registers.hpp \
+  D:\Git\POIP\Kursovoy\code\AHardware\Registers\STM32F411\FieldValues\i2c1fieldvalues.hpp \
+  D:\Git\POIP\Kursovoy\code\AHardware\Registers\STM32F411\i2c1registers.hpp \
+  D:\Git\POIP\Kursovoy\code\AHardware\Temp\Fahrenheit.hpp \
+  D:\Git\POIP\Kursovoy\code\AHardware\Temp\Kelvin.hpp \
+  D:\Git\POIP\Kursovoy\code\AHardware\Temp\Celsius.hpp \
+  D:\Git\POIP\Kursovoy\code\AHardware\Temp\IUnits.hpp \
+  D:\Git\POIP\Kursovoy\code\AHardware\Temp\Temp.hpp \
+  D:\Git\POIP\Kursovoy\code\AHardware\Timer\Timer.hpp \
+  D:\Git\POIP\Kursovoy\code\AHardware\Registers\STM32F411\FieldValues\tim2fieldvalues.hpp \
+  D:\Git\POIP\Kursovoy\code\AHardware\Registers\STM32F411\tim2registers.hpp \
+  D:\Git\POIP\Kursovoy\code\AHardware\Registers\CortexM4\FieldValues\nvicfieldvalues.hpp \
+  D:\Git\POIP\Kursovoy\code\AHardware\Registers\CortexM4\nvicregisters.hpp \
+  D:\Git\POIP\Kursovoy\code\AHardware\UARTDriver\USARTDriver.h \
+  D:\Git\POIP\Kursovoy\code\AHardware\Registers\STM32F411\FieldValues\usart2fieldvalues.hpp \
+  D:\Git\POIP\Kursovoy\code\AHardware\Registers\STM32F411\usart2registers.hpp \
+  D:\Git\POIP\Kursovoy\code\AHardware\UART\usart.h \
+  D:\Git\POIP\Kursovoy\code\AHardware\UART\usartconfig.h \
+  D:\Git\POIP\Kursovoy\code\AHardware\Registers\STM32F411\FieldValues\gpiobfieldvalues.hpp \
+  D:\Git\POIP\Kursovoy\code\AHardware\Registers\STM32F411\gpiobregisters.hpp \
+  D:\Git\POIP\Kursovoy\code\AHardware\Registers\STM32F411\FieldValues\gpioafieldvalues.hpp \
+  D:\Git\POIP\Kursovoy\code\AHardware\Registers\STM32F411\gpioaregisters.hpp \
+  D:\IAR\arm\inc\cpp\iostream \
+  D:\Git\POIP\Kursovoy\code\Rtos\wrapper\Event.hpp \
+  D:\Git\POIP\Kursovoy\code\AHardware\ButtonPoll\ButtonPoll.hpp \
+  D:\Git\POIP\Kursovoy\code\AHardware\Registers\STM32F411\FieldValues\gpiocfieldvalues.hpp \
+  D:\Git\POIP\Kursovoy\code\AHardware\Registers\STM32F411\gpiocregisters.hpp \
+  D:\Git\POIP\Kursovoy\code\AHardware\Registers\register.hpp \
+  D:\Git\POIP\Kursovoy\code\AHardware\Registers\registertype.hpp \
+  D:\Git\POIP\Kursovoy\code\AHardware\Registers\registerbase.hpp \
+  D:\Git\POIP\Kursovoy\code\AHardware\Registers\registerfield.hpp \
+  D:\Git\POIP\Kursovoy\code\AHardware\Registers\accessmode.hpp \
+  D:\Git\POIP\Kursovoy\code\AHardware\Registers\fieldvaluebase.hpp \
+  D:\Git\POIP\Kursovoy\code\AHardware\Registers\fieldvalue.hpp \
+  D:\Git\POIP\Kursovoy\code\AHardware\Registers\STM32F411\FieldValues\rccfieldvalues.hpp \
+  D:\Git\POIP\Kursovoy\code\AHardware\Registers\STM32F411\rccregisters.hpp \
+  D:\Git\POIP\Kursovoy\code\AHardware\Button\Button.hpp \
+  D:\Git\POIP\Kursovoy\code\Rtos\wrapper\eventmode.hpp \
+  D:\Git\POIP\Kursovoy\code\Rtos\wrapper\FreeRtos\rtoswrapper.hpp \
+  D:\IAR\arm\inc\cpp\ratio D:\IAR\arm\inc\cpp\chrono \
+  D:\Git\POIP\Kursovoy\code\Common\susudefs.hpp \
+  D:\Git\POIP\Kursovoy\code\Rtos\FreeRtos\include\event_groups.h \
+  D:\Git\POIP\Kursovoy\code\Rtos\FreeRtos\include\timers.h \
+  D:\Git\POIP\Kursovoy\code\Rtos\FreeRtos\include\queue.h \
+  D:\Git\POIP\Kursovoy\code\Rtos\FreeRtos\include\semphr.h \
+  D:\Git\POIP\Kursovoy\code\Rtos\FreeRtos\include\list.h \
+  D:\Git\POIP\Kursovoy\code\Rtos\FreeRtos\include\task.h \
+  D:\Git\POIP\Kursovoy\code\Rtos\FreeRtos\include\mpu_wrappers.h \
+  D:\IAR\arm\inc\c\iar_intrinsics_common.h \
+  D:\IAR\arm\inc\c\iccarm_builtin.h D:\IAR\arm\inc\c\intrinsics.h \
+  D:\Git\POIP\Kursovoy\code\Rtos\FreeRtos\portable\IAR\ARM_CM4F\portmacro.h \
+  D:\Git\POIP\Kursovoy\code\Rtos\FreeRtos\include\deprecated_definitions.h \
+  D:\Git\POIP\Kursovoy\code\Rtos\FreeRtos\include\portable.h \
+  D:\Git\POIP\Kursovoy\code\Rtos\FreeRtos\include\projdefs.h \
+  D:\Git\POIP\Kursovoy\code\Rtos\FreeRtos\FreeRTOSConfig.h \
+  D:\Git\POIP\Kursovoy\code\Rtos\FreeRtos\include\FreeRtos.h \
+  D:\Git\POIP\Kursovoy\code\Rtos\wrapper\FreeRtos\rtosdefs.hpp \
+  D:\IAR\arm\inc\cpp\tuple D:\IAR\arm\inc\c\errno.h \
+  D:\IAR\arm\inc\cpp\cerrno D:\IAR\arm\inc\cpp\system_error \
+  D:\IAR\arm\inc\c\time32.h D:\IAR\arm\inc\c\time.h \
+  D:\IAR\arm\inc\cpp\ctime D:\IAR\arm\inc\c\ctype.h \
+  D:\IAR\arm\inc\cpp\cctype D:\IAR\arm\inc\cpp\xlocinfo \
+  D:\IAR\arm\inc\cpp\typeinfo D:\IAR\arm\inc\cpp\xstring \
+  D:\IAR\arm\inc\cpp\stdexcept D:\IAR\arm\inc\c\wctype.h \
+  D:\IAR\arm\inc\cpp\cwctype D:\IAR\arm\inc\c\xlocale_lconv.h \
+  D:\IAR\arm\inc\c\xctype.h D:\IAR\arm\inc\c\locale.h \
+  D:\IAR\arm\inc\cpp\clocale D:\IAR\arm\inc\cpp\climits \
+  D:\IAR\arm\inc\cpp\xlocale D:\IAR\arm\inc\cpp\xiosbase \
+  D:\IAR\arm\inc\cpp\streambuf D:\IAR\arm\inc\cpp\xlocnum \
+  D:\IAR\arm\inc\cpp\ios D:\IAR\arm\inc\cpp\ostream \
+  D:\IAR\arm\inc\cpp\istream D:\IAR\arm\inc\cpp\iterator \
+  D:\IAR\arm\inc\c\xatomic.h D:\IAR\arm\inc\c\DLib_Product_string.h \
+  D:\IAR\arm\inc\c\string.h D:\IAR\arm\inc\cpp\cstring \
+  D:\IAR\arm\inc\c\stdio.h D:\IAR\arm\inc\cpp\cstdio \
+  D:\IAR\arm\inc\cpp\iosfwd D:\IAR\arm\inc\cpp\utility \
+  D:\IAR\arm\inc\cpp\xutility D:\IAR\arm\inc\cpp\type_traits \
+  D:\IAR\arm\inc\cpp\xxexception D:\IAR\arm\inc\cpp\exception \
+  D:\IAR\arm\inc\cpp\new D:\IAR\arm\inc\cpp\initializer_list \
+  D:\IAR\arm\inc\c\stddef.h D:\IAR\arm\inc\cpp\cstddef \
+  D:\IAR\arm\inc\cpp\xstddef D:\IAR\arm\inc\c\wchar.h \
+  D:\IAR\arm\inc\cpp\cwchar D:\IAR\arm\inc\cpp\xtr1common \
+  D:\IAR\arm\inc\c\xtgmath.h D:\IAR\arm\inc\c\DLib_float_setup.h \
+  D:\IAR\arm\inc\c\math.h D:\IAR\arm\inc\cpp\cmath \
+  D:\IAR\arm\inc\c\limits.h D:\IAR\arm\inc\c\float.h \
+  D:\IAR\arm\inc\cpp\cfloat D:\IAR\arm\inc\cpp\limits \
+  D:\IAR\arm\inc\c\DLib_Product_stdlib.h D:\IAR\arm\inc\c\ysizet.h \
+  D:\IAR\arm\inc\c\stdlib.h D:\IAR\arm\inc\cpp\cstdlib \
+  D:\IAR\arm\inc\c\DLib_Product.h D:\IAR\arm\inc\c\DLib_Defaults.h \
+  D:\IAR\arm\inc\c\yvals.h D:\IAR\arm\inc\c\stdint.h \
+  D:\IAR\arm\inc\cpp\cstdint D:\IAR\arm\inc\cpp\xmemory0 \
+  D:\IAR\arm\inc\cpp\xmemory D:\IAR\arm\inc\cpp\algorithm \
+  D:\IAR\arm\inc\cpp\array \
+  D:\Git\POIP\Kursovoy\code\Rtos\wrapper\thread.hpp \
+  D:\Git\POIP\Kursovoy\code\Rtos\wrapper\rtos.hpp \
+  D:\Git\POIP\Kursovoy\code\main.cpp

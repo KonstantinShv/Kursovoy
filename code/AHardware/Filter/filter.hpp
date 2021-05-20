@@ -3,8 +3,6 @@
 class Filter
 {
 public:
-//   float RC=10.0f;
-//   float dt=100.0f;
 
    Filter(float RC, float dt)
     {
@@ -19,11 +17,12 @@ public:
     }
      float FiltredValue(float Value)
     {    
-      float FilteredValue = oldFilterValue + (Value - oldFilterValue) * tau;
+      FilteredValue = oldFilterValue + (Value - oldFilterValue) * tau;
       oldFilterValue = FilteredValue;
       return FilteredValue;
     }
 private:
    float oldFilterValue = 0.0F; 
    float tau = 0;
+   float FilteredValue;
 };

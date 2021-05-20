@@ -1,13 +1,13 @@
 ///////////////////////////////////////////////////////////////////////////////
 //
-// IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM        19/May/2021  21:27:51
+// IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM        20/May/2021  20:32:26
 // Copyright 1999-2019 IAR Systems AB.
 //
 //    Cpu mode     =  
 //    Endian       =  little
 //    Source file  =  D:\Git\POIP\Kursovoy\code\main.cpp
 //    Command line =
-//        -f C:\Users\KONSTA~1\AppData\Local\Temp\EW9E95.tmp
+//        -f C:\Users\KONSTA~1\AppData\Local\Temp\EW3D57.tmp
 //        (D:\Git\POIP\Kursovoy\code\main.cpp -lC
 //        D:\Git\POIP\Kursovoy\code\Debug\List -lA
 //        D:\Git\POIP\Kursovoy\code\Debug\List -o
@@ -97,7 +97,7 @@
         RTMODEL "__dlib_file_descriptor", "0"
         RTMODEL "__dlib_full_locale_support", "0"
         RTMODEL "__dlib_version", "6"
-        RTMODEL "__iar_require _Printf", "floats"
+        RTMODEL "__iar_require _Printf", "floats,widths"
         AAPCS BASE,INTERWORK,VFP
         PRESERVE8
         REQUIRE8
@@ -122,7 +122,6 @@
         EXTERN sprintf
         EXTERN strlen
         EXTERN vEventGroupDelete
-        EXTERN vTaskDelay
         EXTERN vTaskStartScheduler
         EXTERN xEventGroupCreateStatic
         EXTERN xEventGroupWaitBits
@@ -135,12 +134,16 @@
         PUBLIC _ZGV6kelvin
         PUBLIC _ZGV7celsius
         PUBLIC _ZGVZSt9use_facetISt5ctypeIcEERKT_vE8_MyFacet
+        PUBLIC _ZN10ButtonPollI5TimerE24ButtonPollInitializationEv
         PUBLIC _ZN10ButtonPollI5TimerEC1ER6ButtonI5GPIOCLi13EERN9OsWrapper5EventE
         PUBLIC _ZN10Fahrenheit9CalculateEf
         PUBLIC _ZN10FahrenheitC1Ev
         PUBLIC _ZN11SystemClock15SystemCoreClockE
         PUBLIC _ZN11USARTDriverI6Usart2E11SendMessageEPKcj
         PUBLIC _ZN11USARTDriverI6Usart2EC1Ev
+        PUBLIC _ZN12RegisterBaseILj1073741860ELj32E13ReadWriteModeE5WriteIS0_vEEvj
+        PUBLIC _ZN12RegisterBaseILj1073741864ELj32E13ReadWriteModeE5WriteIS0_vEEvj
+        PUBLIC _ZN12RegisterBaseILj1073741868ELj32E13ReadWriteModeE5WriteIS0_vEEvj
         PUBLIC _ZN12RegisterBaseILj1073759236ELj32E13ReadWriteModeE5WriteIS0_vEEvj
         PUBLIC _ZN12RegisterBaseILj1073759240ELj32E13ReadWriteModeE5WriteIS0_vEEvj
         PUBLIC _ZN12RegisterBaseILj1073763344ELj32E13ReadWriteModeE3GetIS0_vEEjv
@@ -151,12 +154,14 @@
         PUBLIC _ZN12RegisterBaseILj1073763360ELj32E13ReadWriteModeE5WriteIS0_vEEvj
         PUBLIC _ZN12RegisterBaseILj3758153748ELj32E13ReadWriteModeE5WriteIS0_vEEvj
         PUBLIC _ZN12RegisterBaseILj3758153752ELj32E13ReadWriteModeE5WriteIS0_vEEvj
+        PUBLIC _ZN12RegisterBaseILj3758153984ELj32E13ReadWriteModeE5WriteIS0_vEEvj
         PUBLIC _ZN12RegisterBaseILj3758153988ELj32E13ReadWriteModeE5WriteIS0_vEEvj
         PUBLIC _ZN13RegisterFieldIN4I2C13CR2ELj0ELj6E13ReadWriteModevE3SetIS2_vEEvj
         PUBLIC _ZN13RegisterFieldIN4SPI25CRCPRELj0ELj16E13ReadWriteModevE3SetIS2_vEEvj
         PUBLIC _ZN14FieldValueBaseI18I2C1_CR1_PE_ValuesIN4I2C13CR1ELj0ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
         PUBLIC _ZN14FieldValueBaseI18I2C1_SR1_SB_ValuesIN4I2C13SR1ELj0ELj1E8ReadModeNS1_11I2C1SR1BaseEES4_Lj0EE5IsSetIS3_vEEbv
         PUBLIC _ZN14FieldValueBaseI18RCC_CFGR_SW_ValuesIN3RCC4CFGRELj0ELj2E13ReadWriteModeNS1_11RCCCFGRBaseEES4_Lj0EE3SetIS3_vEEvv
+        PUBLIC _ZN14FieldValueBaseI18TIM2_SR_UIF_ValuesIN4TIM22SRELj0ELj1E13ReadWriteModeNS1_10TIM2SRBaseEES4_Lj0EE3SetIS3_vEEvv
         PUBLIC _ZN14FieldValueBaseI19I2C1_CCR_F_S_ValuesIN4I2C13CCRELj15ELj1E13ReadWriteModeNS1_11I2C1CCRBaseEES4_Lj0EE3SetIS3_vEEvv
         PUBLIC _ZN14FieldValueBaseI19I2C1_CR1_ACK_ValuesIN4I2C13CR1ELj10ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj0EE3SetIS3_vEEvv
         PUBLIC _ZN14FieldValueBaseI19I2C1_CR1_ACK_ValuesIN4I2C13CR1ELj10ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
@@ -166,9 +171,12 @@
         PUBLIC _ZN14FieldValueBaseI19RCC_CFGR_SWS_ValuesIN3RCC4CFGRELj2ELj2E8ReadModeNS1_11RCCCFGRBaseEES4_Lj0EE5IsSetIS3_vEEbv
         PUBLIC _ZN14FieldValueBaseI19RCC_CR_HSION_ValuesIN3RCC2CRELj0ELj1E13ReadWriteModeNS1_9RCCCRBaseEES4_Lj1EE3SetIS3_vEEvv
         PUBLIC _ZN14FieldValueBaseI19SPI2_CR1_SPE_ValuesIN4SPI23CR1ELj6ELj1E13ReadWriteModeNS1_11SPI2CR1BaseEES4_Lj1EE3SetIS3_vEEvv
+        PUBLIC _ZN14FieldValueBaseI19TIM2_CR1_CEN_ValuesIN4TIM23CR1ELj0ELj1E13ReadWriteModeNS1_11TIM2CR1BaseEES4_Lj1EE3SetIS3_vEEvv
+        PUBLIC _ZN14FieldValueBaseI19TIM2_CR1_URS_ValuesIN4TIM23CR1ELj2ELj1E13ReadWriteModeNS1_11TIM2CR1BaseEES4_Lj1EE3SetIS3_vEEvv
         PUBLIC _ZN14FieldValueBaseI20I2C1_CR1_STOP_ValuesIN4I2C13CR1ELj9ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
         PUBLIC _ZN14FieldValueBaseI20I2C1_SR1_ADDR_ValuesIN4I2C13SR1ELj1ELj1E8ReadModeNS1_11I2C1SR1BaseEES4_Lj0EE5IsSetIS3_vEEbv
         PUBLIC _ZN14FieldValueBaseI20RCC_CR_HSIRDY_ValuesIN3RCC2CRELj1ELj1E8ReadModeNS1_9RCCCRBaseEES4_Lj1EE5IsSetIS3_vEEbv
+        PUBLIC _ZN14FieldValueBaseI20TIM2_DIER_UIE_ValuesIN4TIM24DIERELj0ELj1E13ReadWriteModeNS1_12TIM2DIERBaseEES4_Lj1EE3SetIS3_vEEvv
         PUBLIC _ZN14FieldValueBaseI20USART2_CR1_TE_ValuesIN6USART23CR1ELj3ELj1E13ReadWriteModeNS1_13USART2CR1BaseEES4_Lj1EE3SetIS3_vEEvv
         PUBLIC _ZN14FieldValueBaseI20USART2_CR1_UE_ValuesIN6USART23CR1ELj13ELj1E13ReadWriteModeNS1_13USART2CR1BaseEES4_Lj1EE3SetIS3_vEEvv
         PUBLIC _ZN14FieldValueBaseI21GPIOB_BSRR_BS1_ValuesIN5GPIOB4BSRRELj1ELj1E9WriteModeNS1_13GPIOBBSRRBaseEES4_Lj1EE5WriteIS3_vEEvv
@@ -181,10 +189,11 @@
         PUBLIC _ZN14FieldValueBaseI23GPIOB_OTYPER_OT8_ValuesIN5GPIOB6OTYPERELj8ELj1E13ReadWriteModeNS1_15GPIOBOTYPERBaseEES4_Lj1EE3SetIS3_vEEvv
         PUBLIC _ZN14FieldValueBaseI23GPIOB_OTYPER_OT9_ValuesIN5GPIOB6OTYPERELj9ELj1E13ReadWriteModeNS1_15GPIOBOTYPERBaseEES4_Lj1EE3SetIS3_vEEvv
         PUBLIC _ZN14FieldValueBaseI23I2C1_CR1_SMBTYPE_ValuesIN4I2C13CR1ELj3ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj0EE3SetIS3_vEEvv
+        PUBLIC _ZN14FieldValueBaseI23STK_CTRL_TICKINT_ValuesIN3STK4CTRLELj1ELj1E13ReadWriteModeNS1_11STKCTRLBaseEES4_Lj1EE3SetIS3_vEEvv
         PUBLIC _ZN14FieldValueBaseI23USART2_CR1_TXEIE_ValuesIN6USART23CR1ELj7ELj1E13ReadWriteModeNS1_13USART2CR1BaseEES4_Lj1EE3SetIS3_vEEvv
+        PUBLIC _ZN14FieldValueBaseI25RCC_AHB1ENR_DMA2EN_ValuesIN3RCC7APB1ENRELj0ELj1E13ReadWriteModeNS1_14RCCAPB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv
         PUBLIC _ZN14FieldValueBaseI25RCC_AHB1ENR_DMA2EN_ValuesIN3RCC7APB1ENRELj14ELj1E13ReadWriteModeNS1_14RCCAPB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv
         PUBLIC _ZN14FieldValueBaseI25RCC_AHB1ENR_DMA2EN_ValuesIN3RCC7APB1ENRELj21ELj1E13ReadWriteModeNS1_14RCCAPB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv
-        PUBLIC _ZN14FieldValueBaseI25SCB_ICSR_PENDSTSET_ValuesIN3SCB4ICSRELj26ELj1E13ReadWriteModeNS1_11SCBICSRBaseEES4_Lj1EE5IsSetIS3_vEEbv
         PUBLIC _ZN14FieldValueBaseI25STK_CTRL_CLKSOURCE_ValuesIN3STK4CTRLELj2ELj1E13ReadWriteModeNS1_11STKCTRLBaseEES4_Lj1EE3SetIS3_vEEvv
         PUBLIC _ZN14FieldValueBaseI26GPIOB_MODER_MODER15_ValuesIN5GPIOB5MODERELj16ELj2E13ReadWriteModeNS1_14GPIOBMODERBaseEES4_Lj2EE3SetIS3_vEEvv
         PUBLIC _ZN14FieldValueBaseI26GPIOB_MODER_MODER15_ValuesIN5GPIOB5MODERELj18ELj2E13ReadWriteModeNS1_14GPIOBMODERBaseEES4_Lj2EE3SetIS3_vEEvv
@@ -202,6 +211,7 @@
         PUBLIC _ZN4Temp21GetTempInCurrentUnitsEf
         PUBLIC _ZN4Temp8GetUnitsEv
         PUBLIC _ZN5SMBus8ReadWordEh
+        PUBLIC _ZN5Timer5StartEv
         PUBLIC _ZN5UsartI6USART2E14TransmitEnableEv
         PUBLIC _ZN5UsartI6USART2E15InterruptEnableEv
         PUBLIC _ZN5UsartI6USART2E9WriteByteEh
@@ -225,7 +235,6 @@
         PUBLIC _ZN9OsWrapper11RtosWrapper12wCreateEventER19xSTATIC_EVENT_GROUP
         PUBLIC _ZN9OsWrapper11RtosWrapper12wDeleteEventERPv
         PUBLIC _ZN9OsWrapper11RtosWrapper13wCreateThreadINS_4RtosE15TemperatureTaskEEvRT0_PKcNS_14ThreadPriorityEtPj
-        PUBLIC _ZN9OsWrapper11RtosWrapper6wSleepEj
         PUBLIC _ZN9OsWrapper11RtosWrapper6wStartEv
         PUBLIC _ZN9OsWrapper11RtosWrapper9wGetTicksEv
         PUBLIC _ZN9OsWrapper4Rtos12CreateThreadI15TemperatureTaskEEvRT_PKcNS_14ThreadPriorityE
@@ -236,7 +245,6 @@
         PUBLIC _ZN9OsWrapper6ThreadILj512EEC1Ev
         PUBLIC _ZN9OsWrapper6ThreadILj512EEC2Ev
         PUBLIC _ZN9OsWrapper7IThread3RunEv
-        PUBLIC _ZN9OsWrapper7IThread5SleepENSt6chrono8durationIxSt5ratioILx1ELx1000EEEE
         PUBLIC _ZN9OsWrapper7IThreadC1Ev
         PUBLIC _ZN9OsWrapper7IThreadC2Ev
         PUBLIC _ZNK9OsWrapper5Event4WaitENS_9EventModeEj
@@ -334,6 +342,7 @@
         PUBLIC _ZZN13RegisterFieldIN4I2C13CR2ELj0ELj6E13ReadWriteModevE3SetIS2_vEEvjEs_0
         PUBLIC _ZZN13RegisterFieldIN4SPI25CRCPRELj0ELj16E13ReadWriteModevE3SetIS2_vEEvjEs
         PUBLIC _ZZN13RegisterFieldIN4SPI25CRCPRELj0ELj16E13ReadWriteModevE3SetIS2_vEEvjEs_0
+        PUBLIC _ZZN15TemperatureTask7ExecuteEvEs
         PUBLIC _ZZN15TemperatureTask8GetValueEvEs
         PUBLIC _ZZN8RegisterILj1073756160ELj32E13ReadWriteModeN4SPI211SPI2CR1BaseEJ10FieldValueI20SPI2_CR1_MSTR_ValuesINS1_3CR1ELj2ELj1ES0_S2_ES2_Lj1EvES3_I24SPI2_CR1_BIDIMODE_ValuesIS5_Lj15ELj1ES0_S2_ES2_Lj0EvES3_I19SPI2_CR1_DFF_ValuesIS5_Lj11ELj1ES0_S2_ES2_Lj0EvES3_I20SPI2_CR1_CPOL_ValuesIS5_Lj1ELj1ES0_S2_ES2_Lj1EvES3_I20SPI2_CR1_CPHA_ValuesIS5_Lj0ELj1ES0_S2_ES2_Lj1EvES3_I19SPI2_CR1_SSM_ValuesIS5_Lj9ELj1ES0_S2_ES2_Lj1EvES3_I19SPI2_CR1_SSI_ValuesIS5_Lj8ELj1ES0_S2_ES2_Lj1EvES3_I18SPI2_CR1_BR_ValuesIS5_Lj3ELj3ES0_S2_ES2_Lj0EvES3_I24SPI2_CR1_LSBFIRST_ValuesIS5_Lj7ELj1ES0_S2_ES2_Lj0EvES3_I21SPI2_CR1_CRCEN_ValuesIS5_Lj13ELj1ES0_S2_ES2_Lj0EvEEE3SetIS0_vEEvvE4mask
         PUBLIC _ZZN8RegisterILj1073756160ELj32E13ReadWriteModeN4SPI211SPI2CR1BaseEJ10FieldValueI20SPI2_CR1_MSTR_ValuesINS1_3CR1ELj2ELj1ES0_S2_ES2_Lj1EvES3_I24SPI2_CR1_BIDIMODE_ValuesIS5_Lj15ELj1ES0_S2_ES2_Lj0EvES3_I19SPI2_CR1_DFF_ValuesIS5_Lj11ELj1ES0_S2_ES2_Lj0EvES3_I20SPI2_CR1_CPOL_ValuesIS5_Lj1ELj1ES0_S2_ES2_Lj1EvES3_I20SPI2_CR1_CPHA_ValuesIS5_Lj0ELj1ES0_S2_ES2_Lj1EvES3_I19SPI2_CR1_SSM_ValuesIS5_Lj9ELj1ES0_S2_ES2_Lj1EvES3_I19SPI2_CR1_SSI_ValuesIS5_Lj8ELj1ES0_S2_ES2_Lj1EvES3_I18SPI2_CR1_BR_ValuesIS5_Lj3ELj3ES0_S2_ES2_Lj0EvES3_I24SPI2_CR1_LSBFIRST_ValuesIS5_Lj7ELj1ES0_S2_ES2_Lj0EvES3_I21SPI2_CR1_CRCEN_ValuesIS5_Lj13ELj1ES0_S2_ES2_Lj0EvEEE3SetIS0_vEEvvE5value
@@ -514,12 +523,41 @@ _ZTV15TemperatureTask:
         DC32 0x0, _ZTI15TemperatureTask, _ZN15TemperatureTask7ExecuteEv
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
+        SECTION_GROUP _ZTISt15basic_streambufIcSt11char_traitsIcEE
+        DATA
+// __absolute __class_type_info const <Typeinfo for std::basic_streambuf<char, std::char_traits<char>>>
+_ZTISt15basic_streambufIcSt11char_traitsIcEE:
+        DATA32
+        DC32 _ZTVN10__cxxabiv117__class_type_infoE + 0x8
+        DC32 _ZTSSt15basic_streambufIcSt11char_traitsIcEE
+
+        SECTION `.rodata`:CONST:REORDER:NOROOT(2)
+        SECTION_GROUP _ZTVSt11_Wrap_facetISt5ctypeIcEE
+        DATA
+// __absolute void (*const std::_Wrap_facet<std::ios::_Ctype>::__vtbl[4])()
+_ZTVSt11_Wrap_facetISt5ctypeIcEE:
+        DATA32
+        DC32 0x0, _ZTISt11_Wrap_facetISt5ctypeIcEE
+        DC32 _ZNSt11_Wrap_facetISt5ctypeIcEED1Ev
+        DC32 _ZNSt11_Wrap_facetISt5ctypeIcEED0Ev
+
+        SECTION `.rodata`:CONST:REORDER:NOROOT(2)
+        SECTION_GROUP _ZZN15TemperatureTask7ExecuteEvEs
+        DATA
+// __absolute char const <_ZZN15TemperatureTask7ExecuteEvEs>[9]
+_ZZN15TemperatureTask7ExecuteEvEs:
+        DATA8
+        DC8 "%3.2f %c"
+        DATA
+        DC8 0, 0, 0
+
+        SECTION `.rodata`:CONST:REORDER:NOROOT(2)
         SECTION_GROUP _ZZN15TemperatureTask8GetValueEvEs
         DATA
 // __absolute char const <_ZZN15TemperatureTask8GetValueEvEs>[6]
 _ZZN15TemperatureTask8GetValueEvEs:
         DATA8
-        DC8 "%f %s"
+        DC8 "%f %c"
         DATA16
         DC8 0, 0
 
@@ -631,25 +669,6 @@ _ZZN11USARTDriverI6Usart2E11SendMessageEPKcjEs_0:
         DC8 0x65, 0x72, 0x2E, 0x68, 0
         DATA
         DC8 0, 0, 0
-
-        SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        SECTION_GROUP _ZTISt15basic_streambufIcSt11char_traitsIcEE
-        DATA
-// __absolute __class_type_info const <Typeinfo for std::basic_streambuf<char, std::char_traits<char>>>
-_ZTISt15basic_streambufIcSt11char_traitsIcEE:
-        DATA32
-        DC32 _ZTVN10__cxxabiv117__class_type_infoE + 0x8
-        DC32 _ZTSSt15basic_streambufIcSt11char_traitsIcEE
-
-        SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        SECTION_GROUP _ZTVSt11_Wrap_facetISt5ctypeIcEE
-        DATA
-// __absolute void (*const std::_Wrap_facet<std::ios::_Ctype>::__vtbl[4])()
-_ZTVSt11_Wrap_facetISt5ctypeIcEE:
-        DATA32
-        DC32 0x0, _ZTISt11_Wrap_facetISt5ctypeIcEE
-        DC32 _ZNSt11_Wrap_facetISt5ctypeIcEED1Ev
-        DC32 _ZNSt11_Wrap_facetISt5ctypeIcEED0Ev
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
         SECTION_GROUP _ZTI7Celsius
@@ -852,12 +871,6 @@ _ZTSSt11_Wrap_facetISt5ctypeIcEE:
 ?_1:
         DATA8
         DC8 "temperatureTask"
-
-        SECTION `.rodata`:CONST:REORDER:NOROOT(3)
-        DATA
-?_2:
-        DATA64
-        DC64 1'000
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(0)
         SECTION_GROUP _ZNSt6chrono12system_clock9is_steadyE
@@ -1167,12 +1180,12 @@ _ZN11SystemClock15SystemCoreClockE:
 
         SECTION `.data`:DATA:REORDER:NOROOT(2)
         DATA
-//   29 extern "C" uint32_t SystemCoreClock = 16000000U;
+//   29 extern "C" uint32_t SystemCoreClock = 8000000U;
 SystemCoreClock:
         DATA32
-        DC32 16'000'000
+        DC32 8'000'000
 //   30 
-//   31  constexpr std::uint32_t UartSpeed9600 = std::uint32_t(16000000U / 9600U);
+//   31  constexpr std::uint32_t UartSpeed9600 = std::uint32_t(8000000U / 9600U);
 //   32 
 //   33 extern "C" {
 
@@ -1227,316 +1240,318 @@ __low_level_init:
 //   50   STK::CTRL::CLKSOURCE::CpuClock::Set();
           CFI FunCall _ZN14FieldValueBaseI25STK_CTRL_CLKSOURCE_ValuesIN3STK4CTRLELj2ELj1E13ReadWriteModeNS1_11STKCTRLBaseEES4_Lj1EE3SetIS3_vEEvv
         BL       _ZN14FieldValueBaseI25STK_CTRL_CLKSOURCE_ValuesIN3STK4CTRLELj2ELj1E13ReadWriteModeNS1_11STKCTRLBaseEES4_Lj1EE3SetIS3_vEEvv
-//   51   STK::CTRL::ENABLE::Enable::Set();
+//   51   STK::CTRL::TICKINT::EnableInterrupt::Set();
+          CFI FunCall _ZN14FieldValueBaseI23STK_CTRL_TICKINT_ValuesIN3STK4CTRLELj1ELj1E13ReadWriteModeNS1_11STKCTRLBaseEES4_Lj1EE3SetIS3_vEEvv
+        BL       _ZN14FieldValueBaseI23STK_CTRL_TICKINT_ValuesIN3STK4CTRLELj1ELj1E13ReadWriteModeNS1_11STKCTRLBaseEES4_Lj1EE3SetIS3_vEEvv
+//   52   STK::CTRL::ENABLE::Enable::Set();
           CFI FunCall _ZN14FieldValueBaseI22STK_CTRL_ENABLE_ValuesIN3STK4CTRLELj0ELj1E13ReadWriteModeNS1_11STKCTRLBaseEES4_Lj1EE3SetIS3_vEEvv
         BL       _ZN14FieldValueBaseI22STK_CTRL_ENABLE_ValuesIN3STK4CTRLELj0ELj1E13ReadWriteModeNS1_11STKCTRLBaseEES4_Lj1EE3SetIS3_vEEvv
-//   52   while(SCB::ICSR::PENDSTSET::PendingState::IsSet())
-??__low_level_init_2:
-          CFI FunCall _ZN14FieldValueBaseI25SCB_ICSR_PENDSTSET_ValuesIN3SCB4ICSRELj26ELj1E13ReadWriteModeNS1_11SCBICSRBaseEES4_Lj1EE5IsSetIS3_vEEbv
-        BL       _ZN14FieldValueBaseI25SCB_ICSR_PENDSTSET_ValuesIN3SCB4ICSRELj26ELj1E13ReadWriteModeNS1_11SCBICSRBaseEES4_Lj1EE5IsSetIS3_vEEbv
-        CMP      R0,#+0
-        BNE.N    ??__low_level_init_2
-//   53   {
-//   54   }
-//   55 
-//   56    //RCC::APB2ENR::SYSCFGEN::Enable::Set(); 
-//   57   
-//   58   //Switch on clock on PortA a
-//   59   RCC::AHB1ENR::GPIOAEN::Enable::Set();
+//   53   
+//   54 //  while(SCB::ICSR::PENDSTSET::PendingState::IsSet())
+//   55 //  {
+//   56 //  }
+//   57 
+//   58    //RCC::APB2ENR::SYSCFGEN::Enable::Set(); 
+//   59   
+//   60   //Switch on clock on PortA a
+//   61   RCC::AHB1ENR::GPIOAEN::Enable::Set();
           CFI FunCall _ZN14FieldValueBaseI26RCC_AHB1ENR_GPIOAEN_ValuesIN3RCC7AHB1ENRELj0ELj1E13ReadWriteModeNS1_14RCCAHB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv
         BL       _ZN14FieldValueBaseI26RCC_AHB1ENR_GPIOAEN_ValuesIN3RCC7AHB1ENRELj0ELj1E13ReadWriteModeNS1_14RCCAHB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv
-//   60   RCC::AHB1ENR::GPIOBEN::Enable::Set();
+//   62   RCC::AHB1ENR::GPIOBEN::Enable::Set();
           CFI FunCall _ZN14FieldValueBaseI26RCC_AHB1ENR_GPIOBEN_ValuesIN3RCC7AHB1ENRELj1ELj1E13ReadWriteModeNS1_14RCCAHB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv
         BL       _ZN14FieldValueBaseI26RCC_AHB1ENR_GPIOBEN_ValuesIN3RCC7AHB1ENRELj1ELj1E13ReadWriteModeNS1_14RCCAHB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv
-//   61   RCC::AHB1ENR::GPIOCEN::Enable::Set();
+//   63   RCC::AHB1ENR::GPIOCEN::Enable::Set();
           CFI FunCall _ZN14FieldValueBaseI26RCC_AHB1ENR_GPIOCEN_ValuesIN3RCC7AHB1ENRELj2ELj1E13ReadWriteModeNS1_14RCCAHB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv
         BL       _ZN14FieldValueBaseI26RCC_AHB1ENR_GPIOCEN_ValuesIN3RCC7AHB1ENRELj2ELj1E13ReadWriteModeNS1_14RCCAHB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv
-//   62   RCC::APB1ENR::SPI2EN::Enable::Set();
+//   64   RCC::APB1ENR::SPI2EN::Enable::Set();
           CFI FunCall _ZN14FieldValueBaseI25RCC_AHB1ENR_DMA2EN_ValuesIN3RCC7APB1ENRELj14ELj1E13ReadWriteModeNS1_14RCCAPB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv
         BL       _ZN14FieldValueBaseI25RCC_AHB1ENR_DMA2EN_ValuesIN3RCC7APB1ENRELj14ELj1E13ReadWriteModeNS1_14RCCAPB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv
-//   63 
-//   64   
-//   65 GPIOB::MODERPack<
-//   66         GPIOB::MODER::MODER1::Output,         //CS
-//   67         GPIOB::MODER::MODER2::Output,         //DC
-//   68         GPIOB::MODER::MODER8::Output,
-//   69         GPIOB::MODER::MODER9::Output,
-//   70         GPIOB::MODER::MODER13::Alternate,			//PortC.3 scl
-//   71         GPIOB::MODER::MODER15::Alternate			//PortC.2 sda
-//   72     >::Set() ;
+//   65 
+//   66   
+//   67 GPIOB::MODERPack<
+//   68         GPIOB::MODER::MODER1::Output,         //CS
+//   69         GPIOB::MODER::MODER2::Output,         //DC
+//   70         GPIOB::MODER::MODER8::Output,
+//   71         GPIOB::MODER::MODER9::Output,
+//   72         GPIOB::MODER::MODER13::Alternate,			//PortC.3 scl
+//   73         GPIOB::MODER::MODER15::Alternate			//PortC.2 sda
+//   74     >::Set() ;
           CFI FunCall _ZN8RegisterILj1073873920ELj32E13ReadWriteModeN5GPIOB14GPIOBMODERBaseEJ10FieldValueI26GPIOB_MODER_MODER15_ValuesINS1_5MODERELj2ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj4ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj16ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj18ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj26ELj2ES0_S2_ES2_Lj2EvES3_IS4_IS5_Lj30ELj2ES0_S2_ES2_Lj2EvEEE3SetIS0_vEEvv
         BL       _ZN8RegisterILj1073873920ELj32E13ReadWriteModeN5GPIOB14GPIOBMODERBaseEJ10FieldValueI26GPIOB_MODER_MODER15_ValuesINS1_5MODERELj2ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj4ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj16ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj18ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj26ELj2ES0_S2_ES2_Lj2EvES3_IS4_IS5_Lj30ELj2ES0_S2_ES2_Lj2EvEEE3SetIS0_vEEvv
-//   73 
-//   74     GPIOB::AFRHPack<
-//   75         GPIOB::AFRH::AFRH13::Af5,
-//   76         GPIOB::AFRH::AFRH15::Af5
-//   77     >::Set() ;
+//   75 
+//   76     GPIOB::AFRHPack<
+//   77         GPIOB::AFRH::AFRH13::Af5,
+//   78         GPIOB::AFRH::AFRH15::Af5
+//   79     >::Set() ;
           CFI FunCall _ZN8RegisterILj1073873956ELj32E13ReadWriteModeN5GPIOB13GPIOBAFRHBaseEJ10FieldValueI23GPIOB_AFRL_AFRL7_ValuesINS1_4AFRHELj20ELj4ES0_S2_ES2_Lj5EvES3_IS4_IS5_Lj28ELj4ES0_S2_ES2_Lj5EvEEE3SetIS0_vEEvv
         BL       _ZN8RegisterILj1073873956ELj32E13ReadWriteModeN5GPIOB13GPIOBAFRHBaseEJ10FieldValueI23GPIOB_AFRL_AFRL7_ValuesINS1_4AFRHELj20ELj4ES0_S2_ES2_Lj5EvES3_IS4_IS5_Lj28ELj4ES0_S2_ES2_Lj5EvEEE3SetIS0_vEEvv
-//   78 
-//   79     GPIOB::BSRR::BS1::High::Write();
+//   80 
+//   81     GPIOB::BSRR::BS1::High::Write();
           CFI FunCall _ZN14FieldValueBaseI21GPIOB_BSRR_BS1_ValuesIN5GPIOB4BSRRELj1ELj1E9WriteModeNS1_13GPIOBBSRRBaseEES4_Lj1EE5WriteIS3_vEEvv
         BL       _ZN14FieldValueBaseI21GPIOB_BSRR_BS1_ValuesIN5GPIOB4BSRRELj1ELj1E9WriteModeNS1_13GPIOBBSRRBaseEES4_Lj1EE5WriteIS3_vEEvv
-//   80     
-//   81     GPIOC::MODERPack<
-//   82         GPIOC::MODER::MODER5::Output,
-//   83         GPIOC::MODER::MODER8::Output,
-//   84         GPIOC::MODER::MODER9::Output,
-//   85 				GPIOC::MODER::MODER2::Input, //Busy
-//   86 				GPIOC::MODER::MODER3::Output //Reset
-//   87     >::Set() ;
+//   82     
+//   83     GPIOC::MODERPack<
+//   84         GPIOC::MODER::MODER5::Output,
+//   85         GPIOC::MODER::MODER8::Output,
+//   86         GPIOC::MODER::MODER9::Output,
+//   87 				GPIOC::MODER::MODER2::Input, //Busy
+//   88 				GPIOC::MODER::MODER3::Output //Reset
+//   89     >::Set() ;
           CFI FunCall _ZN8RegisterILj1073874944ELj32E13ReadWriteModeN5GPIOC14GPIOCMODERBaseEJ10FieldValueI26GPIOC_MODER_MODER15_ValuesINS1_5MODERELj10ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj16ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj18ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj4ELj2ES0_S2_ES2_Lj0EvES3_IS4_IS5_Lj6ELj2ES0_S2_ES2_Lj1EvEEE3SetIS0_vEEvv
         BL       _ZN8RegisterILj1073874944ELj32E13ReadWriteModeN5GPIOC14GPIOCMODERBaseEJ10FieldValueI26GPIOC_MODER_MODER15_ValuesINS1_5MODERELj10ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj16ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj18ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj4ELj2ES0_S2_ES2_Lj0EvES3_IS4_IS5_Lj6ELj2ES0_S2_ES2_Lj1EvEEE3SetIS0_vEEvv
-//   88 
-//   89      
-//   90       SPI2::CR1Pack<
-//   91         SPI2::CR1::MSTR::Master,   //SPI2 master
-//   92         SPI2::CR1::BIDIMODE::Unidirectional2Line,
-//   93         SPI2::CR1::DFF::Data8bit,
-//   94         SPI2::CR1::CPOL::High,
-//   95         SPI2::CR1::CPHA::Phase2edge,
-//   96         SPI2::CR1::SSM::NssSoftwareEnable,
-//   97         SPI2::CR1::SSI::Value1,
-//   98         SPI2::CR1::BR::PclockDiv2,
-//   99         SPI2::CR1::LSBFIRST::MsbFisrt,
-//  100         SPI2::CR1::CRCEN::CrcCalcDisable
-//  101     >::Set() ;
+//   90 
+//   91      
+//   92       SPI2::CR1Pack<
+//   93         SPI2::CR1::MSTR::Master,   //SPI2 master
+//   94         SPI2::CR1::BIDIMODE::Unidirectional2Line,
+//   95         SPI2::CR1::DFF::Data8bit,
+//   96         SPI2::CR1::CPOL::High,
+//   97         SPI2::CR1::CPHA::Phase2edge,
+//   98         SPI2::CR1::SSM::NssSoftwareEnable,
+//   99         SPI2::CR1::SSI::Value1,
+//  100         SPI2::CR1::BR::PclockDiv2,
+//  101         SPI2::CR1::LSBFIRST::MsbFisrt,
+//  102         SPI2::CR1::CRCEN::CrcCalcDisable
+//  103     >::Set() ;
           CFI FunCall _ZN8RegisterILj1073756160ELj32E13ReadWriteModeN4SPI211SPI2CR1BaseEJ10FieldValueI20SPI2_CR1_MSTR_ValuesINS1_3CR1ELj2ELj1ES0_S2_ES2_Lj1EvES3_I24SPI2_CR1_BIDIMODE_ValuesIS5_Lj15ELj1ES0_S2_ES2_Lj0EvES3_I19SPI2_CR1_DFF_ValuesIS5_Lj11ELj1ES0_S2_ES2_Lj0EvES3_I20SPI2_CR1_CPOL_ValuesIS5_Lj1ELj1ES0_S2_ES2_Lj1EvES3_I20SPI2_CR1_CPHA_ValuesIS5_Lj0ELj1ES0_S2_ES2_Lj1EvES3_I19SPI2_CR1_SSM_ValuesIS5_Lj9ELj1ES0_S2_ES2_Lj1EvES3_I19SPI2_CR1_SSI_ValuesIS5_Lj8ELj1ES0_S2_ES2_Lj1EvES3_I18SPI2_CR1_BR_ValuesIS5_Lj3ELj3ES0_S2_ES2_Lj0EvES3_I24SPI2_CR1_LSBFIRST_ValuesIS5_Lj7ELj1ES0_S2_ES2_Lj0EvES3_I21SPI2_CR1_CRCEN_ValuesIS5_Lj13ELj1ES0_S2_ES2_Lj0EvEEE3SetIS0_vEEvv
         BL       _ZN8RegisterILj1073756160ELj32E13ReadWriteModeN4SPI211SPI2CR1BaseEJ10FieldValueI20SPI2_CR1_MSTR_ValuesINS1_3CR1ELj2ELj1ES0_S2_ES2_Lj1EvES3_I24SPI2_CR1_BIDIMODE_ValuesIS5_Lj15ELj1ES0_S2_ES2_Lj0EvES3_I19SPI2_CR1_DFF_ValuesIS5_Lj11ELj1ES0_S2_ES2_Lj0EvES3_I20SPI2_CR1_CPOL_ValuesIS5_Lj1ELj1ES0_S2_ES2_Lj1EvES3_I20SPI2_CR1_CPHA_ValuesIS5_Lj0ELj1ES0_S2_ES2_Lj1EvES3_I19SPI2_CR1_SSM_ValuesIS5_Lj9ELj1ES0_S2_ES2_Lj1EvES3_I19SPI2_CR1_SSI_ValuesIS5_Lj8ELj1ES0_S2_ES2_Lj1EvES3_I18SPI2_CR1_BR_ValuesIS5_Lj3ELj3ES0_S2_ES2_Lj0EvES3_I24SPI2_CR1_LSBFIRST_ValuesIS5_Lj7ELj1ES0_S2_ES2_Lj0EvES3_I21SPI2_CR1_CRCEN_ValuesIS5_Lj13ELj1ES0_S2_ES2_Lj0EvEEE3SetIS0_vEEvv
-//  102   
-//  103       SPI2::CRCPR::CRCPOLY::Set(10U) ;
+//  104   
+//  105       SPI2::CRCPR::CRCPOLY::Set(10U) ;
         MOVS     R0,#+10
           CFI FunCall _ZN13RegisterFieldIN4SPI25CRCPRELj0ELj16E13ReadWriteModevE3SetIS2_vEEvj
         BL       _ZN13RegisterFieldIN4SPI25CRCPRELj0ELj16E13ReadWriteModevE3SetIS2_vEEvj
-//  104     SPI2::CR1::SPE::Enable::Set() ;
+//  106     SPI2::CR1::SPE::Enable::Set() ;
           CFI FunCall _ZN14FieldValueBaseI19SPI2_CR1_SPE_ValuesIN4SPI23CR1ELj6ELj1E13ReadWriteModeNS1_11SPI2CR1BaseEES4_Lj1EE3SetIS3_vEEvv
         BL       _ZN14FieldValueBaseI19SPI2_CR1_SPE_ValuesIN4SPI23CR1ELj6ELj1E13ReadWriteModeNS1_11SPI2CR1BaseEES4_Lj1EE3SetIS3_vEEvv
-//  105    
-//  106   
-//  107   
-//  108   RCC::APB1ENR::I2C1EN::Enable::Set();//ПОдали тактирование на I2C
+//  107    
+//  108   
+//  109   
+//  110   RCC::APB1ENR::I2C1EN::Enable::Set();//ПОдали тактирование на I2C
           CFI FunCall _ZN14FieldValueBaseI25RCC_AHB1ENR_DMA2EN_ValuesIN3RCC7APB1ENRELj21ELj1E13ReadWriteModeNS1_14RCCAPB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv
         BL       _ZN14FieldValueBaseI25RCC_AHB1ENR_DMA2EN_ValuesIN3RCC7APB1ENRELj21ELj1E13ReadWriteModeNS1_14RCCAPB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv
-//  109  
-//  110   I2C1::CR1::SMBUS::SmBusMode::Set(); //Включение интерфейса SMBus.
+//  111  
+//  112   I2C1::CR1::SMBUS::SmBusMode::Set(); //Включение интерфейса SMBus.
           CFI FunCall _ZN14FieldValueBaseI21I2C1_CR1_SMBUS_ValuesIN4I2C13CR1ELj1ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
         BL       _ZN14FieldValueBaseI21I2C1_CR1_SMBUS_ValuesIN4I2C13CR1ELj1ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
-//  111   I2C1::CR1::SMBTYPE::Device::Set(); //Тип устройства в режиме.
+//  113   I2C1::CR1::SMBTYPE::Device::Set(); //Тип устройства в режиме.
           CFI FunCall _ZN14FieldValueBaseI23I2C1_CR1_SMBTYPE_ValuesIN4I2C13CR1ELj3ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj0EE3SetIS3_vEEvv
         BL       _ZN14FieldValueBaseI23I2C1_CR1_SMBTYPE_ValuesIN4I2C13CR1ELj3ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj0EE3SetIS3_vEEvv
-//  112   I2C1::CCR::F_S::StandartMode::Set(); 
+//  114   I2C1::CCR::F_S::StandartMode::Set(); 
           CFI FunCall _ZN14FieldValueBaseI19I2C1_CCR_F_S_ValuesIN4I2C13CCRELj15ELj1E13ReadWriteModeNS1_11I2C1CCRBaseEES4_Lj0EE3SetIS3_vEEvv
         BL       _ZN14FieldValueBaseI19I2C1_CCR_F_S_ValuesIN4I2C13CCRELj15ELj1E13ReadWriteModeNS1_11I2C1CCRBaseEES4_Lj0EE3SetIS3_vEEvv
-//  113   I2C1::CCR::CCR::Set(0xC8U) ;
+//  115   I2C1::CCR::CCR::Set(0xC8U) ;
         MOVS     R0,#+200
           CFI FunCall _ZN12RegisterBaseILj1073763356ELj32E13ReadWriteModeE3SetIS0_vEEvj
         BL       _ZN12RegisterBaseILj1073763356ELj32E13ReadWriteModeE3SetIS0_vEEvj
-//  114   I2C1::CR2::FREQ::Set(0x10) ;
+//  116   I2C1::CR2::FREQ::Set(0x10) ;
         MOVS     R0,#+16
           CFI FunCall _ZN13RegisterFieldIN4I2C13CR2ELj0ELj6E13ReadWriteModevE3SetIS2_vEEvj
         BL       _ZN13RegisterFieldIN4I2C13CR2ELj0ELj6E13ReadWriteModevE3SetIS2_vEEvj
-//  115   I2C1::TRISE::Write(0x11) ;  
+//  117   I2C1::TRISE::Write(0x11) ;  
         MOVS     R0,#+17
           CFI FunCall _ZN12RegisterBaseILj1073763360ELj32E13ReadWriteModeE5WriteIS0_vEEvj
         BL       _ZN12RegisterBaseILj1073763360ELj32E13ReadWriteModeE5WriteIS0_vEEvj
-//  116   I2C1::CR1::PE::Enable::Set() ;
+//  118   I2C1::CR1::PE::Enable::Set() ;
           CFI FunCall _ZN14FieldValueBaseI18I2C1_CR1_PE_ValuesIN4I2C13CR1ELj0ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
         BL       _ZN14FieldValueBaseI18I2C1_CR1_PE_ValuesIN4I2C13CR1ELj0ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
-//  117  
-//  118   GPIOB::ODR::ODR8::High::Set() ;
+//  119  
+//  120   GPIOB::ODR::ODR8::High::Set() ;
           CFI FunCall _ZN14FieldValueBaseI21GPIOB_ODR_ODR8_ValuesIN5GPIOB3ODRELj8ELj1E13ReadWriteModeNS1_12GPIOBODRBaseEES4_Lj1EE3SetIS3_vEEvv
         BL       _ZN14FieldValueBaseI21GPIOB_ODR_ODR8_ValuesIN5GPIOB3ODRELj8ELj1E13ReadWriteModeNS1_12GPIOBODRBaseEES4_Lj1EE3SetIS3_vEEvv
-//  119   
-//  120   //for I2C1 or SMBus
-//  121   GPIOB::MODER::MODER8::Alternate::Set(); //Alternate moder 8
+//  121   
+//  122   //for I2C1 or SMBus
+//  123   GPIOB::MODER::MODER8::Alternate::Set(); //Alternate moder 8
           CFI FunCall _ZN14FieldValueBaseI26GPIOB_MODER_MODER15_ValuesIN5GPIOB5MODERELj16ELj2E13ReadWriteModeNS1_14GPIOBMODERBaseEES4_Lj2EE3SetIS3_vEEvv
         BL       _ZN14FieldValueBaseI26GPIOB_MODER_MODER15_ValuesIN5GPIOB5MODERELj16ELj2E13ReadWriteModeNS1_14GPIOBMODERBaseEES4_Lj2EE3SetIS3_vEEvv
-//  122   GPIOB::MODER::MODER9::Alternate::Set(); //Alternate moder 9
+//  124   GPIOB::MODER::MODER9::Alternate::Set(); //Alternate moder 9
           CFI FunCall _ZN14FieldValueBaseI26GPIOB_MODER_MODER15_ValuesIN5GPIOB5MODERELj18ELj2E13ReadWriteModeNS1_14GPIOBMODERBaseEES4_Lj2EE3SetIS3_vEEvv
         BL       _ZN14FieldValueBaseI26GPIOB_MODER_MODER15_ValuesIN5GPIOB5MODERELj18ELj2E13ReadWriteModeNS1_14GPIOBMODERBaseEES4_Lj2EE3SetIS3_vEEvv
-//  123   
-//  124   GPIOB::AFRH::AFRH8::Af4::Set();  //scl
+//  125   
+//  126   GPIOB::AFRH::AFRH8::Af4::Set();  //scl
           CFI FunCall _ZN14FieldValueBaseI23GPIOB_AFRL_AFRL7_ValuesIN5GPIOB4AFRHELj0ELj4E13ReadWriteModeNS1_13GPIOBAFRHBaseEES4_Lj4EE3SetIS3_vEEvv
         BL       _ZN14FieldValueBaseI23GPIOB_AFRL_AFRL7_ValuesIN5GPIOB4AFRHELj0ELj4E13ReadWriteModeNS1_13GPIOBAFRHBaseEES4_Lj4EE3SetIS3_vEEvv
-//  125   GPIOB::AFRH::AFRH9::Af4::Set();  //sda
+//  127   GPIOB::AFRH::AFRH9::Af4::Set();  //sda
           CFI FunCall _ZN14FieldValueBaseI23GPIOB_AFRL_AFRL7_ValuesIN5GPIOB4AFRHELj4ELj4E13ReadWriteModeNS1_13GPIOBAFRHBaseEES4_Lj4EE3SetIS3_vEEvv
         BL       _ZN14FieldValueBaseI23GPIOB_AFRL_AFRL7_ValuesIN5GPIOB4AFRHELj4ELj4E13ReadWriteModeNS1_13GPIOBAFRHBaseEES4_Lj4EE3SetIS3_vEEvv
-//  126   
-//  127   GPIOB::OTYPER::OT8::OutputOpenDrain::Set();
+//  128   
+//  129   GPIOB::OTYPER::OT8::OutputOpenDrain::Set();
           CFI FunCall _ZN14FieldValueBaseI23GPIOB_OTYPER_OT8_ValuesIN5GPIOB6OTYPERELj8ELj1E13ReadWriteModeNS1_15GPIOBOTYPERBaseEES4_Lj1EE3SetIS3_vEEvv
         BL       _ZN14FieldValueBaseI23GPIOB_OTYPER_OT8_ValuesIN5GPIOB6OTYPERELj8ELj1E13ReadWriteModeNS1_15GPIOBOTYPERBaseEES4_Lj1EE3SetIS3_vEEvv
-//  128   GPIOB::OTYPER::OT9::OutputOpenDrain::Set();
+//  130   GPIOB::OTYPER::OT9::OutputOpenDrain::Set();
           CFI FunCall _ZN14FieldValueBaseI23GPIOB_OTYPER_OT9_ValuesIN5GPIOB6OTYPERELj9ELj1E13ReadWriteModeNS1_15GPIOBOTYPERBaseEES4_Lj1EE3SetIS3_vEEvv
         BL       _ZN14FieldValueBaseI23GPIOB_OTYPER_OT9_ValuesIN5GPIOB6OTYPERELj9ELj1E13ReadWriteModeNS1_15GPIOBOTYPERBaseEES4_Lj1EE3SetIS3_vEEvv
-//  129   
-//  130   GPIOB::OSPEEDR::OSPEEDR8::HighSpeed::Set() ;
+//  131   
+//  132   GPIOB::OSPEEDR::OSPEEDR8::HighSpeed::Set() ;
           CFI FunCall _ZN14FieldValueBaseI30GPIOB_OSPEEDR_OSPEEDR15_ValuesIN5GPIOB7OSPEEDRELj16ELj2E13ReadWriteModeNS1_16GPIOBOSPEEDRBaseEES4_Lj3EE3SetIS3_vEEvv
         BL       _ZN14FieldValueBaseI30GPIOB_OSPEEDR_OSPEEDR15_ValuesIN5GPIOB7OSPEEDRELj16ELj2E13ReadWriteModeNS1_16GPIOBOSPEEDRBaseEES4_Lj3EE3SetIS3_vEEvv
-//  131   GPIOB::OSPEEDR::OSPEEDR9::HighSpeed::Set() ;
+//  133   GPIOB::OSPEEDR::OSPEEDR9::HighSpeed::Set() ;
           CFI FunCall _ZN14FieldValueBaseI30GPIOB_OSPEEDR_OSPEEDR15_ValuesIN5GPIOB7OSPEEDRELj18ELj2E13ReadWriteModeNS1_16GPIOBOSPEEDRBaseEES4_Lj3EE3SetIS3_vEEvv
         BL       _ZN14FieldValueBaseI30GPIOB_OSPEEDR_OSPEEDR15_ValuesIN5GPIOB7OSPEEDRELj18ELj2E13ReadWriteModeNS1_16GPIOBOSPEEDRBaseEES4_Lj3EE3SetIS3_vEEvv
-//  132   
-//  133   GPIOB::PUPDR::PUPDR8::PullUp::Set() ;
+//  134   
+//  135   GPIOB::PUPDR::PUPDR8::PullUp::Set() ;
           CFI FunCall _ZN14FieldValueBaseI26GPIOB_PUPDR_PUPDR15_ValuesIN5GPIOB5PUPDRELj16ELj2E13ReadWriteModeNS1_14GPIOBPUPDRBaseEES4_Lj1EE3SetIS3_vEEvv
         BL       _ZN14FieldValueBaseI26GPIOB_PUPDR_PUPDR15_ValuesIN5GPIOB5PUPDRELj16ELj2E13ReadWriteModeNS1_14GPIOBPUPDRBaseEES4_Lj1EE3SetIS3_vEEvv
-//  134   GPIOB::PUPDR::PUPDR9::PullUp::Set() ;
+//  136   GPIOB::PUPDR::PUPDR9::PullUp::Set() ;
           CFI FunCall _ZN14FieldValueBaseI26GPIOB_PUPDR_PUPDR15_ValuesIN5GPIOB5PUPDRELj18ELj2E13ReadWriteModeNS1_14GPIOBPUPDRBaseEES4_Lj1EE3SetIS3_vEEvv
         BL       _ZN14FieldValueBaseI26GPIOB_PUPDR_PUPDR15_ValuesIN5GPIOB5PUPDRELj18ELj2E13ReadWriteModeNS1_14GPIOBPUPDRBaseEES4_Lj1EE3SetIS3_vEEvv
-//  135   
-//  136   
-//  137 
-//  138 //SPI
-//  139   // PortB.13 - SPI3_CLK, PortB.15 - SPI2_MOSI, PB1 -CS, PB2- DC, PB8 -Reset
-//  140 
-//  141 
-//  142 //USART  
-//  143   RCC::APB1ENRPack<
-//  144     RCC::APB1ENR::TIM2EN::Enable, 
-//  145     RCC::APB1ENR::USART2EN::Enable
-//  146     >::Set() ;
+//  137   
+//  138   
+//  139 
+//  140 //SPI
+//  141   // PortB.13 - SPI3_CLK, PortB.15 - SPI2_MOSI, PB1 -CS, PB2- DC, PB8 -Reset
+//  142 
+//  143 
+//  144 //USART  
+//  145   RCC::APB1ENRPack<
+//  146     RCC::APB1ENR::TIM2EN::Enable, 
+//  147     RCC::APB1ENR::USART2EN::Enable
+//  148     >::Set() ;
           CFI FunCall _ZN8RegisterILj1073887296ELj32E13ReadWriteModeN3RCC14RCCAPB1ENRBaseEJ10FieldValueI25RCC_AHB1ENR_DMA2EN_ValuesINS1_7APB1ENRELj0ELj1ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj17ELj1ES0_S2_ES2_Lj1EvEEE3SetIS0_vEEvv
         BL       _ZN8RegisterILj1073887296ELj32E13ReadWriteModeN3RCC14RCCAPB1ENRBaseEJ10FieldValueI25RCC_AHB1ENR_DMA2EN_ValuesINS1_7APB1ENRELj0ELj1ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj17ELj1ES0_S2_ES2_Lj1EvEEE3SetIS0_vEEvv
-//  147   
-//  148   GPIOA::MODERPack<
-//  149     GPIOA::MODER::MODER2::Alternate, // Uart2 TX
-//  150     GPIOA::MODER::MODER3::Alternate  // Uart2 RX
-//  151     >::Set() ;
+//  149   
+//  150   GPIOA::MODERPack<
+//  151     GPIOA::MODER::MODER2::Alternate, // Uart2 TX
+//  152     GPIOA::MODER::MODER3::Alternate  // Uart2 RX
+//  153     >::Set() ;
           CFI FunCall _ZN8RegisterILj1073872896ELj32E13ReadWriteModeN5GPIOA14GPIOAMODERBaseEJ10FieldValueI26GPIOA_MODER_MODER15_ValuesINS1_5MODERELj4ELj2ES0_S2_ES2_Lj2EvES3_IS4_IS5_Lj6ELj2ES0_S2_ES2_Lj2EvEEE3SetIS0_vEEvv
         BL       _ZN8RegisterILj1073872896ELj32E13ReadWriteModeN5GPIOA14GPIOAMODERBaseEJ10FieldValueI26GPIOA_MODER_MODER15_ValuesINS1_5MODERELj4ELj2ES0_S2_ES2_Lj2EvES3_IS4_IS5_Lj6ELj2ES0_S2_ES2_Lj2EvEEE3SetIS0_vEEvv
-//  152   
-//  153   GPIOA::AFRLPack <
-//  154     GPIOA::AFRL::AFRL2::Af7, // Uart2 TX
-//  155     GPIOA::AFRL::AFRL3::Af7  // Uart2 RX
-//  156     >::Set() ;
+//  154   
+//  155   GPIOA::AFRLPack <
+//  156     GPIOA::AFRL::AFRL2::Af7, // Uart2 TX
+//  157     GPIOA::AFRL::AFRL3::Af7  // Uart2 RX
+//  158     >::Set() ;
           CFI FunCall _ZN8RegisterILj1073872928ELj32E13ReadWriteModeN5GPIOA13GPIOAAFRLBaseEJ10FieldValueI23GPIOA_AFRL_AFRL7_ValuesINS1_4AFRLELj8ELj4ES0_S2_ES2_Lj7EvES3_IS4_IS5_Lj12ELj4ES0_S2_ES2_Lj7EvEEE3SetIS0_vEEvv
         BL       _ZN8RegisterILj1073872928ELj32E13ReadWriteModeN5GPIOA13GPIOAAFRLBaseEJ10FieldValueI23GPIOA_AFRL_AFRL7_ValuesINS1_4AFRLELj8ELj4ES0_S2_ES2_Lj7EvES3_IS4_IS5_Lj12ELj4ES0_S2_ES2_Lj7EvEEE3SetIS0_vEEvv
-//  157   
-//  158     USART2::BRR::Write(UartSpeed9600);
-        MOVW     R0,#+1666
+//  159   
+//  160     USART2::BRR::Write(UartSpeed9600);
+        MOVW     R0,#+833
           CFI FunCall _ZN12RegisterBaseILj1073759240ELj32E13ReadWriteModeE5WriteIS0_vEEvj
         BL       _ZN12RegisterBaseILj1073759240ELj32E13ReadWriteModeE5WriteIS0_vEEvj
-//  159     USART2::CR1::UE::Enable::Set();    
+//  161     USART2::CR1::UE::Enable::Set();    
           CFI FunCall _ZN14FieldValueBaseI20USART2_CR1_UE_ValuesIN6USART23CR1ELj13ELj1E13ReadWriteModeNS1_13USART2CR1BaseEES4_Lj1EE3SetIS3_vEEvv
         BL       _ZN14FieldValueBaseI20USART2_CR1_UE_ValuesIN6USART23CR1ELj13ELj1E13ReadWriteModeNS1_13USART2CR1BaseEES4_Lj1EE3SetIS3_vEEvv
-//  160     NVIC::ISER1::Write(1<<6);
+//  162     NVIC::ISER1::Write(1<<6);
         MOVS     R0,#+64
           CFI FunCall _ZN12RegisterBaseILj3758153988ELj32E13ReadWriteModeE5WriteIS0_vEEvj
         BL       _ZN12RegisterBaseILj3758153988ELj32E13ReadWriteModeE5WriteIS0_vEEvj
-//  161  
-//  162   return 1;
+//  163  
+//  164   return 1;
         MOVS     R0,#+1
         POP      {R1,PC}          ;; return
-//  163 }
+//  165 }
           CFI EndBlock cfiBlock1
-//  164 };
-//  165 
-//  166 using ResetPin = Pin<Port<GPIOC>, 3U, PinWriteable> ;
-//  167 using DcPin = Pin<Port<GPIOB>, 2U, PinWriteable> ;
-//  168 using CsPin = Pin<Port<GPIOB>, 1U, PinWriteable> ;
-//  169 using BusyPin = Pin<Port<GPIOC>, 2U, PinReadable> ;
-//  170 
-//  171 
-//  172 using LcdDriverSpi = Spi<SPI2> ;
-//  173 using LcdDriver = ElinkDriver<LcdDriverSpi, ResetPin, DcPin, CsPin, BusyPin, Attributes<BlackAndWhite>> ;
-//  174 
+//  166 };
+//  167 
+//  168 using ResetPin = Pin<Port<GPIOC>, 3U, PinWriteable> ;
+//  169 using DcPin = Pin<Port<GPIOB>, 2U, PinWriteable> ;
+//  170 using CsPin = Pin<Port<GPIOB>, 1U, PinWriteable> ;
+//  171 using BusyPin = Pin<Port<GPIOC>, 2U, PinReadable> ;
+//  172 
+//  173 
+//  174 using LcdDriverSpi = Spi<SPI2> ;
+//  175 using LcdDriver = ElinkDriver<LcdDriverSpi, ResetPin, DcPin, CsPin, BusyPin, Attributes<BlackAndWhite>> ;
+//  176 
 
         SECTION `.bss`:DATA:REORDER:NOROOT(0)
         DATA
-//  175 Button<GPIOC, 13> button;
+//  177 Button<GPIOC, 13> button;
 button:
         DS8 1
 
         SECTION `.bss`:DATA:REORDER:NOROOT(2)
         DATA
-//  176 Event event(1000ms, 1);
+//  178 Event event(1000ms, 1);
 event:
         DS8 36
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(3)
         DATA
-?_3:
+?_2:
         DATA64
         DC64 1'000
-//  177 //UserButton button;
-//  178 
-
-        SECTION `.bss`:DATA:REORDER:NOROOT(2)
-        DATA
-//  179 ButtonPoll<Timer> buttonPoll(button,event);
-buttonPoll:
-        DS8 8
+//  179 //UserButton button;
 //  180 
 
         SECTION `.bss`:DATA:REORDER:NOROOT(2)
         DATA
-//  181 Filter filter(10.0F,100.0F);
-filter:
+//  181 ButtonPoll<Timer> buttonPoll(button,event);
+buttonPoll:
         DS8 8
+//  182 
 
         SECTION `.bss`:DATA:REORDER:NOROOT(2)
         DATA
-//  182 TempSens tempSens(filter);
+//  183 Filter filter(10.0F,100.0F);
+filter:
+        DS8 12
+
+        SECTION `.bss`:DATA:REORDER:NOROOT(2)
+        DATA
+//  184 TempSens tempSens(filter);
 tempSens:
-        DS8 8
+        DS8 12
 
         SECTION `.data`:DATA:REORDER:NOROOT(2)
         DATA
-//  183 Temp temp;
+//  185 Temp temp;
 temp:
         DATA32
         DC32 celsius, kelvin, fahrenheit, celsius, 0
 
         SECTION `.bss`:DATA:REORDER:NOROOT(0)
         DATA
-//  184 SMBus smbus;
+//  186 SMBus smbus;
 smbus:
         DS8 1
 
         SECTION `.bss`:DATA:REORDER:NOROOT(2)
         DATA
-//  185 TemperatureTask temperatureTask(temp,tempSens,event);
+//  187 TemperatureTask temperatureTask(temp,tempSens,event);
 temperatureTask:
-        DS8 2'156
-//  186 
-//  187 
+        DS8 2'176
+//  188 
+//  189 
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock2 Using cfiCommon0
           CFI Function main
         THUMB
-//  188 int main()
-//  189 {
+//  190 int main()
+//  191 {
 main:
         PUSH     {R3-R5,LR}
           CFI R14 Frame(CFA, -4)
           CFI R5 Frame(CFA, -8)
           CFI R4 Frame(CFA, -12)
           CFI CFA R13+16
-//  190   const char* message = "Hello World \n";
+//  192   const char* message = "Hello World \n";
         LDR.N    R5,??DataTable2_20
-//  191 
-//  192 //  LcdDriver::Init();
-//  193 //  LcdDriver::Clear();
-//  194 //  
-//  195 //  Point point{130U, 10U};
-//  196 //  Display<400,300>::DrawString(point, "GodFather") ;
-//  197 //  LcdDriver::UpdatePartialWindow(Display<400, 300>::image.data(), 0, 0, 400, 300) ;
-//  198 //  point.y = 130 ;
-//  199 //  point.x = 100 ;
-//  200   
-//  201   //buttonPoll.ButtonPollInitialization();
-//  202   //using namespace OsWrapper;
-//  203    Rtos::CreateThread(temperatureTask, "temperatureTask", ThreadPriority::normal);
+//  193 
+//  194 //  LcdDriver::Init();
+//  195 //  LcdDriver::Clear();
+//  196 //  
+//  197 //  Point point{130U, 10U};
+//  198 //  Display<400,300>::DrawString(point, "GodFather") ;
+//  199 //  LcdDriver::UpdatePartialWindow(Display<400, 300>::image.data(), 0, 0, 400, 300) ;
+//  200 //  point.y = 130 ;
+//  201 //  point.x = 100 ;
+//  202   
+//  203   buttonPoll.ButtonPollInitialization();
+        LDR.N    R0,??DataTable2_14
+          CFI FunCall _ZN10ButtonPollI5TimerE24ButtonPollInitializationEv
+        BL       _ZN10ButtonPollI5TimerE24ButtonPollInitializationEv
+//  204   //using namespace OsWrapper;
+//  205    Rtos::CreateThread(temperatureTask, "temperatureTask", ThreadPriority::normal);
         LDR.N    R4,??DataTable2_18
         MOVS     R2,#+30
         LDR.N    R1,??DataTable2_21
         MOVS     R0,R4
           CFI FunCall _ZN9OsWrapper4Rtos12CreateThreadI15TemperatureTaskEEvRT_PKcNS_14ThreadPriorityE
         BL       _ZN9OsWrapper4Rtos12CreateThreadI15TemperatureTaskEEvRT_PKcNS_14ThreadPriorityE
-//  204    Rtos::Start();
+//  206    Rtos::Start();
           CFI FunCall _ZN9OsWrapper4Rtos5StartEv
         BL       _ZN9OsWrapper4Rtos5StartEv
-//  205   usartDriver.SendMessage(message, strlen(message));
+//  207   usartDriver.SendMessage(message, strlen(message));
         MOVS     R0,R5
           CFI FunCall strlen
         BL       strlen
@@ -1545,15 +1560,15 @@ main:
         LDR.N    R0,??DataTable2_2
           CFI FunCall _ZN11USARTDriverI6Usart2E11SendMessageEPKcj
         BL       _ZN11USARTDriverI6Usart2E11SendMessageEPKcj
-//  206   for(;;)
-//  207   {
-//  208    char* value = temperatureTask.GetValue();
+//  208   for(;;)
+//  209   {
+//  210    char* value = temperatureTask.GetValue();
 ??main_0:
         MOVS     R0,R4
           CFI FunCall _ZN15TemperatureTask8GetValueEv
         BL       _ZN15TemperatureTask8GetValueEv
         MOVS     R1,R0
-//  209   std::cout << value << std::endl;
+//  211   std::cout << value << std::endl;
         LDR.N    R0,??DataTable2_22
           CFI FunCall _ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc
         BL       _ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc
@@ -1561,13 +1576,13 @@ main:
           CFI FunCall _ZNSolsEPFRSoS_E
         BL       _ZNSolsEPFRSoS_E
         B.N      ??main_0
-//  210   //temp.SetNextUnits();
-//  211   
-//  212    
-//  213    
-//  214   }
-//  215   return 0;
-//  216 }
+//  212   //temp.SetNextUnits();
+//  213   
+//  214    
+//  215    
+//  216   }
+//  217 
+//  218 }
           CFI EndBlock cfiBlock2
 
         SECTION `.text`:CODE:NOROOT(2)
@@ -1645,7 +1660,7 @@ main:
         DATA
 ??DataTable2_10:
         DATA32
-        DC32     ?_3
+        DC32     ?_2
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
@@ -3246,23 +3261,8 @@ _ZN9OsWrapper11RtosWrapper6wStartEv:
           CFI EndBlock cfiBlock59
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZN9OsWrapper11RtosWrapper6wSleepEj
-          CFI Block cfiBlock60 Using cfiCommon0
-          CFI Function _ZN9OsWrapper11RtosWrapper6wSleepEj
-        THUMB
-// __interwork __vfp void OsWrapper::RtosWrapper::wSleep(uint32_t)
-_ZN9OsWrapper11RtosWrapper6wSleepEj:
-        PUSH     {R7,LR}
-          CFI R14 Frame(CFA, -4)
-          CFI CFA R13+8
-          CFI FunCall vTaskDelay
-        BL       vTaskDelay
-        POP      {R0,PC}          ;; return
-          CFI EndBlock cfiBlock60
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
         SECTION_GROUP _ZN9OsWrapper11RtosWrapper12wCreateEventER19xSTATIC_EVENT_GROUP
-          CFI Block cfiBlock61 Using cfiCommon0
+          CFI Block cfiBlock60 Using cfiCommon0
           CFI Function _ZN9OsWrapper11RtosWrapper12wCreateEventER19xSTATIC_EVENT_GROUP
         THUMB
 // __interwork __vfp void * OsWrapper::RtosWrapper::wCreateEvent(OsWrapper::tEvent &)
@@ -3273,11 +3273,11 @@ _ZN9OsWrapper11RtosWrapper12wCreateEventER19xSTATIC_EVENT_GROUP:
           CFI FunCall xEventGroupCreateStatic
         BL       xEventGroupCreateStatic
         POP      {R1,PC}          ;; return
-          CFI EndBlock cfiBlock61
+          CFI EndBlock cfiBlock60
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
         SECTION_GROUP _ZN9OsWrapper11RtosWrapper12wDeleteEventERPv
-          CFI Block cfiBlock62 Using cfiCommon0
+          CFI Block cfiBlock61 Using cfiCommon0
           CFI Function _ZN9OsWrapper11RtosWrapper12wDeleteEventERPv
         THUMB
 // __interwork __vfp void OsWrapper::RtosWrapper::wDeleteEvent(void * &)
@@ -3289,11 +3289,11 @@ _ZN9OsWrapper11RtosWrapper12wDeleteEventERPv:
           CFI FunCall vEventGroupDelete
         BL       vEventGroupDelete
         POP      {R0,PC}          ;; return
-          CFI EndBlock cfiBlock62
+          CFI EndBlock cfiBlock61
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
         SECTION_GROUP _ZN9OsWrapper11RtosWrapper10wWaitEventERKPvjjNS_9EventModeE
-          CFI Block cfiBlock63 Using cfiCommon0
+          CFI Block cfiBlock62 Using cfiCommon0
           CFI Function _ZN9OsWrapper11RtosWrapper10wWaitEventERKPvjjNS_9EventModeE
         THUMB
 // __interwork __vfp uint32_t OsWrapper::RtosWrapper::wWaitEvent(void * const &, uint32_t, uint32_t, OsWrapper::EventMode)
@@ -3314,11 +3314,11 @@ _ZN9OsWrapper11RtosWrapper10wWaitEventERKPvjjNS_9EventModeE:
           CFI FunCall xEventGroupWaitBits
         BL       xEventGroupWaitBits
         POP      {R1,R2,R4,PC}    ;; return
-          CFI EndBlock cfiBlock63
+          CFI EndBlock cfiBlock62
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
         SECTION_GROUP _ZN9OsWrapper11RtosWrapper9wGetTicksEv
-          CFI Block cfiBlock64 Using cfiCommon0
+          CFI Block cfiBlock63 Using cfiCommon0
           CFI Function _ZN9OsWrapper11RtosWrapper9wGetTicksEv
         THUMB
 // __interwork __vfp uint32_t OsWrapper::RtosWrapper::wGetTicks()
@@ -3329,11 +3329,11 @@ _ZN9OsWrapper11RtosWrapper9wGetTicksEv:
           CFI FunCall xTaskGetTickCount
         BL       xTaskGetTickCount
         POP      {R1,PC}          ;; return
-          CFI EndBlock cfiBlock64
+          CFI EndBlock cfiBlock63
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
         SECTION_GROUP _ZN9OsWrapper7IThreadC2Ev
-          CFI Block cfiBlock65 Using cfiCommon0
+          CFI Block cfiBlock64 Using cfiCommon0
           CFI Function _ZN9OsWrapper7IThreadC2Ev
         THUMB
 // __code __interwork __vfp OsWrapper::IThread::subobject IThread()
@@ -3344,11 +3344,11 @@ _ZN9OsWrapper7IThreadC2Ev:
           CFI FunCall _ZN9OsWrapper7IThreadC1Ev
         BL       _ZN9OsWrapper7IThreadC1Ev
         POP      {R1,PC}          ;; return
-          CFI EndBlock cfiBlock65
+          CFI EndBlock cfiBlock64
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
         SECTION_GROUP _ZN9OsWrapper7IThreadC1Ev
-          CFI Block cfiBlock66 Using cfiCommon0
+          CFI Block cfiBlock65 Using cfiCommon0
           CFI Function _ZN9OsWrapper7IThreadC1Ev
           CFI NoCalls
         THUMB
@@ -3359,37 +3359,11 @@ _ZN9OsWrapper7IThreadC1Ev:
         MOVS     R1,#+0
         STR      R1,[R0, #+88]
         BX       LR               ;; return
-          CFI EndBlock cfiBlock66
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZN9OsWrapper7IThread5SleepENSt6chrono8durationIxSt5ratioILx1ELx1000EEEE
-          CFI Block cfiBlock67 Using cfiCommon0
-          CFI Function _ZN9OsWrapper7IThread5SleepENSt6chrono8durationIxSt5ratioILx1ELx1000EEEE
-        THUMB
-// __interwork __vfp void OsWrapper::IThread::Sleep(std::chrono::milliseconds)
-_ZN9OsWrapper7IThread5SleepENSt6chrono8durationIxSt5ratioILx1ELx1000EEEE:
-        PUSH     {R0,R1,R7,LR}
-          CFI R14 Frame(CFA, -4)
-          CFI CFA R13+16
-        SUB      SP,SP,#+8
-          CFI CFA R13+24
-        ADD      R0,SP,#+8
-          CFI FunCall _ZNSt6chrono13duration_castINS_8durationIjSt5ratioILx10ELx1000EEEExS2_ILx1ELx1000EEEENSt9enable_ifIXsr3std6chrono12_Is_durationIT_EE5valueES7_E4typeERKNS1_IT0_T1_EE
-        BL       _ZNSt6chrono13duration_castINS_8durationIjSt5ratioILx10ELx1000EEEExS2_ILx1ELx1000EEEENSt9enable_ifIXsr3std6chrono12_Is_durationIT_EE5valueES7_E4typeERKNS1_IT0_T1_EE
-        STR      R0,[SP, #+0]
-        MOV      R0,SP
-          CFI FunCall _ZNKSt6chrono8durationIjSt5ratioILx10ELx1000EEE5countEv
-        BL       _ZNKSt6chrono8durationIjSt5ratioILx10ELx1000EEE5countEv
-          CFI FunCall _ZN9OsWrapper11RtosWrapper6wSleepEj
-        BL       _ZN9OsWrapper11RtosWrapper6wSleepEj
-        ADD      SP,SP,#+20
-          CFI CFA R13+4
-        POP      {PC}             ;; return
-          CFI EndBlock cfiBlock67
+          CFI EndBlock cfiBlock65
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
         SECTION_GROUP _ZN9OsWrapper7IThread3RunEv
-          CFI Block cfiBlock68 Using cfiCommon0
+          CFI Block cfiBlock66 Using cfiCommon0
           CFI Function _ZN9OsWrapper7IThread3RunEv
         THUMB
 // __interwork __vfp void OsWrapper::IThread::Run()
@@ -3408,11 +3382,11 @@ _ZN9OsWrapper7IThread3RunEv:
           CFI FunCall
         BLX      R1
         POP      {R4,PC}          ;; return
-          CFI EndBlock cfiBlock68
+          CFI EndBlock cfiBlock66
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
         SECTION_GROUP _ZN9OsWrapper6ThreadILj512EEC2Ev
-          CFI Block cfiBlock69 Using cfiCommon0
+          CFI Block cfiBlock67 Using cfiCommon0
           CFI Function _ZN9OsWrapper6ThreadILj512EEC2Ev
         THUMB
 // __code __interwork __vfp OsWrapper::Thread<512U>::subobject Thread()
@@ -3423,11 +3397,11 @@ _ZN9OsWrapper6ThreadILj512EEC2Ev:
           CFI FunCall _ZN9OsWrapper6ThreadILj512EEC1Ev
         BL       _ZN9OsWrapper6ThreadILj512EEC1Ev
         POP      {R1,PC}          ;; return
-          CFI EndBlock cfiBlock69
+          CFI EndBlock cfiBlock67
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
         SECTION_GROUP _ZN9OsWrapper6ThreadILj512EEC1Ev
-          CFI Block cfiBlock70 Using cfiCommon0
+          CFI Block cfiBlock68 Using cfiCommon0
           CFI Function _ZN9OsWrapper6ThreadILj512EEC1Ev
         THUMB
 // __code __interwork __vfp OsWrapper::Thread<512U>::Thread()
@@ -3442,11 +3416,11 @@ _ZN9OsWrapper6ThreadILj512EEC1Ev:
         BL       _ZN9OsWrapper7IThreadC2Ev
         MOVS     R0,R4
         POP      {R4,PC}          ;; return
-          CFI EndBlock cfiBlock70
+          CFI EndBlock cfiBlock68
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
         SECTION_GROUP _ZN9OsWrapper4Rtos12CreateThreadI15TemperatureTaskEEvRT_PKcNS_14ThreadPriorityE
-          CFI Block cfiBlock71 Using cfiCommon0
+          CFI Block cfiBlock69 Using cfiCommon0
           CFI Function _ZN9OsWrapper4Rtos12CreateThreadI15TemperatureTaskEEvRT_PKcNS_14ThreadPriorityE
         THUMB
 // __interwork __vfp void OsWrapper::Rtos::CreateThread<TemperatureTask>(TemperatureTask &, char const *, OsWrapper::ThreadPriority)
@@ -3472,11 +3446,11 @@ _ZN9OsWrapper4Rtos12CreateThreadI15TemperatureTaskEEvRT_PKcNS_14ThreadPriorityE:
           CFI FunCall _ZN9OsWrapper11RtosWrapper13wCreateThreadINS_4RtosE15TemperatureTaskEEvRT0_PKcNS_14ThreadPriorityEtPj
         BL       _ZN9OsWrapper11RtosWrapper13wCreateThreadINS_4RtosE15TemperatureTaskEEvRT0_PKcNS_14ThreadPriorityEtPj
         POP      {R0,R1,R4-R6,PC}  ;; return
-          CFI EndBlock cfiBlock71
+          CFI EndBlock cfiBlock69
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
         SECTION_GROUP _ZN9OsWrapper4Rtos5StartEv
-          CFI Block cfiBlock72 Using cfiCommon0
+          CFI Block cfiBlock70 Using cfiCommon0
           CFI Function _ZN9OsWrapper4Rtos5StartEv
         THUMB
 // __interwork __vfp void OsWrapper::Rtos::Start()
@@ -3487,11 +3461,11 @@ _ZN9OsWrapper4Rtos5StartEv:
           CFI FunCall _ZN9OsWrapper11RtosWrapper6wStartEv
         BL       _ZN9OsWrapper11RtosWrapper6wStartEv
         POP      {R0,PC}          ;; return
-          CFI EndBlock cfiBlock72
+          CFI EndBlock cfiBlock70
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
         SECTION_GROUP _ZN9OsWrapper4Rtos3RunEPv
-          CFI Block cfiBlock73 Using cfiCommon0
+          CFI Block cfiBlock71 Using cfiCommon0
           CFI Function _ZN9OsWrapper4Rtos3RunEPv
         THUMB
 // __interwork __vfp void OsWrapper::Rtos::Run(void *)
@@ -3502,11 +3476,11 @@ _ZN9OsWrapper4Rtos3RunEPv:
           CFI FunCall _ZN9OsWrapper7IThread3RunEv
         BL       _ZN9OsWrapper7IThread3RunEv
         POP      {R0,PC}          ;; return
-          CFI EndBlock cfiBlock73
+          CFI EndBlock cfiBlock71
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN13RegisterFieldIN4SPI25CRCPRELj0ELj16E13ReadWriteModevE3SetIS2_vEEvj
-          CFI Block cfiBlock74 Using cfiCommon0
+          CFI Block cfiBlock72 Using cfiCommon0
           CFI Function _ZN13RegisterFieldIN4SPI25CRCPRELj0ELj16E13ReadWriteModevE3SetIS2_vEEvj
         THUMB
 // __interwork __vfp void RegisterField<SPI2::CRCPR, 0U, 16U, ReadWriteMode>::Set<ReadWriteMode, void>(uint32_t)
@@ -3517,7 +3491,7 @@ _ZN13RegisterFieldIN4SPI25CRCPRELj0ELj16E13ReadWriteModevE3SetIS2_vEEvj:
           CFI CFA R13+8
         MOVS     R4,R0
         CMP      R4,#+65536
-        BCC.N    ??Set_43
+        BCC.N    ??Set_47
         MOVS     R2,#+31
         LDR.N    R1,??Set_0
         LDR.N    R0,??Set_0+0x4
@@ -3525,7 +3499,7 @@ _ZN13RegisterFieldIN4SPI25CRCPRELj0ELj16E13ReadWriteModevE3SetIS2_vEEvj:
         BL       __aeabi_assert
           CFI FunCall __iar_EmptyStepPoint
         BL       __iar_EmptyStepPoint
-??Set_43:
+??Set_47:
         LDR.N    R1,??Set_0+0x8   ;; 0x40003810
         LDR      R0,[R1, #+0]
         LSRS     R0,R0,#+16
@@ -3540,11 +3514,11 @@ _ZN13RegisterFieldIN4SPI25CRCPRELj0ELj16E13ReadWriteModevE3SetIS2_vEEvj:
         DC32     _ZZN13RegisterFieldIN4SPI25CRCPRELj0ELj16E13ReadWriteModevE3SetIS2_vEEvjEs_0
         DC32     _ZZN13RegisterFieldIN4SPI25CRCPRELj0ELj16E13ReadWriteModevE3SetIS2_vEEvjEs
         DC32     0x40003810
-          CFI EndBlock cfiBlock74
+          CFI EndBlock cfiBlock72
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN13RegisterFieldIN4I2C13CR2ELj0ELj6E13ReadWriteModevE3SetIS2_vEEvj
-          CFI Block cfiBlock75 Using cfiCommon0
+          CFI Block cfiBlock73 Using cfiCommon0
           CFI Function _ZN13RegisterFieldIN4I2C13CR2ELj0ELj6E13ReadWriteModevE3SetIS2_vEEvj
         THUMB
 // __interwork __vfp void RegisterField<I2C1::CR2, 0U, 6U, ReadWriteMode>::Set<ReadWriteMode, void>(uint32_t)
@@ -3555,7 +3529,7 @@ _ZN13RegisterFieldIN4I2C13CR2ELj0ELj6E13ReadWriteModevE3SetIS2_vEEvj:
           CFI CFA R13+8
         MOVS     R4,R0
         CMP      R4,#+64
-        BCC.N    ??Set_44
+        BCC.N    ??Set_48
         MOVS     R2,#+31
         LDR.N    R1,??Set_1
         LDR.N    R0,??Set_1+0x4
@@ -3563,7 +3537,7 @@ _ZN13RegisterFieldIN4I2C13CR2ELj0ELj6E13ReadWriteModevE3SetIS2_vEEvj:
         BL       __aeabi_assert
           CFI FunCall __iar_EmptyStepPoint
         BL       __iar_EmptyStepPoint
-??Set_44:
+??Set_48:
         LDR.N    R1,??Set_1+0x8   ;; 0x40005404
         LDR      R0,[R1, #+0]
         LSRS     R0,R0,#+6
@@ -3577,76 +3551,107 @@ _ZN13RegisterFieldIN4I2C13CR2ELj0ELj6E13ReadWriteModevE3SetIS2_vEEvj:
         DC32     _ZZN13RegisterFieldIN4I2C13CR2ELj0ELj6E13ReadWriteModevE3SetIS2_vEEvjEs_0
         DC32     _ZZN13RegisterFieldIN4I2C13CR2ELj0ELj6E13ReadWriteModevE3SetIS2_vEEvjEs
         DC32     0x40005404
-          CFI EndBlock cfiBlock75
+          CFI EndBlock cfiBlock73
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
-        SECTION_GROUP _ZN14FieldValueBaseI21I2C1_CR1_START_ValuesIN4I2C13CR1ELj8ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
-          CFI Block cfiBlock76 Using cfiCommon0
-          CFI Function _ZN14FieldValueBaseI21I2C1_CR1_START_ValuesIN4I2C13CR1ELj8ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
+        SECTION_GROUP _ZN14FieldValueBaseI25RCC_AHB1ENR_DMA2EN_ValuesIN3RCC7APB1ENRELj0ELj1E13ReadWriteModeNS1_14RCCAPB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv
+          CFI Block cfiBlock74 Using cfiCommon0
+          CFI Function _ZN14FieldValueBaseI25RCC_AHB1ENR_DMA2EN_ValuesIN3RCC7APB1ENRELj0ELj1E13ReadWriteModeNS1_14RCCAPB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv
           CFI NoCalls
         THUMB
-// __interwork __vfp void FieldValueBase<I2C1_CR1_START_Values<I2C1::CR1, 8U, 1U, ReadWriteMode, I2C1::I2C1CR1Base>, I2C1::I2C1CR1Base, 1U>::Set<ReadWriteMode, void>()
-_ZN14FieldValueBaseI21I2C1_CR1_START_ValuesIN4I2C13CR1ELj8ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv:
-        LDR.N    R1,??Set_2       ;; 0x40005400
+// __interwork __vfp void FieldValueBase<RCC_AHB1ENR_DMA2EN_Values<RCC::APB1ENR, 0U, 1U, ReadWriteMode, RCC::RCCAPB1ENRBase>, RCC::RCCAPB1ENRBase, 1U>::Set<ReadWriteMode, void>()
+_ZN14FieldValueBaseI25RCC_AHB1ENR_DMA2EN_ValuesIN3RCC7APB1ENRELj0ELj1E13ReadWriteModeNS1_14RCCAPB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv:
+        LDR.N    R1,??Set_2       ;; 0x40023840
         LDR      R0,[R1, #+0]
-        ORRS     R0,R0,#0x100
+        ORRS     R0,R0,#0x1
         STR      R0,[R1, #+0]
         BX       LR               ;; return
         DATA
 ??Set_2:
         DATA32
-        DC32     0x40005400
-          CFI EndBlock cfiBlock76
+        DC32     0x40023840
+          CFI EndBlock cfiBlock74
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
-        SECTION_GROUP _ZN14FieldValueBaseI19I2C1_CR1_ACK_ValuesIN4I2C13CR1ELj10ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
-          CFI Block cfiBlock77 Using cfiCommon0
-          CFI Function _ZN14FieldValueBaseI19I2C1_CR1_ACK_ValuesIN4I2C13CR1ELj10ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
+        SECTION_GROUP _ZN14FieldValueBaseI20TIM2_DIER_UIE_ValuesIN4TIM24DIERELj0ELj1E13ReadWriteModeNS1_12TIM2DIERBaseEES4_Lj1EE3SetIS3_vEEvv
+          CFI Block cfiBlock75 Using cfiCommon0
+          CFI Function _ZN14FieldValueBaseI20TIM2_DIER_UIE_ValuesIN4TIM24DIERELj0ELj1E13ReadWriteModeNS1_12TIM2DIERBaseEES4_Lj1EE3SetIS3_vEEvv
           CFI NoCalls
         THUMB
-// __interwork __vfp void FieldValueBase<I2C1_CR1_ACK_Values<I2C1::CR1, 10U, 1U, ReadWriteMode, I2C1::I2C1CR1Base>, I2C1::I2C1CR1Base, 1U>::Set<ReadWriteMode, void>()
-_ZN14FieldValueBaseI19I2C1_CR1_ACK_ValuesIN4I2C13CR1ELj10ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv:
-        LDR.N    R1,??Set_3       ;; 0x40005400
+// __interwork __vfp void FieldValueBase<TIM2_DIER_UIE_Values<TIM2::DIER, 0U, 1U, ReadWriteMode, TIM2::TIM2DIERBase>, TIM2::TIM2DIERBase, 1U>::Set<ReadWriteMode, void>()
+_ZN14FieldValueBaseI20TIM2_DIER_UIE_ValuesIN4TIM24DIERELj0ELj1E13ReadWriteModeNS1_12TIM2DIERBaseEES4_Lj1EE3SetIS3_vEEvv:
+        LDR.N    R1,??Set_3       ;; 0x4000000c
         LDR      R0,[R1, #+0]
-        ORRS     R0,R0,#0x400
+        ORRS     R0,R0,#0x1
         STR      R0,[R1, #+0]
         BX       LR               ;; return
         DATA
 ??Set_3:
         DATA32
-        DC32     0x40005400
-          CFI EndBlock cfiBlock77
+        DC32     0x4000000c
+          CFI EndBlock cfiBlock75
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
-        SECTION_GROUP _ZN14FieldValueBaseI19I2C1_CR1_ACK_ValuesIN4I2C13CR1ELj10ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj0EE3SetIS3_vEEvv
-          CFI Block cfiBlock78 Using cfiCommon0
-          CFI Function _ZN14FieldValueBaseI19I2C1_CR1_ACK_ValuesIN4I2C13CR1ELj10ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj0EE3SetIS3_vEEvv
+        SECTION_GROUP _ZN14FieldValueBaseI18TIM2_SR_UIF_ValuesIN4TIM22SRELj0ELj1E13ReadWriteModeNS1_10TIM2SRBaseEES4_Lj0EE3SetIS3_vEEvv
+          CFI Block cfiBlock76 Using cfiCommon0
+          CFI Function _ZN14FieldValueBaseI18TIM2_SR_UIF_ValuesIN4TIM22SRELj0ELj1E13ReadWriteModeNS1_10TIM2SRBaseEES4_Lj0EE3SetIS3_vEEvv
           CFI NoCalls
         THUMB
-// __interwork __vfp void FieldValueBase<I2C1_CR1_ACK_Values<I2C1::CR1, 10U, 1U, ReadWriteMode, I2C1::I2C1CR1Base>, I2C1::I2C1CR1Base, 0U>::Set<ReadWriteMode, void>()
-_ZN14FieldValueBaseI19I2C1_CR1_ACK_ValuesIN4I2C13CR1ELj10ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj0EE3SetIS3_vEEvv:
-        LDR.N    R1,??Set_4       ;; 0x40005400
+// __interwork __vfp void FieldValueBase<TIM2_SR_UIF_Values<TIM2::SR, 0U, 1U, ReadWriteMode, TIM2::TIM2SRBase>, TIM2::TIM2SRBase, 0U>::Set<ReadWriteMode, void>()
+_ZN14FieldValueBaseI18TIM2_SR_UIF_ValuesIN4TIM22SRELj0ELj1E13ReadWriteModeNS1_10TIM2SRBaseEES4_Lj0EE3SetIS3_vEEvv:
+        LDR.N    R1,??Set_4       ;; 0x40000010
         LDR      R0,[R1, #+0]
-        BICS     R0,R0,#0x400
+        LSRS     R0,R0,#+1
+        LSLS     R0,R0,#+1
         STR      R0,[R1, #+0]
         BX       LR               ;; return
         DATA
 ??Set_4:
         DATA32
-        DC32     0x40005400
+        DC32     0x40000010
+          CFI EndBlock cfiBlock76
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZN14FieldValueBaseI19TIM2_CR1_CEN_ValuesIN4TIM23CR1ELj0ELj1E13ReadWriteModeNS1_11TIM2CR1BaseEES4_Lj1EE3SetIS3_vEEvv
+          CFI Block cfiBlock77 Using cfiCommon0
+          CFI Function _ZN14FieldValueBaseI19TIM2_CR1_CEN_ValuesIN4TIM23CR1ELj0ELj1E13ReadWriteModeNS1_11TIM2CR1BaseEES4_Lj1EE3SetIS3_vEEvv
+          CFI NoCalls
+        THUMB
+// __interwork __vfp void FieldValueBase<TIM2_CR1_CEN_Values<TIM2::CR1, 0U, 1U, ReadWriteMode, TIM2::TIM2CR1Base>, TIM2::TIM2CR1Base, 1U>::Set<ReadWriteMode, void>()
+_ZN14FieldValueBaseI19TIM2_CR1_CEN_ValuesIN4TIM23CR1ELj0ELj1E13ReadWriteModeNS1_11TIM2CR1BaseEES4_Lj1EE3SetIS3_vEEvv:
+        MOVS     R1,#+1073741824
+        LDR      R0,[R1, #+0]
+        ORRS     R0,R0,#0x1
+        STR      R0,[R1, #+0]
+        BX       LR               ;; return
+          CFI EndBlock cfiBlock77
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZN14FieldValueBaseI19TIM2_CR1_URS_ValuesIN4TIM23CR1ELj2ELj1E13ReadWriteModeNS1_11TIM2CR1BaseEES4_Lj1EE3SetIS3_vEEvv
+          CFI Block cfiBlock78 Using cfiCommon0
+          CFI Function _ZN14FieldValueBaseI19TIM2_CR1_URS_ValuesIN4TIM23CR1ELj2ELj1E13ReadWriteModeNS1_11TIM2CR1BaseEES4_Lj1EE3SetIS3_vEEvv
+          CFI NoCalls
+        THUMB
+// __interwork __vfp void FieldValueBase<TIM2_CR1_URS_Values<TIM2::CR1, 2U, 1U, ReadWriteMode, TIM2::TIM2CR1Base>, TIM2::TIM2CR1Base, 1U>::Set<ReadWriteMode, void>()
+_ZN14FieldValueBaseI19TIM2_CR1_URS_ValuesIN4TIM23CR1ELj2ELj1E13ReadWriteModeNS1_11TIM2CR1BaseEES4_Lj1EE3SetIS3_vEEvv:
+        MOVS     R1,#+1073741824
+        LDR      R0,[R1, #+0]
+        ORRS     R0,R0,#0x4
+        STR      R0,[R1, #+0]
+        BX       LR               ;; return
           CFI EndBlock cfiBlock78
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
-        SECTION_GROUP _ZN14FieldValueBaseI19I2C1_CR1_POS_ValuesIN4I2C13CR1ELj11ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
+        SECTION_GROUP _ZN14FieldValueBaseI21I2C1_CR1_START_ValuesIN4I2C13CR1ELj8ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
           CFI Block cfiBlock79 Using cfiCommon0
-          CFI Function _ZN14FieldValueBaseI19I2C1_CR1_POS_ValuesIN4I2C13CR1ELj11ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
+          CFI Function _ZN14FieldValueBaseI21I2C1_CR1_START_ValuesIN4I2C13CR1ELj8ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
           CFI NoCalls
         THUMB
-// __interwork __vfp void FieldValueBase<I2C1_CR1_POS_Values<I2C1::CR1, 11U, 1U, ReadWriteMode, I2C1::I2C1CR1Base>, I2C1::I2C1CR1Base, 1U>::Set<ReadWriteMode, void>()
-_ZN14FieldValueBaseI19I2C1_CR1_POS_ValuesIN4I2C13CR1ELj11ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv:
+// __interwork __vfp void FieldValueBase<I2C1_CR1_START_Values<I2C1::CR1, 8U, 1U, ReadWriteMode, I2C1::I2C1CR1Base>, I2C1::I2C1CR1Base, 1U>::Set<ReadWriteMode, void>()
+_ZN14FieldValueBaseI21I2C1_CR1_START_ValuesIN4I2C13CR1ELj8ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv:
         LDR.N    R1,??Set_5       ;; 0x40005400
         LDR      R0,[R1, #+0]
-        ORRS     R0,R0,#0x800
+        ORRS     R0,R0,#0x100
         STR      R0,[R1, #+0]
         BX       LR               ;; return
         DATA
@@ -3656,16 +3661,16 @@ _ZN14FieldValueBaseI19I2C1_CR1_POS_ValuesIN4I2C13CR1ELj11ELj1E13ReadWriteModeNS1
           CFI EndBlock cfiBlock79
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
-        SECTION_GROUP _ZN14FieldValueBaseI20I2C1_CR1_STOP_ValuesIN4I2C13CR1ELj9ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
+        SECTION_GROUP _ZN14FieldValueBaseI19I2C1_CR1_ACK_ValuesIN4I2C13CR1ELj10ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
           CFI Block cfiBlock80 Using cfiCommon0
-          CFI Function _ZN14FieldValueBaseI20I2C1_CR1_STOP_ValuesIN4I2C13CR1ELj9ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
+          CFI Function _ZN14FieldValueBaseI19I2C1_CR1_ACK_ValuesIN4I2C13CR1ELj10ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
           CFI NoCalls
         THUMB
-// __interwork __vfp void FieldValueBase<I2C1_CR1_STOP_Values<I2C1::CR1, 9U, 1U, ReadWriteMode, I2C1::I2C1CR1Base>, I2C1::I2C1CR1Base, 1U>::Set<ReadWriteMode, void>()
-_ZN14FieldValueBaseI20I2C1_CR1_STOP_ValuesIN4I2C13CR1ELj9ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv:
+// __interwork __vfp void FieldValueBase<I2C1_CR1_ACK_Values<I2C1::CR1, 10U, 1U, ReadWriteMode, I2C1::I2C1CR1Base>, I2C1::I2C1CR1Base, 1U>::Set<ReadWriteMode, void>()
+_ZN14FieldValueBaseI19I2C1_CR1_ACK_ValuesIN4I2C13CR1ELj10ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv:
         LDR.N    R1,??Set_6       ;; 0x40005400
         LDR      R0,[R1, #+0]
-        ORRS     R0,R0,#0x200
+        ORRS     R0,R0,#0x400
         STR      R0,[R1, #+0]
         BX       LR               ;; return
         DATA
@@ -3675,72 +3680,71 @@ _ZN14FieldValueBaseI20I2C1_CR1_STOP_ValuesIN4I2C13CR1ELj9ELj1E13ReadWriteModeNS1
           CFI EndBlock cfiBlock80
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
-        SECTION_GROUP _ZN14FieldValueBaseI19RCC_CR_HSION_ValuesIN3RCC2CRELj0ELj1E13ReadWriteModeNS1_9RCCCRBaseEES4_Lj1EE3SetIS3_vEEvv
+        SECTION_GROUP _ZN14FieldValueBaseI19I2C1_CR1_ACK_ValuesIN4I2C13CR1ELj10ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj0EE3SetIS3_vEEvv
           CFI Block cfiBlock81 Using cfiCommon0
-          CFI Function _ZN14FieldValueBaseI19RCC_CR_HSION_ValuesIN3RCC2CRELj0ELj1E13ReadWriteModeNS1_9RCCCRBaseEES4_Lj1EE3SetIS3_vEEvv
+          CFI Function _ZN14FieldValueBaseI19I2C1_CR1_ACK_ValuesIN4I2C13CR1ELj10ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj0EE3SetIS3_vEEvv
           CFI NoCalls
         THUMB
-// __interwork __vfp void FieldValueBase<RCC_CR_HSION_Values<RCC::CR, 0U, 1U, ReadWriteMode, RCC::RCCCRBase>, RCC::RCCCRBase, 1U>::Set<ReadWriteMode, void>()
-_ZN14FieldValueBaseI19RCC_CR_HSION_ValuesIN3RCC2CRELj0ELj1E13ReadWriteModeNS1_9RCCCRBaseEES4_Lj1EE3SetIS3_vEEvv:
-        LDR.N    R1,??Set_7       ;; 0x40023800
+// __interwork __vfp void FieldValueBase<I2C1_CR1_ACK_Values<I2C1::CR1, 10U, 1U, ReadWriteMode, I2C1::I2C1CR1Base>, I2C1::I2C1CR1Base, 0U>::Set<ReadWriteMode, void>()
+_ZN14FieldValueBaseI19I2C1_CR1_ACK_ValuesIN4I2C13CR1ELj10ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj0EE3SetIS3_vEEvv:
+        LDR.N    R1,??Set_7       ;; 0x40005400
         LDR      R0,[R1, #+0]
-        ORRS     R0,R0,#0x1
+        BICS     R0,R0,#0x400
         STR      R0,[R1, #+0]
         BX       LR               ;; return
         DATA
 ??Set_7:
         DATA32
-        DC32     0x40023800
+        DC32     0x40005400
           CFI EndBlock cfiBlock81
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
-        SECTION_GROUP _ZN14FieldValueBaseI18RCC_CFGR_SW_ValuesIN3RCC4CFGRELj0ELj2E13ReadWriteModeNS1_11RCCCFGRBaseEES4_Lj0EE3SetIS3_vEEvv
+        SECTION_GROUP _ZN14FieldValueBaseI19I2C1_CR1_POS_ValuesIN4I2C13CR1ELj11ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
           CFI Block cfiBlock82 Using cfiCommon0
-          CFI Function _ZN14FieldValueBaseI18RCC_CFGR_SW_ValuesIN3RCC4CFGRELj0ELj2E13ReadWriteModeNS1_11RCCCFGRBaseEES4_Lj0EE3SetIS3_vEEvv
+          CFI Function _ZN14FieldValueBaseI19I2C1_CR1_POS_ValuesIN4I2C13CR1ELj11ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
           CFI NoCalls
         THUMB
-// __interwork __vfp void FieldValueBase<RCC_CFGR_SW_Values<RCC::CFGR, 0U, 2U, ReadWriteMode, RCC::RCCCFGRBase>, RCC::RCCCFGRBase, 0U>::Set<ReadWriteMode, void>()
-_ZN14FieldValueBaseI18RCC_CFGR_SW_ValuesIN3RCC4CFGRELj0ELj2E13ReadWriteModeNS1_11RCCCFGRBaseEES4_Lj0EE3SetIS3_vEEvv:
-        LDR.N    R1,??Set_8       ;; 0x40023808
+// __interwork __vfp void FieldValueBase<I2C1_CR1_POS_Values<I2C1::CR1, 11U, 1U, ReadWriteMode, I2C1::I2C1CR1Base>, I2C1::I2C1CR1Base, 1U>::Set<ReadWriteMode, void>()
+_ZN14FieldValueBaseI19I2C1_CR1_POS_ValuesIN4I2C13CR1ELj11ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv:
+        LDR.N    R1,??Set_8       ;; 0x40005400
         LDR      R0,[R1, #+0]
-        LSRS     R0,R0,#+2
-        LSLS     R0,R0,#+2
+        ORRS     R0,R0,#0x800
         STR      R0,[R1, #+0]
         BX       LR               ;; return
         DATA
 ??Set_8:
         DATA32
-        DC32     0x40023808
+        DC32     0x40005400
           CFI EndBlock cfiBlock82
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
-        SECTION_GROUP _ZN14FieldValueBaseI25STK_CTRL_CLKSOURCE_ValuesIN3STK4CTRLELj2ELj1E13ReadWriteModeNS1_11STKCTRLBaseEES4_Lj1EE3SetIS3_vEEvv
+        SECTION_GROUP _ZN14FieldValueBaseI20I2C1_CR1_STOP_ValuesIN4I2C13CR1ELj9ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
           CFI Block cfiBlock83 Using cfiCommon0
-          CFI Function _ZN14FieldValueBaseI25STK_CTRL_CLKSOURCE_ValuesIN3STK4CTRLELj2ELj1E13ReadWriteModeNS1_11STKCTRLBaseEES4_Lj1EE3SetIS3_vEEvv
+          CFI Function _ZN14FieldValueBaseI20I2C1_CR1_STOP_ValuesIN4I2C13CR1ELj9ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
           CFI NoCalls
         THUMB
-// __interwork __vfp void FieldValueBase<STK_CTRL_CLKSOURCE_Values<STK::CTRL, 2U, 1U, ReadWriteMode, STK::STKCTRLBase>, STK::STKCTRLBase, 1U>::Set<ReadWriteMode, void>()
-_ZN14FieldValueBaseI25STK_CTRL_CLKSOURCE_ValuesIN3STK4CTRLELj2ELj1E13ReadWriteModeNS1_11STKCTRLBaseEES4_Lj1EE3SetIS3_vEEvv:
-        LDR.N    R1,??Set_9       ;; 0xe000e010
+// __interwork __vfp void FieldValueBase<I2C1_CR1_STOP_Values<I2C1::CR1, 9U, 1U, ReadWriteMode, I2C1::I2C1CR1Base>, I2C1::I2C1CR1Base, 1U>::Set<ReadWriteMode, void>()
+_ZN14FieldValueBaseI20I2C1_CR1_STOP_ValuesIN4I2C13CR1ELj9ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv:
+        LDR.N    R1,??Set_9       ;; 0x40005400
         LDR      R0,[R1, #+0]
-        ORRS     R0,R0,#0x4
+        ORRS     R0,R0,#0x200
         STR      R0,[R1, #+0]
         BX       LR               ;; return
         DATA
 ??Set_9:
         DATA32
-        DC32     0xe000e010
+        DC32     0x40005400
           CFI EndBlock cfiBlock83
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
-        SECTION_GROUP _ZN14FieldValueBaseI22STK_CTRL_ENABLE_ValuesIN3STK4CTRLELj0ELj1E13ReadWriteModeNS1_11STKCTRLBaseEES4_Lj1EE3SetIS3_vEEvv
+        SECTION_GROUP _ZN14FieldValueBaseI19RCC_CR_HSION_ValuesIN3RCC2CRELj0ELj1E13ReadWriteModeNS1_9RCCCRBaseEES4_Lj1EE3SetIS3_vEEvv
           CFI Block cfiBlock84 Using cfiCommon0
-          CFI Function _ZN14FieldValueBaseI22STK_CTRL_ENABLE_ValuesIN3STK4CTRLELj0ELj1E13ReadWriteModeNS1_11STKCTRLBaseEES4_Lj1EE3SetIS3_vEEvv
+          CFI Function _ZN14FieldValueBaseI19RCC_CR_HSION_ValuesIN3RCC2CRELj0ELj1E13ReadWriteModeNS1_9RCCCRBaseEES4_Lj1EE3SetIS3_vEEvv
           CFI NoCalls
         THUMB
-// __interwork __vfp void FieldValueBase<STK_CTRL_ENABLE_Values<STK::CTRL, 0U, 1U, ReadWriteMode, STK::STKCTRLBase>, STK::STKCTRLBase, 1U>::Set<ReadWriteMode, void>()
-_ZN14FieldValueBaseI22STK_CTRL_ENABLE_ValuesIN3STK4CTRLELj0ELj1E13ReadWriteModeNS1_11STKCTRLBaseEES4_Lj1EE3SetIS3_vEEvv:
-        LDR.N    R1,??Set_10      ;; 0xe000e010
+// __interwork __vfp void FieldValueBase<RCC_CR_HSION_Values<RCC::CR, 0U, 1U, ReadWriteMode, RCC::RCCCRBase>, RCC::RCCCRBase, 1U>::Set<ReadWriteMode, void>()
+_ZN14FieldValueBaseI19RCC_CR_HSION_ValuesIN3RCC2CRELj0ELj1E13ReadWriteModeNS1_9RCCCRBaseEES4_Lj1EE3SetIS3_vEEvv:
+        LDR.N    R1,??Set_10      ;; 0x40023800
         LDR      R0,[R1, #+0]
         ORRS     R0,R0,#0x1
         STR      R0,[R1, #+0]
@@ -3748,267 +3752,344 @@ _ZN14FieldValueBaseI22STK_CTRL_ENABLE_ValuesIN3STK4CTRLELj0ELj1E13ReadWriteModeN
         DATA
 ??Set_10:
         DATA32
-        DC32     0xe000e010
+        DC32     0x40023800
           CFI EndBlock cfiBlock84
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
-        SECTION_GROUP _ZN14FieldValueBaseI26RCC_AHB1ENR_GPIOAEN_ValuesIN3RCC7AHB1ENRELj0ELj1E13ReadWriteModeNS1_14RCCAHB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv
+        SECTION_GROUP _ZN14FieldValueBaseI18RCC_CFGR_SW_ValuesIN3RCC4CFGRELj0ELj2E13ReadWriteModeNS1_11RCCCFGRBaseEES4_Lj0EE3SetIS3_vEEvv
           CFI Block cfiBlock85 Using cfiCommon0
-          CFI Function _ZN14FieldValueBaseI26RCC_AHB1ENR_GPIOAEN_ValuesIN3RCC7AHB1ENRELj0ELj1E13ReadWriteModeNS1_14RCCAHB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv
+          CFI Function _ZN14FieldValueBaseI18RCC_CFGR_SW_ValuesIN3RCC4CFGRELj0ELj2E13ReadWriteModeNS1_11RCCCFGRBaseEES4_Lj0EE3SetIS3_vEEvv
           CFI NoCalls
         THUMB
-// __interwork __vfp void FieldValueBase<RCC_AHB1ENR_GPIOAEN_Values<RCC::AHB1ENR, 0U, 1U, ReadWriteMode, RCC::RCCAHB1ENRBase>, RCC::RCCAHB1ENRBase, 1U>::Set<ReadWriteMode, void>()
-_ZN14FieldValueBaseI26RCC_AHB1ENR_GPIOAEN_ValuesIN3RCC7AHB1ENRELj0ELj1E13ReadWriteModeNS1_14RCCAHB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv:
-        LDR.N    R1,??Set_11      ;; 0x40023830
+// __interwork __vfp void FieldValueBase<RCC_CFGR_SW_Values<RCC::CFGR, 0U, 2U, ReadWriteMode, RCC::RCCCFGRBase>, RCC::RCCCFGRBase, 0U>::Set<ReadWriteMode, void>()
+_ZN14FieldValueBaseI18RCC_CFGR_SW_ValuesIN3RCC4CFGRELj0ELj2E13ReadWriteModeNS1_11RCCCFGRBaseEES4_Lj0EE3SetIS3_vEEvv:
+        LDR.N    R1,??Set_11      ;; 0x40023808
         LDR      R0,[R1, #+0]
-        ORRS     R0,R0,#0x1
+        LSRS     R0,R0,#+2
+        LSLS     R0,R0,#+2
         STR      R0,[R1, #+0]
         BX       LR               ;; return
         DATA
 ??Set_11:
         DATA32
-        DC32     0x40023830
+        DC32     0x40023808
           CFI EndBlock cfiBlock85
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
-        SECTION_GROUP _ZN14FieldValueBaseI26RCC_AHB1ENR_GPIOBEN_ValuesIN3RCC7AHB1ENRELj1ELj1E13ReadWriteModeNS1_14RCCAHB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv
+        SECTION_GROUP _ZN14FieldValueBaseI25STK_CTRL_CLKSOURCE_ValuesIN3STK4CTRLELj2ELj1E13ReadWriteModeNS1_11STKCTRLBaseEES4_Lj1EE3SetIS3_vEEvv
           CFI Block cfiBlock86 Using cfiCommon0
-          CFI Function _ZN14FieldValueBaseI26RCC_AHB1ENR_GPIOBEN_ValuesIN3RCC7AHB1ENRELj1ELj1E13ReadWriteModeNS1_14RCCAHB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv
+          CFI Function _ZN14FieldValueBaseI25STK_CTRL_CLKSOURCE_ValuesIN3STK4CTRLELj2ELj1E13ReadWriteModeNS1_11STKCTRLBaseEES4_Lj1EE3SetIS3_vEEvv
           CFI NoCalls
         THUMB
-// __interwork __vfp void FieldValueBase<RCC_AHB1ENR_GPIOBEN_Values<RCC::AHB1ENR, 1U, 1U, ReadWriteMode, RCC::RCCAHB1ENRBase>, RCC::RCCAHB1ENRBase, 1U>::Set<ReadWriteMode, void>()
-_ZN14FieldValueBaseI26RCC_AHB1ENR_GPIOBEN_ValuesIN3RCC7AHB1ENRELj1ELj1E13ReadWriteModeNS1_14RCCAHB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv:
-        LDR.N    R1,??Set_12      ;; 0x40023830
-        LDR      R0,[R1, #+0]
-        ORRS     R0,R0,#0x2
-        STR      R0,[R1, #+0]
-        BX       LR               ;; return
-        DATA
-??Set_12:
-        DATA32
-        DC32     0x40023830
-          CFI EndBlock cfiBlock86
-
-        SECTION `.text`:CODE:REORDER:NOROOT(2)
-        SECTION_GROUP _ZN14FieldValueBaseI26RCC_AHB1ENR_GPIOCEN_ValuesIN3RCC7AHB1ENRELj2ELj1E13ReadWriteModeNS1_14RCCAHB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv
-          CFI Block cfiBlock87 Using cfiCommon0
-          CFI Function _ZN14FieldValueBaseI26RCC_AHB1ENR_GPIOCEN_ValuesIN3RCC7AHB1ENRELj2ELj1E13ReadWriteModeNS1_14RCCAHB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv
-          CFI NoCalls
-        THUMB
-// __interwork __vfp void FieldValueBase<RCC_AHB1ENR_GPIOCEN_Values<RCC::AHB1ENR, 2U, 1U, ReadWriteMode, RCC::RCCAHB1ENRBase>, RCC::RCCAHB1ENRBase, 1U>::Set<ReadWriteMode, void>()
-_ZN14FieldValueBaseI26RCC_AHB1ENR_GPIOCEN_ValuesIN3RCC7AHB1ENRELj2ELj1E13ReadWriteModeNS1_14RCCAHB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv:
-        LDR.N    R1,??Set_13      ;; 0x40023830
+// __interwork __vfp void FieldValueBase<STK_CTRL_CLKSOURCE_Values<STK::CTRL, 2U, 1U, ReadWriteMode, STK::STKCTRLBase>, STK::STKCTRLBase, 1U>::Set<ReadWriteMode, void>()
+_ZN14FieldValueBaseI25STK_CTRL_CLKSOURCE_ValuesIN3STK4CTRLELj2ELj1E13ReadWriteModeNS1_11STKCTRLBaseEES4_Lj1EE3SetIS3_vEEvv:
+        LDR.N    R1,??Set_12      ;; 0xe000e010
         LDR      R0,[R1, #+0]
         ORRS     R0,R0,#0x4
         STR      R0,[R1, #+0]
         BX       LR               ;; return
         DATA
-??Set_13:
+??Set_12:
         DATA32
-        DC32     0x40023830
-          CFI EndBlock cfiBlock87
+        DC32     0xe000e010
+          CFI EndBlock cfiBlock86
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
-        SECTION_GROUP _ZN14FieldValueBaseI25RCC_AHB1ENR_DMA2EN_ValuesIN3RCC7APB1ENRELj14ELj1E13ReadWriteModeNS1_14RCCAPB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv
-          CFI Block cfiBlock88 Using cfiCommon0
-          CFI Function _ZN14FieldValueBaseI25RCC_AHB1ENR_DMA2EN_ValuesIN3RCC7APB1ENRELj14ELj1E13ReadWriteModeNS1_14RCCAPB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv
+        SECTION_GROUP _ZN14FieldValueBaseI23STK_CTRL_TICKINT_ValuesIN3STK4CTRLELj1ELj1E13ReadWriteModeNS1_11STKCTRLBaseEES4_Lj1EE3SetIS3_vEEvv
+          CFI Block cfiBlock87 Using cfiCommon0
+          CFI Function _ZN14FieldValueBaseI23STK_CTRL_TICKINT_ValuesIN3STK4CTRLELj1ELj1E13ReadWriteModeNS1_11STKCTRLBaseEES4_Lj1EE3SetIS3_vEEvv
           CFI NoCalls
         THUMB
-// __interwork __vfp void FieldValueBase<RCC_AHB1ENR_DMA2EN_Values<RCC::APB1ENR, 14U, 1U, ReadWriteMode, RCC::RCCAPB1ENRBase>, RCC::RCCAPB1ENRBase, 1U>::Set<ReadWriteMode, void>()
-_ZN14FieldValueBaseI25RCC_AHB1ENR_DMA2EN_ValuesIN3RCC7APB1ENRELj14ELj1E13ReadWriteModeNS1_14RCCAPB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv:
-        LDR.N    R1,??Set_14      ;; 0x40023840
-        LDR      R0,[R1, #+0]
-        ORRS     R0,R0,#0x4000
-        STR      R0,[R1, #+0]
-        BX       LR               ;; return
-        DATA
-??Set_14:
-        DATA32
-        DC32     0x40023840
-          CFI EndBlock cfiBlock88
-
-        SECTION `.text`:CODE:REORDER:NOROOT(2)
-        SECTION_GROUP _ZN14FieldValueBaseI19SPI2_CR1_SPE_ValuesIN4SPI23CR1ELj6ELj1E13ReadWriteModeNS1_11SPI2CR1BaseEES4_Lj1EE3SetIS3_vEEvv
-          CFI Block cfiBlock89 Using cfiCommon0
-          CFI Function _ZN14FieldValueBaseI19SPI2_CR1_SPE_ValuesIN4SPI23CR1ELj6ELj1E13ReadWriteModeNS1_11SPI2CR1BaseEES4_Lj1EE3SetIS3_vEEvv
-          CFI NoCalls
-        THUMB
-// __interwork __vfp void FieldValueBase<SPI2_CR1_SPE_Values<SPI2::CR1, 6U, 1U, ReadWriteMode, SPI2::SPI2CR1Base>, SPI2::SPI2CR1Base, 1U>::Set<ReadWriteMode, void>()
-_ZN14FieldValueBaseI19SPI2_CR1_SPE_ValuesIN4SPI23CR1ELj6ELj1E13ReadWriteModeNS1_11SPI2CR1BaseEES4_Lj1EE3SetIS3_vEEvv:
-        LDR.N    R1,??Set_15      ;; 0x40003800
-        LDR      R0,[R1, #+0]
-        ORRS     R0,R0,#0x40
-        STR      R0,[R1, #+0]
-        BX       LR               ;; return
-        DATA
-??Set_15:
-        DATA32
-        DC32     0x40003800
-          CFI EndBlock cfiBlock89
-
-        SECTION `.text`:CODE:REORDER:NOROOT(2)
-        SECTION_GROUP _ZN14FieldValueBaseI25RCC_AHB1ENR_DMA2EN_ValuesIN3RCC7APB1ENRELj21ELj1E13ReadWriteModeNS1_14RCCAPB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv
-          CFI Block cfiBlock90 Using cfiCommon0
-          CFI Function _ZN14FieldValueBaseI25RCC_AHB1ENR_DMA2EN_ValuesIN3RCC7APB1ENRELj21ELj1E13ReadWriteModeNS1_14RCCAPB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv
-          CFI NoCalls
-        THUMB
-// __interwork __vfp void FieldValueBase<RCC_AHB1ENR_DMA2EN_Values<RCC::APB1ENR, 21U, 1U, ReadWriteMode, RCC::RCCAPB1ENRBase>, RCC::RCCAPB1ENRBase, 1U>::Set<ReadWriteMode, void>()
-_ZN14FieldValueBaseI25RCC_AHB1ENR_DMA2EN_ValuesIN3RCC7APB1ENRELj21ELj1E13ReadWriteModeNS1_14RCCAPB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv:
-        LDR.N    R1,??Set_16      ;; 0x40023840
-        LDR      R0,[R1, #+0]
-        ORRS     R0,R0,#0x200000
-        STR      R0,[R1, #+0]
-        BX       LR               ;; return
-        DATA
-??Set_16:
-        DATA32
-        DC32     0x40023840
-          CFI EndBlock cfiBlock90
-
-        SECTION `.text`:CODE:REORDER:NOROOT(2)
-        SECTION_GROUP _ZN14FieldValueBaseI21I2C1_CR1_SMBUS_ValuesIN4I2C13CR1ELj1ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
-          CFI Block cfiBlock91 Using cfiCommon0
-          CFI Function _ZN14FieldValueBaseI21I2C1_CR1_SMBUS_ValuesIN4I2C13CR1ELj1ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
-          CFI NoCalls
-        THUMB
-// __interwork __vfp void FieldValueBase<I2C1_CR1_SMBUS_Values<I2C1::CR1, 1U, 1U, ReadWriteMode, I2C1::I2C1CR1Base>, I2C1::I2C1CR1Base, 1U>::Set<ReadWriteMode, void>()
-_ZN14FieldValueBaseI21I2C1_CR1_SMBUS_ValuesIN4I2C13CR1ELj1ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv:
-        LDR.N    R1,??Set_17      ;; 0x40005400
+// __interwork __vfp void FieldValueBase<STK_CTRL_TICKINT_Values<STK::CTRL, 1U, 1U, ReadWriteMode, STK::STKCTRLBase>, STK::STKCTRLBase, 1U>::Set<ReadWriteMode, void>()
+_ZN14FieldValueBaseI23STK_CTRL_TICKINT_ValuesIN3STK4CTRLELj1ELj1E13ReadWriteModeNS1_11STKCTRLBaseEES4_Lj1EE3SetIS3_vEEvv:
+        LDR.N    R1,??Set_13      ;; 0xe000e010
         LDR      R0,[R1, #+0]
         ORRS     R0,R0,#0x2
         STR      R0,[R1, #+0]
         BX       LR               ;; return
         DATA
-??Set_17:
+??Set_13:
         DATA32
-        DC32     0x40005400
-          CFI EndBlock cfiBlock91
+        DC32     0xe000e010
+          CFI EndBlock cfiBlock87
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
-        SECTION_GROUP _ZN14FieldValueBaseI23I2C1_CR1_SMBTYPE_ValuesIN4I2C13CR1ELj3ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj0EE3SetIS3_vEEvv
-          CFI Block cfiBlock92 Using cfiCommon0
-          CFI Function _ZN14FieldValueBaseI23I2C1_CR1_SMBTYPE_ValuesIN4I2C13CR1ELj3ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj0EE3SetIS3_vEEvv
+        SECTION_GROUP _ZN14FieldValueBaseI22STK_CTRL_ENABLE_ValuesIN3STK4CTRLELj0ELj1E13ReadWriteModeNS1_11STKCTRLBaseEES4_Lj1EE3SetIS3_vEEvv
+          CFI Block cfiBlock88 Using cfiCommon0
+          CFI Function _ZN14FieldValueBaseI22STK_CTRL_ENABLE_ValuesIN3STK4CTRLELj0ELj1E13ReadWriteModeNS1_11STKCTRLBaseEES4_Lj1EE3SetIS3_vEEvv
           CFI NoCalls
         THUMB
-// __interwork __vfp void FieldValueBase<I2C1_CR1_SMBTYPE_Values<I2C1::CR1, 3U, 1U, ReadWriteMode, I2C1::I2C1CR1Base>, I2C1::I2C1CR1Base, 0U>::Set<ReadWriteMode, void>()
-_ZN14FieldValueBaseI23I2C1_CR1_SMBTYPE_ValuesIN4I2C13CR1ELj3ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj0EE3SetIS3_vEEvv:
-        LDR.N    R1,??Set_18      ;; 0x40005400
-        LDR      R0,[R1, #+0]
-        BICS     R0,R0,#0x8
-        STR      R0,[R1, #+0]
-        BX       LR               ;; return
-        DATA
-??Set_18:
-        DATA32
-        DC32     0x40005400
-          CFI EndBlock cfiBlock92
-
-        SECTION `.text`:CODE:REORDER:NOROOT(2)
-        SECTION_GROUP _ZN14FieldValueBaseI19I2C1_CCR_F_S_ValuesIN4I2C13CCRELj15ELj1E13ReadWriteModeNS1_11I2C1CCRBaseEES4_Lj0EE3SetIS3_vEEvv
-          CFI Block cfiBlock93 Using cfiCommon0
-          CFI Function _ZN14FieldValueBaseI19I2C1_CCR_F_S_ValuesIN4I2C13CCRELj15ELj1E13ReadWriteModeNS1_11I2C1CCRBaseEES4_Lj0EE3SetIS3_vEEvv
-          CFI NoCalls
-        THUMB
-// __interwork __vfp void FieldValueBase<I2C1_CCR_F_S_Values<I2C1::CCR, 15U, 1U, ReadWriteMode, I2C1::I2C1CCRBase>, I2C1::I2C1CCRBase, 0U>::Set<ReadWriteMode, void>()
-_ZN14FieldValueBaseI19I2C1_CCR_F_S_ValuesIN4I2C13CCRELj15ELj1E13ReadWriteModeNS1_11I2C1CCRBaseEES4_Lj0EE3SetIS3_vEEvv:
-        LDR.N    R1,??Set_19      ;; 0x4000541c
-        LDR      R0,[R1, #+0]
-        BICS     R0,R0,#0x8000
-        STR      R0,[R1, #+0]
-        BX       LR               ;; return
-        DATA
-??Set_19:
-        DATA32
-        DC32     0x4000541c
-          CFI EndBlock cfiBlock93
-
-        SECTION `.text`:CODE:REORDER:NOROOT(2)
-        SECTION_GROUP _ZN14FieldValueBaseI18I2C1_CR1_PE_ValuesIN4I2C13CR1ELj0ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
-          CFI Block cfiBlock94 Using cfiCommon0
-          CFI Function _ZN14FieldValueBaseI18I2C1_CR1_PE_ValuesIN4I2C13CR1ELj0ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
-          CFI NoCalls
-        THUMB
-// __interwork __vfp void FieldValueBase<I2C1_CR1_PE_Values<I2C1::CR1, 0U, 1U, ReadWriteMode, I2C1::I2C1CR1Base>, I2C1::I2C1CR1Base, 1U>::Set<ReadWriteMode, void>()
-_ZN14FieldValueBaseI18I2C1_CR1_PE_ValuesIN4I2C13CR1ELj0ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv:
-        LDR.N    R1,??Set_20      ;; 0x40005400
+// __interwork __vfp void FieldValueBase<STK_CTRL_ENABLE_Values<STK::CTRL, 0U, 1U, ReadWriteMode, STK::STKCTRLBase>, STK::STKCTRLBase, 1U>::Set<ReadWriteMode, void>()
+_ZN14FieldValueBaseI22STK_CTRL_ENABLE_ValuesIN3STK4CTRLELj0ELj1E13ReadWriteModeNS1_11STKCTRLBaseEES4_Lj1EE3SetIS3_vEEvv:
+        LDR.N    R1,??Set_14      ;; 0xe000e010
         LDR      R0,[R1, #+0]
         ORRS     R0,R0,#0x1
         STR      R0,[R1, #+0]
         BX       LR               ;; return
         DATA
+??Set_14:
+        DATA32
+        DC32     0xe000e010
+          CFI EndBlock cfiBlock88
+
+        SECTION `.text`:CODE:REORDER:NOROOT(2)
+        SECTION_GROUP _ZN14FieldValueBaseI26RCC_AHB1ENR_GPIOAEN_ValuesIN3RCC7AHB1ENRELj0ELj1E13ReadWriteModeNS1_14RCCAHB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv
+          CFI Block cfiBlock89 Using cfiCommon0
+          CFI Function _ZN14FieldValueBaseI26RCC_AHB1ENR_GPIOAEN_ValuesIN3RCC7AHB1ENRELj0ELj1E13ReadWriteModeNS1_14RCCAHB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv
+          CFI NoCalls
+        THUMB
+// __interwork __vfp void FieldValueBase<RCC_AHB1ENR_GPIOAEN_Values<RCC::AHB1ENR, 0U, 1U, ReadWriteMode, RCC::RCCAHB1ENRBase>, RCC::RCCAHB1ENRBase, 1U>::Set<ReadWriteMode, void>()
+_ZN14FieldValueBaseI26RCC_AHB1ENR_GPIOAEN_ValuesIN3RCC7AHB1ENRELj0ELj1E13ReadWriteModeNS1_14RCCAHB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv:
+        LDR.N    R1,??Set_15      ;; 0x40023830
+        LDR      R0,[R1, #+0]
+        ORRS     R0,R0,#0x1
+        STR      R0,[R1, #+0]
+        BX       LR               ;; return
+        DATA
+??Set_15:
+        DATA32
+        DC32     0x40023830
+          CFI EndBlock cfiBlock89
+
+        SECTION `.text`:CODE:REORDER:NOROOT(2)
+        SECTION_GROUP _ZN14FieldValueBaseI26RCC_AHB1ENR_GPIOBEN_ValuesIN3RCC7AHB1ENRELj1ELj1E13ReadWriteModeNS1_14RCCAHB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv
+          CFI Block cfiBlock90 Using cfiCommon0
+          CFI Function _ZN14FieldValueBaseI26RCC_AHB1ENR_GPIOBEN_ValuesIN3RCC7AHB1ENRELj1ELj1E13ReadWriteModeNS1_14RCCAHB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv
+          CFI NoCalls
+        THUMB
+// __interwork __vfp void FieldValueBase<RCC_AHB1ENR_GPIOBEN_Values<RCC::AHB1ENR, 1U, 1U, ReadWriteMode, RCC::RCCAHB1ENRBase>, RCC::RCCAHB1ENRBase, 1U>::Set<ReadWriteMode, void>()
+_ZN14FieldValueBaseI26RCC_AHB1ENR_GPIOBEN_ValuesIN3RCC7AHB1ENRELj1ELj1E13ReadWriteModeNS1_14RCCAHB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv:
+        LDR.N    R1,??Set_16      ;; 0x40023830
+        LDR      R0,[R1, #+0]
+        ORRS     R0,R0,#0x2
+        STR      R0,[R1, #+0]
+        BX       LR               ;; return
+        DATA
+??Set_16:
+        DATA32
+        DC32     0x40023830
+          CFI EndBlock cfiBlock90
+
+        SECTION `.text`:CODE:REORDER:NOROOT(2)
+        SECTION_GROUP _ZN14FieldValueBaseI26RCC_AHB1ENR_GPIOCEN_ValuesIN3RCC7AHB1ENRELj2ELj1E13ReadWriteModeNS1_14RCCAHB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv
+          CFI Block cfiBlock91 Using cfiCommon0
+          CFI Function _ZN14FieldValueBaseI26RCC_AHB1ENR_GPIOCEN_ValuesIN3RCC7AHB1ENRELj2ELj1E13ReadWriteModeNS1_14RCCAHB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv
+          CFI NoCalls
+        THUMB
+// __interwork __vfp void FieldValueBase<RCC_AHB1ENR_GPIOCEN_Values<RCC::AHB1ENR, 2U, 1U, ReadWriteMode, RCC::RCCAHB1ENRBase>, RCC::RCCAHB1ENRBase, 1U>::Set<ReadWriteMode, void>()
+_ZN14FieldValueBaseI26RCC_AHB1ENR_GPIOCEN_ValuesIN3RCC7AHB1ENRELj2ELj1E13ReadWriteModeNS1_14RCCAHB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv:
+        LDR.N    R1,??Set_17      ;; 0x40023830
+        LDR      R0,[R1, #+0]
+        ORRS     R0,R0,#0x4
+        STR      R0,[R1, #+0]
+        BX       LR               ;; return
+        DATA
+??Set_17:
+        DATA32
+        DC32     0x40023830
+          CFI EndBlock cfiBlock91
+
+        SECTION `.text`:CODE:REORDER:NOROOT(2)
+        SECTION_GROUP _ZN14FieldValueBaseI25RCC_AHB1ENR_DMA2EN_ValuesIN3RCC7APB1ENRELj14ELj1E13ReadWriteModeNS1_14RCCAPB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv
+          CFI Block cfiBlock92 Using cfiCommon0
+          CFI Function _ZN14FieldValueBaseI25RCC_AHB1ENR_DMA2EN_ValuesIN3RCC7APB1ENRELj14ELj1E13ReadWriteModeNS1_14RCCAPB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv
+          CFI NoCalls
+        THUMB
+// __interwork __vfp void FieldValueBase<RCC_AHB1ENR_DMA2EN_Values<RCC::APB1ENR, 14U, 1U, ReadWriteMode, RCC::RCCAPB1ENRBase>, RCC::RCCAPB1ENRBase, 1U>::Set<ReadWriteMode, void>()
+_ZN14FieldValueBaseI25RCC_AHB1ENR_DMA2EN_ValuesIN3RCC7APB1ENRELj14ELj1E13ReadWriteModeNS1_14RCCAPB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv:
+        LDR.N    R1,??Set_18      ;; 0x40023840
+        LDR      R0,[R1, #+0]
+        ORRS     R0,R0,#0x4000
+        STR      R0,[R1, #+0]
+        BX       LR               ;; return
+        DATA
+??Set_18:
+        DATA32
+        DC32     0x40023840
+          CFI EndBlock cfiBlock92
+
+        SECTION `.text`:CODE:REORDER:NOROOT(2)
+        SECTION_GROUP _ZN14FieldValueBaseI19SPI2_CR1_SPE_ValuesIN4SPI23CR1ELj6ELj1E13ReadWriteModeNS1_11SPI2CR1BaseEES4_Lj1EE3SetIS3_vEEvv
+          CFI Block cfiBlock93 Using cfiCommon0
+          CFI Function _ZN14FieldValueBaseI19SPI2_CR1_SPE_ValuesIN4SPI23CR1ELj6ELj1E13ReadWriteModeNS1_11SPI2CR1BaseEES4_Lj1EE3SetIS3_vEEvv
+          CFI NoCalls
+        THUMB
+// __interwork __vfp void FieldValueBase<SPI2_CR1_SPE_Values<SPI2::CR1, 6U, 1U, ReadWriteMode, SPI2::SPI2CR1Base>, SPI2::SPI2CR1Base, 1U>::Set<ReadWriteMode, void>()
+_ZN14FieldValueBaseI19SPI2_CR1_SPE_ValuesIN4SPI23CR1ELj6ELj1E13ReadWriteModeNS1_11SPI2CR1BaseEES4_Lj1EE3SetIS3_vEEvv:
+        LDR.N    R1,??Set_19      ;; 0x40003800
+        LDR      R0,[R1, #+0]
+        ORRS     R0,R0,#0x40
+        STR      R0,[R1, #+0]
+        BX       LR               ;; return
+        DATA
+??Set_19:
+        DATA32
+        DC32     0x40003800
+          CFI EndBlock cfiBlock93
+
+        SECTION `.text`:CODE:REORDER:NOROOT(2)
+        SECTION_GROUP _ZN14FieldValueBaseI25RCC_AHB1ENR_DMA2EN_ValuesIN3RCC7APB1ENRELj21ELj1E13ReadWriteModeNS1_14RCCAPB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv
+          CFI Block cfiBlock94 Using cfiCommon0
+          CFI Function _ZN14FieldValueBaseI25RCC_AHB1ENR_DMA2EN_ValuesIN3RCC7APB1ENRELj21ELj1E13ReadWriteModeNS1_14RCCAPB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv
+          CFI NoCalls
+        THUMB
+// __interwork __vfp void FieldValueBase<RCC_AHB1ENR_DMA2EN_Values<RCC::APB1ENR, 21U, 1U, ReadWriteMode, RCC::RCCAPB1ENRBase>, RCC::RCCAPB1ENRBase, 1U>::Set<ReadWriteMode, void>()
+_ZN14FieldValueBaseI25RCC_AHB1ENR_DMA2EN_ValuesIN3RCC7APB1ENRELj21ELj1E13ReadWriteModeNS1_14RCCAPB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv:
+        LDR.N    R1,??Set_20      ;; 0x40023840
+        LDR      R0,[R1, #+0]
+        ORRS     R0,R0,#0x200000
+        STR      R0,[R1, #+0]
+        BX       LR               ;; return
+        DATA
 ??Set_20:
         DATA32
-        DC32     0x40005400
+        DC32     0x40023840
           CFI EndBlock cfiBlock94
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
-        SECTION_GROUP _ZN14FieldValueBaseI21GPIOB_ODR_ODR8_ValuesIN5GPIOB3ODRELj8ELj1E13ReadWriteModeNS1_12GPIOBODRBaseEES4_Lj1EE3SetIS3_vEEvv
+        SECTION_GROUP _ZN14FieldValueBaseI21I2C1_CR1_SMBUS_ValuesIN4I2C13CR1ELj1ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
           CFI Block cfiBlock95 Using cfiCommon0
-          CFI Function _ZN14FieldValueBaseI21GPIOB_ODR_ODR8_ValuesIN5GPIOB3ODRELj8ELj1E13ReadWriteModeNS1_12GPIOBODRBaseEES4_Lj1EE3SetIS3_vEEvv
+          CFI Function _ZN14FieldValueBaseI21I2C1_CR1_SMBUS_ValuesIN4I2C13CR1ELj1ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
           CFI NoCalls
         THUMB
-// __interwork __vfp void FieldValueBase<GPIOB_ODR_ODR8_Values<GPIOB::ODR, 8U, 1U, ReadWriteMode, GPIOB::GPIOBODRBase>, GPIOB::GPIOBODRBase, 1U>::Set<ReadWriteMode, void>()
-_ZN14FieldValueBaseI21GPIOB_ODR_ODR8_ValuesIN5GPIOB3ODRELj8ELj1E13ReadWriteModeNS1_12GPIOBODRBaseEES4_Lj1EE3SetIS3_vEEvv:
-        LDR.N    R1,??Set_21      ;; 0x40020414
+// __interwork __vfp void FieldValueBase<I2C1_CR1_SMBUS_Values<I2C1::CR1, 1U, 1U, ReadWriteMode, I2C1::I2C1CR1Base>, I2C1::I2C1CR1Base, 1U>::Set<ReadWriteMode, void>()
+_ZN14FieldValueBaseI21I2C1_CR1_SMBUS_ValuesIN4I2C13CR1ELj1ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv:
+        LDR.N    R1,??Set_21      ;; 0x40005400
         LDR      R0,[R1, #+0]
-        ORRS     R0,R0,#0x100
+        ORRS     R0,R0,#0x2
         STR      R0,[R1, #+0]
         BX       LR               ;; return
         DATA
 ??Set_21:
         DATA32
-        DC32     0x40020414
+        DC32     0x40005400
           CFI EndBlock cfiBlock95
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
-        SECTION_GROUP _ZN14FieldValueBaseI26GPIOB_MODER_MODER15_ValuesIN5GPIOB5MODERELj16ELj2E13ReadWriteModeNS1_14GPIOBMODERBaseEES4_Lj2EE3SetIS3_vEEvv
+        SECTION_GROUP _ZN14FieldValueBaseI23I2C1_CR1_SMBTYPE_ValuesIN4I2C13CR1ELj3ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj0EE3SetIS3_vEEvv
           CFI Block cfiBlock96 Using cfiCommon0
+          CFI Function _ZN14FieldValueBaseI23I2C1_CR1_SMBTYPE_ValuesIN4I2C13CR1ELj3ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj0EE3SetIS3_vEEvv
+          CFI NoCalls
+        THUMB
+// __interwork __vfp void FieldValueBase<I2C1_CR1_SMBTYPE_Values<I2C1::CR1, 3U, 1U, ReadWriteMode, I2C1::I2C1CR1Base>, I2C1::I2C1CR1Base, 0U>::Set<ReadWriteMode, void>()
+_ZN14FieldValueBaseI23I2C1_CR1_SMBTYPE_ValuesIN4I2C13CR1ELj3ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj0EE3SetIS3_vEEvv:
+        LDR.N    R1,??Set_22      ;; 0x40005400
+        LDR      R0,[R1, #+0]
+        BICS     R0,R0,#0x8
+        STR      R0,[R1, #+0]
+        BX       LR               ;; return
+        DATA
+??Set_22:
+        DATA32
+        DC32     0x40005400
+          CFI EndBlock cfiBlock96
+
+        SECTION `.text`:CODE:REORDER:NOROOT(2)
+        SECTION_GROUP _ZN14FieldValueBaseI19I2C1_CCR_F_S_ValuesIN4I2C13CCRELj15ELj1E13ReadWriteModeNS1_11I2C1CCRBaseEES4_Lj0EE3SetIS3_vEEvv
+          CFI Block cfiBlock97 Using cfiCommon0
+          CFI Function _ZN14FieldValueBaseI19I2C1_CCR_F_S_ValuesIN4I2C13CCRELj15ELj1E13ReadWriteModeNS1_11I2C1CCRBaseEES4_Lj0EE3SetIS3_vEEvv
+          CFI NoCalls
+        THUMB
+// __interwork __vfp void FieldValueBase<I2C1_CCR_F_S_Values<I2C1::CCR, 15U, 1U, ReadWriteMode, I2C1::I2C1CCRBase>, I2C1::I2C1CCRBase, 0U>::Set<ReadWriteMode, void>()
+_ZN14FieldValueBaseI19I2C1_CCR_F_S_ValuesIN4I2C13CCRELj15ELj1E13ReadWriteModeNS1_11I2C1CCRBaseEES4_Lj0EE3SetIS3_vEEvv:
+        LDR.N    R1,??Set_23      ;; 0x4000541c
+        LDR      R0,[R1, #+0]
+        BICS     R0,R0,#0x8000
+        STR      R0,[R1, #+0]
+        BX       LR               ;; return
+        DATA
+??Set_23:
+        DATA32
+        DC32     0x4000541c
+          CFI EndBlock cfiBlock97
+
+        SECTION `.text`:CODE:REORDER:NOROOT(2)
+        SECTION_GROUP _ZN14FieldValueBaseI18I2C1_CR1_PE_ValuesIN4I2C13CR1ELj0ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
+          CFI Block cfiBlock98 Using cfiCommon0
+          CFI Function _ZN14FieldValueBaseI18I2C1_CR1_PE_ValuesIN4I2C13CR1ELj0ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
+          CFI NoCalls
+        THUMB
+// __interwork __vfp void FieldValueBase<I2C1_CR1_PE_Values<I2C1::CR1, 0U, 1U, ReadWriteMode, I2C1::I2C1CR1Base>, I2C1::I2C1CR1Base, 1U>::Set<ReadWriteMode, void>()
+_ZN14FieldValueBaseI18I2C1_CR1_PE_ValuesIN4I2C13CR1ELj0ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv:
+        LDR.N    R1,??Set_24      ;; 0x40005400
+        LDR      R0,[R1, #+0]
+        ORRS     R0,R0,#0x1
+        STR      R0,[R1, #+0]
+        BX       LR               ;; return
+        DATA
+??Set_24:
+        DATA32
+        DC32     0x40005400
+          CFI EndBlock cfiBlock98
+
+        SECTION `.text`:CODE:REORDER:NOROOT(2)
+        SECTION_GROUP _ZN14FieldValueBaseI21GPIOB_ODR_ODR8_ValuesIN5GPIOB3ODRELj8ELj1E13ReadWriteModeNS1_12GPIOBODRBaseEES4_Lj1EE3SetIS3_vEEvv
+          CFI Block cfiBlock99 Using cfiCommon0
+          CFI Function _ZN14FieldValueBaseI21GPIOB_ODR_ODR8_ValuesIN5GPIOB3ODRELj8ELj1E13ReadWriteModeNS1_12GPIOBODRBaseEES4_Lj1EE3SetIS3_vEEvv
+          CFI NoCalls
+        THUMB
+// __interwork __vfp void FieldValueBase<GPIOB_ODR_ODR8_Values<GPIOB::ODR, 8U, 1U, ReadWriteMode, GPIOB::GPIOBODRBase>, GPIOB::GPIOBODRBase, 1U>::Set<ReadWriteMode, void>()
+_ZN14FieldValueBaseI21GPIOB_ODR_ODR8_ValuesIN5GPIOB3ODRELj8ELj1E13ReadWriteModeNS1_12GPIOBODRBaseEES4_Lj1EE3SetIS3_vEEvv:
+        LDR.N    R1,??Set_25      ;; 0x40020414
+        LDR      R0,[R1, #+0]
+        ORRS     R0,R0,#0x100
+        STR      R0,[R1, #+0]
+        BX       LR               ;; return
+        DATA
+??Set_25:
+        DATA32
+        DC32     0x40020414
+          CFI EndBlock cfiBlock99
+
+        SECTION `.text`:CODE:REORDER:NOROOT(2)
+        SECTION_GROUP _ZN14FieldValueBaseI26GPIOB_MODER_MODER15_ValuesIN5GPIOB5MODERELj16ELj2E13ReadWriteModeNS1_14GPIOBMODERBaseEES4_Lj2EE3SetIS3_vEEvv
+          CFI Block cfiBlock100 Using cfiCommon0
           CFI Function _ZN14FieldValueBaseI26GPIOB_MODER_MODER15_ValuesIN5GPIOB5MODERELj16ELj2E13ReadWriteModeNS1_14GPIOBMODERBaseEES4_Lj2EE3SetIS3_vEEvv
           CFI NoCalls
         THUMB
 // __interwork __vfp void FieldValueBase<GPIOB_MODER_MODER15_Values<GPIOB::MODER, 16U, 2U, ReadWriteMode, GPIOB::GPIOBMODERBase>, GPIOB::GPIOBMODERBase, 2U>::Set<ReadWriteMode, void>()
 _ZN14FieldValueBaseI26GPIOB_MODER_MODER15_ValuesIN5GPIOB5MODERELj16ELj2E13ReadWriteModeNS1_14GPIOBMODERBaseEES4_Lj2EE3SetIS3_vEEvv:
-        LDR.N    R1,??Set_22      ;; 0x40020400
+        LDR.N    R1,??Set_26      ;; 0x40020400
         LDR      R0,[R1, #+0]
         BICS     R0,R0,#0x30000
         ORRS     R0,R0,#0x20000
         STR      R0,[R1, #+0]
         BX       LR               ;; return
         DATA
-??Set_22:
+??Set_26:
         DATA32
         DC32     0x40020400
-          CFI EndBlock cfiBlock96
+          CFI EndBlock cfiBlock100
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN14FieldValueBaseI26GPIOB_MODER_MODER15_ValuesIN5GPIOB5MODERELj18ELj2E13ReadWriteModeNS1_14GPIOBMODERBaseEES4_Lj2EE3SetIS3_vEEvv
-          CFI Block cfiBlock97 Using cfiCommon0
+          CFI Block cfiBlock101 Using cfiCommon0
           CFI Function _ZN14FieldValueBaseI26GPIOB_MODER_MODER15_ValuesIN5GPIOB5MODERELj18ELj2E13ReadWriteModeNS1_14GPIOBMODERBaseEES4_Lj2EE3SetIS3_vEEvv
           CFI NoCalls
         THUMB
 // __interwork __vfp void FieldValueBase<GPIOB_MODER_MODER15_Values<GPIOB::MODER, 18U, 2U, ReadWriteMode, GPIOB::GPIOBMODERBase>, GPIOB::GPIOBMODERBase, 2U>::Set<ReadWriteMode, void>()
 _ZN14FieldValueBaseI26GPIOB_MODER_MODER15_ValuesIN5GPIOB5MODERELj18ELj2E13ReadWriteModeNS1_14GPIOBMODERBaseEES4_Lj2EE3SetIS3_vEEvv:
-        LDR.N    R1,??Set_23      ;; 0x40020400
+        LDR.N    R1,??Set_27      ;; 0x40020400
         LDR      R0,[R1, #+0]
         BICS     R0,R0,#0xC0000
         ORRS     R0,R0,#0x80000
         STR      R0,[R1, #+0]
         BX       LR               ;; return
         DATA
-??Set_23:
+??Set_27:
         DATA32
         DC32     0x40020400
-          CFI EndBlock cfiBlock97
+          CFI EndBlock cfiBlock101
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN14FieldValueBaseI23GPIOB_AFRL_AFRL7_ValuesIN5GPIOB4AFRHELj0ELj4E13ReadWriteModeNS1_13GPIOBAFRHBaseEES4_Lj4EE3SetIS3_vEEvv
-          CFI Block cfiBlock98 Using cfiCommon0
+          CFI Block cfiBlock102 Using cfiCommon0
           CFI Function _ZN14FieldValueBaseI23GPIOB_AFRL_AFRL7_ValuesIN5GPIOB4AFRHELj0ELj4E13ReadWriteModeNS1_13GPIOBAFRHBaseEES4_Lj4EE3SetIS3_vEEvv
           CFI NoCalls
         THUMB
 // __interwork __vfp void FieldValueBase<GPIOB_AFRL_AFRL7_Values<GPIOB::AFRH, 0U, 4U, ReadWriteMode, GPIOB::GPIOBAFRHBase>, GPIOB::GPIOBAFRHBase, 4U>::Set<ReadWriteMode, void>()
 _ZN14FieldValueBaseI23GPIOB_AFRL_AFRL7_ValuesIN5GPIOB4AFRHELj0ELj4E13ReadWriteModeNS1_13GPIOBAFRHBaseEES4_Lj4EE3SetIS3_vEEvv:
-        LDR.N    R1,??Set_24      ;; 0x40020424
+        LDR.N    R1,??Set_28      ;; 0x40020424
         LDR      R0,[R1, #+0]
         LSRS     R0,R0,#+4
         LSLS     R0,R0,#+4
@@ -4016,207 +4097,207 @@ _ZN14FieldValueBaseI23GPIOB_AFRL_AFRL7_ValuesIN5GPIOB4AFRHELj0ELj4E13ReadWriteMo
         STR      R0,[R1, #+0]
         BX       LR               ;; return
         DATA
-??Set_24:
+??Set_28:
         DATA32
         DC32     0x40020424
-          CFI EndBlock cfiBlock98
+          CFI EndBlock cfiBlock102
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN14FieldValueBaseI23GPIOB_AFRL_AFRL7_ValuesIN5GPIOB4AFRHELj4ELj4E13ReadWriteModeNS1_13GPIOBAFRHBaseEES4_Lj4EE3SetIS3_vEEvv
-          CFI Block cfiBlock99 Using cfiCommon0
+          CFI Block cfiBlock103 Using cfiCommon0
           CFI Function _ZN14FieldValueBaseI23GPIOB_AFRL_AFRL7_ValuesIN5GPIOB4AFRHELj4ELj4E13ReadWriteModeNS1_13GPIOBAFRHBaseEES4_Lj4EE3SetIS3_vEEvv
           CFI NoCalls
         THUMB
 // __interwork __vfp void FieldValueBase<GPIOB_AFRL_AFRL7_Values<GPIOB::AFRH, 4U, 4U, ReadWriteMode, GPIOB::GPIOBAFRHBase>, GPIOB::GPIOBAFRHBase, 4U>::Set<ReadWriteMode, void>()
 _ZN14FieldValueBaseI23GPIOB_AFRL_AFRL7_ValuesIN5GPIOB4AFRHELj4ELj4E13ReadWriteModeNS1_13GPIOBAFRHBaseEES4_Lj4EE3SetIS3_vEEvv:
-        LDR.N    R1,??Set_25      ;; 0x40020424
+        LDR.N    R1,??Set_29      ;; 0x40020424
         LDR      R0,[R1, #+0]
         BICS     R0,R0,#0xF0
         ORRS     R0,R0,#0x40
         STR      R0,[R1, #+0]
         BX       LR               ;; return
         DATA
-??Set_25:
+??Set_29:
         DATA32
         DC32     0x40020424
-          CFI EndBlock cfiBlock99
+          CFI EndBlock cfiBlock103
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN14FieldValueBaseI23GPIOB_OTYPER_OT8_ValuesIN5GPIOB6OTYPERELj8ELj1E13ReadWriteModeNS1_15GPIOBOTYPERBaseEES4_Lj1EE3SetIS3_vEEvv
-          CFI Block cfiBlock100 Using cfiCommon0
+          CFI Block cfiBlock104 Using cfiCommon0
           CFI Function _ZN14FieldValueBaseI23GPIOB_OTYPER_OT8_ValuesIN5GPIOB6OTYPERELj8ELj1E13ReadWriteModeNS1_15GPIOBOTYPERBaseEES4_Lj1EE3SetIS3_vEEvv
           CFI NoCalls
         THUMB
 // __interwork __vfp void FieldValueBase<GPIOB_OTYPER_OT8_Values<GPIOB::OTYPER, 8U, 1U, ReadWriteMode, GPIOB::GPIOBOTYPERBase>, GPIOB::GPIOBOTYPERBase, 1U>::Set<ReadWriteMode, void>()
 _ZN14FieldValueBaseI23GPIOB_OTYPER_OT8_ValuesIN5GPIOB6OTYPERELj8ELj1E13ReadWriteModeNS1_15GPIOBOTYPERBaseEES4_Lj1EE3SetIS3_vEEvv:
-        LDR.N    R1,??Set_26      ;; 0x40020404
+        LDR.N    R1,??Set_30      ;; 0x40020404
         LDR      R0,[R1, #+0]
         ORRS     R0,R0,#0x100
         STR      R0,[R1, #+0]
         BX       LR               ;; return
         DATA
-??Set_26:
+??Set_30:
         DATA32
         DC32     0x40020404
-          CFI EndBlock cfiBlock100
+          CFI EndBlock cfiBlock104
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN14FieldValueBaseI23GPIOB_OTYPER_OT9_ValuesIN5GPIOB6OTYPERELj9ELj1E13ReadWriteModeNS1_15GPIOBOTYPERBaseEES4_Lj1EE3SetIS3_vEEvv
-          CFI Block cfiBlock101 Using cfiCommon0
+          CFI Block cfiBlock105 Using cfiCommon0
           CFI Function _ZN14FieldValueBaseI23GPIOB_OTYPER_OT9_ValuesIN5GPIOB6OTYPERELj9ELj1E13ReadWriteModeNS1_15GPIOBOTYPERBaseEES4_Lj1EE3SetIS3_vEEvv
           CFI NoCalls
         THUMB
 // __interwork __vfp void FieldValueBase<GPIOB_OTYPER_OT9_Values<GPIOB::OTYPER, 9U, 1U, ReadWriteMode, GPIOB::GPIOBOTYPERBase>, GPIOB::GPIOBOTYPERBase, 1U>::Set<ReadWriteMode, void>()
 _ZN14FieldValueBaseI23GPIOB_OTYPER_OT9_ValuesIN5GPIOB6OTYPERELj9ELj1E13ReadWriteModeNS1_15GPIOBOTYPERBaseEES4_Lj1EE3SetIS3_vEEvv:
-        LDR.N    R1,??Set_27      ;; 0x40020404
+        LDR.N    R1,??Set_31      ;; 0x40020404
         LDR      R0,[R1, #+0]
         ORRS     R0,R0,#0x200
         STR      R0,[R1, #+0]
         BX       LR               ;; return
         DATA
-??Set_27:
+??Set_31:
         DATA32
         DC32     0x40020404
-          CFI EndBlock cfiBlock101
+          CFI EndBlock cfiBlock105
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN14FieldValueBaseI30GPIOB_OSPEEDR_OSPEEDR15_ValuesIN5GPIOB7OSPEEDRELj16ELj2E13ReadWriteModeNS1_16GPIOBOSPEEDRBaseEES4_Lj3EE3SetIS3_vEEvv
-          CFI Block cfiBlock102 Using cfiCommon0
+          CFI Block cfiBlock106 Using cfiCommon0
           CFI Function _ZN14FieldValueBaseI30GPIOB_OSPEEDR_OSPEEDR15_ValuesIN5GPIOB7OSPEEDRELj16ELj2E13ReadWriteModeNS1_16GPIOBOSPEEDRBaseEES4_Lj3EE3SetIS3_vEEvv
           CFI NoCalls
         THUMB
 // __interwork __vfp void FieldValueBase<GPIOB_OSPEEDR_OSPEEDR15_Values<GPIOB::OSPEEDR, 16U, 2U, ReadWriteMode, GPIOB::GPIOBOSPEEDRBase>, GPIOB::GPIOBOSPEEDRBase, 3U>::Set<ReadWriteMode, void>()
 _ZN14FieldValueBaseI30GPIOB_OSPEEDR_OSPEEDR15_ValuesIN5GPIOB7OSPEEDRELj16ELj2E13ReadWriteModeNS1_16GPIOBOSPEEDRBaseEES4_Lj3EE3SetIS3_vEEvv:
-        LDR.N    R1,??Set_28      ;; 0x40020408
+        LDR.N    R1,??Set_32      ;; 0x40020408
         LDR      R0,[R1, #+0]
         ORRS     R0,R0,#0x30000
         STR      R0,[R1, #+0]
         BX       LR               ;; return
         DATA
-??Set_28:
+??Set_32:
         DATA32
         DC32     0x40020408
-          CFI EndBlock cfiBlock102
+          CFI EndBlock cfiBlock106
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN14FieldValueBaseI30GPIOB_OSPEEDR_OSPEEDR15_ValuesIN5GPIOB7OSPEEDRELj18ELj2E13ReadWriteModeNS1_16GPIOBOSPEEDRBaseEES4_Lj3EE3SetIS3_vEEvv
-          CFI Block cfiBlock103 Using cfiCommon0
+          CFI Block cfiBlock107 Using cfiCommon0
           CFI Function _ZN14FieldValueBaseI30GPIOB_OSPEEDR_OSPEEDR15_ValuesIN5GPIOB7OSPEEDRELj18ELj2E13ReadWriteModeNS1_16GPIOBOSPEEDRBaseEES4_Lj3EE3SetIS3_vEEvv
           CFI NoCalls
         THUMB
 // __interwork __vfp void FieldValueBase<GPIOB_OSPEEDR_OSPEEDR15_Values<GPIOB::OSPEEDR, 18U, 2U, ReadWriteMode, GPIOB::GPIOBOSPEEDRBase>, GPIOB::GPIOBOSPEEDRBase, 3U>::Set<ReadWriteMode, void>()
 _ZN14FieldValueBaseI30GPIOB_OSPEEDR_OSPEEDR15_ValuesIN5GPIOB7OSPEEDRELj18ELj2E13ReadWriteModeNS1_16GPIOBOSPEEDRBaseEES4_Lj3EE3SetIS3_vEEvv:
-        LDR.N    R1,??Set_29      ;; 0x40020408
+        LDR.N    R1,??Set_33      ;; 0x40020408
         LDR      R0,[R1, #+0]
         ORRS     R0,R0,#0xC0000
         STR      R0,[R1, #+0]
         BX       LR               ;; return
         DATA
-??Set_29:
+??Set_33:
         DATA32
         DC32     0x40020408
-          CFI EndBlock cfiBlock103
+          CFI EndBlock cfiBlock107
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN14FieldValueBaseI26GPIOB_PUPDR_PUPDR15_ValuesIN5GPIOB5PUPDRELj16ELj2E13ReadWriteModeNS1_14GPIOBPUPDRBaseEES4_Lj1EE3SetIS3_vEEvv
-          CFI Block cfiBlock104 Using cfiCommon0
+          CFI Block cfiBlock108 Using cfiCommon0
           CFI Function _ZN14FieldValueBaseI26GPIOB_PUPDR_PUPDR15_ValuesIN5GPIOB5PUPDRELj16ELj2E13ReadWriteModeNS1_14GPIOBPUPDRBaseEES4_Lj1EE3SetIS3_vEEvv
           CFI NoCalls
         THUMB
 // __interwork __vfp void FieldValueBase<GPIOB_PUPDR_PUPDR15_Values<GPIOB::PUPDR, 16U, 2U, ReadWriteMode, GPIOB::GPIOBPUPDRBase>, GPIOB::GPIOBPUPDRBase, 1U>::Set<ReadWriteMode, void>()
 _ZN14FieldValueBaseI26GPIOB_PUPDR_PUPDR15_ValuesIN5GPIOB5PUPDRELj16ELj2E13ReadWriteModeNS1_14GPIOBPUPDRBaseEES4_Lj1EE3SetIS3_vEEvv:
-        LDR.N    R1,??Set_30      ;; 0x4002040c
+        LDR.N    R1,??Set_34      ;; 0x4002040c
         LDR      R0,[R1, #+0]
         BICS     R0,R0,#0x30000
         ORRS     R0,R0,#0x10000
         STR      R0,[R1, #+0]
         BX       LR               ;; return
         DATA
-??Set_30:
+??Set_34:
         DATA32
         DC32     0x4002040c
-          CFI EndBlock cfiBlock104
+          CFI EndBlock cfiBlock108
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN14FieldValueBaseI26GPIOB_PUPDR_PUPDR15_ValuesIN5GPIOB5PUPDRELj18ELj2E13ReadWriteModeNS1_14GPIOBPUPDRBaseEES4_Lj1EE3SetIS3_vEEvv
-          CFI Block cfiBlock105 Using cfiCommon0
+          CFI Block cfiBlock109 Using cfiCommon0
           CFI Function _ZN14FieldValueBaseI26GPIOB_PUPDR_PUPDR15_ValuesIN5GPIOB5PUPDRELj18ELj2E13ReadWriteModeNS1_14GPIOBPUPDRBaseEES4_Lj1EE3SetIS3_vEEvv
           CFI NoCalls
         THUMB
 // __interwork __vfp void FieldValueBase<GPIOB_PUPDR_PUPDR15_Values<GPIOB::PUPDR, 18U, 2U, ReadWriteMode, GPIOB::GPIOBPUPDRBase>, GPIOB::GPIOBPUPDRBase, 1U>::Set<ReadWriteMode, void>()
 _ZN14FieldValueBaseI26GPIOB_PUPDR_PUPDR15_ValuesIN5GPIOB5PUPDRELj18ELj2E13ReadWriteModeNS1_14GPIOBPUPDRBaseEES4_Lj1EE3SetIS3_vEEvv:
-        LDR.N    R1,??Set_31      ;; 0x4002040c
+        LDR.N    R1,??Set_35      ;; 0x4002040c
         LDR      R0,[R1, #+0]
         BICS     R0,R0,#0xC0000
         ORRS     R0,R0,#0x40000
         STR      R0,[R1, #+0]
         BX       LR               ;; return
         DATA
-??Set_31:
+??Set_35:
         DATA32
         DC32     0x4002040c
-          CFI EndBlock cfiBlock105
+          CFI EndBlock cfiBlock109
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN14FieldValueBaseI20USART2_CR1_UE_ValuesIN6USART23CR1ELj13ELj1E13ReadWriteModeNS1_13USART2CR1BaseEES4_Lj1EE3SetIS3_vEEvv
-          CFI Block cfiBlock106 Using cfiCommon0
+          CFI Block cfiBlock110 Using cfiCommon0
           CFI Function _ZN14FieldValueBaseI20USART2_CR1_UE_ValuesIN6USART23CR1ELj13ELj1E13ReadWriteModeNS1_13USART2CR1BaseEES4_Lj1EE3SetIS3_vEEvv
           CFI NoCalls
         THUMB
 // __interwork __vfp void FieldValueBase<USART2_CR1_UE_Values<USART2::CR1, 13U, 1U, ReadWriteMode, USART2::USART2CR1Base>, USART2::USART2CR1Base, 1U>::Set<ReadWriteMode, void>()
 _ZN14FieldValueBaseI20USART2_CR1_UE_ValuesIN6USART23CR1ELj13ELj1E13ReadWriteModeNS1_13USART2CR1BaseEES4_Lj1EE3SetIS3_vEEvv:
-        LDR.N    R1,??Set_32      ;; 0x4000440c
+        LDR.N    R1,??Set_36      ;; 0x4000440c
         LDR      R0,[R1, #+0]
         ORRS     R0,R0,#0x2000
         STR      R0,[R1, #+0]
         BX       LR               ;; return
         DATA
-??Set_32:
+??Set_36:
         DATA32
         DC32     0x4000440c
-          CFI EndBlock cfiBlock106
+          CFI EndBlock cfiBlock110
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN14FieldValueBaseI20USART2_CR1_TE_ValuesIN6USART23CR1ELj3ELj1E13ReadWriteModeNS1_13USART2CR1BaseEES4_Lj1EE3SetIS3_vEEvv
-          CFI Block cfiBlock107 Using cfiCommon0
+          CFI Block cfiBlock111 Using cfiCommon0
           CFI Function _ZN14FieldValueBaseI20USART2_CR1_TE_ValuesIN6USART23CR1ELj3ELj1E13ReadWriteModeNS1_13USART2CR1BaseEES4_Lj1EE3SetIS3_vEEvv
           CFI NoCalls
         THUMB
 // __interwork __vfp void FieldValueBase<USART2_CR1_TE_Values<USART2::CR1, 3U, 1U, ReadWriteMode, USART2::USART2CR1Base>, USART2::USART2CR1Base, 1U>::Set<ReadWriteMode, void>()
 _ZN14FieldValueBaseI20USART2_CR1_TE_ValuesIN6USART23CR1ELj3ELj1E13ReadWriteModeNS1_13USART2CR1BaseEES4_Lj1EE3SetIS3_vEEvv:
-        LDR.N    R1,??Set_33      ;; 0x4000440c
+        LDR.N    R1,??Set_37      ;; 0x4000440c
         LDR      R0,[R1, #+0]
         ORRS     R0,R0,#0x8
         STR      R0,[R1, #+0]
         BX       LR               ;; return
         DATA
-??Set_33:
+??Set_37:
         DATA32
         DC32     0x4000440c
-          CFI EndBlock cfiBlock107
+          CFI EndBlock cfiBlock111
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN14FieldValueBaseI23USART2_CR1_TXEIE_ValuesIN6USART23CR1ELj7ELj1E13ReadWriteModeNS1_13USART2CR1BaseEES4_Lj1EE3SetIS3_vEEvv
-          CFI Block cfiBlock108 Using cfiCommon0
+          CFI Block cfiBlock112 Using cfiCommon0
           CFI Function _ZN14FieldValueBaseI23USART2_CR1_TXEIE_ValuesIN6USART23CR1ELj7ELj1E13ReadWriteModeNS1_13USART2CR1BaseEES4_Lj1EE3SetIS3_vEEvv
           CFI NoCalls
         THUMB
 // __interwork __vfp void FieldValueBase<USART2_CR1_TXEIE_Values<USART2::CR1, 7U, 1U, ReadWriteMode, USART2::USART2CR1Base>, USART2::USART2CR1Base, 1U>::Set<ReadWriteMode, void>()
 _ZN14FieldValueBaseI23USART2_CR1_TXEIE_ValuesIN6USART23CR1ELj7ELj1E13ReadWriteModeNS1_13USART2CR1BaseEES4_Lj1EE3SetIS3_vEEvv:
-        LDR.N    R1,??Set_34      ;; 0x4000440c
+        LDR.N    R1,??Set_38      ;; 0x4000440c
         LDR      R0,[R1, #+0]
         ORRS     R0,R0,#0x80
         STR      R0,[R1, #+0]
         BX       LR               ;; return
         DATA
-??Set_34:
+??Set_38:
         DATA32
         DC32     0x4000440c
-          CFI EndBlock cfiBlock108
+          CFI EndBlock cfiBlock112
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN14FieldValueBaseI21GPIOB_BSRR_BS1_ValuesIN5GPIOB4BSRRELj1ELj1E9WriteModeNS1_13GPIOBBSRRBaseEES4_Lj1EE5WriteIS3_vEEvv
-          CFI Block cfiBlock109 Using cfiCommon0
+          CFI Block cfiBlock113 Using cfiCommon0
           CFI Function _ZN14FieldValueBaseI21GPIOB_BSRR_BS1_ValuesIN5GPIOB4BSRRELj1ELj1E9WriteModeNS1_13GPIOBBSRRBaseEES4_Lj1EE5WriteIS3_vEEvv
           CFI NoCalls
         THUMB
@@ -4230,11 +4311,11 @@ _ZN14FieldValueBaseI21GPIOB_BSRR_BS1_ValuesIN5GPIOB4BSRRELj1ELj1E9WriteModeNS1_1
 ??Write_0:
         DATA32
         DC32     0x40020418
-          CFI EndBlock cfiBlock109
+          CFI EndBlock cfiBlock113
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN14FieldValueBaseI18I2C1_SR1_SB_ValuesIN4I2C13SR1ELj0ELj1E8ReadModeNS1_11I2C1SR1BaseEES4_Lj0EE5IsSetIS3_vEEbv
-          CFI Block cfiBlock110 Using cfiCommon0
+          CFI Block cfiBlock114 Using cfiCommon0
           CFI Function _ZN14FieldValueBaseI18I2C1_SR1_SB_ValuesIN4I2C13SR1ELj0ELj1E8ReadModeNS1_11I2C1SR1BaseEES4_Lj0EE5IsSetIS3_vEEbv
           CFI NoCalls
         THUMB
@@ -4250,11 +4331,11 @@ _ZN14FieldValueBaseI18I2C1_SR1_SB_ValuesIN4I2C13SR1ELj0ELj1E8ReadModeNS1_11I2C1S
 ??IsSet_0:
         DATA32
         DC32     0x40005414
-          CFI EndBlock cfiBlock110
+          CFI EndBlock cfiBlock114
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN14FieldValueBaseI20I2C1_SR1_ADDR_ValuesIN4I2C13SR1ELj1ELj1E8ReadModeNS1_11I2C1SR1BaseEES4_Lj0EE5IsSetIS3_vEEbv
-          CFI Block cfiBlock111 Using cfiCommon0
+          CFI Block cfiBlock115 Using cfiCommon0
           CFI Function _ZN14FieldValueBaseI20I2C1_SR1_ADDR_ValuesIN4I2C13SR1ELj1ELj1E8ReadModeNS1_11I2C1SR1BaseEES4_Lj0EE5IsSetIS3_vEEbv
           CFI NoCalls
         THUMB
@@ -4272,11 +4353,11 @@ _ZN14FieldValueBaseI20I2C1_SR1_ADDR_ValuesIN4I2C13SR1ELj1ELj1E8ReadModeNS1_11I2C
 ??IsSet_1:
         DATA32
         DC32     0x40005414
-          CFI EndBlock cfiBlock111
+          CFI EndBlock cfiBlock115
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN14FieldValueBaseI19I2C1_SR1_TxE_ValuesIN4I2C13SR1ELj7ELj1E8ReadModeNS1_11I2C1SR1BaseEES4_Lj0EE5IsSetIS3_vEEbv
-          CFI Block cfiBlock112 Using cfiCommon0
+          CFI Block cfiBlock116 Using cfiCommon0
           CFI Function _ZN14FieldValueBaseI19I2C1_SR1_TxE_ValuesIN4I2C13SR1ELj7ELj1E8ReadModeNS1_11I2C1SR1BaseEES4_Lj0EE5IsSetIS3_vEEbv
           CFI NoCalls
         THUMB
@@ -4294,11 +4375,11 @@ _ZN14FieldValueBaseI19I2C1_SR1_TxE_ValuesIN4I2C13SR1ELj7ELj1E8ReadModeNS1_11I2C1
 ??IsSet_2:
         DATA32
         DC32     0x40005414
-          CFI EndBlock cfiBlock112
+          CFI EndBlock cfiBlock116
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN14FieldValueBaseI19I2C1_SR1_BTF_ValuesIN4I2C13SR1ELj2ELj1E8ReadModeNS1_11I2C1SR1BaseEES4_Lj0EE5IsSetIS3_vEEbv
-          CFI Block cfiBlock113 Using cfiCommon0
+          CFI Block cfiBlock117 Using cfiCommon0
           CFI Function _ZN14FieldValueBaseI19I2C1_SR1_BTF_ValuesIN4I2C13SR1ELj2ELj1E8ReadModeNS1_11I2C1SR1BaseEES4_Lj0EE5IsSetIS3_vEEbv
           CFI NoCalls
         THUMB
@@ -4316,11 +4397,11 @@ _ZN14FieldValueBaseI19I2C1_SR1_BTF_ValuesIN4I2C13SR1ELj2ELj1E8ReadModeNS1_11I2C1
 ??IsSet_3:
         DATA32
         DC32     0x40005414
-          CFI EndBlock cfiBlock113
+          CFI EndBlock cfiBlock117
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN14FieldValueBaseI20RCC_CR_HSIRDY_ValuesIN3RCC2CRELj1ELj1E8ReadModeNS1_9RCCCRBaseEES4_Lj1EE5IsSetIS3_vEEbv
-          CFI Block cfiBlock114 Using cfiCommon0
+          CFI Block cfiBlock118 Using cfiCommon0
           CFI Function _ZN14FieldValueBaseI20RCC_CR_HSIRDY_ValuesIN3RCC2CRELj1ELj1E8ReadModeNS1_9RCCCRBaseEES4_Lj1EE5IsSetIS3_vEEbv
           CFI NoCalls
         THUMB
@@ -4335,11 +4416,11 @@ _ZN14FieldValueBaseI20RCC_CR_HSIRDY_ValuesIN3RCC2CRELj1ELj1E8ReadModeNS1_9RCCCRB
 ??IsSet_4:
         DATA32
         DC32     0x40023800
-          CFI EndBlock cfiBlock114
+          CFI EndBlock cfiBlock118
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN14FieldValueBaseI19RCC_CFGR_SWS_ValuesIN3RCC4CFGRELj2ELj2E8ReadModeNS1_11RCCCFGRBaseEES4_Lj0EE5IsSetIS3_vEEbv
-          CFI Block cfiBlock115 Using cfiCommon0
+          CFI Block cfiBlock119 Using cfiCommon0
           CFI Function _ZN14FieldValueBaseI19RCC_CFGR_SWS_ValuesIN3RCC4CFGRELj2ELj2E8ReadModeNS1_11RCCCFGRBaseEES4_Lj0EE5IsSetIS3_vEEbv
           CFI NoCalls
         THUMB
@@ -4348,42 +4429,23 @@ _ZN14FieldValueBaseI19RCC_CFGR_SWS_ValuesIN3RCC4CFGRELj2ELj2E8ReadModeNS1_11RCCC
         LDR.N    R0,??IsSet_5     ;; 0x40023808
         LDR      R0,[R0, #+0]
         TST      R0,#0xC
-        BNE.N    ??IsSet_7
+        BNE.N    ??IsSet_6
         MOVS     R0,#+1
-        B.N      ??IsSet_8
-??IsSet_7:
+        B.N      ??IsSet_7
+??IsSet_6:
         MOVS     R0,#+0
-??IsSet_8:
+??IsSet_7:
         UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
         BX       LR               ;; return
         DATA
 ??IsSet_5:
         DATA32
         DC32     0x40023808
-          CFI EndBlock cfiBlock115
-
-        SECTION `.text`:CODE:REORDER:NOROOT(2)
-        SECTION_GROUP _ZN14FieldValueBaseI25SCB_ICSR_PENDSTSET_ValuesIN3SCB4ICSRELj26ELj1E13ReadWriteModeNS1_11SCBICSRBaseEES4_Lj1EE5IsSetIS3_vEEbv
-          CFI Block cfiBlock116 Using cfiCommon0
-          CFI Function _ZN14FieldValueBaseI25SCB_ICSR_PENDSTSET_ValuesIN3SCB4ICSRELj26ELj1E13ReadWriteModeNS1_11SCBICSRBaseEES4_Lj1EE5IsSetIS3_vEEbv
-          CFI NoCalls
-        THUMB
-// __interwork __vfp bool FieldValueBase<SCB_ICSR_PENDSTSET_Values<SCB::ICSR, 26U, 1U, ReadWriteMode, SCB::SCBICSRBase>, SCB::SCBICSRBase, 1U>::IsSet<ReadWriteMode, void>()
-_ZN14FieldValueBaseI25SCB_ICSR_PENDSTSET_ValuesIN3SCB4ICSRELj26ELj1E13ReadWriteModeNS1_11SCBICSRBaseEES4_Lj1EE5IsSetIS3_vEEbv:
-        LDR.N    R0,??IsSet_6     ;; 0xe000ed04
-        LDR      R0,[R0, #+0]
-        LSRS     R0,R0,#+26
-        ANDS     R0,R0,#0x1
-        BX       LR               ;; return
-        DATA
-??IsSet_6:
-        DATA32
-        DC32     0xe000ed04
-          CFI EndBlock cfiBlock116
+          CFI EndBlock cfiBlock119
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN12RegisterBaseILj1073759236ELj32E13ReadWriteModeE5WriteIS0_vEEvj
-          CFI Block cfiBlock117 Using cfiCommon0
+          CFI Block cfiBlock120 Using cfiCommon0
           CFI Function _ZN12RegisterBaseILj1073759236ELj32E13ReadWriteModeE5WriteIS0_vEEvj
           CFI NoCalls
         THUMB
@@ -4397,11 +4459,11 @@ _ZN12RegisterBaseILj1073759236ELj32E13ReadWriteModeE5WriteIS0_vEEvj:
 ??Write_1:
         DATA32
         DC32     0x40004404
-          CFI EndBlock cfiBlock117
+          CFI EndBlock cfiBlock120
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN12RegisterBaseILj1073759240ELj32E13ReadWriteModeE5WriteIS0_vEEvj
-          CFI Block cfiBlock118 Using cfiCommon0
+          CFI Block cfiBlock121 Using cfiCommon0
           CFI Function _ZN12RegisterBaseILj1073759240ELj32E13ReadWriteModeE5WriteIS0_vEEvj
           CFI NoCalls
         THUMB
@@ -4415,121 +4477,193 @@ _ZN12RegisterBaseILj1073759240ELj32E13ReadWriteModeE5WriteIS0_vEEvj:
 ??Write_2:
         DATA32
         DC32     0x40004408
-          CFI EndBlock cfiBlock118
+          CFI EndBlock cfiBlock121
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
-        SECTION_GROUP _ZN12RegisterBaseILj3758153988ELj32E13ReadWriteModeE5WriteIS0_vEEvj
-          CFI Block cfiBlock119 Using cfiCommon0
-          CFI Function _ZN12RegisterBaseILj3758153988ELj32E13ReadWriteModeE5WriteIS0_vEEvj
+        SECTION_GROUP _ZN12RegisterBaseILj3758153984ELj32E13ReadWriteModeE5WriteIS0_vEEvj
+          CFI Block cfiBlock122 Using cfiCommon0
+          CFI Function _ZN12RegisterBaseILj3758153984ELj32E13ReadWriteModeE5WriteIS0_vEEvj
           CFI NoCalls
         THUMB
-// __interwork __vfp void RegisterBase<3758153988U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
-_ZN12RegisterBaseILj3758153988ELj32E13ReadWriteModeE5WriteIS0_vEEvj:
-        LDR.N    R1,??Write_3     ;; 0xe000e104
+// __interwork __vfp void RegisterBase<3758153984U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
+_ZN12RegisterBaseILj3758153984ELj32E13ReadWriteModeE5WriteIS0_vEEvj:
+        LDR.N    R1,??Write_3     ;; 0xe000e100
         STR      R0,[R1, #+0]
         BX       LR               ;; return
         Nop      
         DATA
 ??Write_3:
         DATA32
-        DC32     0xe000e104
-          CFI EndBlock cfiBlock119
+        DC32     0xe000e100
+          CFI EndBlock cfiBlock122
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
-        SECTION_GROUP _ZN12RegisterBaseILj1073763344ELj32E13ReadWriteModeE5WriteIS0_vEEvj
-          CFI Block cfiBlock120 Using cfiCommon0
-          CFI Function _ZN12RegisterBaseILj1073763344ELj32E13ReadWriteModeE5WriteIS0_vEEvj
+        SECTION_GROUP _ZN12RegisterBaseILj3758153988ELj32E13ReadWriteModeE5WriteIS0_vEEvj
+          CFI Block cfiBlock123 Using cfiCommon0
+          CFI Function _ZN12RegisterBaseILj3758153988ELj32E13ReadWriteModeE5WriteIS0_vEEvj
           CFI NoCalls
         THUMB
-// __interwork __vfp void RegisterBase<1073763344U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
-_ZN12RegisterBaseILj1073763344ELj32E13ReadWriteModeE5WriteIS0_vEEvj:
-        LDR.N    R1,??Write_4     ;; 0x40005410
+// __interwork __vfp void RegisterBase<3758153988U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
+_ZN12RegisterBaseILj3758153988ELj32E13ReadWriteModeE5WriteIS0_vEEvj:
+        LDR.N    R1,??Write_4     ;; 0xe000e104
         STR      R0,[R1, #+0]
         BX       LR               ;; return
         Nop      
         DATA
 ??Write_4:
         DATA32
-        DC32     0x40005410
-          CFI EndBlock cfiBlock120
+        DC32     0xe000e104
+          CFI EndBlock cfiBlock123
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
-        SECTION_GROUP _ZN12RegisterBaseILj1073763360ELj32E13ReadWriteModeE5WriteIS0_vEEvj
-          CFI Block cfiBlock121 Using cfiCommon0
-          CFI Function _ZN12RegisterBaseILj1073763360ELj32E13ReadWriteModeE5WriteIS0_vEEvj
+        SECTION_GROUP _ZN12RegisterBaseILj1073741860ELj32E13ReadWriteModeE5WriteIS0_vEEvj
+          CFI Block cfiBlock124 Using cfiCommon0
+          CFI Function _ZN12RegisterBaseILj1073741860ELj32E13ReadWriteModeE5WriteIS0_vEEvj
           CFI NoCalls
         THUMB
-// __interwork __vfp void RegisterBase<1073763360U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
-_ZN12RegisterBaseILj1073763360ELj32E13ReadWriteModeE5WriteIS0_vEEvj:
-        LDR.N    R1,??Write_5     ;; 0x40005420
+// __interwork __vfp void RegisterBase<1073741860U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
+_ZN12RegisterBaseILj1073741860ELj32E13ReadWriteModeE5WriteIS0_vEEvj:
+        LDR.N    R1,??Write_5     ;; 0x40000024
         STR      R0,[R1, #+0]
         BX       LR               ;; return
         Nop      
         DATA
 ??Write_5:
         DATA32
-        DC32     0x40005420
-          CFI EndBlock cfiBlock121
+        DC32     0x40000024
+          CFI EndBlock cfiBlock124
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
-        SECTION_GROUP _ZN12RegisterBaseILj3758153748ELj32E13ReadWriteModeE5WriteIS0_vEEvj
-          CFI Block cfiBlock122 Using cfiCommon0
-          CFI Function _ZN12RegisterBaseILj3758153748ELj32E13ReadWriteModeE5WriteIS0_vEEvj
+        SECTION_GROUP _ZN12RegisterBaseILj1073741864ELj32E13ReadWriteModeE5WriteIS0_vEEvj
+          CFI Block cfiBlock125 Using cfiCommon0
+          CFI Function _ZN12RegisterBaseILj1073741864ELj32E13ReadWriteModeE5WriteIS0_vEEvj
           CFI NoCalls
         THUMB
-// __interwork __vfp void RegisterBase<3758153748U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
-_ZN12RegisterBaseILj3758153748ELj32E13ReadWriteModeE5WriteIS0_vEEvj:
-        LDR.N    R1,??Write_6     ;; 0xe000e014
+// __interwork __vfp void RegisterBase<1073741864U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
+_ZN12RegisterBaseILj1073741864ELj32E13ReadWriteModeE5WriteIS0_vEEvj:
+        LDR.N    R1,??Write_6     ;; 0x40000028
         STR      R0,[R1, #+0]
         BX       LR               ;; return
         Nop      
         DATA
 ??Write_6:
         DATA32
-        DC32     0xe000e014
-          CFI EndBlock cfiBlock122
+        DC32     0x40000028
+          CFI EndBlock cfiBlock125
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
-        SECTION_GROUP _ZN12RegisterBaseILj3758153752ELj32E13ReadWriteModeE5WriteIS0_vEEvj
-          CFI Block cfiBlock123 Using cfiCommon0
-          CFI Function _ZN12RegisterBaseILj3758153752ELj32E13ReadWriteModeE5WriteIS0_vEEvj
+        SECTION_GROUP _ZN12RegisterBaseILj1073741868ELj32E13ReadWriteModeE5WriteIS0_vEEvj
+          CFI Block cfiBlock126 Using cfiCommon0
+          CFI Function _ZN12RegisterBaseILj1073741868ELj32E13ReadWriteModeE5WriteIS0_vEEvj
           CFI NoCalls
         THUMB
-// __interwork __vfp void RegisterBase<3758153752U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
-_ZN12RegisterBaseILj3758153752ELj32E13ReadWriteModeE5WriteIS0_vEEvj:
-        LDR.N    R1,??Write_7     ;; 0xe000e018
+// __interwork __vfp void RegisterBase<1073741868U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
+_ZN12RegisterBaseILj1073741868ELj32E13ReadWriteModeE5WriteIS0_vEEvj:
+        LDR.N    R1,??Write_7     ;; 0x4000002c
         STR      R0,[R1, #+0]
         BX       LR               ;; return
         Nop      
         DATA
 ??Write_7:
         DATA32
+        DC32     0x4000002c
+          CFI EndBlock cfiBlock126
+
+        SECTION `.text`:CODE:REORDER:NOROOT(2)
+        SECTION_GROUP _ZN12RegisterBaseILj1073763344ELj32E13ReadWriteModeE5WriteIS0_vEEvj
+          CFI Block cfiBlock127 Using cfiCommon0
+          CFI Function _ZN12RegisterBaseILj1073763344ELj32E13ReadWriteModeE5WriteIS0_vEEvj
+          CFI NoCalls
+        THUMB
+// __interwork __vfp void RegisterBase<1073763344U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
+_ZN12RegisterBaseILj1073763344ELj32E13ReadWriteModeE5WriteIS0_vEEvj:
+        LDR.N    R1,??Write_8     ;; 0x40005410
+        STR      R0,[R1, #+0]
+        BX       LR               ;; return
+        Nop      
+        DATA
+??Write_8:
+        DATA32
+        DC32     0x40005410
+          CFI EndBlock cfiBlock127
+
+        SECTION `.text`:CODE:REORDER:NOROOT(2)
+        SECTION_GROUP _ZN12RegisterBaseILj1073763360ELj32E13ReadWriteModeE5WriteIS0_vEEvj
+          CFI Block cfiBlock128 Using cfiCommon0
+          CFI Function _ZN12RegisterBaseILj1073763360ELj32E13ReadWriteModeE5WriteIS0_vEEvj
+          CFI NoCalls
+        THUMB
+// __interwork __vfp void RegisterBase<1073763360U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
+_ZN12RegisterBaseILj1073763360ELj32E13ReadWriteModeE5WriteIS0_vEEvj:
+        LDR.N    R1,??Write_9     ;; 0x40005420
+        STR      R0,[R1, #+0]
+        BX       LR               ;; return
+        Nop      
+        DATA
+??Write_9:
+        DATA32
+        DC32     0x40005420
+          CFI EndBlock cfiBlock128
+
+        SECTION `.text`:CODE:REORDER:NOROOT(2)
+        SECTION_GROUP _ZN12RegisterBaseILj3758153748ELj32E13ReadWriteModeE5WriteIS0_vEEvj
+          CFI Block cfiBlock129 Using cfiCommon0
+          CFI Function _ZN12RegisterBaseILj3758153748ELj32E13ReadWriteModeE5WriteIS0_vEEvj
+          CFI NoCalls
+        THUMB
+// __interwork __vfp void RegisterBase<3758153748U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
+_ZN12RegisterBaseILj3758153748ELj32E13ReadWriteModeE5WriteIS0_vEEvj:
+        LDR.N    R1,??Write_10    ;; 0xe000e014
+        STR      R0,[R1, #+0]
+        BX       LR               ;; return
+        Nop      
+        DATA
+??Write_10:
+        DATA32
+        DC32     0xe000e014
+          CFI EndBlock cfiBlock129
+
+        SECTION `.text`:CODE:REORDER:NOROOT(2)
+        SECTION_GROUP _ZN12RegisterBaseILj3758153752ELj32E13ReadWriteModeE5WriteIS0_vEEvj
+          CFI Block cfiBlock130 Using cfiCommon0
+          CFI Function _ZN12RegisterBaseILj3758153752ELj32E13ReadWriteModeE5WriteIS0_vEEvj
+          CFI NoCalls
+        THUMB
+// __interwork __vfp void RegisterBase<3758153752U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
+_ZN12RegisterBaseILj3758153752ELj32E13ReadWriteModeE5WriteIS0_vEEvj:
+        LDR.N    R1,??Write_11    ;; 0xe000e018
+        STR      R0,[R1, #+0]
+        BX       LR               ;; return
+        Nop      
+        DATA
+??Write_11:
+        DATA32
         DC32     0xe000e018
-          CFI EndBlock cfiBlock123
+          CFI EndBlock cfiBlock130
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN12RegisterBaseILj1073763356ELj32E13ReadWriteModeE3SetIS0_vEEvj
-          CFI Block cfiBlock124 Using cfiCommon0
+          CFI Block cfiBlock131 Using cfiCommon0
           CFI Function _ZN12RegisterBaseILj1073763356ELj32E13ReadWriteModeE3SetIS0_vEEvj
           CFI NoCalls
         THUMB
 // __interwork __vfp void RegisterBase<1073763356U, 32U, ReadWriteMode>::Set<ReadWriteMode, void>(uint32_t)
 _ZN12RegisterBaseILj1073763356ELj32E13ReadWriteModeE3SetIS0_vEEvj:
-        LDR.N    R2,??Set_35      ;; 0x4000541c
+        LDR.N    R2,??Set_39      ;; 0x4000541c
         LDR      R1,[R2, #+0]
         ORRS     R0,R0,R1
         STR      R0,[R2, #+0]
         BX       LR               ;; return
         Nop      
         DATA
-??Set_35:
+??Set_39:
         DATA32
         DC32     0x4000541c
-          CFI EndBlock cfiBlock124
+          CFI EndBlock cfiBlock131
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN12RegisterBaseILj1073763344ELj32E13ReadWriteModeE3GetIS0_vEEjv
-          CFI Block cfiBlock125 Using cfiCommon0
+          CFI Block cfiBlock132 Using cfiCommon0
           CFI Function _ZN12RegisterBaseILj1073763344ELj32E13ReadWriteModeE3GetIS0_vEEjv
           CFI NoCalls
         THUMB
@@ -4543,11 +4677,11 @@ _ZN12RegisterBaseILj1073763344ELj32E13ReadWriteModeE3GetIS0_vEEjv:
 ??Get_0:
         DATA32
         DC32     0x40005410
-          CFI EndBlock cfiBlock125
+          CFI EndBlock cfiBlock132
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN12RegisterBaseILj1073763348ELj32E13ReadWriteModeE3GetIS0_vEEjv
-          CFI Block cfiBlock126 Using cfiCommon0
+          CFI Block cfiBlock133 Using cfiCommon0
           CFI Function _ZN12RegisterBaseILj1073763348ELj32E13ReadWriteModeE3GetIS0_vEEjv
           CFI NoCalls
         THUMB
@@ -4561,11 +4695,11 @@ _ZN12RegisterBaseILj1073763348ELj32E13ReadWriteModeE3GetIS0_vEEjv:
 ??Get_1:
         DATA32
         DC32     0x40005414
-          CFI EndBlock cfiBlock126
+          CFI EndBlock cfiBlock133
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN12RegisterBaseILj1073763352ELj32E8ReadModeE3GetIS0_vEEjv
-          CFI Block cfiBlock127 Using cfiCommon0
+          CFI Block cfiBlock134 Using cfiCommon0
           CFI Function _ZN12RegisterBaseILj1073763352ELj32E8ReadModeE3GetIS0_vEEjv
           CFI NoCalls
         THUMB
@@ -4579,91 +4713,91 @@ _ZN12RegisterBaseILj1073763352ELj32E8ReadModeE3GetIS0_vEEjv:
 ??Get_2:
         DATA32
         DC32     0x40005418
-          CFI EndBlock cfiBlock127
+          CFI EndBlock cfiBlock134
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN8RegisterILj1073873920ELj32E13ReadWriteModeN5GPIOB14GPIOBMODERBaseEJ10FieldValueI26GPIOB_MODER_MODER15_ValuesINS1_5MODERELj2ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj4ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj16ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj18ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj26ELj2ES0_S2_ES2_Lj2EvES3_IS4_IS5_Lj30ELj2ES0_S2_ES2_Lj2EvEEE3SetIS0_vEEvv
-          CFI Block cfiBlock128 Using cfiCommon0
+          CFI Block cfiBlock135 Using cfiCommon0
           CFI Function _ZN8RegisterILj1073873920ELj32E13ReadWriteModeN5GPIOB14GPIOBMODERBaseEJ10FieldValueI26GPIOB_MODER_MODER15_ValuesINS1_5MODERELj2ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj4ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj16ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj18ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj26ELj2ES0_S2_ES2_Lj2EvES3_IS4_IS5_Lj30ELj2ES0_S2_ES2_Lj2EvEEE3SetIS0_vEEvv
           CFI NoCalls
         THUMB
 // __interwork __vfp void Register<1073873920U, 32U, ReadWriteMode, GPIOB::GPIOBMODERBase, GPIOB_MODER_MODER15_Values<GPIOB::MODER, 2U, 2U, ReadWriteMode, GPIOB::GPIOBMODERBase>::Output, GPIOB_MODER_MODER15_Values<GPIOB::MODER, 4U, 2U, ReadWriteMode, GPIOB::GPIOBMODERBase>::Output, GPIOB_MODER_MODER15_Values<GPIOB::MODER, 16U, 2U, ReadWriteMode, GPIOB::GPIOBMODERBase>::Output, GPIOB_MODER_MODER15_Values<GPIOB::MODER, 18U, 2U, ReadWriteMode, GPIOB::GPIOBMODERBase>::Output, GPIOB_MODER_MODER15_Values<GPIOB::MODER, 26U, 2U, ReadWriteMode, GPIOB::GPIOBMODERBase>::Alternate, GPIOB_MODER_MODER15_Values<GPIOB::MODER, 30U, 2U, ReadWriteMode, GPIOB::GPIOBMODERBase>::Alternate>::Set<ReadWriteMode, void>()
 _ZN8RegisterILj1073873920ELj32E13ReadWriteModeN5GPIOB14GPIOBMODERBaseEJ10FieldValueI26GPIOB_MODER_MODER15_ValuesINS1_5MODERELj2ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj4ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj16ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj18ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj26ELj2ES0_S2_ES2_Lj2EvES3_IS4_IS5_Lj30ELj2ES0_S2_ES2_Lj2EvEEE3SetIS0_vEEvv:
-        LDR.N    R2,??Set_36      ;; 0x40020400
+        LDR.N    R2,??Set_40      ;; 0x40020400
         LDR      R1,[R2, #+0]
-        LDR.N    R0,??Set_36+0x4  ;; 0x33f0ffc3
+        LDR.N    R0,??Set_40+0x4  ;; 0x33f0ffc3
         ANDS     R1,R0,R1
-        LDR.N    R0,??Set_36+0x8  ;; 0x88050014
+        LDR.N    R0,??Set_40+0x8  ;; 0x88050014
         ORRS     R1,R0,R1
         STR      R1,[R2, #+0]
         BX       LR               ;; return
         DATA
-??Set_36:
+??Set_40:
         DATA32
         DC32     0x40020400
         DC32     0x33f0ffc3
         DC32     0x88050014
-          CFI EndBlock cfiBlock128
+          CFI EndBlock cfiBlock135
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN8RegisterILj1073873956ELj32E13ReadWriteModeN5GPIOB13GPIOBAFRHBaseEJ10FieldValueI23GPIOB_AFRL_AFRL7_ValuesINS1_4AFRHELj20ELj4ES0_S2_ES2_Lj5EvES3_IS4_IS5_Lj28ELj4ES0_S2_ES2_Lj5EvEEE3SetIS0_vEEvv
-          CFI Block cfiBlock129 Using cfiCommon0
+          CFI Block cfiBlock136 Using cfiCommon0
           CFI Function _ZN8RegisterILj1073873956ELj32E13ReadWriteModeN5GPIOB13GPIOBAFRHBaseEJ10FieldValueI23GPIOB_AFRL_AFRL7_ValuesINS1_4AFRHELj20ELj4ES0_S2_ES2_Lj5EvES3_IS4_IS5_Lj28ELj4ES0_S2_ES2_Lj5EvEEE3SetIS0_vEEvv
           CFI NoCalls
         THUMB
 // __interwork __vfp void Register<1073873956U, 32U, ReadWriteMode, GPIOB::GPIOBAFRHBase, GPIOB_AFRL_AFRL7_Values<GPIOB::AFRH, 20U, 4U, ReadWriteMode, GPIOB::GPIOBAFRHBase>::Af5, GPIOB_AFRL_AFRL7_Values<GPIOB::AFRH, 28U, 4U, ReadWriteMode, GPIOB::GPIOBAFRHBase>::Af5>::Set<ReadWriteMode, void>()
 _ZN8RegisterILj1073873956ELj32E13ReadWriteModeN5GPIOB13GPIOBAFRHBaseEJ10FieldValueI23GPIOB_AFRL_AFRL7_ValuesINS1_4AFRHELj20ELj4ES0_S2_ES2_Lj5EvES3_IS4_IS5_Lj28ELj4ES0_S2_ES2_Lj5EvEEE3SetIS0_vEEvv:
-        LDR.N    R2,??Set_37      ;; 0x40020424
+        LDR.N    R2,??Set_41      ;; 0x40020424
         LDR      R1,[R2, #+0]
-        LDR.N    R0,??Set_37+0x4  ;; 0xf0fffff
+        LDR.N    R0,??Set_41+0x4  ;; 0xf0fffff
         ANDS     R1,R0,R1
-        LDR.N    R0,??Set_37+0x8  ;; 0x50500000
+        LDR.N    R0,??Set_41+0x8  ;; 0x50500000
         ORRS     R1,R0,R1
         STR      R1,[R2, #+0]
         BX       LR               ;; return
         DATA
-??Set_37:
+??Set_41:
         DATA32
         DC32     0x40020424
         DC32     0xf0fffff
         DC32     0x50500000
-          CFI EndBlock cfiBlock129
+          CFI EndBlock cfiBlock136
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN8RegisterILj1073874944ELj32E13ReadWriteModeN5GPIOC14GPIOCMODERBaseEJ10FieldValueI26GPIOC_MODER_MODER15_ValuesINS1_5MODERELj10ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj16ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj18ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj4ELj2ES0_S2_ES2_Lj0EvES3_IS4_IS5_Lj6ELj2ES0_S2_ES2_Lj1EvEEE3SetIS0_vEEvv
-          CFI Block cfiBlock130 Using cfiCommon0
+          CFI Block cfiBlock137 Using cfiCommon0
           CFI Function _ZN8RegisterILj1073874944ELj32E13ReadWriteModeN5GPIOC14GPIOCMODERBaseEJ10FieldValueI26GPIOC_MODER_MODER15_ValuesINS1_5MODERELj10ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj16ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj18ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj4ELj2ES0_S2_ES2_Lj0EvES3_IS4_IS5_Lj6ELj2ES0_S2_ES2_Lj1EvEEE3SetIS0_vEEvv
           CFI NoCalls
         THUMB
 // __interwork __vfp void Register<1073874944U, 32U, ReadWriteMode, GPIOC::GPIOCMODERBase, GPIOC_MODER_MODER15_Values<GPIOC::MODER, 10U, 2U, ReadWriteMode, GPIOC::GPIOCMODERBase>::Output, GPIOC_MODER_MODER15_Values<GPIOC::MODER, 16U, 2U, ReadWriteMode, GPIOC::GPIOCMODERBase>::Output, GPIOC_MODER_MODER15_Values<GPIOC::MODER, 18U, 2U, ReadWriteMode, GPIOC::GPIOCMODERBase>::Output, GPIOC_MODER_MODER15_Values<GPIOC::MODER, 4U, 2U, ReadWriteMode, GPIOC::GPIOCMODERBase>::Input, GPIOC_MODER_MODER15_Values<GPIOC::MODER, 6U, 2U, ReadWriteMode, GPIOC::GPIOCMODERBase>::Output>::Set<ReadWriteMode, void>()
 _ZN8RegisterILj1073874944ELj32E13ReadWriteModeN5GPIOC14GPIOCMODERBaseEJ10FieldValueI26GPIOC_MODER_MODER15_ValuesINS1_5MODERELj10ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj16ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj18ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj4ELj2ES0_S2_ES2_Lj0EvES3_IS4_IS5_Lj6ELj2ES0_S2_ES2_Lj1EvEEE3SetIS0_vEEvv:
-        LDR.N    R2,??Set_38      ;; 0x40020800
+        LDR.N    R2,??Set_42      ;; 0x40020800
         LDR      R1,[R2, #+0]
-        LDR.N    R0,??Set_38+0x4  ;; 0xfff0f30f
+        LDR.N    R0,??Set_42+0x4  ;; 0xfff0f30f
         ANDS     R1,R0,R1
-        LDR.N    R0,??Set_38+0x8  ;; 0x50440
+        LDR.N    R0,??Set_42+0x8  ;; 0x50440
         ORRS     R1,R0,R1
         STR      R1,[R2, #+0]
         BX       LR               ;; return
         DATA
-??Set_38:
+??Set_42:
         DATA32
         DC32     0x40020800
         DC32     0xfff0f30f
         DC32     0x50440
-          CFI EndBlock cfiBlock130
+          CFI EndBlock cfiBlock137
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN8RegisterILj1073756160ELj32E13ReadWriteModeN4SPI211SPI2CR1BaseEJ10FieldValueI20SPI2_CR1_MSTR_ValuesINS1_3CR1ELj2ELj1ES0_S2_ES2_Lj1EvES3_I24SPI2_CR1_BIDIMODE_ValuesIS5_Lj15ELj1ES0_S2_ES2_Lj0EvES3_I19SPI2_CR1_DFF_ValuesIS5_Lj11ELj1ES0_S2_ES2_Lj0EvES3_I20SPI2_CR1_CPOL_ValuesIS5_Lj1ELj1ES0_S2_ES2_Lj1EvES3_I20SPI2_CR1_CPHA_ValuesIS5_Lj0ELj1ES0_S2_ES2_Lj1EvES3_I19SPI2_CR1_SSM_ValuesIS5_Lj9ELj1ES0_S2_ES2_Lj1EvES3_I19SPI2_CR1_SSI_ValuesIS5_Lj8ELj1ES0_S2_ES2_Lj1EvES3_I18SPI2_CR1_BR_ValuesIS5_Lj3ELj3ES0_S2_ES2_Lj0EvES3_I24SPI2_CR1_LSBFIRST_ValuesIS5_Lj7ELj1ES0_S2_ES2_Lj0EvES3_I21SPI2_CR1_CRCEN_ValuesIS5_Lj13ELj1ES0_S2_ES2_Lj0EvEEE3SetIS0_vEEvv
-          CFI Block cfiBlock131 Using cfiCommon0
+          CFI Block cfiBlock138 Using cfiCommon0
           CFI Function _ZN8RegisterILj1073756160ELj32E13ReadWriteModeN4SPI211SPI2CR1BaseEJ10FieldValueI20SPI2_CR1_MSTR_ValuesINS1_3CR1ELj2ELj1ES0_S2_ES2_Lj1EvES3_I24SPI2_CR1_BIDIMODE_ValuesIS5_Lj15ELj1ES0_S2_ES2_Lj0EvES3_I19SPI2_CR1_DFF_ValuesIS5_Lj11ELj1ES0_S2_ES2_Lj0EvES3_I20SPI2_CR1_CPOL_ValuesIS5_Lj1ELj1ES0_S2_ES2_Lj1EvES3_I20SPI2_CR1_CPHA_ValuesIS5_Lj0ELj1ES0_S2_ES2_Lj1EvES3_I19SPI2_CR1_SSM_ValuesIS5_Lj9ELj1ES0_S2_ES2_Lj1EvES3_I19SPI2_CR1_SSI_ValuesIS5_Lj8ELj1ES0_S2_ES2_Lj1EvES3_I18SPI2_CR1_BR_ValuesIS5_Lj3ELj3ES0_S2_ES2_Lj0EvES3_I24SPI2_CR1_LSBFIRST_ValuesIS5_Lj7ELj1ES0_S2_ES2_Lj0EvES3_I21SPI2_CR1_CRCEN_ValuesIS5_Lj13ELj1ES0_S2_ES2_Lj0EvEEE3SetIS0_vEEvv
           CFI NoCalls
         THUMB
 // __interwork __vfp void Register<1073756160U, 32U, ReadWriteMode, SPI2::SPI2CR1Base, SPI2_CR1_MSTR_Values<SPI2::CR1, 2U, 1U, ReadWriteMode, SPI2::SPI2CR1Base>::Master, SPI2_CR1_BIDIMODE_Values<SPI2::CR1, 15U, 1U, ReadWriteMode, SPI2::SPI2CR1Base>::Unidirectional2Line, SPI2_CR1_DFF_Values<SPI2::CR1, 11U, 1U, ReadWriteMode, SPI2::SPI2CR1Base>::Data8bit, SPI2_CR1_CPOL_Values<SPI2::CR1, 1U, 1U, ReadWriteMode, SPI2::SPI2CR1Base>::High, SPI2_CR1_CPHA_Values<SPI2::CR1, 0U, 1U, ReadWriteMode, SPI2::SPI2CR1Base>::Phase2edge, SPI2_CR1_SSM_Values<SPI2::CR1, 9U, 1U, ReadWriteMode, SPI2::SPI2CR1Base>::NssSoftwareEnable, SPI2_CR1_SSI_Values<SPI2::CR1, 8U, 1U, ReadWriteMode, SPI2::SPI2CR1Base>::Value1, SPI2_CR1_BR_Values<SPI2::CR1, 3U, 3U, ReadWriteMode, SPI2::SPI2CR1Base>::PclockDiv2, SPI2_CR1_LSBFIRST_Values<SPI2::CR1, 7U, 1U, ReadWriteMode, SPI2::SPI2CR1Base>::MsbFisrt, SPI2_CR1_CRCEN_Values<SPI2::CR1, 13U, 1U, ReadWriteMode, SPI2::SPI2CR1Base>::CrcCalcDisable>::Set<ReadWriteMode, void>()
 _ZN8RegisterILj1073756160ELj32E13ReadWriteModeN4SPI211SPI2CR1BaseEJ10FieldValueI20SPI2_CR1_MSTR_ValuesINS1_3CR1ELj2ELj1ES0_S2_ES2_Lj1EvES3_I24SPI2_CR1_BIDIMODE_ValuesIS5_Lj15ELj1ES0_S2_ES2_Lj0EvES3_I19SPI2_CR1_DFF_ValuesIS5_Lj11ELj1ES0_S2_ES2_Lj0EvES3_I20SPI2_CR1_CPOL_ValuesIS5_Lj1ELj1ES0_S2_ES2_Lj1EvES3_I20SPI2_CR1_CPHA_ValuesIS5_Lj0ELj1ES0_S2_ES2_Lj1EvES3_I19SPI2_CR1_SSM_ValuesIS5_Lj9ELj1ES0_S2_ES2_Lj1EvES3_I19SPI2_CR1_SSI_ValuesIS5_Lj8ELj1ES0_S2_ES2_Lj1EvES3_I18SPI2_CR1_BR_ValuesIS5_Lj3ELj3ES0_S2_ES2_Lj0EvES3_I24SPI2_CR1_LSBFIRST_ValuesIS5_Lj7ELj1ES0_S2_ES2_Lj0EvES3_I21SPI2_CR1_CRCEN_ValuesIS5_Lj13ELj1ES0_S2_ES2_Lj0EvEEE3SetIS0_vEEvv:
-        LDR.N    R2,??Set_39      ;; 0x40003800
+        LDR.N    R2,??Set_43      ;; 0x40003800
         LDR      R1,[R2, #+0]
-        LDR.N    R0,??Set_39+0x4  ;; 0xffff5440
+        LDR.N    R0,??Set_43+0x4  ;; 0xffff5440
         ANDS     R1,R0,R1
         MOVW     R0,#+775
         ORRS     R1,R0,R1
@@ -4671,78 +4805,78 @@ _ZN8RegisterILj1073756160ELj32E13ReadWriteModeN4SPI211SPI2CR1BaseEJ10FieldValueI
         BX       LR               ;; return
         Nop      
         DATA
-??Set_39:
+??Set_43:
         DATA32
         DC32     0x40003800
         DC32     0xffff5440
-          CFI EndBlock cfiBlock131
+          CFI EndBlock cfiBlock138
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN8RegisterILj1073887296ELj32E13ReadWriteModeN3RCC14RCCAPB1ENRBaseEJ10FieldValueI25RCC_AHB1ENR_DMA2EN_ValuesINS1_7APB1ENRELj0ELj1ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj17ELj1ES0_S2_ES2_Lj1EvEEE3SetIS0_vEEvv
-          CFI Block cfiBlock132 Using cfiCommon0
+          CFI Block cfiBlock139 Using cfiCommon0
           CFI Function _ZN8RegisterILj1073887296ELj32E13ReadWriteModeN3RCC14RCCAPB1ENRBaseEJ10FieldValueI25RCC_AHB1ENR_DMA2EN_ValuesINS1_7APB1ENRELj0ELj1ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj17ELj1ES0_S2_ES2_Lj1EvEEE3SetIS0_vEEvv
           CFI NoCalls
         THUMB
 // __interwork __vfp void Register<1073887296U, 32U, ReadWriteMode, RCC::RCCAPB1ENRBase, RCC_AHB1ENR_DMA2EN_Values<RCC::APB1ENR, 0U, 1U, ReadWriteMode, RCC::RCCAPB1ENRBase>::Enable, RCC_AHB1ENR_DMA2EN_Values<RCC::APB1ENR, 17U, 1U, ReadWriteMode, RCC::RCCAPB1ENRBase>::Enable>::Set<ReadWriteMode, void>()
 _ZN8RegisterILj1073887296ELj32E13ReadWriteModeN3RCC14RCCAPB1ENRBaseEJ10FieldValueI25RCC_AHB1ENR_DMA2EN_ValuesINS1_7APB1ENRELj0ELj1ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj17ELj1ES0_S2_ES2_Lj1EvEEE3SetIS0_vEEvv:
-        LDR.N    R2,??Set_40      ;; 0x40023840
+        LDR.N    R2,??Set_44      ;; 0x40023840
         LDR      R1,[R2, #+0]
-        LDR.N    R0,??Set_40+0x4  ;; 0xfffdfffe
+        LDR.N    R0,??Set_44+0x4  ;; 0xfffdfffe
         ANDS     R1,R0,R1
         ORR      R1,R1,#0x20000
         ORRS     R1,R1,#0x1
         STR      R1,[R2, #+0]
         BX       LR               ;; return
         DATA
-??Set_40:
+??Set_44:
         DATA32
         DC32     0x40023840
         DC32     0xfffdfffe
-          CFI EndBlock cfiBlock132
+          CFI EndBlock cfiBlock139
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN8RegisterILj1073872896ELj32E13ReadWriteModeN5GPIOA14GPIOAMODERBaseEJ10FieldValueI26GPIOA_MODER_MODER15_ValuesINS1_5MODERELj4ELj2ES0_S2_ES2_Lj2EvES3_IS4_IS5_Lj6ELj2ES0_S2_ES2_Lj2EvEEE3SetIS0_vEEvv
-          CFI Block cfiBlock133 Using cfiCommon0
+          CFI Block cfiBlock140 Using cfiCommon0
           CFI Function _ZN8RegisterILj1073872896ELj32E13ReadWriteModeN5GPIOA14GPIOAMODERBaseEJ10FieldValueI26GPIOA_MODER_MODER15_ValuesINS1_5MODERELj4ELj2ES0_S2_ES2_Lj2EvES3_IS4_IS5_Lj6ELj2ES0_S2_ES2_Lj2EvEEE3SetIS0_vEEvv
           CFI NoCalls
         THUMB
 // __interwork __vfp void Register<1073872896U, 32U, ReadWriteMode, GPIOA::GPIOAMODERBase, GPIOA_MODER_MODER15_Values<GPIOA::MODER, 4U, 2U, ReadWriteMode, GPIOA::GPIOAMODERBase>::Alternate, GPIOA_MODER_MODER15_Values<GPIOA::MODER, 6U, 2U, ReadWriteMode, GPIOA::GPIOAMODERBase>::Alternate>::Set<ReadWriteMode, void>()
 _ZN8RegisterILj1073872896ELj32E13ReadWriteModeN5GPIOA14GPIOAMODERBaseEJ10FieldValueI26GPIOA_MODER_MODER15_ValuesINS1_5MODERELj4ELj2ES0_S2_ES2_Lj2EvES3_IS4_IS5_Lj6ELj2ES0_S2_ES2_Lj2EvEEE3SetIS0_vEEvv:
-        LDR.N    R1,??Set_41      ;; 0x40020000
+        LDR.N    R1,??Set_45      ;; 0x40020000
         LDR      R0,[R1, #+0]
         BICS     R0,R0,#0xF0
         ORRS     R0,R0,#0xA0
         STR      R0,[R1, #+0]
         BX       LR               ;; return
         DATA
-??Set_41:
+??Set_45:
         DATA32
         DC32     0x40020000
-          CFI EndBlock cfiBlock133
+          CFI EndBlock cfiBlock140
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN8RegisterILj1073872928ELj32E13ReadWriteModeN5GPIOA13GPIOAAFRLBaseEJ10FieldValueI23GPIOA_AFRL_AFRL7_ValuesINS1_4AFRLELj8ELj4ES0_S2_ES2_Lj7EvES3_IS4_IS5_Lj12ELj4ES0_S2_ES2_Lj7EvEEE3SetIS0_vEEvv
-          CFI Block cfiBlock134 Using cfiCommon0
+          CFI Block cfiBlock141 Using cfiCommon0
           CFI Function _ZN8RegisterILj1073872928ELj32E13ReadWriteModeN5GPIOA13GPIOAAFRLBaseEJ10FieldValueI23GPIOA_AFRL_AFRL7_ValuesINS1_4AFRLELj8ELj4ES0_S2_ES2_Lj7EvES3_IS4_IS5_Lj12ELj4ES0_S2_ES2_Lj7EvEEE3SetIS0_vEEvv
           CFI NoCalls
         THUMB
 // __interwork __vfp void Register<1073872928U, 32U, ReadWriteMode, GPIOA::GPIOAAFRLBase, GPIOA_AFRL_AFRL7_Values<GPIOA::AFRL, 8U, 4U, ReadWriteMode, GPIOA::GPIOAAFRLBase>::Af7, GPIOA_AFRL_AFRL7_Values<GPIOA::AFRL, 12U, 4U, ReadWriteMode, GPIOA::GPIOAAFRLBase>::Af7>::Set<ReadWriteMode, void>()
 _ZN8RegisterILj1073872928ELj32E13ReadWriteModeN5GPIOA13GPIOAAFRLBaseEJ10FieldValueI23GPIOA_AFRL_AFRL7_ValuesINS1_4AFRLELj8ELj4ES0_S2_ES2_Lj7EvES3_IS4_IS5_Lj12ELj4ES0_S2_ES2_Lj7EvEEE3SetIS0_vEEvv:
-        LDR.N    R1,??Set_42      ;; 0x40020020
+        LDR.N    R1,??Set_46      ;; 0x40020020
         LDR      R0,[R1, #+0]
         BICS     R0,R0,#0xFF00
         ORRS     R0,R0,#0x7700
         STR      R0,[R1, #+0]
         BX       LR               ;; return
         DATA
-??Set_42:
+??Set_46:
         DATA32
         DC32     0x40020020
-          CFI EndBlock cfiBlock134
+          CFI EndBlock cfiBlock141
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
         SECTION_GROUP _ZN9OsWrapper5EventC1ENSt6chrono8durationIxSt5ratioILx1ELx1000EEEEj
-          CFI Block cfiBlock135 Using cfiCommon0
+          CFI Block cfiBlock142 Using cfiCommon0
           CFI Function _ZN9OsWrapper5EventC1ENSt6chrono8durationIxSt5ratioILx1ELx1000EEEEj
         THUMB
 // __code __interwork __vfp OsWrapper::Event::Event(std::chrono::milliseconds, uint32_t)
@@ -4775,11 +4909,11 @@ _ZN9OsWrapper5EventC1ENSt6chrono8durationIxSt5ratioILx1ELx1000EEEEj:
         ADD      SP,SP,#+20
           CFI CFA R13+12
         POP      {R4,R5,PC}       ;; return
-          CFI EndBlock cfiBlock135
+          CFI EndBlock cfiBlock142
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
         SECTION_GROUP _ZN9OsWrapper5EventD1Ev
-          CFI Block cfiBlock136 Using cfiCommon0
+          CFI Block cfiBlock143 Using cfiCommon0
           CFI Function _ZN9OsWrapper5EventD1Ev
         THUMB
 // __code __interwork __vfp OsWrapper::Event::~Event()
@@ -4794,11 +4928,11 @@ _ZN9OsWrapper5EventD1Ev:
         BL       _ZN9OsWrapper11RtosWrapper12wDeleteEventERPv
         MOVS     R0,R4
         POP      {R4,PC}          ;; return
-          CFI EndBlock cfiBlock136
+          CFI EndBlock cfiBlock143
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
         SECTION_GROUP _ZNK9OsWrapper5Event4WaitENS_9EventModeEj
-          CFI Block cfiBlock137 Using cfiCommon0
+          CFI Block cfiBlock144 Using cfiCommon0
           CFI Function _ZNK9OsWrapper5Event4WaitENS_9EventModeEj
         THUMB
 // __interwork __vfp uint32_t OsWrapper::Event::Wait(OsWrapper::EventMode, uint32_t) const
@@ -4812,11 +4946,11 @@ _ZNK9OsWrapper5Event4WaitENS_9EventModeEj:
           CFI FunCall _ZN9OsWrapper11RtosWrapper10wWaitEventERKPvjjNS_9EventModeE
         BL       _ZN9OsWrapper11RtosWrapper10wWaitEventERKPvjjNS_9EventModeE
         POP      {R1,PC}          ;; return
-          CFI EndBlock cfiBlock137
+          CFI EndBlock cfiBlock144
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
         SECTION_GROUP _ZN10ButtonPollI5TimerEC1ER6ButtonI5GPIOCLi13EERN9OsWrapper5EventE
-          CFI Block cfiBlock138 Using cfiCommon0
+          CFI Block cfiBlock145 Using cfiCommon0
           CFI Function _ZN10ButtonPollI5TimerEC1ER6ButtonI5GPIOCLi13EERN9OsWrapper5EventE
           CFI NoCalls
         THUMB
@@ -4825,11 +4959,26 @@ _ZN10ButtonPollI5TimerEC1ER6ButtonI5GPIOCLi13EERN9OsWrapper5EventE:
         STR      R2,[R0, #+0]
         STR      R1,[R0, #+4]
         BX       LR               ;; return
-          CFI EndBlock cfiBlock138
+          CFI EndBlock cfiBlock145
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZN10ButtonPollI5TimerE24ButtonPollInitializationEv
+          CFI Block cfiBlock146 Using cfiCommon0
+          CFI Function _ZN10ButtonPollI5TimerE24ButtonPollInitializationEv
+        THUMB
+// __interwork __vfp void ButtonPoll<Timer>::ButtonPollInitialization()
+_ZN10ButtonPollI5TimerE24ButtonPollInitializationEv:
+        PUSH     {R7,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI CFA R13+8
+          CFI FunCall _ZN5Timer5StartEv
+        BL       _ZN5Timer5StartEv
+        POP      {R0,PC}          ;; return
+          CFI EndBlock cfiBlock146
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
         SECTION_GROUP _ZN11USARTDriverI6Usart2EC1Ev
-          CFI Block cfiBlock139 Using cfiCommon0
+          CFI Block cfiBlock147 Using cfiCommon0
           CFI Function _ZN11USARTDriverI6Usart2EC1Ev
           CFI NoCalls
         THUMB
@@ -4840,11 +4989,11 @@ _ZN11USARTDriverI6Usart2EC1Ev:
         MOVS     R1,#+0
         STR      R1,[R0, #+260]
         BX       LR               ;; return
-          CFI EndBlock cfiBlock139
+          CFI EndBlock cfiBlock147
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN11USARTDriverI6Usart2E11SendMessageEPKcj
-          CFI Block cfiBlock140 Using cfiCommon0
+          CFI Block cfiBlock148 Using cfiCommon0
           CFI Function _ZN11USARTDriverI6Usart2E11SendMessageEPKcj
         THUMB
 // __interwork __vfp void USARTDriver<Usart2>::SendMessage(char const *, size_t)
@@ -4902,11 +5051,11 @@ _ZN11USARTDriverI6Usart2E11SendMessageEPKcj:
         DATA32
         DC32     _ZZN11USARTDriverI6Usart2E11SendMessageEPKcjEs_0
         DC32     _ZZN11USARTDriverI6Usart2E11SendMessageEPKcjEs
-          CFI EndBlock cfiBlock140
+          CFI EndBlock cfiBlock148
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
         SECTION_GROUP _ZN5UsartI6USART2E9WriteByteEh
-          CFI Block cfiBlock141 Using cfiCommon0
+          CFI Block cfiBlock149 Using cfiCommon0
           CFI Function _ZN5UsartI6USART2E9WriteByteEh
         THUMB
 // __interwork __vfp void Usart<USART2>::WriteByte(uint8_t)
@@ -4918,11 +5067,11 @@ _ZN5UsartI6USART2E9WriteByteEh:
           CFI FunCall _ZN12RegisterBaseILj1073759236ELj32E13ReadWriteModeE5WriteIS0_vEEvj
         BL       _ZN12RegisterBaseILj1073759236ELj32E13ReadWriteModeE5WriteIS0_vEEvj
         POP      {R0,PC}          ;; return
-          CFI EndBlock cfiBlock141
+          CFI EndBlock cfiBlock149
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
         SECTION_GROUP _ZN5UsartI6USART2E14TransmitEnableEv
-          CFI Block cfiBlock142 Using cfiCommon0
+          CFI Block cfiBlock150 Using cfiCommon0
           CFI Function _ZN5UsartI6USART2E14TransmitEnableEv
         THUMB
 // __interwork __vfp void Usart<USART2>::TransmitEnable()
@@ -4933,11 +5082,11 @@ _ZN5UsartI6USART2E14TransmitEnableEv:
           CFI FunCall _ZN14FieldValueBaseI20USART2_CR1_TE_ValuesIN6USART23CR1ELj3ELj1E13ReadWriteModeNS1_13USART2CR1BaseEES4_Lj1EE3SetIS3_vEEvv
         BL       _ZN14FieldValueBaseI20USART2_CR1_TE_ValuesIN6USART23CR1ELj3ELj1E13ReadWriteModeNS1_13USART2CR1BaseEES4_Lj1EE3SetIS3_vEEvv
         POP      {R0,PC}          ;; return
-          CFI EndBlock cfiBlock142
+          CFI EndBlock cfiBlock150
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
         SECTION_GROUP _ZN5UsartI6USART2E15InterruptEnableEv
-          CFI Block cfiBlock143 Using cfiCommon0
+          CFI Block cfiBlock151 Using cfiCommon0
           CFI Function _ZN5UsartI6USART2E15InterruptEnableEv
         THUMB
 // __interwork __vfp void Usart<USART2>::InterruptEnable()
@@ -4948,11 +5097,46 @@ _ZN5UsartI6USART2E15InterruptEnableEv:
           CFI FunCall _ZN14FieldValueBaseI23USART2_CR1_TXEIE_ValuesIN6USART23CR1ELj7ELj1E13ReadWriteModeNS1_13USART2CR1BaseEES4_Lj1EE3SetIS3_vEEvv
         BL       _ZN14FieldValueBaseI23USART2_CR1_TXEIE_ValuesIN6USART23CR1ELj7ELj1E13ReadWriteModeNS1_13USART2CR1BaseEES4_Lj1EE3SetIS3_vEEvv
         POP      {R0,PC}          ;; return
-          CFI EndBlock cfiBlock143
+          CFI EndBlock cfiBlock151
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZN5Timer5StartEv
+          CFI Block cfiBlock152 Using cfiCommon0
+          CFI Function _ZN5Timer5StartEv
+        THUMB
+// __interwork __vfp void Timer::Start()
+_ZN5Timer5StartEv:
+        PUSH     {R7,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI CFA R13+8
+          CFI FunCall _ZN14FieldValueBaseI25RCC_AHB1ENR_DMA2EN_ValuesIN3RCC7APB1ENRELj0ELj1E13ReadWriteModeNS1_14RCCAPB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv
+        BL       _ZN14FieldValueBaseI25RCC_AHB1ENR_DMA2EN_ValuesIN3RCC7APB1ENRELj0ELj1E13ReadWriteModeNS1_14RCCAPB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv
+        MOVW     R0,#+7999
+          CFI FunCall _ZN12RegisterBaseILj1073741864ELj32E13ReadWriteModeE5WriteIS0_vEEvj
+        BL       _ZN12RegisterBaseILj1073741864ELj32E13ReadWriteModeE5WriteIS0_vEEvj
+        MOVW     R0,#+499
+          CFI FunCall _ZN12RegisterBaseILj1073741868ELj32E13ReadWriteModeE5WriteIS0_vEEvj
+        BL       _ZN12RegisterBaseILj1073741868ELj32E13ReadWriteModeE5WriteIS0_vEEvj
+        MOVS     R0,#+0
+          CFI FunCall _ZN12RegisterBaseILj1073741860ELj32E13ReadWriteModeE5WriteIS0_vEEvj
+        BL       _ZN12RegisterBaseILj1073741860ELj32E13ReadWriteModeE5WriteIS0_vEEvj
+          CFI FunCall _ZN14FieldValueBaseI20TIM2_DIER_UIE_ValuesIN4TIM24DIERELj0ELj1E13ReadWriteModeNS1_12TIM2DIERBaseEES4_Lj1EE3SetIS3_vEEvv
+        BL       _ZN14FieldValueBaseI20TIM2_DIER_UIE_ValuesIN4TIM24DIERELj0ELj1E13ReadWriteModeNS1_12TIM2DIERBaseEES4_Lj1EE3SetIS3_vEEvv
+          CFI FunCall _ZN14FieldValueBaseI18TIM2_SR_UIF_ValuesIN4TIM22SRELj0ELj1E13ReadWriteModeNS1_10TIM2SRBaseEES4_Lj0EE3SetIS3_vEEvv
+        BL       _ZN14FieldValueBaseI18TIM2_SR_UIF_ValuesIN4TIM22SRELj0ELj1E13ReadWriteModeNS1_10TIM2SRBaseEES4_Lj0EE3SetIS3_vEEvv
+          CFI FunCall _ZN14FieldValueBaseI19TIM2_CR1_CEN_ValuesIN4TIM23CR1ELj0ELj1E13ReadWriteModeNS1_11TIM2CR1BaseEES4_Lj1EE3SetIS3_vEEvv
+        BL       _ZN14FieldValueBaseI19TIM2_CR1_CEN_ValuesIN4TIM23CR1ELj0ELj1E13ReadWriteModeNS1_11TIM2CR1BaseEES4_Lj1EE3SetIS3_vEEvv
+          CFI FunCall _ZN14FieldValueBaseI19TIM2_CR1_URS_ValuesIN4TIM23CR1ELj2ELj1E13ReadWriteModeNS1_11TIM2CR1BaseEES4_Lj1EE3SetIS3_vEEvv
+        BL       _ZN14FieldValueBaseI19TIM2_CR1_URS_ValuesIN4TIM23CR1ELj2ELj1E13ReadWriteModeNS1_11TIM2CR1BaseEES4_Lj1EE3SetIS3_vEEvv
+        MOVS     R0,#+268435456
+          CFI FunCall _ZN12RegisterBaseILj3758153984ELj32E13ReadWriteModeE5WriteIS0_vEEvj
+        BL       _ZN12RegisterBaseILj3758153984ELj32E13ReadWriteModeE5WriteIS0_vEEvj
+        POP      {R0,PC}          ;; return
+          CFI EndBlock cfiBlock152
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
         SECTION_GROUP _ZN6IUnits8GetValueEv
-          CFI Block cfiBlock144 Using cfiCommon0
+          CFI Block cfiBlock153 Using cfiCommon0
           CFI Function _ZN6IUnits8GetValueEv
           CFI NoCalls
         THUMB
@@ -4960,11 +5144,11 @@ _ZN5UsartI6USART2E15InterruptEnableEv:
 _ZN6IUnits8GetValueEv:
         VLDR     S0,[R0, #+4]
         BX       LR               ;; return
-          CFI EndBlock cfiBlock144
+          CFI EndBlock cfiBlock153
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN7CelsiusC1Ev
-          CFI Block cfiBlock145 Using cfiCommon0
+          CFI Block cfiBlock154 Using cfiCommon0
           CFI Function _ZN7CelsiusC1Ev
           CFI NoCalls
         THUMB
@@ -4978,11 +5162,11 @@ _ZN7CelsiusC1Ev:
 ??Celsius_0:
         DATA32
         DC32     _ZTV7Celsius+0x8
-          CFI EndBlock cfiBlock145
+          CFI EndBlock cfiBlock154
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
         SECTION_GROUP _ZN7Celsius9CalculateEf
-          CFI Block cfiBlock146 Using cfiCommon0
+          CFI Block cfiBlock155 Using cfiCommon0
           CFI Function _ZN7Celsius9CalculateEf
           CFI NoCalls
         THUMB
@@ -4990,11 +5174,11 @@ _ZN7CelsiusC1Ev:
 _ZN7Celsius9CalculateEf:
         VSTR     S0,[R0, #+4]
         BX       LR               ;; return
-          CFI EndBlock cfiBlock146
+          CFI EndBlock cfiBlock155
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN6KelvinC1Ev
-          CFI Block cfiBlock147 Using cfiCommon0
+          CFI Block cfiBlock156 Using cfiCommon0
           CFI Function _ZN6KelvinC1Ev
           CFI NoCalls
         THUMB
@@ -5008,11 +5192,11 @@ _ZN6KelvinC1Ev:
 ??Kelvin_0:
         DATA32
         DC32     _ZTV6Kelvin+0x8
-          CFI EndBlock cfiBlock147
+          CFI EndBlock cfiBlock156
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN6Kelvin9CalculateEf
-          CFI Block cfiBlock148 Using cfiCommon0
+          CFI Block cfiBlock157 Using cfiCommon0
           CFI Function _ZN6Kelvin9CalculateEf
           CFI NoCalls
         THUMB
@@ -5027,11 +5211,11 @@ _ZN6Kelvin9CalculateEf:
 ??Calculate_0:
         DATA32
         DC32     0x43888000
-          CFI EndBlock cfiBlock148
+          CFI EndBlock cfiBlock157
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN10FahrenheitC1Ev
-          CFI Block cfiBlock149 Using cfiCommon0
+          CFI Block cfiBlock158 Using cfiCommon0
           CFI Function _ZN10FahrenheitC1Ev
           CFI NoCalls
         THUMB
@@ -5045,11 +5229,11 @@ _ZN10FahrenheitC1Ev:
 ??Fahrenheit_0:
         DATA32
         DC32     _ZTV10Fahrenheit+0x8
-          CFI EndBlock cfiBlock149
+          CFI EndBlock cfiBlock158
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN10Fahrenheit9CalculateEf
-          CFI Block cfiBlock150 Using cfiCommon0
+          CFI Block cfiBlock159 Using cfiCommon0
           CFI Function _ZN10Fahrenheit9CalculateEf
           CFI NoCalls
         THUMB
@@ -5068,11 +5252,11 @@ _ZN10Fahrenheit9CalculateEf:
 ??Calculate_1:
         DATA32
         DC32     0x42000000
-          CFI EndBlock cfiBlock150
+          CFI EndBlock cfiBlock159
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
         SECTION_GROUP _ZN4Temp12SetNextUnitsEv
-          CFI Block cfiBlock151 Using cfiCommon0
+          CFI Block cfiBlock160 Using cfiCommon0
           CFI Function _ZN4Temp12SetNextUnitsEv
         THUMB
 // __interwork __vfp void Temp::SetNextUnits()
@@ -5097,11 +5281,11 @@ _ZN4Temp12SetNextUnitsEv:
         STR      R0,[R4, #+16]
 ??SetNextUnits_0:
         POP      {R4,PC}          ;; return
-          CFI EndBlock cfiBlock151
+          CFI EndBlock cfiBlock160
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
         SECTION_GROUP _ZN4Temp21GetTempInCurrentUnitsEf
-          CFI Block cfiBlock152 Using cfiCommon0
+          CFI Block cfiBlock161 Using cfiCommon0
           CFI Function _ZN4Temp21GetTempInCurrentUnitsEf
         THUMB
 // __interwork __vfp float Temp::GetTempInCurrentUnits(float)
@@ -5121,11 +5305,11 @@ _ZN4Temp21GetTempInCurrentUnitsEf:
           CFI FunCall _ZN6IUnits8GetValueEv
         BL       _ZN6IUnits8GetValueEv
         POP      {R4,PC}          ;; return
-          CFI EndBlock cfiBlock152
+          CFI EndBlock cfiBlock161
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
         SECTION_GROUP _ZN4Temp8GetUnitsEv
-          CFI Block cfiBlock153 Using cfiCommon0
+          CFI Block cfiBlock162 Using cfiCommon0
           CFI Function _ZN4Temp8GetUnitsEv
           CFI NoCalls
         THUMB
@@ -5148,13 +5332,14 @@ _ZN4Temp8GetUnitsEv:
         MOVS     R0,#+70
         B.N      ??GetUnits_4
 ??GetUnits_3:
+        MOVS     R0,#+0
 ??GetUnits_4:
         BX       LR               ;; return
-          CFI EndBlock cfiBlock153
+          CFI EndBlock cfiBlock162
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
         SECTION_GROUP _ZN5SMBus8ReadWordEh
-          CFI Block cfiBlock154 Using cfiCommon0
+          CFI Block cfiBlock163 Using cfiCommon0
           CFI Function _ZN5SMBus8ReadWordEh
         THUMB
 // __interwork __vfp uint16_t SMBus::ReadWord(uint8_t)
@@ -5240,11 +5425,11 @@ _ZN5SMBus8ReadWordEh:
         UXTAH    R0,R0,R4
         UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
         POP      {R4,PC}          ;; return
-          CFI EndBlock cfiBlock154
+          CFI EndBlock cfiBlock163
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
         SECTION_GROUP _ZN6FilterC1Eff
-          CFI Block cfiBlock155 Using cfiCommon0
+          CFI Block cfiBlock164 Using cfiCommon0
           CFI Function _ZN6FilterC1Eff
         THUMB
 // __code __interwork __vfp Filter::Filter(float, float)
@@ -5275,40 +5460,43 @@ _ZN6FilterC1Eff:
 ??Filter_1:
         MOVS     R0,R4
         POP      {R4,PC}          ;; return
-          CFI EndBlock cfiBlock155
+          CFI EndBlock cfiBlock164
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
         SECTION_GROUP _ZN6Filter12FiltredValueEf
-          CFI Block cfiBlock156 Using cfiCommon0
+          CFI Block cfiBlock165 Using cfiCommon0
           CFI Function _ZN6Filter12FiltredValueEf
           CFI NoCalls
         THUMB
 // __interwork __vfp float Filter::FiltredValue(float)
 _ZN6Filter12FiltredValueEf:
         VLDR     S1,[R0, #0]
-        VSUB.F32 S1,S0,S1
-        VLDR     S2,[R0, #+4]
-        VLDR     S0,[R0, #0]
-        VMLA.F32 S0,S1,S2
-        VSTR     S0,[R0, #0]
+        VSUB.F32 S0,S0,S1
+        VLDR     S1,[R0, #+4]
+        VLDR     S2,[R0, #0]
+        VMLA.F32 S2,S0,S1
+        VSTR     S2,[R0, #+8]
+        LDR      R1,[R0, #+8]
+        STR      R1,[R0, #+0]
+        VLDR     S0,[R0, #+8]
         BX       LR               ;; return
-          CFI EndBlock cfiBlock156
+          CFI EndBlock cfiBlock165
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
         SECTION_GROUP _ZN8TempSensC1ER6Filter
-          CFI Block cfiBlock157 Using cfiCommon0
+          CFI Block cfiBlock166 Using cfiCommon0
           CFI Function _ZN8TempSensC1ER6Filter
           CFI NoCalls
         THUMB
 // __code __interwork __vfp TempSens::TempSens(Filter &)
 _ZN8TempSensC1ER6Filter:
-        STR      R1,[R0, #+4]
+        STR      R1,[R0, #+8]
         BX       LR               ;; return
-          CFI EndBlock cfiBlock157
+          CFI EndBlock cfiBlock166
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN8TempSens8TakeMeasEv
-          CFI Block cfiBlock158 Using cfiCommon0
+          CFI Block cfiBlock167 Using cfiCommon0
           CFI Function _ZN8TempSens8TakeMeasEv
         THUMB
 // __interwork __vfp float TempSens::TakeMeas()
@@ -5325,13 +5513,16 @@ _ZN8TempSens8TakeMeasEv:
         VCVT.F32.U32 S0,S0
         VSTR     S0,[R4, #0]
         VLDR     S0,[R4, #0]
-        LDR      R0,[R4, #+4]
+        LDR      R0,[R4, #+8]
           CFI FunCall _ZN6Filter12FiltredValueEf
         BL       _ZN6Filter12FiltredValueEf
-        VMOV.F32 S1,S0
-        VLDR.W   S2,??TakeMeas_0  ;; 0x3ca3d70a
-        VLDR.W   S0,??TakeMeas_0+0x4  ;; 0xc3889333
-        VMLA.F32 S0,S1,S2
+        VSTR     S0,[R4, #+4]
+        VLDR     S0,[R4, #+4]
+        VLDR.W   S1,??TakeMeas_0  ;; 0x3ca3d70a
+        VLDR.W   S2,??TakeMeas_0+0x4  ;; 0xc3889333
+        VMLA.F32 S2,S0,S1
+        VSTR     S2,[R4, #+4]
+        VLDR     S0,[R4, #+4]
         POP      {R4,PC}          ;; return
         Nop      
         DATA
@@ -5339,11 +5530,11 @@ _ZN8TempSens8TakeMeasEv:
         DATA32
         DC32     0x3ca3d70a
         DC32     0xc3889333
-          CFI EndBlock cfiBlock158
+          CFI EndBlock cfiBlock167
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN15TemperatureTaskC1ER4TempR8TempSensRN9OsWrapper5EventE
-          CFI Block cfiBlock159 Using cfiCommon0
+          CFI Block cfiBlock168 Using cfiCommon0
           CFI Function _ZN15TemperatureTaskC1ER4TempR8TempSensRN9OsWrapper5EventE
         THUMB
 // __code __interwork __vfp TemperatureTask::TemperatureTask(Temp &, TempSens &, OsWrapper::Event &)
@@ -5364,105 +5555,125 @@ _ZN15TemperatureTaskC1ER4TempR8TempSensRN9OsWrapper5EventE:
         BL       _ZN9OsWrapper6ThreadILj512EEC2Ev
         LDR.N    R0,??TemperatureTask_0
         STR      R0,[R4, #+0]
-        STR      R7,[R4, #+2144]
-        STR      R5,[R4, #+2148]
-        STR      R6,[R4, #+2152]
+        STR      R7,[R4, #+2140]
+        STR      R5,[R4, #+2144]
+        STR      R6,[R4, #+2148]
         MOVS     R0,R4
         POP      {R1,R4-R7,PC}    ;; return
         DATA
 ??TemperatureTask_0:
         DATA32
         DC32     _ZTV15TemperatureTask+0x8
-          CFI EndBlock cfiBlock159
+          CFI EndBlock cfiBlock168
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN15TemperatureTask7ExecuteEv
-          CFI Block cfiBlock160 Using cfiCommon0
+          CFI Block cfiBlock169 Using cfiCommon0
           CFI Function _ZN15TemperatureTask7ExecuteEv
         THUMB
 // __interwork __vfp void TemperatureTask::Execute()
 _ZN15TemperatureTask7ExecuteEv:
-        PUSH     {R4,LR}
+        PUSH     {R2-R4,LR}
           CFI R14 Frame(CFA, -4)
           CFI R4 Frame(CFA, -8)
-          CFI CFA R13+8
-        MOVS     R4,R0
-        MOVS     R2,#+255
-        MOVS     R1,#+0
-        LDR      R0,[R4, #+2144]
-          CFI FunCall _ZNK9OsWrapper5Event4WaitENS_9EventModeEj
-        BL       _ZNK9OsWrapper5Event4WaitENS_9EventModeEj
-        CMP      R0,#+0
-        BEQ.N    ??Execute_1
-        LDR      R0,[R4, #+2148]
-          CFI FunCall _ZN4Temp12SetNextUnitsEv
-        BL       _ZN4Temp12SetNextUnitsEv
-??Execute_1:
-        LDR      R0,[R4, #+2152]
-          CFI FunCall _ZN8TempSens8TakeMeasEv
-        BL       _ZN8TempSens8TakeMeasEv
-        ADDW     R0,R4,#+2140
-        VSTR     S0,[R0, #0]
-        LDR.N    R2,??Execute_0
-        LDRD     R0,R1,[R2, #+0]
-          CFI FunCall _ZN9OsWrapper7IThread5SleepENSt6chrono8durationIxSt5ratioILx1ELx1000EEEE
-        BL       _ZN9OsWrapper7IThread5SleepENSt6chrono8durationIxSt5ratioILx1ELx1000EEEE
-        POP      {R4,PC}          ;; return
-        DATA
-??Execute_0:
-        DATA32
-        DC32     ?_2
-          CFI EndBlock cfiBlock160
-
-        SECTION `.text`:CODE:REORDER:NOROOT(2)
-        SECTION_GROUP _ZN15TemperatureTask8GetValueEv
-          CFI Block cfiBlock161 Using cfiCommon0
-          CFI Function _ZN15TemperatureTask8GetValueEv
-        THUMB
-// __interwork __vfp char *TemperatureTask::GetValue()
-_ZN15TemperatureTask8GetValueEv:
-        PUSH     {R4,LR}
-          CFI R14 Frame(CFA, -4)
-          CFI R4 Frame(CFA, -8)
-          CFI CFA R13+8
-        VPUSH    {D8}
-          CFI D8 Frame(CFA, -16)
           CFI CFA R13+16
-        SUB      SP,SP,#+16
-          CFI CFA R13+32
         MOVS     R4,R0
-        LDR      R0,[R4, #+2140]
+??Execute_1:
+        LDR      R0,[R4, #+2164]
         VMOV     S0,R0
-        LDR      R0,[R4, #+2148]
+        LDR      R0,[R4, #+2144]
           CFI FunCall _ZN4Temp21GetTempInCurrentUnitsEf
         BL       _ZN4Temp21GetTempInCurrentUnitsEf
-        VMOV.F32 S16,S0
-        LDR      R0,[R4, #+2148]
+        ADDW     R0,R4,#+2168
+        VSTR     S0,[R0, #0]
+        LDR      R0,[R4, #+2144]
           CFI FunCall _ZN4Temp8GetUnitsEv
         BL       _ZN4Temp8GetUnitsEv
         UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
         STR      R0,[SP, #+0]
-        VMOV     R0,S16
+        LDR      R0,[R4, #+2168]
+          CFI FunCall __aeabi_f2d
+        BL       __aeabi_f2d
+        MOVS     R2,R0
+        MOVS     R3,R1
+        LDR.N    R1,??Execute_0
+        ADDW     R0,R4,#+2152
+          CFI FunCall sprintf
+        BL       sprintf
+        ADDW     R1,R4,#+2152
+        LDR.N    R0,??Execute_0+0x4
+          CFI FunCall _ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc
+        BL       _ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc
+        LDR.N    R1,??Execute_0+0x8
+          CFI FunCall _ZNSolsEPFRSoS_E
+        BL       _ZNSolsEPFRSoS_E
+        MOVS     R2,#+255
+        MOVS     R1,#+0
+        LDR      R0,[R4, #+2140]
+          CFI FunCall _ZNK9OsWrapper5Event4WaitENS_9EventModeEj
+        BL       _ZNK9OsWrapper5Event4WaitENS_9EventModeEj
+        CMP      R0,#+0
+        BEQ.N    ??Execute_2
+        LDR      R0,[R4, #+2144]
+          CFI FunCall _ZN4Temp12SetNextUnitsEv
+        BL       _ZN4Temp12SetNextUnitsEv
+??Execute_2:
+        LDR      R0,[R4, #+2148]
+          CFI FunCall _ZN8TempSens8TakeMeasEv
+        BL       _ZN8TempSens8TakeMeasEv
+        ADDW     R0,R4,#+2164
+        VSTR     S0,[R0, #0]
+        B.N      ??Execute_1
+        DATA
+??Execute_0:
+        DATA32
+        DC32     _ZZN15TemperatureTask7ExecuteEvEs
+        DC32     _ZSt4cout
+        DC32     _ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_
+          CFI EndBlock cfiBlock169
+
+        SECTION `.text`:CODE:REORDER:NOROOT(2)
+        SECTION_GROUP _ZN15TemperatureTask8GetValueEv
+          CFI Block cfiBlock170 Using cfiCommon0
+          CFI Function _ZN15TemperatureTask8GetValueEv
+        THUMB
+// __interwork __vfp char *TemperatureTask::GetValue()
+_ZN15TemperatureTask8GetValueEv:
+        PUSH     {R2-R4,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI R4 Frame(CFA, -8)
+          CFI CFA R13+16
+        MOVS     R4,R0
+        LDR      R0,[R4, #+2164]
+        VMOV     S0,R0
+        LDR      R0,[R4, #+2144]
+          CFI FunCall _ZN4Temp21GetTempInCurrentUnitsEf
+        BL       _ZN4Temp21GetTempInCurrentUnitsEf
+        ADDW     R0,R4,#+2168
+        VSTR     S0,[R0, #0]
+        LDR      R0,[R4, #+2144]
+          CFI FunCall _ZN4Temp8GetUnitsEv
+        BL       _ZN4Temp8GetUnitsEv
+        STRB     R0,[R4, #+2172]
+        LDRB     R0,[R4, #+2172]
+        STR      R0,[SP, #+0]
+        LDR      R0,[R4, #+2168]
           CFI FunCall __aeabi_f2d
         BL       __aeabi_f2d
         MOVS     R2,R0
         MOVS     R3,R1
         LDR.N    R1,??GetValue_0
-        ADD      R0,SP,#+4
+        ADDW     R0,R4,#+2152
           CFI FunCall sprintf
         BL       sprintf
-        ADD      R0,SP,#+4
-        ADD      SP,SP,#+16
-          CFI CFA R13+16
-        VPOP     {D8}
-          CFI D8 SameValue
-          CFI CFA R13+8
-        POP      {R4,PC}          ;; return
+        ADDW     R0,R4,#+2152
+        POP      {R1,R2,R4,PC}    ;; return
+        Nop      
         DATA
 ??GetValue_0:
         DATA32
         DC32     _ZZN15TemperatureTask8GetValueEvEs
-          CFI EndBlock cfiBlock161
+          CFI EndBlock cfiBlock170
 
         SECTION `.iar_vfe_vtableinfo_ZTVSt5ctypeIcE`:DATA:NOALLOC:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
@@ -5690,8 +5901,6 @@ _ZN15TemperatureTask8GetValueEv:
         DC32 0
 
         END
-//  217 
-//  218 
 //  219 
 //  220 
 //  221 
@@ -5703,16 +5912,18 @@ _ZN15TemperatureTask8GetValueEv:
 //  227 
 //  228 
 //  229 
+//  230 
+//  231 
 // 
-// 2'515 bytes in section .bss
+// 2'543 bytes in section .bss
 //    24 bytes in section .data
 //     4 bytes in section .init_array
-// 1'071 bytes in section .rodata
-// 4'432 bytes in section .text
+// 1'075 bytes in section .rodata
+// 4'684 bytes in section .text
 // 
-//   574 bytes of CODE  memory (+ 3'862 bytes shared)
-//    48 bytes of CONST memory (+ 1'023 bytes shared)
-// 2'242 bytes of DATA  memory (+   297 bytes shared)
+//   576 bytes of CODE  memory (+ 4'112 bytes shared)
+//    40 bytes of CONST memory (+ 1'035 bytes shared)
+// 2'270 bytes of DATA  memory (+   297 bytes shared)
 //
 //Errors: none
-//Warnings: 4
+//Warnings: none

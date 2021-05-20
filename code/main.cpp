@@ -26,9 +26,9 @@
 #include "stkregisters.hpp"
 #include "scbregisters.hpp"
 using namespace std;
-extern "C" uint32_t SystemCoreClock = 16000000U;
+extern "C" uint32_t SystemCoreClock = 8000000U;
 
- constexpr std::uint32_t UartSpeed9600 = std::uint32_t(16000000U / 9600U);
+ constexpr std::uint32_t UartSpeed9600 = std::uint32_t(8000000U / 9600U);
 
 extern "C" {
 int __low_level_init(void)
@@ -40,7 +40,7 @@ int __low_level_init(void)
 
   }
   //Switch system clock on external oscillator
-  RCC::CFGR::SW::Hsi::Set() ;
+  RCC::CFGR::SW::Hsi::Set();
   while (!RCC::CFGR::SWS::Hsi::IsSet())
   {
 
@@ -48,10 +48,12 @@ int __low_level_init(void)
   STK::LOAD::Write(SystemCoreClock/1000U - 1);
   STK::VAL::Write(0U);
   STK::CTRL::CLKSOURCE::CpuClock::Set();
+  STK::CTRL::TICKINT::EnableInterrupt::Set();
   STK::CTRL::ENABLE::Enable::Set();
-  while(SCB::ICSR::PENDSTSET::PendingState::IsSet())
-  {
-  }
+  
+//  while(SCB::ICSR::PENDSTSET::PendingState::IsSet())
+//  {
+//  }
 
    //RCC::APB2ENR::SYSCFGEN::Enable::Set(); 
   
@@ -198,7 +200,7 @@ int main()
 //  point.y = 130 ;
 //  point.x = 100 ;
   
-  //buttonPoll.ButtonPollInitialization();
+  buttonPoll.ButtonPollInitialization();
   //using namespace OsWrapper;
    Rtos::CreateThread(temperatureTask, "temperatureTask", ThreadPriority::normal);
    Rtos::Start();
@@ -212,7 +214,7 @@ int main()
    
    
   }
-  return 0;
+
 }
 
 

@@ -1,13 +1,13 @@
 ///////////////////////////////////////////////////////////////////////////////
 //
-// IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM        19/May/2021  21:13:57
+// IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM        20/May/2021  20:32:26
 // Copyright 1999-2019 IAR Systems AB.
 //
 //    Cpu mode     =  
 //    Endian       =  little
 //    Source file  =  D:\Git\POIP\Kursovoy\code\AHardware\Timer\Timer.cpp
 //    Command line =
-//        -f C:\Users\KONSTA~1\AppData\Local\Temp\EWE6C3.tmp
+//        -f C:\Users\KONSTA~1\AppData\Local\Temp\EW3F60.tmp
 //        (D:\Git\POIP\Kursovoy\code\AHardware\Timer\Timer.cpp -lC
 //        D:\Git\POIP\Kursovoy\code\Debug\List -lA
 //        D:\Git\POIP\Kursovoy\code\Debug\List -o
@@ -110,6 +110,7 @@
 
         PUBLIC _ZN10ButtonPollI5TimerE4PollEv
         PUBLIC _ZN12RegisterBaseILj1073874960ELj32E8ReadModeE3GetIS0_vEEjv
+        PUBLIC _ZN14FieldValueBaseI18TIM2_SR_UIF_ValuesIN4TIM22SRELj0ELj1E13ReadWriteModeNS1_10TIM2SRBaseEES4_Lj0EE3SetIS3_vEEvv
         PUBLIC _ZN5Timer16InterruptHandlerEv
         PUBLIC _ZN6ButtonI5GPIOCLi13EE9IsPressedEv
         PUBLIC _ZN9OsWrapper11RtosWrapper12wSignalEventERKPvj
@@ -172,8 +173,28 @@
 //    1 #include "timer.hpp" // for Timer
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
-        SECTION_GROUP _ZN12RegisterBaseILj1073874960ELj32E8ReadModeE3GetIS0_vEEjv
+        SECTION_GROUP _ZN14FieldValueBaseI18TIM2_SR_UIF_ValuesIN4TIM22SRELj0ELj1E13ReadWriteModeNS1_10TIM2SRBaseEES4_Lj0EE3SetIS3_vEEvv
           CFI Block cfiBlock0 Using cfiCommon0
+          CFI Function _ZN14FieldValueBaseI18TIM2_SR_UIF_ValuesIN4TIM22SRELj0ELj1E13ReadWriteModeNS1_10TIM2SRBaseEES4_Lj0EE3SetIS3_vEEvv
+          CFI NoCalls
+        THUMB
+// __interwork __vfp void FieldValueBase<TIM2_SR_UIF_Values<TIM2::SR, 0U, 1U, ReadWriteMode, TIM2::TIM2SRBase>, TIM2::TIM2SRBase, 0U>::Set<ReadWriteMode, void>()
+_ZN14FieldValueBaseI18TIM2_SR_UIF_ValuesIN4TIM22SRELj0ELj1E13ReadWriteModeNS1_10TIM2SRBaseEES4_Lj0EE3SetIS3_vEEvv:
+        LDR.N    R1,??Set_0       ;; 0x40000010
+        LDR      R0,[R1, #+0]
+        LSRS     R0,R0,#+1
+        LSLS     R0,R0,#+1
+        STR      R0,[R1, #+0]
+        BX       LR               ;; return
+        DATA
+??Set_0:
+        DATA32
+        DC32     0x40000010
+          CFI EndBlock cfiBlock0
+
+        SECTION `.text`:CODE:REORDER:NOROOT(2)
+        SECTION_GROUP _ZN12RegisterBaseILj1073874960ELj32E8ReadModeE3GetIS0_vEEjv
+          CFI Block cfiBlock1 Using cfiCommon0
           CFI Function _ZN12RegisterBaseILj1073874960ELj32E8ReadModeE3GetIS0_vEEjv
           CFI NoCalls
         THUMB
@@ -187,7 +208,7 @@ _ZN12RegisterBaseILj1073874960ELj32E8ReadModeE3GetIS0_vEEjv:
 ??Get_0:
         DATA32
         DC32     0x40020810
-          CFI EndBlock cfiBlock0
+          CFI EndBlock cfiBlock1
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
         SECTION_GROUP _ZTISt10ctype_base
@@ -248,7 +269,7 @@ _ZNSt6chrono12steady_clock9is_steadyE:
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN9OsWrapper11RtosWrapper12wSignalEventERKPvj
-          CFI Block cfiBlock1 Using cfiCommon0
+          CFI Block cfiBlock2 Using cfiCommon0
           CFI Function _ZN9OsWrapper11RtosWrapper12wSignalEventERKPvj
         THUMB
 // __interwork __vfp void OsWrapper::RtosWrapper::wSignalEvent(void * const &, uint32_t)
@@ -282,11 +303,11 @@ _ZN9OsWrapper11RtosWrapper12wSignalEventERKPvj:
         DATA32
         DC32     vEventGroupSetBitsCallback
         DC32     0xe000ed04
-          CFI EndBlock cfiBlock1
+          CFI EndBlock cfiBlock2
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
         SECTION_GROUP _ZN9OsWrapper5Event6SignalEv
-          CFI Block cfiBlock2 Using cfiCommon0
+          CFI Block cfiBlock3 Using cfiCommon0
           CFI Function _ZN9OsWrapper5Event6SignalEv
         THUMB
 // __interwork __vfp void OsWrapper::Event::Signal()
@@ -298,11 +319,11 @@ _ZN9OsWrapper5Event6SignalEv:
           CFI FunCall _ZN9OsWrapper11RtosWrapper12wSignalEventERKPvj
         BL       _ZN9OsWrapper11RtosWrapper12wSignalEventERKPvj
         POP      {R0,PC}          ;; return
-          CFI EndBlock cfiBlock2
+          CFI EndBlock cfiBlock3
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
         SECTION_GROUP _ZN6ButtonI5GPIOCLi13EE9IsPressedEv
-          CFI Block cfiBlock3 Using cfiCommon0
+          CFI Block cfiBlock4 Using cfiCommon0
           CFI Function _ZN6ButtonI5GPIOCLi13EE9IsPressedEv
         THUMB
 // __interwork __vfp bool Button<GPIOC, 13>::IsPressed()
@@ -317,11 +338,11 @@ _ZN6ButtonI5GPIOCLi13EE9IsPressedEv:
         EORS     R0,R0,#0x1
         UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
         POP      {R1,PC}          ;; return
-          CFI EndBlock cfiBlock3
+          CFI EndBlock cfiBlock4
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
         SECTION_GROUP _ZN10ButtonPollI5TimerE4PollEv
-          CFI Block cfiBlock4 Using cfiCommon0
+          CFI Block cfiBlock5 Using cfiCommon0
           CFI Function _ZN10ButtonPollI5TimerE4PollEv
         THUMB
 // __interwork __vfp void ButtonPoll<Timer>::Poll()
@@ -341,12 +362,12 @@ _ZN10ButtonPollI5TimerE4PollEv:
         BL       _ZN9OsWrapper5Event6SignalEv
 ??Poll_0:
         POP      {R4,PC}          ;; return
-          CFI EndBlock cfiBlock4
+          CFI EndBlock cfiBlock5
 //    2 #include "interruptentry.hpp" //for InterruptEntry
 //    3 
 
         SECTION `.text`:CODE:NOROOT(2)
-          CFI Block cfiBlock5 Using cfiCommon0
+          CFI Block cfiBlock6 Using cfiCommon0
           CFI Function _ZN5Timer16InterruptHandlerEv
         THUMB
 //    4 void Timer::InterruptHandler()
@@ -360,14 +381,17 @@ _ZN5Timer16InterruptHandlerEv:
         LDR.N    R0,??InterruptHandler_0
           CFI FunCall _ZN10ButtonPollI5TimerE4PollEv
         BL       _ZN10ButtonPollI5TimerE4PollEv
-//    8 }
+//    8   TIM2::SR::UIF::NoInterruptPending::Set();
+          CFI FunCall _ZN14FieldValueBaseI18TIM2_SR_UIF_ValuesIN4TIM22SRELj0ELj1E13ReadWriteModeNS1_10TIM2SRBaseEES4_Lj0EE3SetIS3_vEEvv
+        BL       _ZN14FieldValueBaseI18TIM2_SR_UIF_ValuesIN4TIM22SRELj0ELj1E13ReadWriteModeNS1_10TIM2SRBaseEES4_Lj0EE3SetIS3_vEEvv
+//    9 }
         POP      {R0,PC}          ;; return
         Nop      
         DATA
 ??InterruptHandler_0:
         DATA32
         DC32     buttonPoll
-          CFI EndBlock cfiBlock5
+          CFI EndBlock cfiBlock6
 
         SECTION `.iar_vfe_header`:DATA:NOALLOC:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
@@ -377,9 +401,9 @@ _ZN5Timer16InterruptHandlerEv:
         END
 // 
 //  47 bytes in section .rodata
-// 136 bytes in section .text
+// 156 bytes in section .text
 // 
-// 16 bytes of CODE  memory (+ 120 bytes shared)
+// 20 bytes of CODE  memory (+ 136 bytes shared)
 //  0 bytes of CONST memory (+  47 bytes shared)
 //
 //Errors: none

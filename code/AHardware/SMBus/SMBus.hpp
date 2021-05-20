@@ -10,7 +10,7 @@ public:
   
   static uint16_t ReadWord(std::uint8_t address)
   {
-  I2C1::CR1::START::Enable::Set(); 
+     I2C1::CR1::START::Enable::Set(); 
      I2C1::CR1::ACK::Acknowledge::Set() ;
      while(I2C1::SR1::SB::Value0::IsSet()) //wait until start condition 
      {
@@ -36,8 +36,7 @@ public:
      
      while(I2C1::SR1::TxE::Value0::IsSet())//wait until DR empty
      {
-     } 
-     
+     }    
      
       
      //Restart
@@ -68,11 +67,6 @@ public:
         std::uint16_t value = I2C1::DR::Get();
         value = value + (I2C1::DR::Get()<<8);
         return value;
-//      float temp = float(value)*0.02F - 273.15F;
-//        std::cout << temp << "aboba" << std::endl;
-        
-       
-       
   }
   
 };

@@ -2239,7 +2239,7 @@
                 <name>$PROJ_DIR$\AHardware\LCDDriver\Display.hpp</name>
             </file>
             <file>
-                <name>$PROJ_DIR$\..\..\CortexLib\AbstractHardware\EdpElink\elinkdriver.hpp</name>
+                <name>$PROJ_DIR$\AHardware\LCDDriver\elinkdriver.hpp</name>
             </file>
             <file>
                 <name>$PROJ_DIR$\AHardware\LCDDriver\systemclock.hpp</name>
