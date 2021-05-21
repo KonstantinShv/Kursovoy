@@ -1,21 +1,24 @@
 #pragma once
-#include "USARTDriver.h"
-
-
-template<typename TemperatureSource>
-class BlueToothTask: public Thread<128>
+//#include "USARTDriver.h"
+#include "thread.hpp"//for thread
+#include "usartconfig.h"
+using namespace OsWrapper;
+template<auto& temperatureSource>
+class BlueToothTask: public Thread<512>
 {
 public:
-  BlueToothTask(Event&, ievent): event(ievent)
-  {
-  }
+
   void Execute()
   {
-    char TempValue = TemperatureSource.GetValue();
-    usartDriver.SendMessage(message, strlen(TempValue));
+    for(;;)
+    {
+   out = temperatureSource.GetValue();
+   usartDriver.SendMessage(out, strlen(out));
+   Sleep(1000ms);
+    }
   }
   
 private:
-  Event& event;
-  USARTDriver& usartDriver<USART2>;
+  char* out;
+  
 };

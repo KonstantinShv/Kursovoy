@@ -2198,12 +2198,6 @@
             </file>
         </group>
         <group>
-            <name>Filter</name>
-            <file>
-                <name>$PROJ_DIR$\AHardware\Filter\filter.hpp</name>
-            </file>
-        </group>
-        <group>
             <name>ITransmit</name>
             <file>
                 <name>$PROJ_DIR$\AHardware\ITransmit\Itransmit.h</name>
@@ -2739,6 +2733,9 @@
         <name>Application</name>
         <group>
             <name>Filter</name>
+            <file>
+                <name>$PROJ_DIR$\AHardware\Filter\filter.hpp</name>
+            </file>
         </group>
         <group>
             <name>Tasks</name>

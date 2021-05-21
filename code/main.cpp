@@ -25,10 +25,12 @@
 #include "TempSens.hpp"
 #include "stkregisters.hpp"
 #include "scbregisters.hpp"
+#include "ScreenTask.hpp"//for ScreenTask
+#include "BlueToothTask.hpp"//for BlueToothTask
 using namespace std;
 extern "C" uint32_t SystemCoreClock = 8000000U;
 
- constexpr std::uint32_t UartSpeed9600 = std::uint32_t(8000000U / 9600U);
+ constexpr std::uint32_t UartSpeed9600 = std::uint32_t(16000000U / 9600U);
 
 extern "C" {
 int __low_level_init(void)
@@ -45,6 +47,9 @@ int __low_level_init(void)
   {
 
   }
+  
+      
+  
   STK::LOAD::Write(SystemCoreClock/1000U - 1);
   STK::VAL::Write(0U);
   STK::CTRL::CLKSOURCE::CpuClock::Set();
@@ -160,6 +165,10 @@ GPIOB::MODERPack<
     USART2::BRR::Write(UartSpeed9600);
     USART2::CR1::UE::Enable::Set();    
     NVIC::ISER1::Write(1<<6);
+    
+    
+    
+
  
   return 1;
 }
@@ -174,9 +183,10 @@ using BusyPin = Pin<Port<GPIOC>, 2U, PinReadable> ;
 using LcdDriverSpi = Spi<SPI2> ;
 using LcdDriver = ElinkDriver<LcdDriverSpi, ResetPin, DcPin, CsPin, BusyPin, Attributes<BlackAndWhite>> ;
 
+
 Button<GPIOC, 13> button;
 Event event(1000ms, 1);
-//UserButton button;
+
 
 ButtonPoll<Timer> buttonPoll(button,event);
 
@@ -185,47 +195,32 @@ TempSens tempSens(filter);
 Temp temp;
 SMBus smbus;
 TemperatureTask temperatureTask(temp,tempSens,event);
-
+ScreenTask<temperatureTask> screenTask;
+BlueToothTask<temperatureTask> blueToothTask;
 
 int main()
 {
-  const char* message = "Hello World \n";
 
-//  LcdDriver::Init();
-//  LcdDriver::Clear();
+//
+
 //  
 //  Point point{130U, 10U};
 //  Display<400,300>::DrawString(point, "GodFather") ;
 //  LcdDriver::UpdatePartialWindow(Display<400, 300>::image.data(), 0, 0, 400, 300) ;
 //  point.y = 130 ;
 //  point.x = 100 ;
+//  
   
-  buttonPoll.ButtonPollInitialization();
-  //using namespace OsWrapper;
-   Rtos::CreateThread(temperatureTask, "temperatureTask", ThreadPriority::normal);
+    
+   buttonPoll.ButtonPollInitialization();
+   Rtos::CreateThread(screenTask, "screenTask", ThreadPriority::normal); 
+   Rtos::CreateThread(temperatureTask, "temperatureTask", ThreadPriority::normal);   
+   Rtos::CreateThread(blueToothTask, "blueToothTask", ThreadPriority::normal); 
    Rtos::Start();
-  usartDriver.SendMessage(message, strlen(message));
+
   for(;;)
   {
-   char* value = temperatureTask.GetValue();
-  std::cout << value << std::endl;
-  //temp.SetNextUnits();
-  
-   
    
   }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

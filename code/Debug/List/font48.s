@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //
-// IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM        20/May/2021  20:32:24
+// IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM        21/May/2021  23:29:15
 // Copyright 1999-2019 IAR Systems AB.
 //
 //    Cpu mode     =  
@@ -8,7 +8,7 @@
 //    Source file  =
 //        D:\Git\POIP\Kursovoy\code\AHardware\LCDDriver\Fonts\font48.cpp
 //    Command line =
-//        -f C:\Users\KONSTA~1\AppData\Local\Temp\EW3C29.tmp
+//        -f C:\Users\KONSTA~1\AppData\Local\Temp\EW7F2E.tmp
 //        (D:\Git\POIP\Kursovoy\code\AHardware\LCDDriver\Fonts\font48.cpp -lC
 //        D:\Git\POIP\Kursovoy\code\Debug\List -lA
 //        D:\Git\POIP\Kursovoy\code\Debug\List -o

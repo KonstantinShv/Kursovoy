@@ -5,10 +5,11 @@ class IUnits
 {
 public:
    virtual void Calculate(float value) = 0;
-   float GetValue()
+   char* GetValue()
    {
-     return tempValue;
+     return buffer;
    }
 protected:
+  char buffer[22];
   float tempValue;
 };

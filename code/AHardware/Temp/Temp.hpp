@@ -20,30 +20,13 @@ public:
      }
    }
    
-   float GetTempInCurrentUnits(float value)
+   char* GetTempInCurrentUnits(float value)
    {
      pCurrentUnits->Calculate(value);
      return pCurrentUnits->GetValue();
    }
    
-   char GetUnits()
-   {
-     switch(currenntUnitsId)
-     {
-     case 0:
-       return 'C';
-       break;
-     case 1:
-       return 'K';
-       break;
-     case 2:
-       return 'F';
-       break;
-     default:
-       return 0;
-      
-     }
-   }
+
      
 private:
   IUnits* units[3] = {&celsius, &kelvin, &fahrenheit}; 
