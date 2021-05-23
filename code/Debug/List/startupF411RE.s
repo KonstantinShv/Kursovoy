@@ -1,13 +1,13 @@
 ///////////////////////////////////////////////////////////////////////////////
 //
-// IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM        21/May/2021  23:29:17
+// IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM        23/May/2021  15:09:19
 // Copyright 1999-2019 IAR Systems AB.
 //
 //    Cpu mode     =  
 //    Endian       =  little
 //    Source file  =  D:\Git\POIP\Kursovoy\code\startupF411RE.cpp
 //    Command line =
-//        -f C:\Users\KONSTA~1\AppData\Local\Temp\EW8188.tmp
+//        -f C:\Users\KONSTA~1\AppData\Local\Temp\EW3A4A.tmp
 //        (D:\Git\POIP\Kursovoy\code\startupF411RE.cpp -lC
 //        D:\Git\POIP\Kursovoy\code\Debug\List -lA
 //        D:\Git\POIP\Kursovoy\code\Debug\List -o
@@ -136,9 +136,7 @@
         PUBLIC _ZNSt6chrono12system_clock12is_monotonicE
         PUBLIC _ZNSt6chrono12system_clock9is_steadyE
         PUBLIC _ZTISt10ctype_base
-        PUBLIC _ZTISt5_IosbIiE
         PUBLIC _ZTSSt10ctype_base
-        PUBLIC _ZTSSt5_IosbIiE
         PUBLIC __iar_program_start
         PUBLIC __vector_table
         PUBLIC usartDriver
@@ -263,22 +261,6 @@ _ZTSSt10ctype_base:
         DATA8
         DC8 "St10ctype_base"
         DC8 0
-
-        SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        SECTION_GROUP _ZTISt5_IosbIiE
-        DATA
-// __absolute __class_type_info const <Typeinfo for std::_Iosb<int>>
-_ZTISt5_IosbIiE:
-        DATA32
-        DC32 _ZTVN10__cxxabiv117__class_type_infoE + 0x8, _ZTSSt5_IosbIiE
-
-        SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        SECTION_GROUP _ZTSSt5_IosbIiE
-        DATA
-// __absolute char const <Typeinfo name for std::_Iosb<int>>[12]
-_ZTSSt5_IosbIiE:
-        DATA8
-        DC8 "St5_IosbIiE"
 //    7 #include "Timer.hpp"
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(0)
@@ -794,11 +776,11 @@ _ZN4Uart16interruptHandlerEv:
 // 265 bytes in section .bss
 //   4 bytes in section .init_array
 // 408 bytes in section .intvec
-//  47 bytes in section .rodata
+//  27 bytes in section .rodata
 // 228 bytes in section .text
 // 
 //  52 bytes of CODE  memory (+ 180 bytes shared)
-// 408 bytes of CONST memory (+  47 bytes shared)
+// 408 bytes of CONST memory (+  27 bytes shared)
 //   0 bytes of DATA  memory (+ 265 bytes shared)
 //
 //Errors: none

@@ -1,11 +1,6 @@
 #pragma once
-
 #include <array>
-//#include "Itransmit.h"
 #include <cassert>
-//#include "usartconfig.h"
-
-
 
 class ITransmit
 {

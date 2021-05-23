@@ -1,13 +1,13 @@
 ///////////////////////////////////////////////////////////////////////////////
 //
-// IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM        21/May/2021  23:29:17
+// IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM        23/May/2021  15:09:19
 // Copyright 1999-2019 IAR Systems AB.
 //
 //    Cpu mode     =  
 //    Endian       =  little
 //    Source file  =  D:\Git\POIP\Kursovoy\code\AHardware\Timer\Timer.cpp
 //    Command line =
-//        -f C:\Users\KONSTA~1\AppData\Local\Temp\EW8301.tmp
+//        -f C:\Users\KONSTA~1\AppData\Local\Temp\EW3BD2.tmp
 //        (D:\Git\POIP\Kursovoy\code\AHardware\Timer\Timer.cpp -lC
 //        D:\Git\POIP\Kursovoy\code\Debug\List -lA
 //        D:\Git\POIP\Kursovoy\code\Debug\List -o
@@ -103,7 +103,6 @@
 
         #define SHT_PROGBITS 0x1
 
-        EXTERN _ZTVN10__cxxabiv117__class_type_infoE
         EXTERN buttonPoll
         EXTERN vEventGroupSetBitsCallback
         EXTERN xTimerPendFunctionCallFromISR
@@ -118,10 +117,6 @@
         PUBLIC _ZNSt6chrono12steady_clock9is_steadyE
         PUBLIC _ZNSt6chrono12system_clock12is_monotonicE
         PUBLIC _ZNSt6chrono12system_clock9is_steadyE
-        PUBLIC _ZTISt10ctype_base
-        PUBLIC _ZTISt5_IosbIiE
-        PUBLIC _ZTSSt10ctype_base
-        PUBLIC _ZTSSt5_IosbIiE
         
           CFI Names cfiNames0
           CFI StackFrame CFA R13 DATA
@@ -209,39 +204,6 @@ _ZN12RegisterBaseILj1073874960ELj32E8ReadModeE3GetIS0_vEEjv:
         DATA32
         DC32     0x40020810
           CFI EndBlock cfiBlock1
-
-        SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        SECTION_GROUP _ZTISt10ctype_base
-        DATA
-// __absolute __class_type_info const <Typeinfo for std::ctype_base>
-_ZTISt10ctype_base:
-        DATA32
-        DC32 _ZTVN10__cxxabiv117__class_type_infoE + 0x8, _ZTSSt10ctype_base
-
-        SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        SECTION_GROUP _ZTSSt10ctype_base
-        DATA
-// __absolute char const <Typeinfo name for std::ctype_base>[15]
-_ZTSSt10ctype_base:
-        DATA8
-        DC8 "St10ctype_base"
-        DC8 0
-
-        SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        SECTION_GROUP _ZTISt5_IosbIiE
-        DATA
-// __absolute __class_type_info const <Typeinfo for std::_Iosb<int>>
-_ZTISt5_IosbIiE:
-        DATA32
-        DC32 _ZTVN10__cxxabiv117__class_type_infoE + 0x8, _ZTSSt5_IosbIiE
-
-        SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        SECTION_GROUP _ZTSSt5_IosbIiE
-        DATA
-// __absolute char const <Typeinfo name for std::_Iosb<int>>[12]
-_ZTSSt5_IosbIiE:
-        DATA8
-        DC8 "St5_IosbIiE"
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(0)
         SECTION_GROUP _ZNSt6chrono12system_clock9is_steadyE
@@ -376,15 +338,14 @@ _ZN5Timer16InterruptHandlerEv:
         PUSH     {R7,LR}
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+8
-//    6   //OsWrapper::InterruptEntry ie;
-//    7   buttonPoll.Poll();
+//    6   buttonPoll.Poll();
         LDR.N    R0,??InterruptHandler_0
           CFI FunCall _ZN10ButtonPollI5TimerE4PollEv
         BL       _ZN10ButtonPollI5TimerE4PollEv
-//    8   TIM2::SR::UIF::NoInterruptPending::Set();
+//    7   TIM2::SR::UIF::NoInterruptPending::Set();
           CFI FunCall _ZN14FieldValueBaseI18TIM2_SR_UIF_ValuesIN4TIM22SRELj0ELj1E13ReadWriteModeNS1_10TIM2SRBaseEES4_Lj0EE3SetIS3_vEEvv
         BL       _ZN14FieldValueBaseI18TIM2_SR_UIF_ValuesIN4TIM22SRELj0ELj1E13ReadWriteModeNS1_10TIM2SRBaseEES4_Lj0EE3SetIS3_vEEvv
-//    9 }
+//    8 }
         POP      {R0,PC}          ;; return
         Nop      
         DATA
@@ -400,11 +361,11 @@ _ZN5Timer16InterruptHandlerEv:
 
         END
 // 
-//  47 bytes in section .rodata
+//   3 bytes in section .rodata
 // 156 bytes in section .text
 // 
 // 20 bytes of CODE  memory (+ 136 bytes shared)
-//  0 bytes of CONST memory (+  47 bytes shared)
+//  0 bytes of CONST memory (+   3 bytes shared)
 //
 //Errors: none
 //Warnings: none

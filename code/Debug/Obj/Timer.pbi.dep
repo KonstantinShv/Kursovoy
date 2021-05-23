@@ -75,16 +75,4 @@ Timer.pbi: D:\Git\POIP\Kursovoy\code\AHardware\Timer\Timer.cpp \
   D:\Git\POIP\Kursovoy\code\Rtos\wrapper\eventmode.hpp \
   D:\Git\POIP\Kursovoy\code\Rtos\wrapper/eventmode.hpp \
   D:\Git\POIP\Kursovoy\code\AHardware\Button\Button.hpp \
-  D:\IAR\arm\inc\cpp\iostream D:\IAR\arm\inc\cpp\istream \
-  D:\IAR\arm\inc\cpp\ostream D:\IAR\arm\inc\cpp\ios \
-  D:\IAR\arm\inc\cpp\xlocnum D:\IAR\arm\inc\cpp\streambuf \
-  D:\IAR\arm\inc\cpp\xiosbase D:\IAR\arm\inc\cpp\xlocale \
-  D:\IAR\arm\inc\cpp\clocale D:\IAR\arm\inc\c\locale.h \
-  D:\IAR\arm\inc\c\xctype.h D:\IAR\arm\inc\c\xlocale_lconv.h \
-  D:\IAR\arm\inc\cpp\cwctype D:\IAR\arm\inc\c\wctype.h \
-  D:\IAR\arm\inc\cpp\stdexcept D:\IAR\arm\inc\cpp\xstring \
-  D:\IAR\arm\inc\cpp\typeinfo D:\IAR\arm\inc\cpp\xlocinfo \
-  D:\IAR\arm\inc\cpp\cctype D:\IAR\arm\inc\c\ctype.h \
-  D:\IAR\arm\inc\cpp\system_error D:\IAR\arm\inc\cpp\cerrno \
-  D:\IAR\arm\inc\c\errno.h \
   D:\Git\POIP\Kursovoy\code\Rtos\wrapper\interruptentry.hpp

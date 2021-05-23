@@ -16,11 +16,11 @@
         <ShowSource>1</ShowSource>
     </Trace1>
     <DebugChecksum>
-        <Checksum>1362310887</Checksum>
+        <Checksum>1766982053</Checksum>
     </DebugChecksum>
     <Disassembly>
-        <MixedMode>1</MixedMode>
         <InstrCount>0</InstrCount>
+        <MixedMode>1</MixedMode>
     </Disassembly>
     <CodeCoverage>
         <Enabled>0</Enabled>
@@ -153,10 +153,14 @@
         <Count>1</Count>
     </Breakpoints2>
     <Aliases>
-        <A0>_ "C:\Users\Студент\Desktop\K\Kursovoy-main\code\AHardware\Button\Button.hpp" "E:\Git\POIP\Kursovoy\code\AHardware\Button\Button.hpp"</A0>
-        <A1>_ "C:\Users\Студент\Desktop\Новая папка (4)\KURS\Kursovoy\code\AHardware\Button\Button.hpp" "D:\Git\POIP\Kursovoy\code\AHardware\Button\Button.hpp"</A1>
-        <A2>_ "E:\Git\POIP\Kursovoy\code\AHardware\Button\Button.hpp" "D:\Git\POIP\Kursovoy\code\AHardware\Button\Button.hpp"</A2>
-        <Count>3</Count>
+        <A0>_ "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\arm\inc\cpp\chrono" "D:\IAR\arm\inc\cpp\chrono"</A0>
+        <A1>_ "C:\Users\Студент\Desktop\K\Kursovoy-main\code\AHardware\Button\Button.hpp" "E:\Git\POIP\Kursovoy\code\AHardware\Button\Button.hpp"</A1>
+        <A2>_ "C:\Users\Студент\Desktop\Новая папка (4)\KURS\Kursovoy\code\AHardware\Button\Button.hpp" "D:\Git\POIP\Kursovoy\code\AHardware\Button\Button.hpp"</A2>
+        <A3>_ "C:\Users\Студент\Desktop\Новая папка (5)\KURS\code\Application\Tasks\BlueToothTask\BlueToothTask.hpp" "D:\Git\POIP\Kursovoy\code\Application\Tasks\BlueToothTask\BlueToothTask.hpp"</A3>
+        <A4>_ "D:\Git\POIP\Kursovoy\code\Application\Tasks\BlueToothTask\BlueToothTask.hpp" "C:\Users\Студент\Desktop\Новая папка (5)\KURS\code\Application\Tasks\BlueToothTask\BlueToothTask.hpp"</A4>
+        <A5>_ "D:\IAR\arm\inc\cpp\chrono" "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\arm\inc\cpp\chrono"</A5>
+        <A6>_ "E:\Git\POIP\Kursovoy\code\AHardware\Button\Button.hpp" "D:\Git\POIP\Kursovoy\code\AHardware\Button\Button.hpp"</A6>
+        <Count>7</Count>
         <SuppressDialog>0</SuppressDialog>
     </Aliases>
 </settings>

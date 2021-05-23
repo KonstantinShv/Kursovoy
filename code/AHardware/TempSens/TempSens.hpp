@@ -1,6 +1,6 @@
 #pragma once
-#include "SMBus.hpp"
-#include "filter.hpp"
+#include "SMBus.hpp" //for SMBus
+#include "filter.hpp" //for filter
 
 class TempSens
 {
@@ -9,8 +9,7 @@ public:
   TempSens(Filter& aFilter):filter(aFilter)
   {
      
-  }
-  
+  }  
   float TakeMeas()
   {
     not_filt_value = (SMBus::ReadWord(0x07));

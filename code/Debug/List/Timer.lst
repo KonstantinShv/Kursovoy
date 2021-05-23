@@ -1,13 +1,13 @@
 ###############################################################################
 #
-# IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM         21/May/2021  23:29:17
+# IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM         23/May/2021  15:09:19
 # Copyright 1999-2019 IAR Systems AB.
 #
 #    Cpu mode     =  
 #    Endian       =  little
 #    Source file  =  D:\Git\POIP\Kursovoy\code\AHardware\Timer\Timer.cpp
 #    Command line =
-#        -f C:\Users\KONSTA~1\AppData\Local\Temp\EW8301.tmp
+#        -f C:\Users\KONSTA~1\AppData\Local\Temp\EW3BD2.tmp
 #        (D:\Git\POIP\Kursovoy\code\AHardware\Timer\Timer.cpp -lC
 #        D:\Git\POIP\Kursovoy\code\Debug\List -lA
 #        D:\Git\POIP\Kursovoy\code\Debug\List -o
@@ -199,13 +199,12 @@ D:\Git\POIP\Kursovoy\code\AHardware\Timer\Timer.cpp
       5          {
    \                     _ZN5Timer16InterruptHandlerEv: (+1)
    \        0x0   0xB580             PUSH     {R7,LR}
-      6            //OsWrapper::InterruptEntry ie;
-      7            buttonPoll.Poll();
+      6            buttonPoll.Poll();
    \        0x2   0x4803             LDR.N    R0,??InterruptHandler_0
    \        0x4   0x....'....        BL       _ZN10ButtonPollI5TimerE4PollEv
-      8            TIM2::SR::UIF::NoInterruptPending::Set();
+      7            TIM2::SR::UIF::NoInterruptPending::Set();
    \        0x8   0x....'....        BL       _ZN14FieldValueBaseI18TIM2_SR_UIF_ValuesIN4TIM22SRELj0ELj1E13ReadWriteModeNS1_10TIM2SRBaseEES4_Lj0EE3SetIS3_vEEvv
-      9          }
+      8          }
    \        0xC   0xBD01             POP      {R0,PC}          ;; return
    \        0xE   0xBF00             Nop      
    \                     ??InterruptHandler_0:
@@ -245,14 +244,13 @@ D:\Git\POIP\Kursovoy\code\AHardware\Timer\Timer.cpp
        1  std::chrono::steady_clock::is_steady
        1  std::chrono::system_clock::is_monotonic
        1  std::chrono::system_clock::is_steady
-      44  -- Other
 
  
-  47 bytes in section .rodata
+   3 bytes in section .rodata
  156 bytes in section .text
  
  20 bytes of CODE  memory (+ 136 bytes shared)
-  0 bytes of CONST memory (+  47 bytes shared)
+  0 bytes of CONST memory (+   3 bytes shared)
 
 Errors: none
 Warnings: none

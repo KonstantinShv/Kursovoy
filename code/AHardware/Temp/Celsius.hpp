@@ -8,7 +8,8 @@ public:
    void Calculate(float value) override
    {
      tempValue = value;
-     sprintf(buffer, "Temperature %3.2f C \n" , tempValue);
+     sprintf(buffer, "                          ");
+     sprintf(buffer, "Temperature %3.2f C    " , tempValue);
    }  
 private:
      

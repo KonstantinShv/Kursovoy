@@ -91,6 +91,5 @@ startupF411RE.pbi: D:\Git\POIP\Kursovoy\code\startupF411RE.cpp \
   D:\Git\POIP\Kursovoy\code\Rtos\wrapper\eventmode.hpp \
   D:\Git\POIP\Kursovoy\code\Rtos\wrapper/eventmode.hpp \
   D:\Git\POIP\Kursovoy\code\AHardware\Button\Button.hpp \
-  D:\IAR\arm\inc\cpp\iostream \
   D:\Git\POIP\Kursovoy\code\Rtos\wrapper\rtos.hpp \
   D:\Git\POIP\Kursovoy\code\Rtos\wrapper/thread.hpp

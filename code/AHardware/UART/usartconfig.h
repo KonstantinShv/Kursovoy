@@ -1,7 +1,7 @@
 #pragma once
-#include "usart.h"
-#include "usart2registers.hpp"
-#include "USARTDriver.h"
+#include "usart.h" //for usart
+#include "usart2registers.hpp" //for usart2registers
+#include "USARTDriver.h" //for USARTDriver
 
 class Usart2;
 

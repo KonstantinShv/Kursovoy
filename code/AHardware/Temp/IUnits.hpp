@@ -10,6 +10,6 @@ public:
      return buffer;
    }
 protected:
-  char buffer[22];
+  char buffer[27];
   float tempValue;
 };

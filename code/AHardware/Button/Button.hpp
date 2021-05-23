@@ -1,7 +1,6 @@
 #pragma once
-#include "rccregisters.hpp"
-#include "gpiocregisters.hpp"
-
+#include "rccregisters.hpp" // for rccregisters
+#include "gpiocregisters.hpp" // gpiocregisters
 
 template<typename PortX, int PinX>
 class Button

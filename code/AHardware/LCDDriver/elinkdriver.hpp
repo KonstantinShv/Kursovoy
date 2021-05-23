@@ -151,7 +151,7 @@ static constexpr unsigned char EPD_4IN2_lut_bb_quick[] = {
 
 struct BlackAndWhite
 {
-} ;
+};
 
 template <typename Spi, typename ResetPin, typename DcPin, typename CsPin, typename BusyPin, typename Atribute>
 struct ElinkDriver

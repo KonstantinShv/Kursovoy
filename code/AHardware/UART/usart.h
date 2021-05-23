@@ -1,9 +1,6 @@
 #pragma once
-
-#include <cstdint>
-//#include "ITransmit.h"
-#include "usart2registers.hpp"
-#include "USARTDriver.h"
+#include "usart2registers.hpp" //for usart2registers
+#include "USARTDriver.h" //for USARTDriver
 template<typename TUSARTReg>
 
 class Usart

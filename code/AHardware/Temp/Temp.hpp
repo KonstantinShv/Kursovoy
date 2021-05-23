@@ -1,16 +1,12 @@
 #pragma once
-#include "IUnits.hpp"
-#include "Celsius.hpp"
-#include "Kelvin.hpp"
-#include "Fahrenheit.hpp"
-
-
+#include "IUnits.hpp" //for IUnits
+#include "Celsius.hpp" //for Celsius
+#include "Kelvin.hpp" // for Kelvin
+#include "Fahrenheit.hpp" // Fahrenheit
 
 class Temp
-{
-  
-public:
-   
+{  
+public:   
    void SetNextUnits()
    {
      pCurrentUnits = units[currenntUnitsId++];
@@ -18,16 +14,12 @@ public:
      {
        currenntUnitsId = 0U;
      }
-   }
-   
+   }   
    char* GetTempInCurrentUnits(float value)
    {
      pCurrentUnits->Calculate(value);
      return pCurrentUnits->GetValue();
-   }
-   
-
-     
+   }     
 private:
   IUnits* units[3] = {&celsius, &kelvin, &fahrenheit}; 
   IUnits* pCurrentUnits = units[0];

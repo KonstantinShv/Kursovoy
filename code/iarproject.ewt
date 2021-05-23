@@ -2386,19 +2386,13 @@
             </file>
         </group>
         <group>
-            <name>ButtonPoll</name>
+            <name>Display</name>
             <file>
-                <name>$PROJ_DIR$\AHardware\ButtonPoll\ButtonPoll.hpp</name>
+                <name>$PROJ_DIR$\AHardware\LCDDriver\display.hpp</name>
             </file>
         </group>
         <group>
-            <name>ITransmit</name>
-            <file>
-                <name>$PROJ_DIR$\AHardware\ITransmit\Itransmit.h</name>
-            </file>
-        </group>
-        <group>
-            <name>LCDDriver</name>
+            <name>ElinkDriver</name>
             <group>
                 <name>Fonts</name>
                 <file>
@@ -2423,9 +2417,6 @@
                     <name>$PROJ_DIR$\AHardware\LCDDriver\Fonts\segoeUISemibold_24pt.h</name>
                 </file>
             </group>
-            <file>
-                <name>$PROJ_DIR$\AHardware\LCDDriver\Display.hpp</name>
-            </file>
             <file>
                 <name>$PROJ_DIR$\AHardware\LCDDriver\elinkdriver.hpp</name>
             </file>
@@ -2875,30 +2866,6 @@
             </file>
         </group>
         <group>
-            <name>Temp</name>
-            <file>
-                <name>$PROJ_DIR$\AHardware\Temp\Celsius.hpp</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\AHardware\Temp\Fahrenheit.hpp</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\AHardware\Temp\IUnits.hpp</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\AHardware\Temp\Kelvin.hpp</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\AHardware\Temp\Temp.hpp</name>
-            </file>
-        </group>
-        <group>
-            <name>TempSens</name>
-            <file>
-                <name>$PROJ_DIR$\AHardware\TempSens\TempSens.hpp</name>
-            </file>
-        </group>
-        <group>
             <name>Timer</name>
             <file>
                 <name>$PROJ_DIR$\AHardware\Timer\Timer.cpp</name>
@@ -2908,7 +2875,7 @@
             </file>
         </group>
         <group>
-            <name>UART</name>
+            <name>USART</name>
             <file>
                 <name>$PROJ_DIR$\AHardware\UART\usart.h</name>
             </file>
@@ -2916,19 +2883,25 @@
                 <name>$PROJ_DIR$\AHardware\UART\usartconfig.h</name>
             </file>
         </group>
-        <group>
-            <name>UARTDriver</name>
-            <file>
-                <name>$PROJ_DIR$\AHardware\UARTDriver\USARTDriver.h</name>
-            </file>
-        </group>
     </group>
     <group>
         <name>Application</name>
         <group>
+            <name>ButtonPoll</name>
+            <file>
+                <name>$PROJ_DIR$\AHardware\ButtonPoll\ButtonPoll.hpp</name>
+            </file>
+        </group>
+        <group>
             <name>Filter</name>
             <file>
                 <name>$PROJ_DIR$\AHardware\Filter\filter.hpp</name>
+            </file>
+        </group>
+        <group>
+            <name>ITransmit</name>
+            <file>
+                <name>$PROJ_DIR$\AHardware\ITransmit\Itransmit.h</name>
             </file>
         </group>
         <group>
@@ -2956,10 +2929,37 @@
             <name>Temp</name>
             <group>
                 <name>Temp</name>
+                <file>
+                    <name>$PROJ_DIR$\AHardware\Temp\Temp.hpp</name>
+                </file>
             </group>
             <group>
                 <name>Units</name>
+                <file>
+                    <name>$PROJ_DIR$\AHardware\Temp\Celsius.hpp</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\AHardware\Temp\Fahrenheit.hpp</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\AHardware\Temp\IUnits.hpp</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\AHardware\Temp\Kelvin.hpp</name>
+                </file>
             </group>
+        </group>
+        <group>
+            <name>TempSens</name>
+            <file>
+                <name>$PROJ_DIR$\AHardware\TempSens\TempSens.hpp</name>
+            </file>
+        </group>
+        <group>
+            <name>USARTDriver</name>
+            <file>
+                <name>$PROJ_DIR$\AHardware\UARTDriver\USARTDriver.h</name>
+            </file>
         </group>
     </group>
     <group>

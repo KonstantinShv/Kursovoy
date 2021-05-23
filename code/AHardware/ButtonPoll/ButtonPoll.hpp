@@ -1,11 +1,6 @@
 #pragma once
-#include "event.hpp"
+#include "event.hpp" //for event
 #include "Button.hpp"  //for UserButton
-#include <iostream>
-
-//#define REGISTERS_BUTTONPOLL_HPP
-
-
 
 using namespace OsWrapper;
 

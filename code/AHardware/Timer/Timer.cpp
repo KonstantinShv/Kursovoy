@@ -3,7 +3,6 @@
 
 void Timer::InterruptHandler()
 {
-  //OsWrapper::InterruptEntry ie;
   buttonPoll.Poll();
   TIM2::SR::UIF::NoInterruptPending::Set();
 }

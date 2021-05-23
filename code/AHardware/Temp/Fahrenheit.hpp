@@ -7,7 +7,8 @@ public:
    void Calculate(float value) override
    {
      tempValue = (value*9/5) + 32;
-     sprintf(buffer, "Temperature %3.2f F \n", tempValue);
+     sprintf(buffer, "                         ");
+     sprintf(buffer, "Temperature %3.2f F   ", tempValue);
    }   
 private:
    
