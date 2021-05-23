@@ -22,8 +22,7 @@ public:
    void Poll()
   {
     if(button.IsPressed())
-      {
-        
+      {        
       ButtonPressEvent.Signal();
       }
   }

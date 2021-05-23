@@ -1,5 +1,11 @@
 main.pbi: \
   D:\Git\POIP\Kursovoy\code\Application\Tasks\BlueToothTask\BlueToothTask.hpp \
+  D:\Git\POIP\Kursovoy\code\AHardware\LCDDriver\systemclock.hpp \
+  D:\Git\POIP\Kursovoy\code\AHardware\LCDDriver\elinkdriver.hpp \
+  D:\Git\POIP\Kursovoy\code\AHardware\LCDDriver\Fonts\font_segoeUISemibold_24pt.h \
+  D:\Git\POIP\Kursovoy\code\AHardware\LCDDriver\Fonts\font.h \
+  D:\Git\POIP\Kursovoy\code\AHardware\LCDDriver\Fonts\font_segoeUISemibold_48pt.h \
+  D:\Git\POIP\Kursovoy\code\AHardware\LCDDriver\display.hpp \
   D:\Git\POIP\Kursovoy\code\Application\Tasks\ScreenTask\ScreenTask.hpp \
   D:\Git\POIP\Kursovoy\code\AHardware\Registers\CortexM4\FieldValues\scbfieldvalues.hpp \
   D:\Git\POIP\Kursovoy\code\AHardware\Registers\CortexM4\scbregisters.hpp \
@@ -16,12 +22,6 @@ main.pbi: \
   D:\Git\POIP\Kursovoy\code\AHardware\Port\port.hpp \
   D:\IAR\arm\inc\c\inttypes.h D:\IAR\arm\inc\cpp\cinttypes \
   D:\Git\POIP\Kursovoy\code\AHardware\Pin\pin.hpp \
-  D:\Git\POIP\Kursovoy\code\AHardware\LCDDriver\Fonts\font_segoeUISemibold_24pt.h \
-  D:\Git\POIP\Kursovoy\code\AHardware\LCDDriver\Fonts\font.h \
-  D:\Git\POIP\Kursovoy\code\AHardware\LCDDriver\Fonts\font_segoeUISemibold_48pt.h \
-  D:\Git\POIP\Kursovoy\code\AHardware\LCDDriver\display.hpp \
-  D:\Git\POIP\Kursovoy\code\AHardware\LCDDriver\systemclock.hpp \
-  D:\Git\POIP\Kursovoy\code\AHardware\LCDDriver\elinkdriver.hpp \
   D:\Git\POIP\Kursovoy\code\AHardware\Registers\STM32F411\FieldValues\spi2fieldvalues.hpp \
   D:\Git\POIP\Kursovoy\code\AHardware\Registers\STM32F411\spi2registers.hpp \
   D:\Git\POIP\Kursovoy\code\AHardware\Registers\STM32F411\FieldValues\i2c2fieldvalues.hpp \

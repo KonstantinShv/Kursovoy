@@ -1022,7 +1022,7 @@
                     <item>value</item>
                     <item>temp_lsb</item>
                     <item>out</item>
-                    <item></item>
+                    <item />
                 </expressions>
                 <col-names>
                     <item>Expression</item>
