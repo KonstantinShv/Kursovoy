@@ -1,13 +1,13 @@
 ///////////////////////////////////////////////////////////////////////////////
 //
-// IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM        23/May/2021  15:09:20
+// IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM        25/May/2021  18:27:42
 // Copyright 1999-2019 IAR Systems AB.
 //
 //    Cpu mode     =  
 //    Endian       =  little
 //    Source file  =  D:\Git\POIP\Kursovoy\code\main.cpp
 //    Command line =
-//        -f C:\Users\KONSTA~1\AppData\Local\Temp\EW393E.tmp
+//        -f C:\Users\KONSTA~1\AppData\Local\Temp\EW87A9.tmp
 //        (D:\Git\POIP\Kursovoy\code\main.cpp -lC
 //        D:\Git\POIP\Kursovoy\code\Debug\List -lA
 //        D:\Git\POIP\Kursovoy\code\Debug\List -o
@@ -1355,100 +1355,13 @@ fahrenheit:
 //   14 #include "i2c1registers.hpp" //for I2C1
 //   15 #include "i2c2registers.hpp" //for I2C2
 //   16 #include "spi2registers.hpp" //for spi2registers
-//   17 #include "elinkdriver.hpp"    //for ElinkDriver
-
-        SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        SECTION_GROUP _ZN11SystemClock15SystemCoreClockE
-        DATA
-// __absolute uint32_t const SystemClock::SystemCoreClock
-_ZN11SystemClock15SystemCoreClockE:
-        DATA32
-        DC32 16'000'000
-
-        SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        DATA
-// static __absolute unsigned char const EPD_4IN2_lut_vcom0[44]
-EPD_4IN2_lut_vcom0:
-        DATA8
-        DC8 0, 23, 0, 0, 0, 2, 0, 23, 23, 0, 0, 2, 0, 10, 1, 0, 0, 1, 0, 14, 14
-        DC8 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-
-        SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        DATA
-// static __absolute unsigned char const EPD_4IN2_lut_vcom0_quick[44]
-EPD_4IN2_lut_vcom0_quick:
-        DATA8
-        DC8 0, 14, 14, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-
-        SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        DATA
-// static __absolute unsigned char const EPD_4IN2_lut_ww[42]
-EPD_4IN2_lut_ww:
-        DATA8
-        DC8 64, 23, 0, 0, 0, 2, 144, 23, 23, 0, 0, 2, 64, 10, 1, 0, 0, 1, 160
-        DC8 14, 14, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-        DC8 0, 0, 0
-
-        SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        DATA
-// static __absolute unsigned char const EPD_4IN2_lut_ww_quick[42]
-EPD_4IN2_lut_ww_quick:
-        DATA8
-        DC8 160, 14, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-
-        SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        DATA
-// static __absolute unsigned char const EPD_4IN2_lut_bw[42]
-EPD_4IN2_lut_bw:
-        DATA8
-        DC8 64, 23, 0, 0, 0, 2, 144, 23, 23, 0, 0, 2, 64, 10, 1, 0, 0, 1, 160
-        DC8 14, 14, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-        DC8 0, 0, 0
-
-        SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        DATA
-// static __absolute unsigned char const EPD_4IN2_lut_bw_quick[42]
-EPD_4IN2_lut_bw_quick:
-        DATA8
-        DC8 160, 14, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-
-        SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        DATA
-// static __absolute unsigned char const EPD_4IN2_lut_wb[42]
-EPD_4IN2_lut_wb:
-        DATA8
-        DC8 128, 23, 0, 0, 0, 2, 144, 23, 23, 0, 0, 2, 128, 10, 1, 0, 0, 1, 80
-        DC8 14, 14, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-        DC8 0, 0, 0
-
-        SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        DATA
-// static __absolute unsigned char const EPD_4IN2_lut_wb_quick[42]
-EPD_4IN2_lut_wb_quick:
-        DATA8
-        DC8 80, 14, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-
-        SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        DATA
-// static __absolute unsigned char const EPD_4IN2_lut_bb[42]
-EPD_4IN2_lut_bb:
-        DATA8
-        DC8 128, 23, 0, 0, 0, 2, 144, 23, 23, 0, 0, 2, 128, 10, 1, 0, 0, 1, 80
-        DC8 14, 14, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-        DC8 0, 0, 0
-
-        SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        DATA
-// static __absolute unsigned char const EPD_4IN2_lut_bb_quick[42]
-EPD_4IN2_lut_bb_quick:
-        DATA8
-        DC8 80, 14, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-//   18 #include "display.hpp"        //for Display
+//   17 #include "pin.hpp" //for pin
+//   18 #include "port.hpp" //for port
+//   19 #include "spi.hpp" //for spi
+//   20 #include "TemperatureTask.hpp" //for TemperatureTask
+//   21 #include "stkregisters.hpp" //for stkregisters
+//   22 #include "scbregisters.hpp" //for scbregisters
+//   23 #include "ScreenTask.hpp"//for ScreenTask
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
         DATA
@@ -2696,14 +2609,99 @@ _ZN7DisplayILt400ELt300EE5imageE:
         DC8 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
+        SECTION_GROUP _ZN11SystemClock15SystemCoreClockE
         DATA
-//   19 #include "pin.hpp" //for pin
-//   20 #include "port.hpp" //for port
-//   21 #include "spi.hpp" //for spi
-//   22 #include "TemperatureTask.hpp" //for TemperatureTask
-//   23 #include "stkregisters.hpp" //for stkregisters
-//   24 #include "scbregisters.hpp" //for scbregisters
-//   25 #include "ScreenTask.hpp"//for ScreenTask
+// __absolute uint32_t const SystemClock::SystemCoreClock
+_ZN11SystemClock15SystemCoreClockE:
+        DATA32
+        DC32 16'000'000
+
+        SECTION `.rodata`:CONST:REORDER:NOROOT(2)
+        DATA
+// static __absolute unsigned char const EPD_4IN2_lut_vcom0[44]
+EPD_4IN2_lut_vcom0:
+        DATA8
+        DC8 0, 23, 0, 0, 0, 2, 0, 23, 23, 0, 0, 2, 0, 10, 1, 0, 0, 1, 0, 14, 14
+        DC8 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+
+        SECTION `.rodata`:CONST:REORDER:NOROOT(2)
+        DATA
+// static __absolute unsigned char const EPD_4IN2_lut_vcom0_quick[44]
+EPD_4IN2_lut_vcom0_quick:
+        DATA8
+        DC8 0, 14, 14, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+
+        SECTION `.rodata`:CONST:REORDER:NOROOT(2)
+        DATA
+// static __absolute unsigned char const EPD_4IN2_lut_ww[42]
+EPD_4IN2_lut_ww:
+        DATA8
+        DC8 64, 23, 0, 0, 0, 2, 144, 23, 23, 0, 0, 2, 64, 10, 1, 0, 0, 1, 160
+        DC8 14, 14, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0
+
+        SECTION `.rodata`:CONST:REORDER:NOROOT(2)
+        DATA
+// static __absolute unsigned char const EPD_4IN2_lut_ww_quick[42]
+EPD_4IN2_lut_ww_quick:
+        DATA8
+        DC8 160, 14, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+
+        SECTION `.rodata`:CONST:REORDER:NOROOT(2)
+        DATA
+// static __absolute unsigned char const EPD_4IN2_lut_bw[42]
+EPD_4IN2_lut_bw:
+        DATA8
+        DC8 64, 23, 0, 0, 0, 2, 144, 23, 23, 0, 0, 2, 64, 10, 1, 0, 0, 1, 160
+        DC8 14, 14, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0
+
+        SECTION `.rodata`:CONST:REORDER:NOROOT(2)
+        DATA
+// static __absolute unsigned char const EPD_4IN2_lut_bw_quick[42]
+EPD_4IN2_lut_bw_quick:
+        DATA8
+        DC8 160, 14, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+
+        SECTION `.rodata`:CONST:REORDER:NOROOT(2)
+        DATA
+// static __absolute unsigned char const EPD_4IN2_lut_wb[42]
+EPD_4IN2_lut_wb:
+        DATA8
+        DC8 128, 23, 0, 0, 0, 2, 144, 23, 23, 0, 0, 2, 128, 10, 1, 0, 0, 1, 80
+        DC8 14, 14, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0
+
+        SECTION `.rodata`:CONST:REORDER:NOROOT(2)
+        DATA
+// static __absolute unsigned char const EPD_4IN2_lut_wb_quick[42]
+EPD_4IN2_lut_wb_quick:
+        DATA8
+        DC8 80, 14, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+
+        SECTION `.rodata`:CONST:REORDER:NOROOT(2)
+        DATA
+// static __absolute unsigned char const EPD_4IN2_lut_bb[42]
+EPD_4IN2_lut_bb:
+        DATA8
+        DC8 128, 23, 0, 0, 0, 2, 144, 23, 23, 0, 0, 2, 128, 10, 1, 0, 0, 1, 80
+        DC8 14, 14, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0
+
+        SECTION `.rodata`:CONST:REORDER:NOROOT(2)
+        DATA
+// static __absolute unsigned char const EPD_4IN2_lut_bb_quick[42]
+EPD_4IN2_lut_bb_quick:
+        DATA8
+        DC8 80, 14, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+
+        SECTION `.rodata`:CONST:REORDER:NOROOT(2)
+        DATA
 ?_5:
         DATA16
         DC16 30, 100
@@ -2719,60 +2717,60 @@ _ZN7DisplayILt400ELt300EE5imageE:
 ?_7:
         DATA16
         DC16 400, 200
-//   26 #include "BlueToothTask.hpp"//for BlueToothTask
-//   27 
-//   28 using namespace std;
+//   24 #include "BlueToothTask.hpp"//for BlueToothTask
+//   25 
+//   26 using namespace std;
 
         SECTION `.data`:DATA:REORDER:NOROOT(2)
         DATA
-//   29 extern "C" uint32_t SystemCoreClock = 8000000U;
+//   27 extern "C" uint32_t SystemCoreClock = 8000000U;
 SystemCoreClock:
         DATA32
         DC32 8'000'000
+//   28 
+//   29  constexpr std::uint32_t UartSpeed9600 = std::uint32_t(16000000U / 9600U);
 //   30 
-//   31  constexpr std::uint32_t UartSpeed9600 = std::uint32_t(16000000U / 9600U);
-//   32 
-//   33 extern "C" {
+//   31 extern "C" {
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock1 Using cfiCommon0
           CFI Function __low_level_init
         THUMB
-//   34 int __low_level_init(void)
-//   35 {
+//   32 int __low_level_init(void)
+//   33 {
 __low_level_init:
         PUSH     {R7,LR}
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+8
-//   36  //Switch system clock on internal oscillator
-//   37   RCC::CR::HSION::On::Set();
+//   34  //Switch system clock on internal oscillator
+//   35   RCC::CR::HSION::On::Set();
           CFI FunCall _ZN14FieldValueBaseI19RCC_CR_HSION_ValuesIN3RCC2CRELj0ELj1E13ReadWriteModeNS1_9RCCCRBaseEES4_Lj1EE3SetIS3_vEEvv
         BL       _ZN14FieldValueBaseI19RCC_CR_HSION_ValuesIN3RCC2CRELj0ELj1E13ReadWriteModeNS1_9RCCCRBaseEES4_Lj1EE3SetIS3_vEEvv
-//   38   while (!RCC::CR::HSIRDY::Ready::IsSet())
+//   36   while (!RCC::CR::HSIRDY::Ready::IsSet())
 ??__low_level_init_0:
           CFI FunCall _ZN14FieldValueBaseI20RCC_CR_HSIRDY_ValuesIN3RCC2CRELj1ELj1E8ReadModeNS1_9RCCCRBaseEES4_Lj1EE5IsSetIS3_vEEbv
         BL       _ZN14FieldValueBaseI20RCC_CR_HSIRDY_ValuesIN3RCC2CRELj1ELj1E8ReadModeNS1_9RCCCRBaseEES4_Lj1EE5IsSetIS3_vEEbv
         CMP      R0,#+0
         BEQ.N    ??__low_level_init_0
-//   39   {
-//   40 
-//   41   }
-//   42   
-//   43   RCC::CFGR::SW::Hsi::Set();
+//   37   {
+//   38 
+//   39   }
+//   40   
+//   41   RCC::CFGR::SW::Hsi::Set();
           CFI FunCall _ZN14FieldValueBaseI18RCC_CFGR_SW_ValuesIN3RCC4CFGRELj0ELj2E13ReadWriteModeNS1_11RCCCFGRBaseEES4_Lj0EE3SetIS3_vEEvv
         BL       _ZN14FieldValueBaseI18RCC_CFGR_SW_ValuesIN3RCC4CFGRELj0ELj2E13ReadWriteModeNS1_11RCCCFGRBaseEES4_Lj0EE3SetIS3_vEEvv
-//   44   while (!RCC::CFGR::SWS::Hsi::IsSet())
+//   42   while (!RCC::CFGR::SWS::Hsi::IsSet())
 ??__low_level_init_1:
           CFI FunCall _ZN14FieldValueBaseI19RCC_CFGR_SWS_ValuesIN3RCC4CFGRELj2ELj2E8ReadModeNS1_11RCCCFGRBaseEES4_Lj0EE5IsSetIS3_vEEbv
         BL       _ZN14FieldValueBaseI19RCC_CFGR_SWS_ValuesIN3RCC4CFGRELj2ELj2E8ReadModeNS1_11RCCCFGRBaseEES4_Lj0EE5IsSetIS3_vEEbv
         CMP      R0,#+0
         BEQ.N    ??__low_level_init_1
-//   45   {
-//   46 
-//   47   }  
-//   48       
-//   49 //SystemClock 
-//   50   STK::LOAD::Write(SystemCoreClock/1000U - 1);
+//   43   {
+//   44 
+//   45   }  
+//   46       
+//   47 //SystemClock 
+//   48   STK::LOAD::Write(SystemCoreClock/1000U - 1);
         LDR.N    R0,??DataTable2_21
         LDR      R0,[R0, #+0]
         MOV      R1,#+1000
@@ -2780,196 +2778,196 @@ __low_level_init:
         SUBS     R0,R0,#+1
           CFI FunCall _ZN12RegisterBaseILj3758153748ELj32E13ReadWriteModeE5WriteIS0_vEEvj
         BL       _ZN12RegisterBaseILj3758153748ELj32E13ReadWriteModeE5WriteIS0_vEEvj
-//   51   STK::VAL::Write(0U);
+//   49   STK::VAL::Write(0U);
         MOVS     R0,#+0
           CFI FunCall _ZN12RegisterBaseILj3758153752ELj32E13ReadWriteModeE5WriteIS0_vEEvj
         BL       _ZN12RegisterBaseILj3758153752ELj32E13ReadWriteModeE5WriteIS0_vEEvj
-//   52   STK::CTRL::CLKSOURCE::CpuClock::Set();
+//   50   STK::CTRL::CLKSOURCE::CpuClock::Set();
           CFI FunCall _ZN14FieldValueBaseI25STK_CTRL_CLKSOURCE_ValuesIN3STK4CTRLELj2ELj1E13ReadWriteModeNS1_11STKCTRLBaseEES4_Lj1EE3SetIS3_vEEvv
         BL       _ZN14FieldValueBaseI25STK_CTRL_CLKSOURCE_ValuesIN3STK4CTRLELj2ELj1E13ReadWriteModeNS1_11STKCTRLBaseEES4_Lj1EE3SetIS3_vEEvv
-//   53   STK::CTRL::TICKINT::EnableInterrupt::Set();
+//   51   STK::CTRL::TICKINT::EnableInterrupt::Set();
           CFI FunCall _ZN14FieldValueBaseI23STK_CTRL_TICKINT_ValuesIN3STK4CTRLELj1ELj1E13ReadWriteModeNS1_11STKCTRLBaseEES4_Lj1EE3SetIS3_vEEvv
         BL       _ZN14FieldValueBaseI23STK_CTRL_TICKINT_ValuesIN3STK4CTRLELj1ELj1E13ReadWriteModeNS1_11STKCTRLBaseEES4_Lj1EE3SetIS3_vEEvv
-//   54   STK::CTRL::ENABLE::Enable::Set();  
+//   52   STK::CTRL::ENABLE::Enable::Set();  
           CFI FunCall _ZN14FieldValueBaseI22STK_CTRL_ENABLE_ValuesIN3STK4CTRLELj0ELj1E13ReadWriteModeNS1_11STKCTRLBaseEES4_Lj1EE3SetIS3_vEEvv
         BL       _ZN14FieldValueBaseI22STK_CTRL_ENABLE_ValuesIN3STK4CTRLELj0ELj1E13ReadWriteModeNS1_11STKCTRLBaseEES4_Lj1EE3SetIS3_vEEvv
-//   55 
-//   56   RCC::AHB1ENR::GPIOAEN::Enable::Set();
+//   53 
+//   54   RCC::AHB1ENR::GPIOAEN::Enable::Set();
           CFI FunCall _ZN14FieldValueBaseI26RCC_AHB1ENR_GPIOAEN_ValuesIN3RCC7AHB1ENRELj0ELj1E13ReadWriteModeNS1_14RCCAHB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv
         BL       _ZN14FieldValueBaseI26RCC_AHB1ENR_GPIOAEN_ValuesIN3RCC7AHB1ENRELj0ELj1E13ReadWriteModeNS1_14RCCAHB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv
-//   57   RCC::AHB1ENR::GPIOBEN::Enable::Set();
+//   55   RCC::AHB1ENR::GPIOBEN::Enable::Set();
           CFI FunCall _ZN14FieldValueBaseI26RCC_AHB1ENR_GPIOBEN_ValuesIN3RCC7AHB1ENRELj1ELj1E13ReadWriteModeNS1_14RCCAHB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv
         BL       _ZN14FieldValueBaseI26RCC_AHB1ENR_GPIOBEN_ValuesIN3RCC7AHB1ENRELj1ELj1E13ReadWriteModeNS1_14RCCAHB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv
-//   58   RCC::AHB1ENR::GPIOCEN::Enable::Set();
+//   56   RCC::AHB1ENR::GPIOCEN::Enable::Set();
           CFI FunCall _ZN14FieldValueBaseI26RCC_AHB1ENR_GPIOCEN_ValuesIN3RCC7AHB1ENRELj2ELj1E13ReadWriteModeNS1_14RCCAHB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv
         BL       _ZN14FieldValueBaseI26RCC_AHB1ENR_GPIOCEN_ValuesIN3RCC7AHB1ENRELj2ELj1E13ReadWriteModeNS1_14RCCAHB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv
-//   59   
-//   60 //SPI
-//   61   RCC::APB1ENR::SPI2EN::Enable::Set();  
+//   57   
+//   58 //SPI
+//   59   RCC::APB1ENR::SPI2EN::Enable::Set();  
           CFI FunCall _ZN14FieldValueBaseI25RCC_AHB1ENR_DMA2EN_ValuesIN3RCC7APB1ENRELj14ELj1E13ReadWriteModeNS1_14RCCAPB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv
         BL       _ZN14FieldValueBaseI25RCC_AHB1ENR_DMA2EN_ValuesIN3RCC7APB1ENRELj14ELj1E13ReadWriteModeNS1_14RCCAPB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv
-//   62 GPIOB::MODERPack<
-//   63         GPIOB::MODER::MODER1::Output,         
-//   64         GPIOB::MODER::MODER2::Output,         
-//   65         GPIOB::MODER::MODER8::Output,
-//   66         GPIOB::MODER::MODER9::Output,
-//   67         GPIOB::MODER::MODER13::Alternate,
-//   68         GPIOB::MODER::MODER15::Alternate			
-//   69     >::Set() ;
+//   60 GPIOB::MODERPack<
+//   61         GPIOB::MODER::MODER1::Output,         
+//   62         GPIOB::MODER::MODER2::Output,         
+//   63         GPIOB::MODER::MODER8::Output,
+//   64         GPIOB::MODER::MODER9::Output,
+//   65         GPIOB::MODER::MODER13::Alternate,
+//   66         GPIOB::MODER::MODER15::Alternate			
+//   67     >::Set() ;
           CFI FunCall _ZN8RegisterILj1073873920ELj32E13ReadWriteModeN5GPIOB14GPIOBMODERBaseEJ10FieldValueI26GPIOB_MODER_MODER15_ValuesINS1_5MODERELj2ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj4ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj16ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj18ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj26ELj2ES0_S2_ES2_Lj2EvES3_IS4_IS5_Lj30ELj2ES0_S2_ES2_Lj2EvEEE3SetIS0_vEEvv
         BL       _ZN8RegisterILj1073873920ELj32E13ReadWriteModeN5GPIOB14GPIOBMODERBaseEJ10FieldValueI26GPIOB_MODER_MODER15_ValuesINS1_5MODERELj2ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj4ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj16ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj18ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj26ELj2ES0_S2_ES2_Lj2EvES3_IS4_IS5_Lj30ELj2ES0_S2_ES2_Lj2EvEEE3SetIS0_vEEvv
-//   70     GPIOB::AFRHPack<
-//   71         GPIOB::AFRH::AFRH13::Af5,
-//   72         GPIOB::AFRH::AFRH15::Af5
-//   73     >::Set() ;
+//   68     GPIOB::AFRHPack<
+//   69         GPIOB::AFRH::AFRH13::Af5,
+//   70         GPIOB::AFRH::AFRH15::Af5
+//   71     >::Set() ;
           CFI FunCall _ZN8RegisterILj1073873956ELj32E13ReadWriteModeN5GPIOB13GPIOBAFRHBaseEJ10FieldValueI23GPIOB_AFRL_AFRL7_ValuesINS1_4AFRHELj20ELj4ES0_S2_ES2_Lj5EvES3_IS4_IS5_Lj28ELj4ES0_S2_ES2_Lj5EvEEE3SetIS0_vEEvv
         BL       _ZN8RegisterILj1073873956ELj32E13ReadWriteModeN5GPIOB13GPIOBAFRHBaseEJ10FieldValueI23GPIOB_AFRL_AFRL7_ValuesINS1_4AFRHELj20ELj4ES0_S2_ES2_Lj5EvES3_IS4_IS5_Lj28ELj4ES0_S2_ES2_Lj5EvEEE3SetIS0_vEEvv
-//   74     GPIOB::BSRR::BS1::High::Write();    
+//   72     GPIOB::BSRR::BS1::High::Write();    
           CFI FunCall _ZN14FieldValueBaseI21GPIOB_BSRR_BS1_ValuesIN5GPIOB4BSRRELj1ELj1E9WriteModeNS1_13GPIOBBSRRBaseEES4_Lj1EE5WriteIS3_vEEvv
         BL       _ZN14FieldValueBaseI21GPIOB_BSRR_BS1_ValuesIN5GPIOB4BSRRELj1ELj1E9WriteModeNS1_13GPIOBBSRRBaseEES4_Lj1EE5WriteIS3_vEEvv
-//   75     GPIOC::MODERPack<
-//   76         GPIOC::MODER::MODER5::Output,
-//   77         GPIOC::MODER::MODER8::Output,
-//   78         GPIOC::MODER::MODER9::Output,
-//   79 				GPIOC::MODER::MODER2::Input, //Busy
-//   80 				GPIOC::MODER::MODER3::Output //Reset
-//   81     >::Set() ;     
+//   73     GPIOC::MODERPack<
+//   74         GPIOC::MODER::MODER5::Output,
+//   75         GPIOC::MODER::MODER8::Output,
+//   76         GPIOC::MODER::MODER9::Output,
+//   77 				GPIOC::MODER::MODER2::Input, //Busy
+//   78 				GPIOC::MODER::MODER3::Output //Reset
+//   79     >::Set() ;     
           CFI FunCall _ZN8RegisterILj1073874944ELj32E13ReadWriteModeN5GPIOC14GPIOCMODERBaseEJ10FieldValueI26GPIOC_MODER_MODER15_ValuesINS1_5MODERELj10ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj16ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj18ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj4ELj2ES0_S2_ES2_Lj0EvES3_IS4_IS5_Lj6ELj2ES0_S2_ES2_Lj1EvEEE3SetIS0_vEEvv
         BL       _ZN8RegisterILj1073874944ELj32E13ReadWriteModeN5GPIOC14GPIOCMODERBaseEJ10FieldValueI26GPIOC_MODER_MODER15_ValuesINS1_5MODERELj10ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj16ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj18ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj4ELj2ES0_S2_ES2_Lj0EvES3_IS4_IS5_Lj6ELj2ES0_S2_ES2_Lj1EvEEE3SetIS0_vEEvv
-//   82       SPI2::CR1Pack<
-//   83         SPI2::CR1::MSTR::Master,   //SPI2 master
-//   84         SPI2::CR1::BIDIMODE::Unidirectional2Line,
-//   85         SPI2::CR1::DFF::Data8bit,
-//   86         SPI2::CR1::CPOL::High,
-//   87         SPI2::CR1::CPHA::Phase2edge,
-//   88         SPI2::CR1::SSM::NssSoftwareEnable,
-//   89         SPI2::CR1::SSI::Value1,
-//   90         SPI2::CR1::BR::PclockDiv2,
-//   91         SPI2::CR1::LSBFIRST::MsbFisrt,
-//   92         SPI2::CR1::CRCEN::CrcCalcDisable
-//   93     >::Set() ;  
+//   80       SPI2::CR1Pack<
+//   81         SPI2::CR1::MSTR::Master,   //SPI2 master
+//   82         SPI2::CR1::BIDIMODE::Unidirectional2Line,
+//   83         SPI2::CR1::DFF::Data8bit,
+//   84         SPI2::CR1::CPOL::High,
+//   85         SPI2::CR1::CPHA::Phase2edge,
+//   86         SPI2::CR1::SSM::NssSoftwareEnable,
+//   87         SPI2::CR1::SSI::Value1,
+//   88         SPI2::CR1::BR::PclockDiv2,
+//   89         SPI2::CR1::LSBFIRST::MsbFisrt,
+//   90         SPI2::CR1::CRCEN::CrcCalcDisable
+//   91     >::Set() ;  
           CFI FunCall _ZN8RegisterILj1073756160ELj32E13ReadWriteModeN4SPI211SPI2CR1BaseEJ10FieldValueI20SPI2_CR1_MSTR_ValuesINS1_3CR1ELj2ELj1ES0_S2_ES2_Lj1EvES3_I24SPI2_CR1_BIDIMODE_ValuesIS5_Lj15ELj1ES0_S2_ES2_Lj0EvES3_I19SPI2_CR1_DFF_ValuesIS5_Lj11ELj1ES0_S2_ES2_Lj0EvES3_I20SPI2_CR1_CPOL_ValuesIS5_Lj1ELj1ES0_S2_ES2_Lj1EvES3_I20SPI2_CR1_CPHA_ValuesIS5_Lj0ELj1ES0_S2_ES2_Lj1EvES3_I19SPI2_CR1_SSM_ValuesIS5_Lj9ELj1ES0_S2_ES2_Lj1EvES3_I19SPI2_CR1_SSI_ValuesIS5_Lj8ELj1ES0_S2_ES2_Lj1EvES3_I18SPI2_CR1_BR_ValuesIS5_Lj3ELj3ES0_S2_ES2_Lj0EvES3_I24SPI2_CR1_LSBFIRST_ValuesIS5_Lj7ELj1ES0_S2_ES2_Lj0EvES3_I21SPI2_CR1_CRCEN_ValuesIS5_Lj13ELj1ES0_S2_ES2_Lj0EvEEE3SetIS0_vEEvv
         BL       _ZN8RegisterILj1073756160ELj32E13ReadWriteModeN4SPI211SPI2CR1BaseEJ10FieldValueI20SPI2_CR1_MSTR_ValuesINS1_3CR1ELj2ELj1ES0_S2_ES2_Lj1EvES3_I24SPI2_CR1_BIDIMODE_ValuesIS5_Lj15ELj1ES0_S2_ES2_Lj0EvES3_I19SPI2_CR1_DFF_ValuesIS5_Lj11ELj1ES0_S2_ES2_Lj0EvES3_I20SPI2_CR1_CPOL_ValuesIS5_Lj1ELj1ES0_S2_ES2_Lj1EvES3_I20SPI2_CR1_CPHA_ValuesIS5_Lj0ELj1ES0_S2_ES2_Lj1EvES3_I19SPI2_CR1_SSM_ValuesIS5_Lj9ELj1ES0_S2_ES2_Lj1EvES3_I19SPI2_CR1_SSI_ValuesIS5_Lj8ELj1ES0_S2_ES2_Lj1EvES3_I18SPI2_CR1_BR_ValuesIS5_Lj3ELj3ES0_S2_ES2_Lj0EvES3_I24SPI2_CR1_LSBFIRST_ValuesIS5_Lj7ELj1ES0_S2_ES2_Lj0EvES3_I21SPI2_CR1_CRCEN_ValuesIS5_Lj13ELj1ES0_S2_ES2_Lj0EvEEE3SetIS0_vEEvv
-//   94       SPI2::CRCPR::CRCPOLY::Set(10U) ;
+//   92       SPI2::CRCPR::CRCPOLY::Set(10U) ;
         MOVS     R0,#+10
           CFI FunCall _ZN13RegisterFieldIN4SPI25CRCPRELj0ELj16E13ReadWriteModevE3SetIS2_vEEvj
         BL       _ZN13RegisterFieldIN4SPI25CRCPRELj0ELj16E13ReadWriteModevE3SetIS2_vEEvj
-//   95     SPI2::CR1::SPE::Enable::Set() ;
+//   93     SPI2::CR1::SPE::Enable::Set() ;
           CFI FunCall _ZN14FieldValueBaseI19SPI2_CR1_SPE_ValuesIN4SPI23CR1ELj6ELj1E13ReadWriteModeNS1_11SPI2CR1BaseEES4_Lj1EE3SetIS3_vEEvv
         BL       _ZN14FieldValueBaseI19SPI2_CR1_SPE_ValuesIN4SPI23CR1ELj6ELj1E13ReadWriteModeNS1_11SPI2CR1BaseEES4_Lj1EE3SetIS3_vEEvv
-//   96    
-//   97   
-//   98 //SMBus  
-//   99   RCC::APB1ENR::I2C1EN::Enable::Set(); 
+//   94    
+//   95   
+//   96 //SMBus  
+//   97   RCC::APB1ENR::I2C1EN::Enable::Set(); 
           CFI FunCall _ZN14FieldValueBaseI25RCC_AHB1ENR_DMA2EN_ValuesIN3RCC7APB1ENRELj21ELj1E13ReadWriteModeNS1_14RCCAPB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv
         BL       _ZN14FieldValueBaseI25RCC_AHB1ENR_DMA2EN_ValuesIN3RCC7APB1ENRELj21ELj1E13ReadWriteModeNS1_14RCCAPB1ENRBaseEES4_Lj1EE3SetIS3_vEEvv
-//  100   I2C1::CR1::SMBUS::SmBusMode::Set(); 
+//   98   I2C1::CR1::SMBUS::SmBusMode::Set(); 
           CFI FunCall _ZN14FieldValueBaseI21I2C1_CR1_SMBUS_ValuesIN4I2C13CR1ELj1ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
         BL       _ZN14FieldValueBaseI21I2C1_CR1_SMBUS_ValuesIN4I2C13CR1ELj1ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
-//  101   I2C1::CR1::SMBTYPE::Device::Set(); 
+//   99   I2C1::CR1::SMBTYPE::Device::Set(); 
           CFI FunCall _ZN14FieldValueBaseI23I2C1_CR1_SMBTYPE_ValuesIN4I2C13CR1ELj3ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj0EE3SetIS3_vEEvv
         BL       _ZN14FieldValueBaseI23I2C1_CR1_SMBTYPE_ValuesIN4I2C13CR1ELj3ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj0EE3SetIS3_vEEvv
-//  102   I2C1::CCR::F_S::StandartMode::Set(); 
+//  100   I2C1::CCR::F_S::StandartMode::Set(); 
           CFI FunCall _ZN14FieldValueBaseI19I2C1_CCR_F_S_ValuesIN4I2C13CCRELj15ELj1E13ReadWriteModeNS1_11I2C1CCRBaseEES4_Lj0EE3SetIS3_vEEvv
         BL       _ZN14FieldValueBaseI19I2C1_CCR_F_S_ValuesIN4I2C13CCRELj15ELj1E13ReadWriteModeNS1_11I2C1CCRBaseEES4_Lj0EE3SetIS3_vEEvv
-//  103   I2C1::CCR::CCR::Set(0xC8U) ;
+//  101   I2C1::CCR::CCR::Set(0xC8U) ;
         MOVS     R0,#+200
           CFI FunCall _ZN12RegisterBaseILj1073763356ELj32E13ReadWriteModeE3SetIS0_vEEvj
         BL       _ZN12RegisterBaseILj1073763356ELj32E13ReadWriteModeE3SetIS0_vEEvj
-//  104   I2C1::CR2::FREQ::Set(0x10) ;
+//  102   I2C1::CR2::FREQ::Set(0x10) ;
         MOVS     R0,#+16
           CFI FunCall _ZN13RegisterFieldIN4I2C13CR2ELj0ELj6E13ReadWriteModevE3SetIS2_vEEvj
         BL       _ZN13RegisterFieldIN4I2C13CR2ELj0ELj6E13ReadWriteModevE3SetIS2_vEEvj
-//  105   I2C1::TRISE::Write(0x11) ;  
+//  103   I2C1::TRISE::Write(0x11) ;  
         MOVS     R0,#+17
           CFI FunCall _ZN12RegisterBaseILj1073763360ELj32E13ReadWriteModeE5WriteIS0_vEEvj
         BL       _ZN12RegisterBaseILj1073763360ELj32E13ReadWriteModeE5WriteIS0_vEEvj
-//  106   I2C1::CR1::PE::Enable::Set() ; 
+//  104   I2C1::CR1::PE::Enable::Set() ; 
           CFI FunCall _ZN14FieldValueBaseI18I2C1_CR1_PE_ValuesIN4I2C13CR1ELj0ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
         BL       _ZN14FieldValueBaseI18I2C1_CR1_PE_ValuesIN4I2C13CR1ELj0ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
-//  107   GPIOB::ODR::ODR8::High::Set() ; 
+//  105   GPIOB::ODR::ODR8::High::Set() ; 
           CFI FunCall _ZN14FieldValueBaseI21GPIOB_ODR_ODR8_ValuesIN5GPIOB3ODRELj8ELj1E13ReadWriteModeNS1_12GPIOBODRBaseEES4_Lj1EE3SetIS3_vEEvv
         BL       _ZN14FieldValueBaseI21GPIOB_ODR_ODR8_ValuesIN5GPIOB3ODRELj8ELj1E13ReadWriteModeNS1_12GPIOBODRBaseEES4_Lj1EE3SetIS3_vEEvv
-//  108   GPIOB::MODER::MODER8::Alternate::Set(); //Alternate moder 8
+//  106   GPIOB::MODER::MODER8::Alternate::Set(); //Alternate moder 8
           CFI FunCall _ZN14FieldValueBaseI26GPIOB_MODER_MODER15_ValuesIN5GPIOB5MODERELj16ELj2E13ReadWriteModeNS1_14GPIOBMODERBaseEES4_Lj2EE3SetIS3_vEEvv
         BL       _ZN14FieldValueBaseI26GPIOB_MODER_MODER15_ValuesIN5GPIOB5MODERELj16ELj2E13ReadWriteModeNS1_14GPIOBMODERBaseEES4_Lj2EE3SetIS3_vEEvv
-//  109   GPIOB::MODER::MODER9::Alternate::Set(); //Alternate moder 9  
+//  107   GPIOB::MODER::MODER9::Alternate::Set(); //Alternate moder 9  
           CFI FunCall _ZN14FieldValueBaseI26GPIOB_MODER_MODER15_ValuesIN5GPIOB5MODERELj18ELj2E13ReadWriteModeNS1_14GPIOBMODERBaseEES4_Lj2EE3SetIS3_vEEvv
         BL       _ZN14FieldValueBaseI26GPIOB_MODER_MODER15_ValuesIN5GPIOB5MODERELj18ELj2E13ReadWriteModeNS1_14GPIOBMODERBaseEES4_Lj2EE3SetIS3_vEEvv
-//  110   GPIOB::AFRH::AFRH8::Af4::Set();  //scl
+//  108   GPIOB::AFRH::AFRH8::Af4::Set();  //scl
           CFI FunCall _ZN14FieldValueBaseI23GPIOB_AFRL_AFRL7_ValuesIN5GPIOB4AFRHELj0ELj4E13ReadWriteModeNS1_13GPIOBAFRHBaseEES4_Lj4EE3SetIS3_vEEvv
         BL       _ZN14FieldValueBaseI23GPIOB_AFRL_AFRL7_ValuesIN5GPIOB4AFRHELj0ELj4E13ReadWriteModeNS1_13GPIOBAFRHBaseEES4_Lj4EE3SetIS3_vEEvv
-//  111   GPIOB::AFRH::AFRH9::Af4::Set();  //sda  
+//  109   GPIOB::AFRH::AFRH9::Af4::Set();  //sda  
           CFI FunCall _ZN14FieldValueBaseI23GPIOB_AFRL_AFRL7_ValuesIN5GPIOB4AFRHELj4ELj4E13ReadWriteModeNS1_13GPIOBAFRHBaseEES4_Lj4EE3SetIS3_vEEvv
         BL       _ZN14FieldValueBaseI23GPIOB_AFRL_AFRL7_ValuesIN5GPIOB4AFRHELj4ELj4E13ReadWriteModeNS1_13GPIOBAFRHBaseEES4_Lj4EE3SetIS3_vEEvv
-//  112   GPIOB::OTYPER::OT8::OutputOpenDrain::Set();
+//  110   GPIOB::OTYPER::OT8::OutputOpenDrain::Set();
           CFI FunCall _ZN14FieldValueBaseI23GPIOB_OTYPER_OT8_ValuesIN5GPIOB6OTYPERELj8ELj1E13ReadWriteModeNS1_15GPIOBOTYPERBaseEES4_Lj1EE3SetIS3_vEEvv
         BL       _ZN14FieldValueBaseI23GPIOB_OTYPER_OT8_ValuesIN5GPIOB6OTYPERELj8ELj1E13ReadWriteModeNS1_15GPIOBOTYPERBaseEES4_Lj1EE3SetIS3_vEEvv
-//  113   GPIOB::OTYPER::OT9::OutputOpenDrain::Set();  
+//  111   GPIOB::OTYPER::OT9::OutputOpenDrain::Set();  
           CFI FunCall _ZN14FieldValueBaseI23GPIOB_OTYPER_OT9_ValuesIN5GPIOB6OTYPERELj9ELj1E13ReadWriteModeNS1_15GPIOBOTYPERBaseEES4_Lj1EE3SetIS3_vEEvv
         BL       _ZN14FieldValueBaseI23GPIOB_OTYPER_OT9_ValuesIN5GPIOB6OTYPERELj9ELj1E13ReadWriteModeNS1_15GPIOBOTYPERBaseEES4_Lj1EE3SetIS3_vEEvv
-//  114   GPIOB::OSPEEDR::OSPEEDR8::HighSpeed::Set() ;
+//  112   GPIOB::OSPEEDR::OSPEEDR8::HighSpeed::Set() ;
           CFI FunCall _ZN14FieldValueBaseI30GPIOB_OSPEEDR_OSPEEDR15_ValuesIN5GPIOB7OSPEEDRELj16ELj2E13ReadWriteModeNS1_16GPIOBOSPEEDRBaseEES4_Lj3EE3SetIS3_vEEvv
         BL       _ZN14FieldValueBaseI30GPIOB_OSPEEDR_OSPEEDR15_ValuesIN5GPIOB7OSPEEDRELj16ELj2E13ReadWriteModeNS1_16GPIOBOSPEEDRBaseEES4_Lj3EE3SetIS3_vEEvv
-//  115   GPIOB::OSPEEDR::OSPEEDR9::HighSpeed::Set() ;  
+//  113   GPIOB::OSPEEDR::OSPEEDR9::HighSpeed::Set() ;  
           CFI FunCall _ZN14FieldValueBaseI30GPIOB_OSPEEDR_OSPEEDR15_ValuesIN5GPIOB7OSPEEDRELj18ELj2E13ReadWriteModeNS1_16GPIOBOSPEEDRBaseEES4_Lj3EE3SetIS3_vEEvv
         BL       _ZN14FieldValueBaseI30GPIOB_OSPEEDR_OSPEEDR15_ValuesIN5GPIOB7OSPEEDRELj18ELj2E13ReadWriteModeNS1_16GPIOBOSPEEDRBaseEES4_Lj3EE3SetIS3_vEEvv
-//  116   GPIOB::PUPDR::PUPDR8::PullUp::Set() ;
+//  114   GPIOB::PUPDR::PUPDR8::PullUp::Set() ;
           CFI FunCall _ZN14FieldValueBaseI26GPIOB_PUPDR_PUPDR15_ValuesIN5GPIOB5PUPDRELj16ELj2E13ReadWriteModeNS1_14GPIOBPUPDRBaseEES4_Lj1EE3SetIS3_vEEvv
         BL       _ZN14FieldValueBaseI26GPIOB_PUPDR_PUPDR15_ValuesIN5GPIOB5PUPDRELj16ELj2E13ReadWriteModeNS1_14GPIOBPUPDRBaseEES4_Lj1EE3SetIS3_vEEvv
-//  117   GPIOB::PUPDR::PUPDR9::PullUp::Set() ;
+//  115   GPIOB::PUPDR::PUPDR9::PullUp::Set() ;
           CFI FunCall _ZN14FieldValueBaseI26GPIOB_PUPDR_PUPDR15_ValuesIN5GPIOB5PUPDRELj18ELj2E13ReadWriteModeNS1_14GPIOBPUPDRBaseEES4_Lj1EE3SetIS3_vEEvv
         BL       _ZN14FieldValueBaseI26GPIOB_PUPDR_PUPDR15_ValuesIN5GPIOB5PUPDRELj18ELj2E13ReadWriteModeNS1_14GPIOBPUPDRBaseEES4_Lj1EE3SetIS3_vEEvv
-//  118 
-//  119 //USART  
-//  120   RCC::APB1ENRPack<
-//  121     RCC::APB1ENR::TIM2EN::Enable, 
-//  122     RCC::APB1ENR::USART2EN::Enable
-//  123     >::Set() ;
+//  116 
+//  117 //USART  
+//  118   RCC::APB1ENRPack<
+//  119     RCC::APB1ENR::TIM2EN::Enable, 
+//  120     RCC::APB1ENR::USART2EN::Enable
+//  121     >::Set() ;
           CFI FunCall _ZN8RegisterILj1073887296ELj32E13ReadWriteModeN3RCC14RCCAPB1ENRBaseEJ10FieldValueI25RCC_AHB1ENR_DMA2EN_ValuesINS1_7APB1ENRELj0ELj1ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj17ELj1ES0_S2_ES2_Lj1EvEEE3SetIS0_vEEvv
         BL       _ZN8RegisterILj1073887296ELj32E13ReadWriteModeN3RCC14RCCAPB1ENRBaseEJ10FieldValueI25RCC_AHB1ENR_DMA2EN_ValuesINS1_7APB1ENRELj0ELj1ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj17ELj1ES0_S2_ES2_Lj1EvEEE3SetIS0_vEEvv
-//  124   
-//  125   GPIOA::MODERPack<
-//  126     GPIOA::MODER::MODER2::Alternate, // Uart2 TX
-//  127     GPIOA::MODER::MODER3::Alternate  // Uart2 RX
-//  128     >::Set() ;
+//  122   
+//  123   GPIOA::MODERPack<
+//  124     GPIOA::MODER::MODER2::Alternate, // Uart2 TX
+//  125     GPIOA::MODER::MODER3::Alternate  // Uart2 RX
+//  126     >::Set() ;
           CFI FunCall _ZN8RegisterILj1073872896ELj32E13ReadWriteModeN5GPIOA14GPIOAMODERBaseEJ10FieldValueI26GPIOA_MODER_MODER15_ValuesINS1_5MODERELj4ELj2ES0_S2_ES2_Lj2EvES3_IS4_IS5_Lj6ELj2ES0_S2_ES2_Lj2EvEEE3SetIS0_vEEvv
         BL       _ZN8RegisterILj1073872896ELj32E13ReadWriteModeN5GPIOA14GPIOAMODERBaseEJ10FieldValueI26GPIOA_MODER_MODER15_ValuesINS1_5MODERELj4ELj2ES0_S2_ES2_Lj2EvES3_IS4_IS5_Lj6ELj2ES0_S2_ES2_Lj2EvEEE3SetIS0_vEEvv
-//  129   
-//  130   GPIOA::AFRLPack <
-//  131     GPIOA::AFRL::AFRL2::Af7, // Uart2 TX
-//  132     GPIOA::AFRL::AFRL3::Af7  // Uart2 RX
-//  133     >::Set() ;
+//  127   
+//  128   GPIOA::AFRLPack <
+//  129     GPIOA::AFRL::AFRL2::Af7, // Uart2 TX
+//  130     GPIOA::AFRL::AFRL3::Af7  // Uart2 RX
+//  131     >::Set() ;
           CFI FunCall _ZN8RegisterILj1073872928ELj32E13ReadWriteModeN5GPIOA13GPIOAAFRLBaseEJ10FieldValueI23GPIOA_AFRL_AFRL7_ValuesINS1_4AFRLELj8ELj4ES0_S2_ES2_Lj7EvES3_IS4_IS5_Lj12ELj4ES0_S2_ES2_Lj7EvEEE3SetIS0_vEEvv
         BL       _ZN8RegisterILj1073872928ELj32E13ReadWriteModeN5GPIOA13GPIOAAFRLBaseEJ10FieldValueI23GPIOA_AFRL_AFRL7_ValuesINS1_4AFRLELj8ELj4ES0_S2_ES2_Lj7EvES3_IS4_IS5_Lj12ELj4ES0_S2_ES2_Lj7EvEEE3SetIS0_vEEvv
-//  134   
-//  135     USART2::BRR::Write(UartSpeed9600);
+//  132   
+//  133     USART2::BRR::Write(UartSpeed9600);
         MOVW     R0,#+1666
           CFI FunCall _ZN12RegisterBaseILj1073759240ELj32E13ReadWriteModeE5WriteIS0_vEEvj
         BL       _ZN12RegisterBaseILj1073759240ELj32E13ReadWriteModeE5WriteIS0_vEEvj
-//  136     USART2::CR1::UE::Enable::Set();    
+//  134     USART2::CR1::UE::Enable::Set();    
           CFI FunCall _ZN14FieldValueBaseI20USART2_CR1_UE_ValuesIN6USART23CR1ELj13ELj1E13ReadWriteModeNS1_13USART2CR1BaseEES4_Lj1EE3SetIS3_vEEvv
         BL       _ZN14FieldValueBaseI20USART2_CR1_UE_ValuesIN6USART23CR1ELj13ELj1E13ReadWriteModeNS1_13USART2CR1BaseEES4_Lj1EE3SetIS3_vEEvv
-//  137     NVIC::ISER1::Write(1<<6);
+//  135     NVIC::ISER1::Write(1<<6);
         MOVS     R0,#+64
           CFI FunCall _ZN12RegisterBaseILj3758153988ELj32E13ReadWriteModeE5WriteIS0_vEEvj
         BL       _ZN12RegisterBaseILj3758153988ELj32E13ReadWriteModeE5WriteIS0_vEEvj
-//  138   return 1;
+//  136   return 1;
         MOVS     R0,#+1
         POP      {R1,PC}          ;; return
-//  139 }
+//  137 }
           CFI EndBlock cfiBlock1
-//  140 };
+//  138 };
 
         SECTION `.bss`:DATA:REORDER:NOROOT(0)
         DATA
-//  141 Button<GPIOC, 13> button;
+//  139 Button<GPIOC, 13> button;
 button:
         DS8 1
 
         SECTION `.bss`:DATA:REORDER:NOROOT(2)
         DATA
-//  142 Event event(1000ms, 1);
+//  140 Event event(1000ms, 1);
 event:
         DS8 36
 
@@ -2981,50 +2979,50 @@ event:
 
         SECTION `.bss`:DATA:REORDER:NOROOT(2)
         DATA
-//  143 ButtonPoll<Timer> buttonPoll(button,event);
+//  141 ButtonPoll<Timer> buttonPoll(button,event);
 buttonPoll:
         DS8 8
 
         SECTION `.bss`:DATA:REORDER:NOROOT(2)
         DATA
-//  144 Filter filter(10.0F,100.0F);
+//  142 Filter filter(10.0F,100.0F);
 filter:
         DS8 12
 
         SECTION `.bss`:DATA:REORDER:NOROOT(2)
         DATA
-//  145 TempSens tempSens(filter);
+//  143 TempSens tempSens(filter);
 tempSens:
         DS8 12
 
         SECTION `.data`:DATA:REORDER:NOROOT(2)
         DATA
-//  146 Temp temp;
+//  144 Temp temp;
 temp:
         DATA32
         DC32 celsius, kelvin, fahrenheit, celsius, 0
 
         SECTION `.bss`:DATA:REORDER:NOROOT(0)
         DATA
-//  147 SMBus smbus;
+//  145 SMBus smbus;
 smbus:
         DS8 1
 
         SECTION `.bss`:DATA:REORDER:NOROOT(2)
         DATA
-//  148 TemperatureTask temperatureTask(temp,tempSens,event);
+//  146 TemperatureTask temperatureTask(temp,tempSens,event);
 temperatureTask:
         DS8 2'160
 
         SECTION `.bss`:DATA:REORDER:NOROOT(2)
         DATA
-//  149 ScreenTask<temperatureTask> screenTask;
+//  147 ScreenTask<temperatureTask> screenTask;
 screenTask:
         DS8 2'160
 
         SECTION `.bss`:DATA:REORDER:NOROOT(2)
         DATA
-//  150 BlueToothTask<temperatureTask> blueToothTask;
+//  148 BlueToothTask<temperatureTask> blueToothTask;
 blueToothTask:
         DS8 2'172
 
@@ -3032,43 +3030,43 @@ blueToothTask:
           CFI Block cfiBlock2 Using cfiCommon0
           CFI Function main
         THUMB
-//  151 int main()
-//  152 {  
+//  149 int main()
+//  150 {  
 main:
         PUSH     {R7,LR}
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+8
-//  153    buttonPoll.ButtonPollInitialization();
+//  151    buttonPoll.ButtonPollInitialization();
         LDR.N    R0,??DataTable2_14
           CFI FunCall _ZN10ButtonPollI5TimerE24ButtonPollInitializationEv
         BL       _ZN10ButtonPollI5TimerE24ButtonPollInitializationEv
-//  154    Rtos::CreateThread(screenTask, "screenTask", ThreadPriority::normal); 
+//  152    Rtos::CreateThread(screenTask, "screenTask", ThreadPriority::normal); 
         MOVS     R2,#+30
         LDR.N    R1,??DataTable2_22
         LDR.N    R0,??DataTable2_19
           CFI FunCall _ZN9OsWrapper4Rtos12CreateThreadI10ScreenTaskIL_Z15temperatureTaskEEEEvRT_PKcNS_14ThreadPriorityE
         BL       _ZN9OsWrapper4Rtos12CreateThreadI10ScreenTaskIL_Z15temperatureTaskEEEEvRT_PKcNS_14ThreadPriorityE
-//  155    Rtos::CreateThread(temperatureTask, "temperatureTask", ThreadPriority::normal);   
+//  153    Rtos::CreateThread(temperatureTask, "temperatureTask", ThreadPriority::normal);   
         MOVS     R2,#+30
         LDR.N    R1,??DataTable2_23
         LDR.N    R0,??DataTable2_18
           CFI FunCall _ZN9OsWrapper4Rtos12CreateThreadI15TemperatureTaskEEvRT_PKcNS_14ThreadPriorityE
         BL       _ZN9OsWrapper4Rtos12CreateThreadI15TemperatureTaskEEvRT_PKcNS_14ThreadPriorityE
-//  156    Rtos::CreateThread(blueToothTask, "blueToothTask", ThreadPriority::normal); 
+//  154    Rtos::CreateThread(blueToothTask, "blueToothTask", ThreadPriority::normal); 
         MOVS     R2,#+30
         LDR.N    R1,??DataTable2_24
         LDR.N    R0,??DataTable2_20
           CFI FunCall _ZN9OsWrapper4Rtos12CreateThreadI13BlueToothTaskIL_Z15temperatureTaskEEEEvRT_PKcNS_14ThreadPriorityE
         BL       _ZN9OsWrapper4Rtos12CreateThreadI13BlueToothTaskIL_Z15temperatureTaskEEEEvRT_PKcNS_14ThreadPriorityE
-//  157    Rtos::Start();
+//  155    Rtos::Start();
           CFI FunCall _ZN9OsWrapper4Rtos5StartEv
         BL       _ZN9OsWrapper4Rtos5StartEv
-//  158   for(;;)
+//  156   for(;;)
 ??main_0:
         B.N      ??main_0
-//  159   {   
-//  160   }
-//  161 }
+//  157   {   
+//  158   }
+//  159 }
           CFI EndBlock cfiBlock2
 
         SECTION `.text`:CODE:NOROOT(2)
@@ -5826,671 +5824,599 @@ _ZN4Temp21GetTempInCurrentUnitsEf:
           CFI EndBlock cfiBlock128
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZN11SystemClock10SetDelayMsEj
+        SECTION_GROUP _ZN3PinI4PortI5GPIOCELh3E12PinWriteableE3SetIS3_vEEvv
           CFI Block cfiBlock129 Using cfiCommon0
-          CFI Function _ZN11SystemClock10SetDelayMsEj
-          CFI NoCalls
+          CFI Function _ZN3PinI4PortI5GPIOCELh3E12PinWriteableE3SetIS3_vEEvv
         THUMB
-// __interwork __vfp void SystemClock::SetDelayMs(uint32_t)
-_ZN11SystemClock10SetDelayMsEj:
-        MOV      R1,#+3200
-        MULS     R0,R1,R0
-        B.N      ??SetDelayMs_0
-??SetDelayMs_1:
-        SUBS     R0,R0,#+1
-??SetDelayMs_0:
-        CMP      R0,#+0
-        BNE.N    ??SetDelayMs_1
-        BX       LR               ;; return
-          CFI EndBlock cfiBlock129
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
-          CFI Block cfiBlock130 Using cfiCommon0
-          CFI Function _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
-        THUMB
-// __interwork __vfp void ElinkDriver<Spi<SPI2>, Pin<Port<GPIOC>, (uint8_t)'\003', PinWriteable>, Pin<Port<GPIOB>, (uint8_t)'\002', PinWriteable>, Pin<Port<GPIOB>, (uint8_t)'\001', PinWriteable>, Pin<Port<GPIOC>, (uint8_t)'\002', PinReadable>, Attributes<BlackAndWhite>>::SendCommand(ElinkDriverCommands)
-_ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands:
-        PUSH     {R4,LR}
-          CFI R14 Frame(CFA, -4)
-          CFI R4 Frame(CFA, -8)
-          CFI CFA R13+8
-        MOVS     R4,R0
-          CFI FunCall _ZN3PinI4PortI5GPIOBELh2E12PinWriteableE5ResetIS3_vEEvv
-        BL       _ZN3PinI4PortI5GPIOBELh2E12PinWriteableE5ResetIS3_vEEvv
-          CFI FunCall _ZN3PinI4PortI5GPIOBELh1E12PinWriteableE5ResetIS3_vEEvv
-        BL       _ZN3PinI4PortI5GPIOBELh1E12PinWriteableE5ResetIS3_vEEvv
-        MOVS     R0,R4
-        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
-          CFI FunCall _ZN3SpiI4SPI2E9WriteByteEh
-        BL       _ZN3SpiI4SPI2E9WriteByteEh
-          CFI FunCall _ZN3PinI4PortI5GPIOBELh1E12PinWriteableE3SetIS3_vEEvv
-        BL       _ZN3PinI4PortI5GPIOBELh1E12PinWriteableE3SetIS3_vEEvv
-          CFI FunCall _ZN3PinI4PortI5GPIOBELh1E12PinWriteableE3SetIS3_vEEvv
-        BL       _ZN3PinI4PortI5GPIOBELh1E12PinWriteableE3SetIS3_vEEvv
-        POP      {R4,PC}          ;; return
-          CFI EndBlock cfiBlock130
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-          CFI Block cfiBlock131 Using cfiCommon0
-          CFI Function _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-        THUMB
-// __interwork __vfp void ElinkDriver<Spi<SPI2>, Pin<Port<GPIOC>, (uint8_t)'\003', PinWriteable>, Pin<Port<GPIOB>, (uint8_t)'\002', PinWriteable>, Pin<Port<GPIOB>, (uint8_t)'\001', PinWriteable>, Pin<Port<GPIOC>, (uint8_t)'\002', PinReadable>, Attributes<BlackAndWhite>>::SendData(uint8_t)
-_ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh:
-        PUSH     {R4,LR}
-          CFI R14 Frame(CFA, -4)
-          CFI R4 Frame(CFA, -8)
-          CFI CFA R13+8
-        MOVS     R4,R0
-          CFI FunCall _ZN3PinI4PortI5GPIOBELh2E12PinWriteableE3SetIS3_vEEvv
-        BL       _ZN3PinI4PortI5GPIOBELh2E12PinWriteableE3SetIS3_vEEvv
-          CFI FunCall _ZN3PinI4PortI5GPIOBELh1E12PinWriteableE5ResetIS3_vEEvv
-        BL       _ZN3PinI4PortI5GPIOBELh1E12PinWriteableE5ResetIS3_vEEvv
-        MOVS     R0,R4
-        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
-          CFI FunCall _ZN3SpiI4SPI2E9WriteByteEh
-        BL       _ZN3SpiI4SPI2E9WriteByteEh
-          CFI FunCall _ZN3PinI4PortI5GPIOBELh1E12PinWriteableE3SetIS3_vEEvv
-        BL       _ZN3PinI4PortI5GPIOBELh1E12PinWriteableE3SetIS3_vEEvv
-        POP      {R4,PC}          ;; return
-          CFI EndBlock cfiBlock131
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE7RefreshEv
-          CFI Block cfiBlock132 Using cfiCommon0
-          CFI Function _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE7RefreshEv
-        THUMB
-// __interwork __vfp void ElinkDriver<Spi<SPI2>, Pin<Port<GPIOC>, (uint8_t)'\003', PinWriteable>, Pin<Port<GPIOB>, (uint8_t)'\002', PinWriteable>, Pin<Port<GPIOB>, (uint8_t)'\001', PinWriteable>, Pin<Port<GPIOC>, (uint8_t)'\002', PinReadable>, Attributes<BlackAndWhite>>::Refresh()
-_ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE7RefreshEv:
+// __interwork __vfp void Pin<Port<GPIOC>, (uint8_t)'\003', PinWriteable>::Set<PinWriteable, void>()
+_ZN3PinI4PortI5GPIOCELh3E12PinWriteableE3SetIS3_vEEvv:
         PUSH     {R7,LR}
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+8
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE6SetLutEv
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE6SetLutEv
-        MOVS     R0,#+18
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
-        MOVS     R0,#+100
-          CFI FunCall _ZN11SystemClock10SetDelayMsEj
-        BL       _ZN11SystemClock10SetDelayMsEj
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE13WaitUntilBusyEv
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE13WaitUntilBusyEv
+        MOVS     R0,#+8
+          CFI FunCall _ZN4PortI5GPIOCE3SetEj
+        BL       _ZN4PortI5GPIOCE3SetEj
+        POP      {R0,PC}          ;; return
+          CFI EndBlock cfiBlock129
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZN3PinI4PortI5GPIOBELh2E12PinWriteableE3SetIS3_vEEvv
+          CFI Block cfiBlock130 Using cfiCommon0
+          CFI Function _ZN3PinI4PortI5GPIOBELh2E12PinWriteableE3SetIS3_vEEvv
+        THUMB
+// __interwork __vfp void Pin<Port<GPIOB>, (uint8_t)'\002', PinWriteable>::Set<PinWriteable, void>()
+_ZN3PinI4PortI5GPIOBELh2E12PinWriteableE3SetIS3_vEEvv:
+        PUSH     {R7,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI CFA R13+8
+        MOVS     R0,#+4
+          CFI FunCall _ZN4PortI5GPIOBE3SetEj
+        BL       _ZN4PortI5GPIOBE3SetEj
+        POP      {R0,PC}          ;; return
+          CFI EndBlock cfiBlock130
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZN3PinI4PortI5GPIOBELh1E12PinWriteableE3SetIS3_vEEvv
+          CFI Block cfiBlock131 Using cfiCommon0
+          CFI Function _ZN3PinI4PortI5GPIOBELh1E12PinWriteableE3SetIS3_vEEvv
+        THUMB
+// __interwork __vfp void Pin<Port<GPIOB>, (uint8_t)'\001', PinWriteable>::Set<PinWriteable, void>()
+_ZN3PinI4PortI5GPIOBELh1E12PinWriteableE3SetIS3_vEEvv:
+        PUSH     {R7,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI CFA R13+8
+        MOVS     R0,#+2
+          CFI FunCall _ZN4PortI5GPIOBE3SetEj
+        BL       _ZN4PortI5GPIOBE3SetEj
+        POP      {R0,PC}          ;; return
+          CFI EndBlock cfiBlock131
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZN3PinI4PortI5GPIOCELh3E12PinWriteableE5ResetIS3_vEEvv
+          CFI Block cfiBlock132 Using cfiCommon0
+          CFI Function _ZN3PinI4PortI5GPIOCELh3E12PinWriteableE5ResetIS3_vEEvv
+        THUMB
+// __interwork __vfp void Pin<Port<GPIOC>, (uint8_t)'\003', PinWriteable>::Reset<PinWriteable, void>()
+_ZN3PinI4PortI5GPIOCELh3E12PinWriteableE5ResetIS3_vEEvv:
+        PUSH     {R7,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI CFA R13+8
+        MOVS     R0,#+8
+          CFI FunCall _ZN4PortI5GPIOCE5ResetEj
+        BL       _ZN4PortI5GPIOCE5ResetEj
         POP      {R0,PC}          ;; return
           CFI EndBlock cfiBlock132
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE12RefreshQuickIvEEvv
+        SECTION_GROUP _ZN3PinI4PortI5GPIOBELh2E12PinWriteableE5ResetIS3_vEEvv
           CFI Block cfiBlock133 Using cfiCommon0
-          CFI Function _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE12RefreshQuickIvEEvv
+          CFI Function _ZN3PinI4PortI5GPIOBELh2E12PinWriteableE5ResetIS3_vEEvv
         THUMB
-// __interwork __vfp void ElinkDriver<Spi<SPI2>, Pin<Port<GPIOC>, (uint8_t)'\003', PinWriteable>, Pin<Port<GPIOB>, (uint8_t)'\002', PinWriteable>, Pin<Port<GPIOB>, (uint8_t)'\001', PinWriteable>, Pin<Port<GPIOC>, (uint8_t)'\002', PinReadable>, Attributes<BlackAndWhite>>::RefreshQuick<void>()
-_ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE12RefreshQuickIvEEvv:
+// __interwork __vfp void Pin<Port<GPIOB>, (uint8_t)'\002', PinWriteable>::Reset<PinWriteable, void>()
+_ZN3PinI4PortI5GPIOBELh2E12PinWriteableE5ResetIS3_vEEvv:
         PUSH     {R7,LR}
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+8
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SetLutQuickIvEEvv
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SetLutQuickIvEEvv
-        MOVS     R0,#+18
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE13WaitUntilBusyEv
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE13WaitUntilBusyEv
+        MOVS     R0,#+4
+          CFI FunCall _ZN4PortI5GPIOBE5ResetEj
+        BL       _ZN4PortI5GPIOBE5ResetEj
         POP      {R0,PC}          ;; return
           CFI EndBlock cfiBlock133
 
-        SECTION `.text`:CODE:REORDER:NOROOT(2)
-        SECTION_GROUP _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE6SetLutEv
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZN3PinI4PortI5GPIOBELh1E12PinWriteableE5ResetIS3_vEEvv
           CFI Block cfiBlock134 Using cfiCommon0
-          CFI Function _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE6SetLutEv
+          CFI Function _ZN3PinI4PortI5GPIOBELh1E12PinWriteableE5ResetIS3_vEEvv
         THUMB
-// __interwork __vfp void ElinkDriver<Spi<SPI2>, Pin<Port<GPIOC>, (uint8_t)'\003', PinWriteable>, Pin<Port<GPIOB>, (uint8_t)'\002', PinWriteable>, Pin<Port<GPIOB>, (uint8_t)'\001', PinWriteable>, Pin<Port<GPIOC>, (uint8_t)'\002', PinReadable>, Attributes<BlackAndWhite>>::SetLut()
-_ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE6SetLutEv:
-        PUSH     {R4,LR}
+// __interwork __vfp void Pin<Port<GPIOB>, (uint8_t)'\001', PinWriteable>::Reset<PinWriteable, void>()
+_ZN3PinI4PortI5GPIOBELh1E12PinWriteableE5ResetIS3_vEEvv:
+        PUSH     {R7,LR}
           CFI R14 Frame(CFA, -4)
-          CFI R4 Frame(CFA, -8)
           CFI CFA R13+8
-        MOVS     R0,#+32
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
-        MOVS     R4,#+0
-        B.N      ??SetLut_1
-??SetLut_2:
-        LDR.N    R0,??SetLut_0
-        MOVS     R1,R4
-        UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
-        LDRB     R0,[R0, R1]
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-        ADDS     R4,R4,#+1
-??SetLut_1:
-        MOVS     R0,R4
-        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
-        CMP      R0,#+44
-        BCC.N    ??SetLut_2
-        MOVS     R0,#+33
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
-        MOVS     R4,#+0
-        B.N      ??SetLut_3
-??SetLut_4:
-        LDR.N    R0,??SetLut_0+0x4
-        MOVS     R1,R4
-        UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
-        LDRB     R0,[R0, R1]
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-        ADDS     R4,R4,#+1
-??SetLut_3:
-        MOVS     R0,R4
-        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
-        CMP      R0,#+42
-        BLT.N    ??SetLut_4
-        MOVS     R0,#+34
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
-        MOVS     R4,#+0
-        B.N      ??SetLut_5
-??SetLut_6:
-        LDR.N    R0,??SetLut_0+0x8
-        MOVS     R1,R4
-        UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
-        LDRB     R0,[R0, R1]
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-        ADDS     R4,R4,#+1
-??SetLut_5:
-        MOVS     R0,R4
-        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
-        CMP      R0,#+42
-        BCC.N    ??SetLut_6
-        MOVS     R0,#+35
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
-        MOVS     R4,#+0
-        B.N      ??SetLut_7
-??SetLut_8:
-        LDR.N    R0,??SetLut_0+0xC
-        MOVS     R1,R4
-        UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
-        LDRB     R0,[R0, R1]
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-        ADDS     R4,R4,#+1
-??SetLut_7:
-        MOVS     R0,R4
-        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
-        CMP      R0,#+42
-        BCC.N    ??SetLut_8
-        MOVS     R0,#+36
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
-        MOVS     R4,#+0
-        B.N      ??SetLut_9
-??SetLut_10:
-        LDR.N    R0,??SetLut_0+0x10
-        MOVS     R1,R4
-        UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
-        LDRB     R0,[R0, R1]
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-        ADDS     R4,R4,#+1
-??SetLut_9:
-        MOVS     R0,R4
-        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
-        CMP      R0,#+42
-        BCC.N    ??SetLut_10
-        POP      {R4,PC}          ;; return
-        DATA
-??SetLut_0:
-        DATA32
-        DC32     EPD_4IN2_lut_vcom0
-        DC32     EPD_4IN2_lut_ww
-        DC32     EPD_4IN2_lut_bw
-        DC32     EPD_4IN2_lut_wb
-        DC32     EPD_4IN2_lut_bb
+        MOVS     R0,#+2
+          CFI FunCall _ZN4PortI5GPIOBE5ResetEj
+        BL       _ZN4PortI5GPIOBE5ResetEj
+        POP      {R0,PC}          ;; return
           CFI EndBlock cfiBlock134
 
-        SECTION `.text`:CODE:REORDER:NOROOT(2)
-        SECTION_GROUP _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SetLutQuickIvEEvv
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZN3PinI4PortI5GPIOCELh2E11PinReadableE3GetIS3_vEEDav
           CFI Block cfiBlock135 Using cfiCommon0
-          CFI Function _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SetLutQuickIvEEvv
+          CFI Function _ZN3PinI4PortI5GPIOCELh2E11PinReadableE3GetIS3_vEEDav
         THUMB
-// __interwork __vfp void ElinkDriver<Spi<SPI2>, Pin<Port<GPIOC>, (uint8_t)'\003', PinWriteable>, Pin<Port<GPIOB>, (uint8_t)'\002', PinWriteable>, Pin<Port<GPIOB>, (uint8_t)'\001', PinWriteable>, Pin<Port<GPIOC>, (uint8_t)'\002', PinReadable>, Attributes<BlackAndWhite>>::SetLutQuick<void>()
-_ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SetLutQuickIvEEvv:
+// __interwork __vfp unsigned int Pin<Port<GPIOC>, (uint8_t)'\002', PinReadable>::Get<PinReadable, void>()
+_ZN3PinI4PortI5GPIOCELh2E11PinReadableE3GetIS3_vEEDav:
+        PUSH     {R7,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI CFA R13+8
+          CFI FunCall _ZN4PortI5GPIOCE3GetEv
+        BL       _ZN4PortI5GPIOCE3GetEv
+        UBFX     R0,R0,#+2,#+1
+        POP      {R1,PC}          ;; return
+          CFI EndBlock cfiBlock135
+
+        SECTION `.text`:CODE:REORDER:NOROOT(2)
+        SECTION_GROUP _ZN4PortI5GPIOCE3SetEj
+          CFI Block cfiBlock136 Using cfiCommon0
+          CFI Function _ZN4PortI5GPIOCE3SetEj
+        THUMB
+// __interwork __vfp void Port<GPIOC>::Set(uint32_t)
+_ZN4PortI5GPIOCE3SetEj:
         PUSH     {R4,LR}
           CFI R14 Frame(CFA, -4)
           CFI R4 Frame(CFA, -8)
           CFI CFA R13+8
-        MOVS     R0,#+32
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
-        MOVS     R4,#+0
-        B.N      ??SetLutQuick_1
-??SetLutQuick_2:
-        LDR.N    R0,??SetLutQuick_0
-        MOVS     R1,R4
-        UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
-        LDRB     R0,[R0, R1]
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-        ADDS     R4,R4,#+1
-??SetLutQuick_1:
+        MOVS     R4,R0
+        CMP      R4,#+65537
+        BCC.N    ??Set_51
+        MOVS     R2,#+19
+        LDR.N    R1,??Set_47
+        LDR.N    R0,??Set_47+0x4
+          CFI FunCall __aeabi_assert
+        BL       __aeabi_assert
+          CFI FunCall __iar_EmptyStepPoint
+        BL       __iar_EmptyStepPoint
+??Set_51:
         MOVS     R0,R4
-        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
-        CMP      R0,#+44
-        BCC.N    ??SetLutQuick_2
-        MOVS     R0,#+33
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
-        MOVS     R4,#+0
-        B.N      ??SetLutQuick_3
-??SetLutQuick_4:
-        LDR.N    R0,??SetLutQuick_0+0x4
-        MOVS     R1,R4
-        UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
-        LDRB     R0,[R0, R1]
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-        ADDS     R4,R4,#+1
-??SetLutQuick_3:
-        MOVS     R0,R4
-        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
-        CMP      R0,#+42
-        BLT.N    ??SetLutQuick_4
-        MOVS     R0,#+34
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
-        MOVS     R4,#+0
-        B.N      ??SetLutQuick_5
-??SetLutQuick_6:
-        LDR.N    R0,??SetLutQuick_0+0x8
-        MOVS     R1,R4
-        UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
-        LDRB     R0,[R0, R1]
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-        ADDS     R4,R4,#+1
-??SetLutQuick_5:
-        MOVS     R0,R4
-        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
-        CMP      R0,#+42
-        BCC.N    ??SetLutQuick_6
-        MOVS     R0,#+35
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
-        MOVS     R4,#+0
-        B.N      ??SetLutQuick_7
-??SetLutQuick_8:
-        LDR.N    R0,??SetLutQuick_0+0xC
-        MOVS     R1,R4
-        UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
-        LDRB     R0,[R0, R1]
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-        ADDS     R4,R4,#+1
-??SetLutQuick_7:
-        MOVS     R0,R4
-        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
-        CMP      R0,#+42
-        BCC.N    ??SetLutQuick_8
-        MOVS     R0,#+36
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
-        MOVS     R4,#+0
-        B.N      ??SetLutQuick_9
-??SetLutQuick_10:
-        LDR.N    R0,??SetLutQuick_0+0x10
-        MOVS     R1,R4
-        UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
-        LDRB     R0,[R0, R1]
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-        ADDS     R4,R4,#+1
-??SetLutQuick_9:
-        MOVS     R0,R4
-        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
-        CMP      R0,#+42
-        BCC.N    ??SetLutQuick_10
+          CFI FunCall _ZN12RegisterBaseILj1073874968ELj32E9WriteModeE5WriteIS0_vEEvj
+        BL       _ZN12RegisterBaseILj1073874968ELj32E9WriteModeE5WriteIS0_vEEvj
         POP      {R4,PC}          ;; return
         DATA
-??SetLutQuick_0:
+??Set_47:
         DATA32
-        DC32     EPD_4IN2_lut_vcom0_quick
-        DC32     EPD_4IN2_lut_ww_quick
-        DC32     EPD_4IN2_lut_bw_quick
-        DC32     EPD_4IN2_lut_wb_quick
-        DC32     EPD_4IN2_lut_bb_quick
-          CFI EndBlock cfiBlock135
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE4InitIvEEvv
-          CFI Block cfiBlock136 Using cfiCommon0
-          CFI Function _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE4InitIvEEvv
-        THUMB
-// __interwork __vfp void ElinkDriver<Spi<SPI2>, Pin<Port<GPIOC>, (uint8_t)'\003', PinWriteable>, Pin<Port<GPIOB>, (uint8_t)'\002', PinWriteable>, Pin<Port<GPIOB>, (uint8_t)'\001', PinWriteable>, Pin<Port<GPIOC>, (uint8_t)'\002', PinReadable>, Attributes<BlackAndWhite>>::Init<void>()
-_ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE4InitIvEEvv:
-        PUSH     {R7,LR}
-          CFI R14 Frame(CFA, -4)
-          CFI CFA R13+8
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE5ResetEv
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE5ResetEv
-        MOVS     R0,#+6
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
-        MOVS     R0,#+23
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-        MOVS     R0,#+23
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-        MOVS     R0,#+23
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-        MOVS     R0,#+2
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE13WaitUntilBusyEv
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE13WaitUntilBusyEv
-        MOVS     R0,#+4
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE13WaitUntilBusyEv
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE13WaitUntilBusyEv
-        MOVS     R0,#+0
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
-        MOVS     R0,#+63
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-        MOVS     R0,#+48
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
-        MOVS     R0,#+60
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-        MOVS     R0,#+130
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
-        MOVS     R0,#+58
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-        MOVS     R0,#+80
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
-        MOVS     R0,#+151
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE6SetLutEv
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE6SetLutEv
-        POP      {R0,PC}          ;; return
+        DC32     _ZZN4PortI5GPIOCE3SetEjEs_0
+        DC32     _ZZN4PortI5GPIOCE3SetEjEs
           CFI EndBlock cfiBlock136
 
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE19UpdatePartialWindowEPKhtttt
+        SECTION `.text`:CODE:REORDER:NOROOT(2)
+        SECTION_GROUP _ZN4PortI5GPIOBE3SetEj
           CFI Block cfiBlock137 Using cfiCommon0
-          CFI Function _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE19UpdatePartialWindowEPKhtttt
+          CFI Function _ZN4PortI5GPIOBE3SetEj
         THUMB
-// __interwork __vfp void ElinkDriver<Spi<SPI2>, Pin<Port<GPIOC>, (uint8_t)'\003', PinWriteable>, Pin<Port<GPIOB>, (uint8_t)'\002', PinWriteable>, Pin<Port<GPIOB>, (uint8_t)'\001', PinWriteable>, Pin<Port<GPIOC>, (uint8_t)'\002', PinReadable>, Attributes<BlackAndWhite>>::UpdatePartialWindow(uint8_t const *, uint16_t, uint16_t, uint16_t, uint16_t)
-_ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE19UpdatePartialWindowEPKhtttt:
-        PUSH     {R3-R9,LR}
+// __interwork __vfp void Port<GPIOB>::Set(uint32_t)
+_ZN4PortI5GPIOBE3SetEj:
+        PUSH     {R4,LR}
           CFI R14 Frame(CFA, -4)
-          CFI R9 Frame(CFA, -8)
-          CFI R8 Frame(CFA, -12)
-          CFI R7 Frame(CFA, -16)
-          CFI R6 Frame(CFA, -20)
-          CFI R5 Frame(CFA, -24)
-          CFI R4 Frame(CFA, -28)
-          CFI CFA R13+32
-        MOVS     R5,R0
-        MOVS     R6,R1
-        MOVS     R7,R2
-        MOV      R8,R3
-        LDR      R4,[SP, #+32]
-        MOV      R0,R8
-        UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
-        MOVS     R1,#+8
-        SDIV     R9,R0,R1
+          CFI R4 Frame(CFA, -8)
+          CFI CFA R13+8
+        MOVS     R4,R0
+        CMP      R4,#+65537
+        BCC.N    ??Set_52
+        MOVS     R2,#+19
+        LDR.N    R1,??Set_48
+        LDR.N    R0,??Set_48+0x4
+          CFI FunCall __aeabi_assert
+        BL       __aeabi_assert
+          CFI FunCall __iar_EmptyStepPoint
+        BL       __iar_EmptyStepPoint
+??Set_52:
         MOVS     R0,R4
-        UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
-        MUL      R9,R0,R9
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE14SetPartialModeEv
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE14SetPartialModeEv
-        MOVS     R0,#+144
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
-        MOVS     R0,R6
-        UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
-        LSRS     R0,R0,#+8
-        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-        ANDS     R0,R6,#0xF8
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-        MOVS     R0,R6
-        UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
-        ANDS     R0,R0,#0xF8
-        UXTAH    R0,R0,R8
-        SUBS     R0,R0,#+1
-        LSRS     R0,R0,#+8
-        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-        UXTH     R6,R6            ;; ZeroExt  R6,R6,#+16,#+16
-        ANDS     R6,R6,#0xF8
-        UXTAH    R0,R6,R8
-        SUBS     R0,R0,#+1
-        ORRS     R0,R0,#0x7
-        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-        MOVS     R0,R7
-        UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
-        LSRS     R0,R0,#+8
-        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-        MOVS     R0,R7
-        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-        MOVS     R0,R4
-        UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
-        UXTAH    R0,R0,R7
-        SUBS     R0,R0,#+1
-        LSRS     R0,R0,#+8
-        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-        UXTH     R4,R4            ;; ZeroExt  R4,R4,#+16,#+16
-        UXTAH    R0,R4,R7
-        SUBS     R0,R0,#+1
-        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-        MOVS     R0,#+1
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-        MOVS     R0,#+19
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
-        MOVS     R4,#+0
-        B.N      ??UpdatePartialWindow_0
-??UpdatePartialWindow_1:
-        LDRB     R0,[R5, R4]
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-        ADDS     R4,R4,#+1
-??UpdatePartialWindow_0:
-        CMP      R4,R9
-        BCC.N    ??UpdatePartialWindow_1
-        MOVS     R0,#+144
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE12RefreshQuickIvEEvv
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE12RefreshQuickIvEEvv
-        POP      {R0,R4-R9,PC}    ;; return
+          CFI FunCall _ZN12RegisterBaseILj1073873944ELj32E9WriteModeE5WriteIS0_vEEvj
+        BL       _ZN12RegisterBaseILj1073873944ELj32E9WriteModeE5WriteIS0_vEEvj
+        POP      {R4,PC}          ;; return
+        DATA
+??Set_48:
+        DATA32
+        DC32     _ZZN4PortI5GPIOBE3SetEjEs_0
+        DC32     _ZZN4PortI5GPIOBE3SetEjEs
           CFI EndBlock cfiBlock137
 
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE14SetPartialModeEv
+        SECTION `.text`:CODE:REORDER:NOROOT(2)
+        SECTION_GROUP _ZN4PortI5GPIOCE5ResetEj
           CFI Block cfiBlock138 Using cfiCommon0
-          CFI Function _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE14SetPartialModeEv
+          CFI Function _ZN4PortI5GPIOCE5ResetEj
         THUMB
-// __interwork __vfp void ElinkDriver<Spi<SPI2>, Pin<Port<GPIOC>, (uint8_t)'\003', PinWriteable>, Pin<Port<GPIOB>, (uint8_t)'\002', PinWriteable>, Pin<Port<GPIOB>, (uint8_t)'\001', PinWriteable>, Pin<Port<GPIOC>, (uint8_t)'\002', PinReadable>, Attributes<BlackAndWhite>>::SetPartialMode()
-_ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE14SetPartialModeEv:
-        PUSH     {R7,LR}
+// __interwork __vfp void Port<GPIOC>::Reset(uint32_t)
+_ZN4PortI5GPIOCE5ResetEj:
+        PUSH     {R4,LR}
           CFI R14 Frame(CFA, -4)
+          CFI R4 Frame(CFA, -8)
           CFI CFA R13+8
-        MOVS     R0,#+145
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
-        POP      {R0,PC}          ;; return
+        MOVS     R4,R0
+        CMP      R4,#+65537
+        BCC.N    ??Reset_2
+        MOVS     R2,#+25
+        LDR.N    R1,??Reset_0
+        LDR.N    R0,??Reset_0+0x4
+          CFI FunCall __aeabi_assert
+        BL       __aeabi_assert
+          CFI FunCall __iar_EmptyStepPoint
+        BL       __iar_EmptyStepPoint
+??Reset_2:
+        LSLS     R4,R4,#+16
+        MOVS     R0,R4
+          CFI FunCall _ZN12RegisterBaseILj1073874968ELj32E9WriteModeE5WriteIS0_vEEvj
+        BL       _ZN12RegisterBaseILj1073874968ELj32E9WriteModeE5WriteIS0_vEEvj
+        POP      {R4,PC}          ;; return
+        Nop      
+        DATA
+??Reset_0:
+        DATA32
+        DC32     _ZZN4PortI5GPIOCE5ResetEjEs_0
+        DC32     _ZZN4PortI5GPIOCE5ResetEjEs
           CFI EndBlock cfiBlock138
 
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE5ClearEv
+        SECTION `.text`:CODE:REORDER:NOROOT(2)
+        SECTION_GROUP _ZN4PortI5GPIOBE5ResetEj
           CFI Block cfiBlock139 Using cfiCommon0
-          CFI Function _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE5ClearEv
+          CFI Function _ZN4PortI5GPIOBE5ResetEj
         THUMB
-// __interwork __vfp void ElinkDriver<Spi<SPI2>, Pin<Port<GPIOC>, (uint8_t)'\003', PinWriteable>, Pin<Port<GPIOB>, (uint8_t)'\002', PinWriteable>, Pin<Port<GPIOB>, (uint8_t)'\001', PinWriteable>, Pin<Port<GPIOC>, (uint8_t)'\002', PinReadable>, Attributes<BlackAndWhite>>::Clear()
-_ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE5ClearEv:
-        PUSH     {R3-R5,LR}
+// __interwork __vfp void Port<GPIOB>::Reset(uint32_t)
+_ZN4PortI5GPIOBE5ResetEj:
+        PUSH     {R4,LR}
           CFI R14 Frame(CFA, -4)
-          CFI R5 Frame(CFA, -8)
-          CFI R4 Frame(CFA, -12)
-          CFI CFA R13+16
-        MOVS     R0,#+16
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
-        MOVS     R4,#+0
-        B.N      ??Clear_0
-??Clear_1:
-        MOVS     R0,#+255
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-        ADDS     R5,R5,#+1
-??Clear_2:
-        MOVS     R0,R5
-        UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
-        CMP      R0,#+50
-        BLT.N    ??Clear_1
-        ADDS     R4,R4,#+1
-??Clear_0:
+          CFI R4 Frame(CFA, -8)
+          CFI CFA R13+8
+        MOVS     R4,R0
+        CMP      R4,#+65537
+        BCC.N    ??Reset_3
+        MOVS     R2,#+25
+        LDR.N    R1,??Reset_1
+        LDR.N    R0,??Reset_1+0x4
+          CFI FunCall __aeabi_assert
+        BL       __aeabi_assert
+          CFI FunCall __iar_EmptyStepPoint
+        BL       __iar_EmptyStepPoint
+??Reset_3:
+        LSLS     R4,R4,#+16
         MOVS     R0,R4
-        UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
-        CMP      R0,#+300
-        BGE.N    ??Clear_3
-        MOVS     R5,#+0
-        B.N      ??Clear_2
-??Clear_3:
-        MOVS     R0,#+19
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
-        MOVS     R4,#+0
-        B.N      ??Clear_4
-??Clear_5:
-        MOVS     R0,#+255
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
-        ADDS     R5,R5,#+1
-??Clear_6:
-        MOVS     R0,R5
-        UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
-        CMP      R0,#+50
-        BLT.N    ??Clear_5
-        ADDS     R4,R4,#+1
-??Clear_4:
-        MOVS     R0,R4
-        UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
-        CMP      R0,#+300
-        BGE.N    ??Clear_7
-        MOVS     R5,#+0
-        B.N      ??Clear_6
-??Clear_7:
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE7RefreshEv
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE7RefreshEv
-        POP      {R0,R4,R5,PC}    ;; return
+          CFI FunCall _ZN12RegisterBaseILj1073873944ELj32E9WriteModeE5WriteIS0_vEEvj
+        BL       _ZN12RegisterBaseILj1073873944ELj32E9WriteModeE5WriteIS0_vEEvj
+        POP      {R4,PC}          ;; return
+        Nop      
+        DATA
+??Reset_1:
+        DATA32
+        DC32     _ZZN4PortI5GPIOBE5ResetEjEs_0
+        DC32     _ZZN4PortI5GPIOBE5ResetEjEs
           CFI EndBlock cfiBlock139
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE5ResetEv
+        SECTION_GROUP _ZN4PortI5GPIOCE3GetEv
           CFI Block cfiBlock140 Using cfiCommon0
-          CFI Function _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE5ResetEv
+          CFI Function _ZN4PortI5GPIOCE3GetEv
         THUMB
-// __interwork __vfp void ElinkDriver<Spi<SPI2>, Pin<Port<GPIOC>, (uint8_t)'\003', PinWriteable>, Pin<Port<GPIOB>, (uint8_t)'\002', PinWriteable>, Pin<Port<GPIOB>, (uint8_t)'\001', PinWriteable>, Pin<Port<GPIOC>, (uint8_t)'\002', PinReadable>, Attributes<BlackAndWhite>>::Reset()
-_ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE5ResetEv:
+// __interwork __vfp uint32_t Port<GPIOC>::Get()
+_ZN4PortI5GPIOCE3GetEv:
         PUSH     {R7,LR}
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+8
-          CFI FunCall _ZN3PinI4PortI5GPIOCELh3E12PinWriteableE3SetIS3_vEEvv
-        BL       _ZN3PinI4PortI5GPIOCELh3E12PinWriteableE3SetIS3_vEEvv
-        MOVS     R0,#+200
-          CFI FunCall _ZN11SystemClock10SetDelayMsEj
-        BL       _ZN11SystemClock10SetDelayMsEj
-          CFI FunCall _ZN3PinI4PortI5GPIOCELh3E12PinWriteableE5ResetIS3_vEEvv
-        BL       _ZN3PinI4PortI5GPIOCELh3E12PinWriteableE5ResetIS3_vEEvv
-        MOVS     R0,#+200
-          CFI FunCall _ZN11SystemClock10SetDelayMsEj
-        BL       _ZN11SystemClock10SetDelayMsEj
-          CFI FunCall _ZN3PinI4PortI5GPIOCELh3E12PinWriteableE3SetIS3_vEEvv
-        BL       _ZN3PinI4PortI5GPIOCELh3E12PinWriteableE3SetIS3_vEEvv
-        MOVS     R0,#+200
-          CFI FunCall _ZN11SystemClock10SetDelayMsEj
-        BL       _ZN11SystemClock10SetDelayMsEj
-        POP      {R0,PC}          ;; return
+          CFI FunCall _ZN12RegisterBaseILj1073874960ELj32E8ReadModeE3GetIS0_vEEjv
+        BL       _ZN12RegisterBaseILj1073874960ELj32E8ReadModeE3GetIS0_vEEjv
+        POP      {R1,PC}          ;; return
           CFI EndBlock cfiBlock140
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE6IsBusyEv
+        SECTION_GROUP _ZN3SpiI4SPI2E9WriteByteEh
           CFI Block cfiBlock141 Using cfiCommon0
-          CFI Function _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE6IsBusyEv
+          CFI Function _ZN3SpiI4SPI2E9WriteByteEh
         THUMB
-// __interwork __vfp bool ElinkDriver<Spi<SPI2>, Pin<Port<GPIOC>, (uint8_t)'\003', PinWriteable>, Pin<Port<GPIOB>, (uint8_t)'\002', PinWriteable>, Pin<Port<GPIOB>, (uint8_t)'\001', PinWriteable>, Pin<Port<GPIOC>, (uint8_t)'\002', PinReadable>, Attributes<BlackAndWhite>>::IsBusy()
-_ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE6IsBusyEv:
-        PUSH     {R7,LR}
+// __interwork __vfp void Spi<SPI2>::WriteByte(uint8_t)
+_ZN3SpiI4SPI2E9WriteByteEh:
+        PUSH     {R4,LR}
           CFI R14 Frame(CFA, -4)
+          CFI R4 Frame(CFA, -8)
           CFI CFA R13+8
-          CFI FunCall _ZN3PinI4PortI5GPIOCELh2E11PinReadableE3GetIS3_vEEDav
-        BL       _ZN3PinI4PortI5GPIOCELh2E11PinReadableE3GetIS3_vEEDav
-        CMP      R0,#+1
-        BNE.N    ??IsBusy_0
-        MOVS     R0,#+1
-        B.N      ??IsBusy_1
-??IsBusy_0:
-        MOVS     R0,#+0
-??IsBusy_1:
+        MOVS     R4,R0
+??WriteByte_0:
+          CFI FunCall _ZN14FieldValueBaseI18SPI2_SR_TXE_ValuesIN4SPI22SRELj1ELj1E8ReadModeNS1_10SPI2SRBaseEES4_Lj0EE5IsSetIS3_vEEbv
+        BL       _ZN14FieldValueBaseI18SPI2_SR_TXE_ValuesIN4SPI22SRELj1ELj1E8ReadModeNS1_10SPI2SRBaseEES4_Lj0EE5IsSetIS3_vEEbv
+        CMP      R0,#+0
+        BNE.N    ??WriteByte_0
+        MOVS     R0,R4
         UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
-        POP      {R1,PC}          ;; return
+          CFI FunCall _ZN3SpiI4SPI2E8SendByteEh
+        BL       _ZN3SpiI4SPI2E8SendByteEh
+??WriteByte_1:
+          CFI FunCall _ZN14FieldValueBaseI18SPI2_SR_BSY_ValuesIN4SPI22SRELj7ELj1E8ReadModeNS1_10SPI2SRBaseEES4_Lj1EE5IsSetIS3_vEEbv
+        BL       _ZN14FieldValueBaseI18SPI2_SR_BSY_ValuesIN4SPI22SRELj7ELj1E8ReadModeNS1_10SPI2SRBaseEES4_Lj1EE5IsSetIS3_vEEbv
+        CMP      R0,#+0
+        BNE.N    ??WriteByte_1
+        POP      {R4,PC}          ;; return
           CFI EndBlock cfiBlock141
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE13WaitUntilBusyEv
+        SECTION_GROUP _ZN3SpiI4SPI2E8SendByteEh
           CFI Block cfiBlock142 Using cfiCommon0
-          CFI Function _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE13WaitUntilBusyEv
+          CFI Function _ZN3SpiI4SPI2E8SendByteEh
         THUMB
-// __interwork __vfp void ElinkDriver<Spi<SPI2>, Pin<Port<GPIOC>, (uint8_t)'\003', PinWriteable>, Pin<Port<GPIOB>, (uint8_t)'\002', PinWriteable>, Pin<Port<GPIOB>, (uint8_t)'\001', PinWriteable>, Pin<Port<GPIOC>, (uint8_t)'\002', PinReadable>, Attributes<BlackAndWhite>>::WaitUntilBusy()
-_ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE13WaitUntilBusyEv:
+// __interwork __vfp void Spi<SPI2>::SendByte(uint8_t)
+_ZN3SpiI4SPI2E8SendByteEh:
         PUSH     {R7,LR}
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+8
-        B.N      ??WaitUntilBusy_0
-??WaitUntilBusy_1:
-        MOVS     R0,#+10
-          CFI FunCall _ZN11SystemClock10SetDelayMsEj
-        BL       _ZN11SystemClock10SetDelayMsEj
-??WaitUntilBusy_0:
-          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE6IsBusyEv
-        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE6IsBusyEv
-        CMP      R0,#+0
-        BEQ.N    ??WaitUntilBusy_1
+        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+          CFI FunCall _ZN12RegisterBaseILj1073756172ELj32E13ReadWriteModeE5WriteIS0_vEEvj
+        BL       _ZN12RegisterBaseILj1073756172ELj32E13ReadWriteModeE5WriteIS0_vEEvj
         POP      {R0,PC}          ;; return
           CFI EndBlock cfiBlock142
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZN5PointC1Ett
+        SECTION_GROUP _ZN5SMBus8ReadWordEh
           CFI Block cfiBlock143 Using cfiCommon0
+          CFI Function _ZN5SMBus8ReadWordEh
+        THUMB
+// __interwork __vfp uint16_t SMBus::ReadWord(uint8_t)
+_ZN5SMBus8ReadWordEh:
+        PUSH     {R4,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI R4 Frame(CFA, -8)
+          CFI CFA R13+8
+        MOVS     R4,R0
+          CFI FunCall _ZN14FieldValueBaseI21I2C1_CR1_START_ValuesIN4I2C13CR1ELj8ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
+        BL       _ZN14FieldValueBaseI21I2C1_CR1_START_ValuesIN4I2C13CR1ELj8ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
+          CFI FunCall _ZN14FieldValueBaseI19I2C1_CR1_ACK_ValuesIN4I2C13CR1ELj10ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
+        BL       _ZN14FieldValueBaseI19I2C1_CR1_ACK_ValuesIN4I2C13CR1ELj10ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
+??ReadWord_0:
+          CFI FunCall _ZN14FieldValueBaseI18I2C1_SR1_SB_ValuesIN4I2C13SR1ELj0ELj1E8ReadModeNS1_11I2C1SR1BaseEES4_Lj0EE5IsSetIS3_vEEbv
+        BL       _ZN14FieldValueBaseI18I2C1_SR1_SB_ValuesIN4I2C13SR1ELj0ELj1E8ReadModeNS1_11I2C1SR1BaseEES4_Lj0EE5IsSetIS3_vEEbv
+        CMP      R0,#+0
+        BNE.N    ??ReadWord_0
+          CFI FunCall _ZN12RegisterBaseILj1073763348ELj32E13ReadWriteModeE3GetIS0_vEEjv
+        BL       _ZN12RegisterBaseILj1073763348ELj32E13ReadWriteModeE3GetIS0_vEEjv
+        MOVS     R0,#+0
+          CFI FunCall _ZN12RegisterBaseILj1073763344ELj32E13ReadWriteModeE5WriteIS0_vEEvj
+        BL       _ZN12RegisterBaseILj1073763344ELj32E13ReadWriteModeE5WriteIS0_vEEvj
+??ReadWord_1:
+          CFI FunCall _ZN14FieldValueBaseI20I2C1_SR1_ADDR_ValuesIN4I2C13SR1ELj1ELj1E8ReadModeNS1_11I2C1SR1BaseEES4_Lj0EE5IsSetIS3_vEEbv
+        BL       _ZN14FieldValueBaseI20I2C1_SR1_ADDR_ValuesIN4I2C13SR1ELj1ELj1E8ReadModeNS1_11I2C1SR1BaseEES4_Lj0EE5IsSetIS3_vEEbv
+        CMP      R0,#+0
+        BNE.N    ??ReadWord_1
+          CFI FunCall _ZN12RegisterBaseILj1073763348ELj32E13ReadWriteModeE3GetIS0_vEEjv
+        BL       _ZN12RegisterBaseILj1073763348ELj32E13ReadWriteModeE3GetIS0_vEEjv
+          CFI FunCall _ZN12RegisterBaseILj1073763352ELj32E8ReadModeE3GetIS0_vEEjv
+        BL       _ZN12RegisterBaseILj1073763352ELj32E8ReadModeE3GetIS0_vEEjv
+??ReadWord_2:
+          CFI FunCall _ZN14FieldValueBaseI19I2C1_SR1_TxE_ValuesIN4I2C13SR1ELj7ELj1E8ReadModeNS1_11I2C1SR1BaseEES4_Lj0EE5IsSetIS3_vEEbv
+        BL       _ZN14FieldValueBaseI19I2C1_SR1_TxE_ValuesIN4I2C13SR1ELj7ELj1E8ReadModeNS1_11I2C1SR1BaseEES4_Lj0EE5IsSetIS3_vEEbv
+        CMP      R0,#+0
+        BNE.N    ??ReadWord_2
+        UXTB     R4,R4            ;; ZeroExt  R4,R4,#+24,#+24
+        MOVS     R0,R4
+          CFI FunCall _ZN12RegisterBaseILj1073763344ELj32E13ReadWriteModeE5WriteIS0_vEEvj
+        BL       _ZN12RegisterBaseILj1073763344ELj32E13ReadWriteModeE5WriteIS0_vEEvj
+??ReadWord_3:
+          CFI FunCall _ZN14FieldValueBaseI19I2C1_SR1_TxE_ValuesIN4I2C13SR1ELj7ELj1E8ReadModeNS1_11I2C1SR1BaseEES4_Lj0EE5IsSetIS3_vEEbv
+        BL       _ZN14FieldValueBaseI19I2C1_SR1_TxE_ValuesIN4I2C13SR1ELj7ELj1E8ReadModeNS1_11I2C1SR1BaseEES4_Lj0EE5IsSetIS3_vEEbv
+        CMP      R0,#+0
+        BNE.N    ??ReadWord_3
+          CFI FunCall _ZN14FieldValueBaseI21I2C1_CR1_START_ValuesIN4I2C13CR1ELj8ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
+        BL       _ZN14FieldValueBaseI21I2C1_CR1_START_ValuesIN4I2C13CR1ELj8ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
+??ReadWord_4:
+          CFI FunCall _ZN14FieldValueBaseI18I2C1_SR1_SB_ValuesIN4I2C13SR1ELj0ELj1E8ReadModeNS1_11I2C1SR1BaseEES4_Lj0EE5IsSetIS3_vEEbv
+        BL       _ZN14FieldValueBaseI18I2C1_SR1_SB_ValuesIN4I2C13SR1ELj0ELj1E8ReadModeNS1_11I2C1SR1BaseEES4_Lj0EE5IsSetIS3_vEEbv
+        CMP      R0,#+0
+        BNE.N    ??ReadWord_4
+        MOVS     R0,#+1
+          CFI FunCall _ZN12RegisterBaseILj1073763344ELj32E13ReadWriteModeE5WriteIS0_vEEvj
+        BL       _ZN12RegisterBaseILj1073763344ELj32E13ReadWriteModeE5WriteIS0_vEEvj
+??ReadWord_5:
+          CFI FunCall _ZN14FieldValueBaseI20I2C1_SR1_ADDR_ValuesIN4I2C13SR1ELj1ELj1E8ReadModeNS1_11I2C1SR1BaseEES4_Lj0EE5IsSetIS3_vEEbv
+        BL       _ZN14FieldValueBaseI20I2C1_SR1_ADDR_ValuesIN4I2C13SR1ELj1ELj1E8ReadModeNS1_11I2C1SR1BaseEES4_Lj0EE5IsSetIS3_vEEbv
+        CMP      R0,#+0
+        BNE.N    ??ReadWord_5
+          CFI FunCall _ZN14FieldValueBaseI19I2C1_CR1_ACK_ValuesIN4I2C13CR1ELj10ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj0EE3SetIS3_vEEvv
+        BL       _ZN14FieldValueBaseI19I2C1_CR1_ACK_ValuesIN4I2C13CR1ELj10ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj0EE3SetIS3_vEEvv
+          CFI FunCall _ZN14FieldValueBaseI19I2C1_CR1_POS_ValuesIN4I2C13CR1ELj11ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
+        BL       _ZN14FieldValueBaseI19I2C1_CR1_POS_ValuesIN4I2C13CR1ELj11ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
+          CFI FunCall _ZN12RegisterBaseILj1073763348ELj32E13ReadWriteModeE3GetIS0_vEEjv
+        BL       _ZN12RegisterBaseILj1073763348ELj32E13ReadWriteModeE3GetIS0_vEEjv
+          CFI FunCall _ZN12RegisterBaseILj1073763352ELj32E8ReadModeE3GetIS0_vEEjv
+        BL       _ZN12RegisterBaseILj1073763352ELj32E8ReadModeE3GetIS0_vEEjv
+??ReadWord_6:
+          CFI FunCall _ZN14FieldValueBaseI19I2C1_SR1_BTF_ValuesIN4I2C13SR1ELj2ELj1E8ReadModeNS1_11I2C1SR1BaseEES4_Lj0EE5IsSetIS3_vEEbv
+        BL       _ZN14FieldValueBaseI19I2C1_SR1_BTF_ValuesIN4I2C13SR1ELj2ELj1E8ReadModeNS1_11I2C1SR1BaseEES4_Lj0EE5IsSetIS3_vEEbv
+        CMP      R0,#+0
+        BNE.N    ??ReadWord_6
+          CFI FunCall _ZN14FieldValueBaseI20I2C1_CR1_STOP_ValuesIN4I2C13CR1ELj9ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
+        BL       _ZN14FieldValueBaseI20I2C1_CR1_STOP_ValuesIN4I2C13CR1ELj9ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
+          CFI FunCall _ZN12RegisterBaseILj1073763344ELj32E13ReadWriteModeE3GetIS0_vEEjv
+        BL       _ZN12RegisterBaseILj1073763344ELj32E13ReadWriteModeE3GetIS0_vEEjv
+        MOVS     R4,R0
+          CFI FunCall _ZN12RegisterBaseILj1073763344ELj32E13ReadWriteModeE3GetIS0_vEEjv
+        BL       _ZN12RegisterBaseILj1073763344ELj32E13ReadWriteModeE3GetIS0_vEEjv
+        LSLS     R0,R0,#+8
+        UXTAH    R0,R0,R4
+        UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+        POP      {R4,PC}          ;; return
+          CFI EndBlock cfiBlock143
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZN6FilterC1Eff
+          CFI Block cfiBlock144 Using cfiCommon0
+          CFI Function _ZN6FilterC1Eff
+        THUMB
+// __code __interwork __vfp Filter::Filter(float, float)
+_ZN6FilterC1Eff:
+        PUSH     {R4,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI R4 Frame(CFA, -8)
+          CFI CFA R13+8
+        MOVS     R4,R0
+        MOVS     R0,#+0
+        STR      R0,[R4, #+0]
+        MOVS     R0,#+0
+        STR      R0,[R4, #+4]
+        VCMP.F32 S0,#0.0
+        FMSTAT   
+        BLE.N    ??Filter_0
+        VNEG.F32 S1,S1
+        VDIV.F32 S0,S1,S0
+          CFI FunCall expf
+        BL       expf
+        VMOV.F32 S1,#1.0
+        VSUB.F32 S0,S1,S0
+        VSTR     S0,[R4, #+4]
+        B.N      ??Filter_1
+??Filter_0:
+        MOVS     R0,#+1065353216
+        STR      R0,[R4, #+4]
+??Filter_1:
+        MOVS     R0,R4
+        POP      {R4,PC}          ;; return
+          CFI EndBlock cfiBlock144
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZN6Filter12FiltredValueEf
+          CFI Block cfiBlock145 Using cfiCommon0
+          CFI Function _ZN6Filter12FiltredValueEf
+          CFI NoCalls
+        THUMB
+// __interwork __vfp float Filter::FiltredValue(float)
+_ZN6Filter12FiltredValueEf:
+        VLDR     S1,[R0, #0]
+        VSUB.F32 S0,S0,S1
+        VLDR     S1,[R0, #+4]
+        VLDR     S2,[R0, #0]
+        VMLA.F32 S2,S0,S1
+        VSTR     S2,[R0, #+8]
+        LDR      R1,[R0, #+8]
+        STR      R1,[R0, #+0]
+        VLDR     S0,[R0, #+8]
+        BX       LR               ;; return
+          CFI EndBlock cfiBlock145
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZN8TempSensC1ER6Filter
+          CFI Block cfiBlock146 Using cfiCommon0
+          CFI Function _ZN8TempSensC1ER6Filter
+          CFI NoCalls
+        THUMB
+// __code __interwork __vfp TempSens::TempSens(Filter &)
+_ZN8TempSensC1ER6Filter:
+        STR      R1,[R0, #+8]
+        BX       LR               ;; return
+          CFI EndBlock cfiBlock146
+
+        SECTION `.text`:CODE:REORDER:NOROOT(2)
+        SECTION_GROUP _ZN8TempSens8TakeMeasEv
+          CFI Block cfiBlock147 Using cfiCommon0
+          CFI Function _ZN8TempSens8TakeMeasEv
+        THUMB
+// __interwork __vfp float TempSens::TakeMeas()
+_ZN8TempSens8TakeMeasEv:
+        PUSH     {R4,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI R4 Frame(CFA, -8)
+          CFI CFA R13+8
+        MOVS     R4,R0
+        MOVS     R0,#+7
+          CFI FunCall _ZN5SMBus8ReadWordEh
+        BL       _ZN5SMBus8ReadWordEh
+        VMOV     S0,R0
+        VCVT.F32.U32 S0,S0
+        VSTR     S0,[R4, #0]
+        VLDR     S0,[R4, #0]
+        LDR      R0,[R4, #+8]
+          CFI FunCall _ZN6Filter12FiltredValueEf
+        BL       _ZN6Filter12FiltredValueEf
+        VSTR     S0,[R4, #+4]
+        VLDR     S0,[R4, #+4]
+        VLDR.W   S1,??TakeMeas_0  ;; 0x3ca3d70a
+        VLDR.W   S2,??TakeMeas_0+0x4  ;; 0xc3889333
+        VMLA.F32 S2,S0,S1
+        VSTR     S2,[R4, #+4]
+        VLDR     S0,[R4, #+4]
+        POP      {R4,PC}          ;; return
+        Nop      
+        DATA
+??TakeMeas_0:
+        DATA32
+        DC32     0x3ca3d70a
+        DC32     0xc3889333
+          CFI EndBlock cfiBlock147
+
+        SECTION `.text`:CODE:REORDER:NOROOT(2)
+        SECTION_GROUP _ZN15TemperatureTaskC1ER4TempR8TempSensRN9OsWrapper5EventE
+          CFI Block cfiBlock148 Using cfiCommon0
+          CFI Function _ZN15TemperatureTaskC1ER4TempR8TempSensRN9OsWrapper5EventE
+        THUMB
+// __code __interwork __vfp TemperatureTask::TemperatureTask(Temp &, TempSens &, OsWrapper::Event &)
+_ZN15TemperatureTaskC1ER4TempR8TempSensRN9OsWrapper5EventE:
+        PUSH     {R3-R7,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI R7 Frame(CFA, -8)
+          CFI R6 Frame(CFA, -12)
+          CFI R5 Frame(CFA, -16)
+          CFI R4 Frame(CFA, -20)
+          CFI CFA R13+24
+        MOVS     R4,R0
+        MOVS     R5,R1
+        MOVS     R6,R2
+        MOVS     R7,R3
+        MOVS     R0,R4
+          CFI FunCall _ZN9OsWrapper6ThreadILj512EEC2Ev
+        BL       _ZN9OsWrapper6ThreadILj512EEC2Ev
+        LDR.N    R0,??TemperatureTask_0
+        STR      R0,[R4, #+0]
+        STR      R7,[R4, #+2140]
+        STR      R5,[R4, #+2144]
+        STR      R6,[R4, #+2148]
+        MOVS     R0,R4
+        POP      {R1,R4-R7,PC}    ;; return
+        DATA
+??TemperatureTask_0:
+        DATA32
+        DC32     _ZTV15TemperatureTask+0x8
+          CFI EndBlock cfiBlock148
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZN15TemperatureTask7ExecuteEv
+          CFI Block cfiBlock149 Using cfiCommon0
+          CFI Function _ZN15TemperatureTask7ExecuteEv
+        THUMB
+// __interwork __vfp void TemperatureTask::Execute()
+_ZN15TemperatureTask7ExecuteEv:
+        PUSH     {R4,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI R4 Frame(CFA, -8)
+          CFI CFA R13+8
+        MOVS     R4,R0
+??Execute_2:
+        MOVS     R2,#+255
+        MOVS     R1,#+0
+        LDR      R0,[R4, #+2140]
+          CFI FunCall _ZNK9OsWrapper5Event4WaitENS_9EventModeEj
+        BL       _ZNK9OsWrapper5Event4WaitENS_9EventModeEj
+        CMP      R0,#+0
+        BEQ.N    ??Execute_3
+        LDR      R0,[R4, #+2144]
+          CFI FunCall _ZN4Temp12SetNextUnitsEv
+        BL       _ZN4Temp12SetNextUnitsEv
+??Execute_3:
+        LDR      R0,[R4, #+2148]
+          CFI FunCall _ZN8TempSens8TakeMeasEv
+        BL       _ZN8TempSens8TakeMeasEv
+        ADDW     R0,R4,#+2152
+        VSTR     S0,[R0, #0]
+        B.N      ??Execute_2
+          CFI EndBlock cfiBlock149
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZN15TemperatureTask8GetValueEv
+          CFI Block cfiBlock150 Using cfiCommon0
+          CFI Function _ZN15TemperatureTask8GetValueEv
+        THUMB
+// __interwork __vfp char *TemperatureTask::GetValue()
+_ZN15TemperatureTask8GetValueEv:
+        PUSH     {R4,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI R4 Frame(CFA, -8)
+          CFI CFA R13+8
+        MOVS     R4,R0
+        LDR      R0,[R4, #+2152]
+        VMOV     S0,R0
+        LDR      R0,[R4, #+2144]
+          CFI FunCall _ZN4Temp21GetTempInCurrentUnitsEf
+        BL       _ZN4Temp21GetTempInCurrentUnitsEf
+        STR      R0,[R4, #+2156]
+        LDR      R0,[R4, #+2156]
+        POP      {R4,PC}          ;; return
+          CFI EndBlock cfiBlock150
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZN5PointC1Ett
+          CFI Block cfiBlock151 Using cfiCommon0
           CFI Function _ZN5PointC1Ett
           CFI NoCalls
         THUMB
@@ -6499,11 +6425,11 @@ _ZN5PointC1Ett:
         STRH     R1,[R0, #+0]
         STRH     R2,[R0, #+2]
         BX       LR               ;; return
-          CFI EndBlock cfiBlock143
+          CFI EndBlock cfiBlock151
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN7DisplayILt400ELt300EE8SetPixelE5Point5Color
-          CFI Block cfiBlock144 Using cfiCommon0
+          CFI Block cfiBlock152 Using cfiCommon0
           CFI Function _ZN7DisplayILt400ELt300EE8SetPixelE5Point5Color
         THUMB
 // __interwork __vfp void Display<(uint16_t)400U, (uint16_t)300U>::SetPixel(Point, Color)
@@ -6578,11 +6504,11 @@ _ZN7DisplayILt400ELt300EE8SetPixelE5Point5Color:
         DC32     _ZZN7DisplayILt400ELt300EE8SetPixelE5Point5ColorEs_0
         DC32     _ZZN7DisplayILt400ELt300EE8SetPixelE5Point5ColorEs
         DC32     _ZN7DisplayILt400ELt300EE5imageE
-          CFI EndBlock cfiBlock144
+          CFI EndBlock cfiBlock152
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN7DisplayILt400ELt300EE12ClearWindowsE5PointS1_5Color
-          CFI Block cfiBlock145 Using cfiCommon0
+          CFI Block cfiBlock153 Using cfiCommon0
           CFI Function _ZN7DisplayILt400ELt300EE12ClearWindowsE5PointS1_5Color
         THUMB
 // __interwork __vfp void Display<(uint16_t)400U, (uint16_t)300U>::ClearWindows(Point, Point, Color)
@@ -6654,11 +6580,11 @@ _ZN7DisplayILt400ELt300EE12ClearWindowsE5PointS1_5Color:
         DATA32
         DC32     _ZZN7DisplayILt400ELt300EE12ClearWindowsE5PointS1_5ColorEs_0
         DC32     _ZZN7DisplayILt400ELt300EE12ClearWindowsE5PointS1_5ColorEs
-          CFI EndBlock cfiBlock145
+          CFI EndBlock cfiBlock153
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN7DisplayILt400ELt300EE8DrawCharE5Pointc
-          CFI Block cfiBlock146 Using cfiCommon0
+          CFI Block cfiBlock154 Using cfiCommon0
           CFI Function _ZN7DisplayILt400ELt300EE8DrawCharE5Pointc
         THUMB
 // __interwork __vfp uint32_t Display<(uint16_t)400U, (uint16_t)300U>::DrawChar(Point, char)
@@ -6808,11 +6734,11 @@ _ZN7DisplayILt400ELt300EE8DrawCharE5Pointc:
         DC32     _ZZN7DisplayILt400ELt300EE8DrawCharE5PointcEs_0
         DC32     _ZZN7DisplayILt400ELt300EE8DrawCharE5PointcEs
         DC32     _ZN7DisplayILt400ELt300EE4fontE
-          CFI EndBlock cfiBlock146
+          CFI EndBlock cfiBlock154
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN7DisplayILt400ELt300EE10DrawStringE5PointPKc
-          CFI Block cfiBlock147 Using cfiCommon0
+          CFI Block cfiBlock155 Using cfiCommon0
           CFI Function _ZN7DisplayILt400ELt300EE10DrawStringE5PointPKc
         THUMB
 // __interwork __vfp void Display<(uint16_t)400U, (uint16_t)300U>::DrawString(Point, char const *)
@@ -6907,597 +6833,669 @@ _ZN7DisplayILt400ELt300EE10DrawStringE5PointPKc:
 ??DrawString_0:
         DATA32
         DC32     _ZN7DisplayILt400ELt300EE4fontE
-          CFI EndBlock cfiBlock147
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZN3PinI4PortI5GPIOCELh3E12PinWriteableE3SetIS3_vEEvv
-          CFI Block cfiBlock148 Using cfiCommon0
-          CFI Function _ZN3PinI4PortI5GPIOCELh3E12PinWriteableE3SetIS3_vEEvv
-        THUMB
-// __interwork __vfp void Pin<Port<GPIOC>, (uint8_t)'\003', PinWriteable>::Set<PinWriteable, void>()
-_ZN3PinI4PortI5GPIOCELh3E12PinWriteableE3SetIS3_vEEvv:
-        PUSH     {R7,LR}
-          CFI R14 Frame(CFA, -4)
-          CFI CFA R13+8
-        MOVS     R0,#+8
-          CFI FunCall _ZN4PortI5GPIOCE3SetEj
-        BL       _ZN4PortI5GPIOCE3SetEj
-        POP      {R0,PC}          ;; return
-          CFI EndBlock cfiBlock148
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZN3PinI4PortI5GPIOBELh2E12PinWriteableE3SetIS3_vEEvv
-          CFI Block cfiBlock149 Using cfiCommon0
-          CFI Function _ZN3PinI4PortI5GPIOBELh2E12PinWriteableE3SetIS3_vEEvv
-        THUMB
-// __interwork __vfp void Pin<Port<GPIOB>, (uint8_t)'\002', PinWriteable>::Set<PinWriteable, void>()
-_ZN3PinI4PortI5GPIOBELh2E12PinWriteableE3SetIS3_vEEvv:
-        PUSH     {R7,LR}
-          CFI R14 Frame(CFA, -4)
-          CFI CFA R13+8
-        MOVS     R0,#+4
-          CFI FunCall _ZN4PortI5GPIOBE3SetEj
-        BL       _ZN4PortI5GPIOBE3SetEj
-        POP      {R0,PC}          ;; return
-          CFI EndBlock cfiBlock149
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZN3PinI4PortI5GPIOBELh1E12PinWriteableE3SetIS3_vEEvv
-          CFI Block cfiBlock150 Using cfiCommon0
-          CFI Function _ZN3PinI4PortI5GPIOBELh1E12PinWriteableE3SetIS3_vEEvv
-        THUMB
-// __interwork __vfp void Pin<Port<GPIOB>, (uint8_t)'\001', PinWriteable>::Set<PinWriteable, void>()
-_ZN3PinI4PortI5GPIOBELh1E12PinWriteableE3SetIS3_vEEvv:
-        PUSH     {R7,LR}
-          CFI R14 Frame(CFA, -4)
-          CFI CFA R13+8
-        MOVS     R0,#+2
-          CFI FunCall _ZN4PortI5GPIOBE3SetEj
-        BL       _ZN4PortI5GPIOBE3SetEj
-        POP      {R0,PC}          ;; return
-          CFI EndBlock cfiBlock150
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZN3PinI4PortI5GPIOCELh3E12PinWriteableE5ResetIS3_vEEvv
-          CFI Block cfiBlock151 Using cfiCommon0
-          CFI Function _ZN3PinI4PortI5GPIOCELh3E12PinWriteableE5ResetIS3_vEEvv
-        THUMB
-// __interwork __vfp void Pin<Port<GPIOC>, (uint8_t)'\003', PinWriteable>::Reset<PinWriteable, void>()
-_ZN3PinI4PortI5GPIOCELh3E12PinWriteableE5ResetIS3_vEEvv:
-        PUSH     {R7,LR}
-          CFI R14 Frame(CFA, -4)
-          CFI CFA R13+8
-        MOVS     R0,#+8
-          CFI FunCall _ZN4PortI5GPIOCE5ResetEj
-        BL       _ZN4PortI5GPIOCE5ResetEj
-        POP      {R0,PC}          ;; return
-          CFI EndBlock cfiBlock151
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZN3PinI4PortI5GPIOBELh2E12PinWriteableE5ResetIS3_vEEvv
-          CFI Block cfiBlock152 Using cfiCommon0
-          CFI Function _ZN3PinI4PortI5GPIOBELh2E12PinWriteableE5ResetIS3_vEEvv
-        THUMB
-// __interwork __vfp void Pin<Port<GPIOB>, (uint8_t)'\002', PinWriteable>::Reset<PinWriteable, void>()
-_ZN3PinI4PortI5GPIOBELh2E12PinWriteableE5ResetIS3_vEEvv:
-        PUSH     {R7,LR}
-          CFI R14 Frame(CFA, -4)
-          CFI CFA R13+8
-        MOVS     R0,#+4
-          CFI FunCall _ZN4PortI5GPIOBE5ResetEj
-        BL       _ZN4PortI5GPIOBE5ResetEj
-        POP      {R0,PC}          ;; return
-          CFI EndBlock cfiBlock152
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZN3PinI4PortI5GPIOBELh1E12PinWriteableE5ResetIS3_vEEvv
-          CFI Block cfiBlock153 Using cfiCommon0
-          CFI Function _ZN3PinI4PortI5GPIOBELh1E12PinWriteableE5ResetIS3_vEEvv
-        THUMB
-// __interwork __vfp void Pin<Port<GPIOB>, (uint8_t)'\001', PinWriteable>::Reset<PinWriteable, void>()
-_ZN3PinI4PortI5GPIOBELh1E12PinWriteableE5ResetIS3_vEEvv:
-        PUSH     {R7,LR}
-          CFI R14 Frame(CFA, -4)
-          CFI CFA R13+8
-        MOVS     R0,#+2
-          CFI FunCall _ZN4PortI5GPIOBE5ResetEj
-        BL       _ZN4PortI5GPIOBE5ResetEj
-        POP      {R0,PC}          ;; return
-          CFI EndBlock cfiBlock153
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZN3PinI4PortI5GPIOCELh2E11PinReadableE3GetIS3_vEEDav
-          CFI Block cfiBlock154 Using cfiCommon0
-          CFI Function _ZN3PinI4PortI5GPIOCELh2E11PinReadableE3GetIS3_vEEDav
-        THUMB
-// __interwork __vfp unsigned int Pin<Port<GPIOC>, (uint8_t)'\002', PinReadable>::Get<PinReadable, void>()
-_ZN3PinI4PortI5GPIOCELh2E11PinReadableE3GetIS3_vEEDav:
-        PUSH     {R7,LR}
-          CFI R14 Frame(CFA, -4)
-          CFI CFA R13+8
-          CFI FunCall _ZN4PortI5GPIOCE3GetEv
-        BL       _ZN4PortI5GPIOCE3GetEv
-        UBFX     R0,R0,#+2,#+1
-        POP      {R1,PC}          ;; return
-          CFI EndBlock cfiBlock154
-
-        SECTION `.text`:CODE:REORDER:NOROOT(2)
-        SECTION_GROUP _ZN4PortI5GPIOCE3SetEj
-          CFI Block cfiBlock155 Using cfiCommon0
-          CFI Function _ZN4PortI5GPIOCE3SetEj
-        THUMB
-// __interwork __vfp void Port<GPIOC>::Set(uint32_t)
-_ZN4PortI5GPIOCE3SetEj:
-        PUSH     {R4,LR}
-          CFI R14 Frame(CFA, -4)
-          CFI R4 Frame(CFA, -8)
-          CFI CFA R13+8
-        MOVS     R4,R0
-        CMP      R4,#+65537
-        BCC.N    ??Set_51
-        MOVS     R2,#+19
-        LDR.N    R1,??Set_47
-        LDR.N    R0,??Set_47+0x4
-          CFI FunCall __aeabi_assert
-        BL       __aeabi_assert
-          CFI FunCall __iar_EmptyStepPoint
-        BL       __iar_EmptyStepPoint
-??Set_51:
-        MOVS     R0,R4
-          CFI FunCall _ZN12RegisterBaseILj1073874968ELj32E9WriteModeE5WriteIS0_vEEvj
-        BL       _ZN12RegisterBaseILj1073874968ELj32E9WriteModeE5WriteIS0_vEEvj
-        POP      {R4,PC}          ;; return
-        DATA
-??Set_47:
-        DATA32
-        DC32     _ZZN4PortI5GPIOCE3SetEjEs_0
-        DC32     _ZZN4PortI5GPIOCE3SetEjEs
           CFI EndBlock cfiBlock155
 
-        SECTION `.text`:CODE:REORDER:NOROOT(2)
-        SECTION_GROUP _ZN4PortI5GPIOBE3SetEj
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZN11SystemClock10SetDelayMsEj
           CFI Block cfiBlock156 Using cfiCommon0
-          CFI Function _ZN4PortI5GPIOBE3SetEj
+          CFI Function _ZN11SystemClock10SetDelayMsEj
+          CFI NoCalls
         THUMB
-// __interwork __vfp void Port<GPIOB>::Set(uint32_t)
-_ZN4PortI5GPIOBE3SetEj:
-        PUSH     {R4,LR}
-          CFI R14 Frame(CFA, -4)
-          CFI R4 Frame(CFA, -8)
-          CFI CFA R13+8
-        MOVS     R4,R0
-        CMP      R4,#+65537
-        BCC.N    ??Set_52
-        MOVS     R2,#+19
-        LDR.N    R1,??Set_48
-        LDR.N    R0,??Set_48+0x4
-          CFI FunCall __aeabi_assert
-        BL       __aeabi_assert
-          CFI FunCall __iar_EmptyStepPoint
-        BL       __iar_EmptyStepPoint
-??Set_52:
-        MOVS     R0,R4
-          CFI FunCall _ZN12RegisterBaseILj1073873944ELj32E9WriteModeE5WriteIS0_vEEvj
-        BL       _ZN12RegisterBaseILj1073873944ELj32E9WriteModeE5WriteIS0_vEEvj
-        POP      {R4,PC}          ;; return
-        DATA
-??Set_48:
-        DATA32
-        DC32     _ZZN4PortI5GPIOBE3SetEjEs_0
-        DC32     _ZZN4PortI5GPIOBE3SetEjEs
+// __interwork __vfp void SystemClock::SetDelayMs(uint32_t)
+_ZN11SystemClock10SetDelayMsEj:
+        MOV      R1,#+3200
+        MULS     R0,R1,R0
+        B.N      ??SetDelayMs_0
+??SetDelayMs_1:
+        SUBS     R0,R0,#+1
+??SetDelayMs_0:
+        CMP      R0,#+0
+        BNE.N    ??SetDelayMs_1
+        BX       LR               ;; return
           CFI EndBlock cfiBlock156
 
-        SECTION `.text`:CODE:REORDER:NOROOT(2)
-        SECTION_GROUP _ZN4PortI5GPIOCE5ResetEj
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
           CFI Block cfiBlock157 Using cfiCommon0
-          CFI Function _ZN4PortI5GPIOCE5ResetEj
+          CFI Function _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
         THUMB
-// __interwork __vfp void Port<GPIOC>::Reset(uint32_t)
-_ZN4PortI5GPIOCE5ResetEj:
+// __interwork __vfp void ElinkDriver<Spi<SPI2>, Pin<Port<GPIOC>, (uint8_t)'\003', PinWriteable>, Pin<Port<GPIOB>, (uint8_t)'\002', PinWriteable>, Pin<Port<GPIOB>, (uint8_t)'\001', PinWriteable>, Pin<Port<GPIOC>, (uint8_t)'\002', PinReadable>, Attributes<BlackAndWhite>>::SendCommand(ElinkDriverCommands)
+_ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands:
         PUSH     {R4,LR}
           CFI R14 Frame(CFA, -4)
           CFI R4 Frame(CFA, -8)
           CFI CFA R13+8
         MOVS     R4,R0
-        CMP      R4,#+65537
-        BCC.N    ??Reset_2
-        MOVS     R2,#+25
-        LDR.N    R1,??Reset_0
-        LDR.N    R0,??Reset_0+0x4
-          CFI FunCall __aeabi_assert
-        BL       __aeabi_assert
-          CFI FunCall __iar_EmptyStepPoint
-        BL       __iar_EmptyStepPoint
-??Reset_2:
-        LSLS     R4,R4,#+16
+          CFI FunCall _ZN3PinI4PortI5GPIOBELh2E12PinWriteableE5ResetIS3_vEEvv
+        BL       _ZN3PinI4PortI5GPIOBELh2E12PinWriteableE5ResetIS3_vEEvv
+          CFI FunCall _ZN3PinI4PortI5GPIOBELh1E12PinWriteableE5ResetIS3_vEEvv
+        BL       _ZN3PinI4PortI5GPIOBELh1E12PinWriteableE5ResetIS3_vEEvv
         MOVS     R0,R4
-          CFI FunCall _ZN12RegisterBaseILj1073874968ELj32E9WriteModeE5WriteIS0_vEEvj
-        BL       _ZN12RegisterBaseILj1073874968ELj32E9WriteModeE5WriteIS0_vEEvj
+        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+          CFI FunCall _ZN3SpiI4SPI2E9WriteByteEh
+        BL       _ZN3SpiI4SPI2E9WriteByteEh
+          CFI FunCall _ZN3PinI4PortI5GPIOBELh1E12PinWriteableE3SetIS3_vEEvv
+        BL       _ZN3PinI4PortI5GPIOBELh1E12PinWriteableE3SetIS3_vEEvv
+          CFI FunCall _ZN3PinI4PortI5GPIOBELh1E12PinWriteableE3SetIS3_vEEvv
+        BL       _ZN3PinI4PortI5GPIOBELh1E12PinWriteableE3SetIS3_vEEvv
         POP      {R4,PC}          ;; return
-        Nop      
-        DATA
-??Reset_0:
-        DATA32
-        DC32     _ZZN4PortI5GPIOCE5ResetEjEs_0
-        DC32     _ZZN4PortI5GPIOCE5ResetEjEs
           CFI EndBlock cfiBlock157
 
-        SECTION `.text`:CODE:REORDER:NOROOT(2)
-        SECTION_GROUP _ZN4PortI5GPIOBE5ResetEj
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
           CFI Block cfiBlock158 Using cfiCommon0
-          CFI Function _ZN4PortI5GPIOBE5ResetEj
+          CFI Function _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
         THUMB
-// __interwork __vfp void Port<GPIOB>::Reset(uint32_t)
-_ZN4PortI5GPIOBE5ResetEj:
+// __interwork __vfp void ElinkDriver<Spi<SPI2>, Pin<Port<GPIOC>, (uint8_t)'\003', PinWriteable>, Pin<Port<GPIOB>, (uint8_t)'\002', PinWriteable>, Pin<Port<GPIOB>, (uint8_t)'\001', PinWriteable>, Pin<Port<GPIOC>, (uint8_t)'\002', PinReadable>, Attributes<BlackAndWhite>>::SendData(uint8_t)
+_ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh:
         PUSH     {R4,LR}
           CFI R14 Frame(CFA, -4)
           CFI R4 Frame(CFA, -8)
           CFI CFA R13+8
         MOVS     R4,R0
-        CMP      R4,#+65537
-        BCC.N    ??Reset_3
-        MOVS     R2,#+25
-        LDR.N    R1,??Reset_1
-        LDR.N    R0,??Reset_1+0x4
-          CFI FunCall __aeabi_assert
-        BL       __aeabi_assert
-          CFI FunCall __iar_EmptyStepPoint
-        BL       __iar_EmptyStepPoint
-??Reset_3:
-        LSLS     R4,R4,#+16
+          CFI FunCall _ZN3PinI4PortI5GPIOBELh2E12PinWriteableE3SetIS3_vEEvv
+        BL       _ZN3PinI4PortI5GPIOBELh2E12PinWriteableE3SetIS3_vEEvv
+          CFI FunCall _ZN3PinI4PortI5GPIOBELh1E12PinWriteableE5ResetIS3_vEEvv
+        BL       _ZN3PinI4PortI5GPIOBELh1E12PinWriteableE5ResetIS3_vEEvv
         MOVS     R0,R4
-          CFI FunCall _ZN12RegisterBaseILj1073873944ELj32E9WriteModeE5WriteIS0_vEEvj
-        BL       _ZN12RegisterBaseILj1073873944ELj32E9WriteModeE5WriteIS0_vEEvj
+        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+          CFI FunCall _ZN3SpiI4SPI2E9WriteByteEh
+        BL       _ZN3SpiI4SPI2E9WriteByteEh
+          CFI FunCall _ZN3PinI4PortI5GPIOBELh1E12PinWriteableE3SetIS3_vEEvv
+        BL       _ZN3PinI4PortI5GPIOBELh1E12PinWriteableE3SetIS3_vEEvv
         POP      {R4,PC}          ;; return
-        Nop      
-        DATA
-??Reset_1:
-        DATA32
-        DC32     _ZZN4PortI5GPIOBE5ResetEjEs_0
-        DC32     _ZZN4PortI5GPIOBE5ResetEjEs
           CFI EndBlock cfiBlock158
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZN4PortI5GPIOCE3GetEv
+        SECTION_GROUP _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE7RefreshEv
           CFI Block cfiBlock159 Using cfiCommon0
-          CFI Function _ZN4PortI5GPIOCE3GetEv
+          CFI Function _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE7RefreshEv
         THUMB
-// __interwork __vfp uint32_t Port<GPIOC>::Get()
-_ZN4PortI5GPIOCE3GetEv:
+// __interwork __vfp void ElinkDriver<Spi<SPI2>, Pin<Port<GPIOC>, (uint8_t)'\003', PinWriteable>, Pin<Port<GPIOB>, (uint8_t)'\002', PinWriteable>, Pin<Port<GPIOB>, (uint8_t)'\001', PinWriteable>, Pin<Port<GPIOC>, (uint8_t)'\002', PinReadable>, Attributes<BlackAndWhite>>::Refresh()
+_ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE7RefreshEv:
         PUSH     {R7,LR}
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+8
-          CFI FunCall _ZN12RegisterBaseILj1073874960ELj32E8ReadModeE3GetIS0_vEEjv
-        BL       _ZN12RegisterBaseILj1073874960ELj32E8ReadModeE3GetIS0_vEEjv
-        POP      {R1,PC}          ;; return
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE6SetLutEv
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE6SetLutEv
+        MOVS     R0,#+18
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
+        MOVS     R0,#+100
+          CFI FunCall _ZN11SystemClock10SetDelayMsEj
+        BL       _ZN11SystemClock10SetDelayMsEj
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE13WaitUntilBusyEv
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE13WaitUntilBusyEv
+        POP      {R0,PC}          ;; return
           CFI EndBlock cfiBlock159
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZN3SpiI4SPI2E9WriteByteEh
+        SECTION_GROUP _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE12RefreshQuickIvEEvv
           CFI Block cfiBlock160 Using cfiCommon0
-          CFI Function _ZN3SpiI4SPI2E9WriteByteEh
+          CFI Function _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE12RefreshQuickIvEEvv
         THUMB
-// __interwork __vfp void Spi<SPI2>::WriteByte(uint8_t)
-_ZN3SpiI4SPI2E9WriteByteEh:
-        PUSH     {R4,LR}
-          CFI R14 Frame(CFA, -4)
-          CFI R4 Frame(CFA, -8)
-          CFI CFA R13+8
-        MOVS     R4,R0
-??WriteByte_0:
-          CFI FunCall _ZN14FieldValueBaseI18SPI2_SR_TXE_ValuesIN4SPI22SRELj1ELj1E8ReadModeNS1_10SPI2SRBaseEES4_Lj0EE5IsSetIS3_vEEbv
-        BL       _ZN14FieldValueBaseI18SPI2_SR_TXE_ValuesIN4SPI22SRELj1ELj1E8ReadModeNS1_10SPI2SRBaseEES4_Lj0EE5IsSetIS3_vEEbv
-        CMP      R0,#+0
-        BNE.N    ??WriteByte_0
-        MOVS     R0,R4
-        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
-          CFI FunCall _ZN3SpiI4SPI2E8SendByteEh
-        BL       _ZN3SpiI4SPI2E8SendByteEh
-??WriteByte_1:
-          CFI FunCall _ZN14FieldValueBaseI18SPI2_SR_BSY_ValuesIN4SPI22SRELj7ELj1E8ReadModeNS1_10SPI2SRBaseEES4_Lj1EE5IsSetIS3_vEEbv
-        BL       _ZN14FieldValueBaseI18SPI2_SR_BSY_ValuesIN4SPI22SRELj7ELj1E8ReadModeNS1_10SPI2SRBaseEES4_Lj1EE5IsSetIS3_vEEbv
-        CMP      R0,#+0
-        BNE.N    ??WriteByte_1
-        POP      {R4,PC}          ;; return
-          CFI EndBlock cfiBlock160
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZN3SpiI4SPI2E8SendByteEh
-          CFI Block cfiBlock161 Using cfiCommon0
-          CFI Function _ZN3SpiI4SPI2E8SendByteEh
-        THUMB
-// __interwork __vfp void Spi<SPI2>::SendByte(uint8_t)
-_ZN3SpiI4SPI2E8SendByteEh:
+// __interwork __vfp void ElinkDriver<Spi<SPI2>, Pin<Port<GPIOC>, (uint8_t)'\003', PinWriteable>, Pin<Port<GPIOB>, (uint8_t)'\002', PinWriteable>, Pin<Port<GPIOB>, (uint8_t)'\001', PinWriteable>, Pin<Port<GPIOC>, (uint8_t)'\002', PinReadable>, Attributes<BlackAndWhite>>::RefreshQuick<void>()
+_ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE12RefreshQuickIvEEvv:
         PUSH     {R7,LR}
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+8
-        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
-          CFI FunCall _ZN12RegisterBaseILj1073756172ELj32E13ReadWriteModeE5WriteIS0_vEEvj
-        BL       _ZN12RegisterBaseILj1073756172ELj32E13ReadWriteModeE5WriteIS0_vEEvj
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SetLutQuickIvEEvv
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SetLutQuickIvEEvv
+        MOVS     R0,#+18
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE13WaitUntilBusyEv
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE13WaitUntilBusyEv
         POP      {R0,PC}          ;; return
-          CFI EndBlock cfiBlock161
+          CFI EndBlock cfiBlock160
 
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZN5SMBus8ReadWordEh
-          CFI Block cfiBlock162 Using cfiCommon0
-          CFI Function _ZN5SMBus8ReadWordEh
+        SECTION `.text`:CODE:REORDER:NOROOT(2)
+        SECTION_GROUP _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE6SetLutEv
+          CFI Block cfiBlock161 Using cfiCommon0
+          CFI Function _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE6SetLutEv
         THUMB
-// __interwork __vfp uint16_t SMBus::ReadWord(uint8_t)
-_ZN5SMBus8ReadWordEh:
+// __interwork __vfp void ElinkDriver<Spi<SPI2>, Pin<Port<GPIOC>, (uint8_t)'\003', PinWriteable>, Pin<Port<GPIOB>, (uint8_t)'\002', PinWriteable>, Pin<Port<GPIOB>, (uint8_t)'\001', PinWriteable>, Pin<Port<GPIOC>, (uint8_t)'\002', PinReadable>, Attributes<BlackAndWhite>>::SetLut()
+_ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE6SetLutEv:
         PUSH     {R4,LR}
           CFI R14 Frame(CFA, -4)
           CFI R4 Frame(CFA, -8)
           CFI CFA R13+8
-        MOVS     R4,R0
-          CFI FunCall _ZN14FieldValueBaseI21I2C1_CR1_START_ValuesIN4I2C13CR1ELj8ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
-        BL       _ZN14FieldValueBaseI21I2C1_CR1_START_ValuesIN4I2C13CR1ELj8ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
-          CFI FunCall _ZN14FieldValueBaseI19I2C1_CR1_ACK_ValuesIN4I2C13CR1ELj10ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
-        BL       _ZN14FieldValueBaseI19I2C1_CR1_ACK_ValuesIN4I2C13CR1ELj10ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
-??ReadWord_0:
-          CFI FunCall _ZN14FieldValueBaseI18I2C1_SR1_SB_ValuesIN4I2C13SR1ELj0ELj1E8ReadModeNS1_11I2C1SR1BaseEES4_Lj0EE5IsSetIS3_vEEbv
-        BL       _ZN14FieldValueBaseI18I2C1_SR1_SB_ValuesIN4I2C13SR1ELj0ELj1E8ReadModeNS1_11I2C1SR1BaseEES4_Lj0EE5IsSetIS3_vEEbv
-        CMP      R0,#+0
-        BNE.N    ??ReadWord_0
-          CFI FunCall _ZN12RegisterBaseILj1073763348ELj32E13ReadWriteModeE3GetIS0_vEEjv
-        BL       _ZN12RegisterBaseILj1073763348ELj32E13ReadWriteModeE3GetIS0_vEEjv
-        MOVS     R0,#+0
-          CFI FunCall _ZN12RegisterBaseILj1073763344ELj32E13ReadWriteModeE5WriteIS0_vEEvj
-        BL       _ZN12RegisterBaseILj1073763344ELj32E13ReadWriteModeE5WriteIS0_vEEvj
-??ReadWord_1:
-          CFI FunCall _ZN14FieldValueBaseI20I2C1_SR1_ADDR_ValuesIN4I2C13SR1ELj1ELj1E8ReadModeNS1_11I2C1SR1BaseEES4_Lj0EE5IsSetIS3_vEEbv
-        BL       _ZN14FieldValueBaseI20I2C1_SR1_ADDR_ValuesIN4I2C13SR1ELj1ELj1E8ReadModeNS1_11I2C1SR1BaseEES4_Lj0EE5IsSetIS3_vEEbv
-        CMP      R0,#+0
-        BNE.N    ??ReadWord_1
-          CFI FunCall _ZN12RegisterBaseILj1073763348ELj32E13ReadWriteModeE3GetIS0_vEEjv
-        BL       _ZN12RegisterBaseILj1073763348ELj32E13ReadWriteModeE3GetIS0_vEEjv
-          CFI FunCall _ZN12RegisterBaseILj1073763352ELj32E8ReadModeE3GetIS0_vEEjv
-        BL       _ZN12RegisterBaseILj1073763352ELj32E8ReadModeE3GetIS0_vEEjv
-??ReadWord_2:
-          CFI FunCall _ZN14FieldValueBaseI19I2C1_SR1_TxE_ValuesIN4I2C13SR1ELj7ELj1E8ReadModeNS1_11I2C1SR1BaseEES4_Lj0EE5IsSetIS3_vEEbv
-        BL       _ZN14FieldValueBaseI19I2C1_SR1_TxE_ValuesIN4I2C13SR1ELj7ELj1E8ReadModeNS1_11I2C1SR1BaseEES4_Lj0EE5IsSetIS3_vEEbv
-        CMP      R0,#+0
-        BNE.N    ??ReadWord_2
-        UXTB     R4,R4            ;; ZeroExt  R4,R4,#+24,#+24
+        MOVS     R0,#+32
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
+        MOVS     R4,#+0
+        B.N      ??SetLut_1
+??SetLut_2:
+        LDR.N    R0,??SetLut_0
+        MOVS     R1,R4
+        UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
+        LDRB     R0,[R0, R1]
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
+        ADDS     R4,R4,#+1
+??SetLut_1:
         MOVS     R0,R4
-          CFI FunCall _ZN12RegisterBaseILj1073763344ELj32E13ReadWriteModeE5WriteIS0_vEEvj
-        BL       _ZN12RegisterBaseILj1073763344ELj32E13ReadWriteModeE5WriteIS0_vEEvj
-??ReadWord_3:
-          CFI FunCall _ZN14FieldValueBaseI19I2C1_SR1_TxE_ValuesIN4I2C13SR1ELj7ELj1E8ReadModeNS1_11I2C1SR1BaseEES4_Lj0EE5IsSetIS3_vEEbv
-        BL       _ZN14FieldValueBaseI19I2C1_SR1_TxE_ValuesIN4I2C13SR1ELj7ELj1E8ReadModeNS1_11I2C1SR1BaseEES4_Lj0EE5IsSetIS3_vEEbv
-        CMP      R0,#+0
-        BNE.N    ??ReadWord_3
-          CFI FunCall _ZN14FieldValueBaseI21I2C1_CR1_START_ValuesIN4I2C13CR1ELj8ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
-        BL       _ZN14FieldValueBaseI21I2C1_CR1_START_ValuesIN4I2C13CR1ELj8ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
-??ReadWord_4:
-          CFI FunCall _ZN14FieldValueBaseI18I2C1_SR1_SB_ValuesIN4I2C13SR1ELj0ELj1E8ReadModeNS1_11I2C1SR1BaseEES4_Lj0EE5IsSetIS3_vEEbv
-        BL       _ZN14FieldValueBaseI18I2C1_SR1_SB_ValuesIN4I2C13SR1ELj0ELj1E8ReadModeNS1_11I2C1SR1BaseEES4_Lj0EE5IsSetIS3_vEEbv
-        CMP      R0,#+0
-        BNE.N    ??ReadWord_4
-        MOVS     R0,#+1
-          CFI FunCall _ZN12RegisterBaseILj1073763344ELj32E13ReadWriteModeE5WriteIS0_vEEvj
-        BL       _ZN12RegisterBaseILj1073763344ELj32E13ReadWriteModeE5WriteIS0_vEEvj
-??ReadWord_5:
-          CFI FunCall _ZN14FieldValueBaseI20I2C1_SR1_ADDR_ValuesIN4I2C13SR1ELj1ELj1E8ReadModeNS1_11I2C1SR1BaseEES4_Lj0EE5IsSetIS3_vEEbv
-        BL       _ZN14FieldValueBaseI20I2C1_SR1_ADDR_ValuesIN4I2C13SR1ELj1ELj1E8ReadModeNS1_11I2C1SR1BaseEES4_Lj0EE5IsSetIS3_vEEbv
-        CMP      R0,#+0
-        BNE.N    ??ReadWord_5
-          CFI FunCall _ZN14FieldValueBaseI19I2C1_CR1_ACK_ValuesIN4I2C13CR1ELj10ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj0EE3SetIS3_vEEvv
-        BL       _ZN14FieldValueBaseI19I2C1_CR1_ACK_ValuesIN4I2C13CR1ELj10ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj0EE3SetIS3_vEEvv
-          CFI FunCall _ZN14FieldValueBaseI19I2C1_CR1_POS_ValuesIN4I2C13CR1ELj11ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
-        BL       _ZN14FieldValueBaseI19I2C1_CR1_POS_ValuesIN4I2C13CR1ELj11ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
-          CFI FunCall _ZN12RegisterBaseILj1073763348ELj32E13ReadWriteModeE3GetIS0_vEEjv
-        BL       _ZN12RegisterBaseILj1073763348ELj32E13ReadWriteModeE3GetIS0_vEEjv
-          CFI FunCall _ZN12RegisterBaseILj1073763352ELj32E8ReadModeE3GetIS0_vEEjv
-        BL       _ZN12RegisterBaseILj1073763352ELj32E8ReadModeE3GetIS0_vEEjv
-??ReadWord_6:
-          CFI FunCall _ZN14FieldValueBaseI19I2C1_SR1_BTF_ValuesIN4I2C13SR1ELj2ELj1E8ReadModeNS1_11I2C1SR1BaseEES4_Lj0EE5IsSetIS3_vEEbv
-        BL       _ZN14FieldValueBaseI19I2C1_SR1_BTF_ValuesIN4I2C13SR1ELj2ELj1E8ReadModeNS1_11I2C1SR1BaseEES4_Lj0EE5IsSetIS3_vEEbv
-        CMP      R0,#+0
-        BNE.N    ??ReadWord_6
-          CFI FunCall _ZN14FieldValueBaseI20I2C1_CR1_STOP_ValuesIN4I2C13CR1ELj9ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
-        BL       _ZN14FieldValueBaseI20I2C1_CR1_STOP_ValuesIN4I2C13CR1ELj9ELj1E13ReadWriteModeNS1_11I2C1CR1BaseEES4_Lj1EE3SetIS3_vEEvv
-          CFI FunCall _ZN12RegisterBaseILj1073763344ELj32E13ReadWriteModeE3GetIS0_vEEjv
-        BL       _ZN12RegisterBaseILj1073763344ELj32E13ReadWriteModeE3GetIS0_vEEjv
-        MOVS     R4,R0
-          CFI FunCall _ZN12RegisterBaseILj1073763344ELj32E13ReadWriteModeE3GetIS0_vEEjv
-        BL       _ZN12RegisterBaseILj1073763344ELj32E13ReadWriteModeE3GetIS0_vEEjv
-        LSLS     R0,R0,#+8
-        UXTAH    R0,R0,R4
-        UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+        CMP      R0,#+44
+        BCC.N    ??SetLut_2
+        MOVS     R0,#+33
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
+        MOVS     R4,#+0
+        B.N      ??SetLut_3
+??SetLut_4:
+        LDR.N    R0,??SetLut_0+0x4
+        MOVS     R1,R4
+        UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
+        LDRB     R0,[R0, R1]
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
+        ADDS     R4,R4,#+1
+??SetLut_3:
+        MOVS     R0,R4
+        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+        CMP      R0,#+42
+        BLT.N    ??SetLut_4
+        MOVS     R0,#+34
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
+        MOVS     R4,#+0
+        B.N      ??SetLut_5
+??SetLut_6:
+        LDR.N    R0,??SetLut_0+0x8
+        MOVS     R1,R4
+        UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
+        LDRB     R0,[R0, R1]
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
+        ADDS     R4,R4,#+1
+??SetLut_5:
+        MOVS     R0,R4
+        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+        CMP      R0,#+42
+        BCC.N    ??SetLut_6
+        MOVS     R0,#+35
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
+        MOVS     R4,#+0
+        B.N      ??SetLut_7
+??SetLut_8:
+        LDR.N    R0,??SetLut_0+0xC
+        MOVS     R1,R4
+        UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
+        LDRB     R0,[R0, R1]
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
+        ADDS     R4,R4,#+1
+??SetLut_7:
+        MOVS     R0,R4
+        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+        CMP      R0,#+42
+        BCC.N    ??SetLut_8
+        MOVS     R0,#+36
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
+        MOVS     R4,#+0
+        B.N      ??SetLut_9
+??SetLut_10:
+        LDR.N    R0,??SetLut_0+0x10
+        MOVS     R1,R4
+        UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
+        LDRB     R0,[R0, R1]
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
+        ADDS     R4,R4,#+1
+??SetLut_9:
+        MOVS     R0,R4
+        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+        CMP      R0,#+42
+        BCC.N    ??SetLut_10
         POP      {R4,PC}          ;; return
+        DATA
+??SetLut_0:
+        DATA32
+        DC32     EPD_4IN2_lut_vcom0
+        DC32     EPD_4IN2_lut_ww
+        DC32     EPD_4IN2_lut_bw
+        DC32     EPD_4IN2_lut_wb
+        DC32     EPD_4IN2_lut_bb
+          CFI EndBlock cfiBlock161
+
+        SECTION `.text`:CODE:REORDER:NOROOT(2)
+        SECTION_GROUP _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SetLutQuickIvEEvv
+          CFI Block cfiBlock162 Using cfiCommon0
+          CFI Function _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SetLutQuickIvEEvv
+        THUMB
+// __interwork __vfp void ElinkDriver<Spi<SPI2>, Pin<Port<GPIOC>, (uint8_t)'\003', PinWriteable>, Pin<Port<GPIOB>, (uint8_t)'\002', PinWriteable>, Pin<Port<GPIOB>, (uint8_t)'\001', PinWriteable>, Pin<Port<GPIOC>, (uint8_t)'\002', PinReadable>, Attributes<BlackAndWhite>>::SetLutQuick<void>()
+_ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SetLutQuickIvEEvv:
+        PUSH     {R4,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI R4 Frame(CFA, -8)
+          CFI CFA R13+8
+        MOVS     R0,#+32
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
+        MOVS     R4,#+0
+        B.N      ??SetLutQuick_1
+??SetLutQuick_2:
+        LDR.N    R0,??SetLutQuick_0
+        MOVS     R1,R4
+        UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
+        LDRB     R0,[R0, R1]
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
+        ADDS     R4,R4,#+1
+??SetLutQuick_1:
+        MOVS     R0,R4
+        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+        CMP      R0,#+44
+        BCC.N    ??SetLutQuick_2
+        MOVS     R0,#+33
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
+        MOVS     R4,#+0
+        B.N      ??SetLutQuick_3
+??SetLutQuick_4:
+        LDR.N    R0,??SetLutQuick_0+0x4
+        MOVS     R1,R4
+        UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
+        LDRB     R0,[R0, R1]
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
+        ADDS     R4,R4,#+1
+??SetLutQuick_3:
+        MOVS     R0,R4
+        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+        CMP      R0,#+42
+        BLT.N    ??SetLutQuick_4
+        MOVS     R0,#+34
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
+        MOVS     R4,#+0
+        B.N      ??SetLutQuick_5
+??SetLutQuick_6:
+        LDR.N    R0,??SetLutQuick_0+0x8
+        MOVS     R1,R4
+        UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
+        LDRB     R0,[R0, R1]
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
+        ADDS     R4,R4,#+1
+??SetLutQuick_5:
+        MOVS     R0,R4
+        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+        CMP      R0,#+42
+        BCC.N    ??SetLutQuick_6
+        MOVS     R0,#+35
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
+        MOVS     R4,#+0
+        B.N      ??SetLutQuick_7
+??SetLutQuick_8:
+        LDR.N    R0,??SetLutQuick_0+0xC
+        MOVS     R1,R4
+        UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
+        LDRB     R0,[R0, R1]
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
+        ADDS     R4,R4,#+1
+??SetLutQuick_7:
+        MOVS     R0,R4
+        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+        CMP      R0,#+42
+        BCC.N    ??SetLutQuick_8
+        MOVS     R0,#+36
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
+        MOVS     R4,#+0
+        B.N      ??SetLutQuick_9
+??SetLutQuick_10:
+        LDR.N    R0,??SetLutQuick_0+0x10
+        MOVS     R1,R4
+        UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
+        LDRB     R0,[R0, R1]
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
+        ADDS     R4,R4,#+1
+??SetLutQuick_9:
+        MOVS     R0,R4
+        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+        CMP      R0,#+42
+        BCC.N    ??SetLutQuick_10
+        POP      {R4,PC}          ;; return
+        DATA
+??SetLutQuick_0:
+        DATA32
+        DC32     EPD_4IN2_lut_vcom0_quick
+        DC32     EPD_4IN2_lut_ww_quick
+        DC32     EPD_4IN2_lut_bw_quick
+        DC32     EPD_4IN2_lut_wb_quick
+        DC32     EPD_4IN2_lut_bb_quick
           CFI EndBlock cfiBlock162
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZN6FilterC1Eff
+        SECTION_GROUP _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE4InitIvEEvv
           CFI Block cfiBlock163 Using cfiCommon0
-          CFI Function _ZN6FilterC1Eff
+          CFI Function _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE4InitIvEEvv
         THUMB
-// __code __interwork __vfp Filter::Filter(float, float)
-_ZN6FilterC1Eff:
-        PUSH     {R4,LR}
+// __interwork __vfp void ElinkDriver<Spi<SPI2>, Pin<Port<GPIOC>, (uint8_t)'\003', PinWriteable>, Pin<Port<GPIOB>, (uint8_t)'\002', PinWriteable>, Pin<Port<GPIOB>, (uint8_t)'\001', PinWriteable>, Pin<Port<GPIOC>, (uint8_t)'\002', PinReadable>, Attributes<BlackAndWhite>>::Init<void>()
+_ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE4InitIvEEvv:
+        PUSH     {R7,LR}
           CFI R14 Frame(CFA, -4)
-          CFI R4 Frame(CFA, -8)
           CFI CFA R13+8
-        MOVS     R4,R0
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE5ResetEv
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE5ResetEv
+        MOVS     R0,#+6
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
+        MOVS     R0,#+23
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
+        MOVS     R0,#+23
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
+        MOVS     R0,#+23
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
+        MOVS     R0,#+2
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE13WaitUntilBusyEv
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE13WaitUntilBusyEv
+        MOVS     R0,#+4
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE13WaitUntilBusyEv
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE13WaitUntilBusyEv
         MOVS     R0,#+0
-        STR      R0,[R4, #+0]
-        MOVS     R0,#+0
-        STR      R0,[R4, #+4]
-        VCMP.F32 S0,#0.0
-        FMSTAT   
-        BLE.N    ??Filter_0
-        VNEG.F32 S1,S1
-        VDIV.F32 S0,S1,S0
-          CFI FunCall expf
-        BL       expf
-        VMOV.F32 S1,#1.0
-        VSUB.F32 S0,S1,S0
-        VSTR     S0,[R4, #+4]
-        B.N      ??Filter_1
-??Filter_0:
-        MOVS     R0,#+1065353216
-        STR      R0,[R4, #+4]
-??Filter_1:
-        MOVS     R0,R4
-        POP      {R4,PC}          ;; return
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
+        MOVS     R0,#+63
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
+        MOVS     R0,#+48
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
+        MOVS     R0,#+60
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
+        MOVS     R0,#+130
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
+        MOVS     R0,#+58
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
+        MOVS     R0,#+80
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
+        MOVS     R0,#+151
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE6SetLutEv
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE6SetLutEv
+        POP      {R0,PC}          ;; return
           CFI EndBlock cfiBlock163
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZN6Filter12FiltredValueEf
+        SECTION_GROUP _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE19UpdatePartialWindowEPKhtttt
           CFI Block cfiBlock164 Using cfiCommon0
-          CFI Function _ZN6Filter12FiltredValueEf
-          CFI NoCalls
+          CFI Function _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE19UpdatePartialWindowEPKhtttt
         THUMB
-// __interwork __vfp float Filter::FiltredValue(float)
-_ZN6Filter12FiltredValueEf:
-        VLDR     S1,[R0, #0]
-        VSUB.F32 S0,S0,S1
-        VLDR     S1,[R0, #+4]
-        VLDR     S2,[R0, #0]
-        VMLA.F32 S2,S0,S1
-        VSTR     S2,[R0, #+8]
-        LDR      R1,[R0, #+8]
-        STR      R1,[R0, #+0]
-        VLDR     S0,[R0, #+8]
-        BX       LR               ;; return
+// __interwork __vfp void ElinkDriver<Spi<SPI2>, Pin<Port<GPIOC>, (uint8_t)'\003', PinWriteable>, Pin<Port<GPIOB>, (uint8_t)'\002', PinWriteable>, Pin<Port<GPIOB>, (uint8_t)'\001', PinWriteable>, Pin<Port<GPIOC>, (uint8_t)'\002', PinReadable>, Attributes<BlackAndWhite>>::UpdatePartialWindow(uint8_t const *, uint16_t, uint16_t, uint16_t, uint16_t)
+_ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE19UpdatePartialWindowEPKhtttt:
+        PUSH     {R3-R9,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI R9 Frame(CFA, -8)
+          CFI R8 Frame(CFA, -12)
+          CFI R7 Frame(CFA, -16)
+          CFI R6 Frame(CFA, -20)
+          CFI R5 Frame(CFA, -24)
+          CFI R4 Frame(CFA, -28)
+          CFI CFA R13+32
+        MOVS     R5,R0
+        MOVS     R6,R1
+        MOVS     R7,R2
+        MOV      R8,R3
+        LDR      R4,[SP, #+32]
+        MOV      R0,R8
+        UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+        MOVS     R1,#+8
+        SDIV     R9,R0,R1
+        MOVS     R0,R4
+        UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+        MUL      R9,R0,R9
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE14SetPartialModeEv
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE14SetPartialModeEv
+        MOVS     R0,#+144
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
+        MOVS     R0,R6
+        UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+        LSRS     R0,R0,#+8
+        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
+        ANDS     R0,R6,#0xF8
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
+        MOVS     R0,R6
+        UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+        ANDS     R0,R0,#0xF8
+        UXTAH    R0,R0,R8
+        SUBS     R0,R0,#+1
+        LSRS     R0,R0,#+8
+        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
+        UXTH     R6,R6            ;; ZeroExt  R6,R6,#+16,#+16
+        ANDS     R6,R6,#0xF8
+        UXTAH    R0,R6,R8
+        SUBS     R0,R0,#+1
+        ORRS     R0,R0,#0x7
+        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
+        MOVS     R0,R7
+        UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+        LSRS     R0,R0,#+8
+        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
+        MOVS     R0,R7
+        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
+        MOVS     R0,R4
+        UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+        UXTAH    R0,R0,R7
+        SUBS     R0,R0,#+1
+        LSRS     R0,R0,#+8
+        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
+        UXTH     R4,R4            ;; ZeroExt  R4,R4,#+16,#+16
+        UXTAH    R0,R4,R7
+        SUBS     R0,R0,#+1
+        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
+        MOVS     R0,#+1
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
+        MOVS     R0,#+19
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
+        MOVS     R4,#+0
+        B.N      ??UpdatePartialWindow_0
+??UpdatePartialWindow_1:
+        LDRB     R0,[R5, R4]
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
+        ADDS     R4,R4,#+1
+??UpdatePartialWindow_0:
+        CMP      R4,R9
+        BCC.N    ??UpdatePartialWindow_1
+        MOVS     R0,#+144
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE12RefreshQuickIvEEvv
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE12RefreshQuickIvEEvv
+        POP      {R0,R4-R9,PC}    ;; return
           CFI EndBlock cfiBlock164
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZN8TempSensC1ER6Filter
+        SECTION_GROUP _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE14SetPartialModeEv
           CFI Block cfiBlock165 Using cfiCommon0
-          CFI Function _ZN8TempSensC1ER6Filter
-          CFI NoCalls
+          CFI Function _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE14SetPartialModeEv
         THUMB
-// __code __interwork __vfp TempSens::TempSens(Filter &)
-_ZN8TempSensC1ER6Filter:
-        STR      R1,[R0, #+8]
-        BX       LR               ;; return
+// __interwork __vfp void ElinkDriver<Spi<SPI2>, Pin<Port<GPIOC>, (uint8_t)'\003', PinWriteable>, Pin<Port<GPIOB>, (uint8_t)'\002', PinWriteable>, Pin<Port<GPIOB>, (uint8_t)'\001', PinWriteable>, Pin<Port<GPIOC>, (uint8_t)'\002', PinReadable>, Attributes<BlackAndWhite>>::SetPartialMode()
+_ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE14SetPartialModeEv:
+        PUSH     {R7,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI CFA R13+8
+        MOVS     R0,#+145
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
+        POP      {R0,PC}          ;; return
           CFI EndBlock cfiBlock165
 
-        SECTION `.text`:CODE:REORDER:NOROOT(2)
-        SECTION_GROUP _ZN8TempSens8TakeMeasEv
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE5ClearEv
           CFI Block cfiBlock166 Using cfiCommon0
-          CFI Function _ZN8TempSens8TakeMeasEv
+          CFI Function _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE5ClearEv
         THUMB
-// __interwork __vfp float TempSens::TakeMeas()
-_ZN8TempSens8TakeMeasEv:
-        PUSH     {R4,LR}
+// __interwork __vfp void ElinkDriver<Spi<SPI2>, Pin<Port<GPIOC>, (uint8_t)'\003', PinWriteable>, Pin<Port<GPIOB>, (uint8_t)'\002', PinWriteable>, Pin<Port<GPIOB>, (uint8_t)'\001', PinWriteable>, Pin<Port<GPIOC>, (uint8_t)'\002', PinReadable>, Attributes<BlackAndWhite>>::Clear()
+_ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE5ClearEv:
+        PUSH     {R3-R5,LR}
           CFI R14 Frame(CFA, -4)
-          CFI R4 Frame(CFA, -8)
-          CFI CFA R13+8
-        MOVS     R4,R0
-        MOVS     R0,#+7
-          CFI FunCall _ZN5SMBus8ReadWordEh
-        BL       _ZN5SMBus8ReadWordEh
-        VMOV     S0,R0
-        VCVT.F32.U32 S0,S0
-        VSTR     S0,[R4, #0]
-        VLDR     S0,[R4, #0]
-        LDR      R0,[R4, #+8]
-          CFI FunCall _ZN6Filter12FiltredValueEf
-        BL       _ZN6Filter12FiltredValueEf
-        VSTR     S0,[R4, #+4]
-        VLDR     S0,[R4, #+4]
-        VLDR.W   S1,??TakeMeas_0  ;; 0x3ca3d70a
-        VLDR.W   S2,??TakeMeas_0+0x4  ;; 0xc3889333
-        VMLA.F32 S2,S0,S1
-        VSTR     S2,[R4, #+4]
-        VLDR     S0,[R4, #+4]
-        POP      {R4,PC}          ;; return
-        Nop      
-        DATA
-??TakeMeas_0:
-        DATA32
-        DC32     0x3ca3d70a
-        DC32     0xc3889333
+          CFI R5 Frame(CFA, -8)
+          CFI R4 Frame(CFA, -12)
+          CFI CFA R13+16
+        MOVS     R0,#+16
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
+        MOVS     R4,#+0
+        B.N      ??Clear_0
+??Clear_1:
+        MOVS     R0,#+255
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
+        ADDS     R5,R5,#+1
+??Clear_2:
+        MOVS     R0,R5
+        UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+        CMP      R0,#+50
+        BLT.N    ??Clear_1
+        ADDS     R4,R4,#+1
+??Clear_0:
+        MOVS     R0,R4
+        UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+        CMP      R0,#+300
+        BGE.N    ??Clear_3
+        MOVS     R5,#+0
+        B.N      ??Clear_2
+??Clear_3:
+        MOVS     R0,#+19
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE11SendCommandE19ElinkDriverCommands
+        MOVS     R4,#+0
+        B.N      ??Clear_4
+??Clear_5:
+        MOVS     R0,#+255
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE8SendDataEh
+        ADDS     R5,R5,#+1
+??Clear_6:
+        MOVS     R0,R5
+        UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+        CMP      R0,#+50
+        BLT.N    ??Clear_5
+        ADDS     R4,R4,#+1
+??Clear_4:
+        MOVS     R0,R4
+        UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+        CMP      R0,#+300
+        BGE.N    ??Clear_7
+        MOVS     R5,#+0
+        B.N      ??Clear_6
+??Clear_7:
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE7RefreshEv
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE7RefreshEv
+        POP      {R0,R4,R5,PC}    ;; return
           CFI EndBlock cfiBlock166
 
-        SECTION `.text`:CODE:REORDER:NOROOT(2)
-        SECTION_GROUP _ZN15TemperatureTaskC1ER4TempR8TempSensRN9OsWrapper5EventE
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE5ResetEv
           CFI Block cfiBlock167 Using cfiCommon0
-          CFI Function _ZN15TemperatureTaskC1ER4TempR8TempSensRN9OsWrapper5EventE
+          CFI Function _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE5ResetEv
         THUMB
-// __code __interwork __vfp TemperatureTask::TemperatureTask(Temp &, TempSens &, OsWrapper::Event &)
-_ZN15TemperatureTaskC1ER4TempR8TempSensRN9OsWrapper5EventE:
-        PUSH     {R3-R7,LR}
+// __interwork __vfp void ElinkDriver<Spi<SPI2>, Pin<Port<GPIOC>, (uint8_t)'\003', PinWriteable>, Pin<Port<GPIOB>, (uint8_t)'\002', PinWriteable>, Pin<Port<GPIOB>, (uint8_t)'\001', PinWriteable>, Pin<Port<GPIOC>, (uint8_t)'\002', PinReadable>, Attributes<BlackAndWhite>>::Reset()
+_ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE5ResetEv:
+        PUSH     {R7,LR}
           CFI R14 Frame(CFA, -4)
-          CFI R7 Frame(CFA, -8)
-          CFI R6 Frame(CFA, -12)
-          CFI R5 Frame(CFA, -16)
-          CFI R4 Frame(CFA, -20)
-          CFI CFA R13+24
-        MOVS     R4,R0
-        MOVS     R5,R1
-        MOVS     R6,R2
-        MOVS     R7,R3
-        MOVS     R0,R4
-          CFI FunCall _ZN9OsWrapper6ThreadILj512EEC2Ev
-        BL       _ZN9OsWrapper6ThreadILj512EEC2Ev
-        LDR.N    R0,??TemperatureTask_0
-        STR      R0,[R4, #+0]
-        STR      R7,[R4, #+2140]
-        STR      R5,[R4, #+2144]
-        STR      R6,[R4, #+2148]
-        MOVS     R0,R4
-        POP      {R1,R4-R7,PC}    ;; return
-        DATA
-??TemperatureTask_0:
-        DATA32
-        DC32     _ZTV15TemperatureTask+0x8
+          CFI CFA R13+8
+          CFI FunCall _ZN3PinI4PortI5GPIOCELh3E12PinWriteableE3SetIS3_vEEvv
+        BL       _ZN3PinI4PortI5GPIOCELh3E12PinWriteableE3SetIS3_vEEvv
+        MOVS     R0,#+200
+          CFI FunCall _ZN11SystemClock10SetDelayMsEj
+        BL       _ZN11SystemClock10SetDelayMsEj
+          CFI FunCall _ZN3PinI4PortI5GPIOCELh3E12PinWriteableE5ResetIS3_vEEvv
+        BL       _ZN3PinI4PortI5GPIOCELh3E12PinWriteableE5ResetIS3_vEEvv
+        MOVS     R0,#+200
+          CFI FunCall _ZN11SystemClock10SetDelayMsEj
+        BL       _ZN11SystemClock10SetDelayMsEj
+          CFI FunCall _ZN3PinI4PortI5GPIOCELh3E12PinWriteableE3SetIS3_vEEvv
+        BL       _ZN3PinI4PortI5GPIOCELh3E12PinWriteableE3SetIS3_vEEvv
+        MOVS     R0,#+200
+          CFI FunCall _ZN11SystemClock10SetDelayMsEj
+        BL       _ZN11SystemClock10SetDelayMsEj
+        POP      {R0,PC}          ;; return
           CFI EndBlock cfiBlock167
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZN15TemperatureTask7ExecuteEv
+        SECTION_GROUP _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE6IsBusyEv
           CFI Block cfiBlock168 Using cfiCommon0
-          CFI Function _ZN15TemperatureTask7ExecuteEv
+          CFI Function _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE6IsBusyEv
         THUMB
-// __interwork __vfp void TemperatureTask::Execute()
-_ZN15TemperatureTask7ExecuteEv:
-        PUSH     {R4,LR}
+// __interwork __vfp bool ElinkDriver<Spi<SPI2>, Pin<Port<GPIOC>, (uint8_t)'\003', PinWriteable>, Pin<Port<GPIOB>, (uint8_t)'\002', PinWriteable>, Pin<Port<GPIOB>, (uint8_t)'\001', PinWriteable>, Pin<Port<GPIOC>, (uint8_t)'\002', PinReadable>, Attributes<BlackAndWhite>>::IsBusy()
+_ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE6IsBusyEv:
+        PUSH     {R7,LR}
           CFI R14 Frame(CFA, -4)
-          CFI R4 Frame(CFA, -8)
           CFI CFA R13+8
-        MOVS     R4,R0
-??Execute_2:
-        MOVS     R2,#+255
-        MOVS     R1,#+0
-        LDR      R0,[R4, #+2140]
-          CFI FunCall _ZNK9OsWrapper5Event4WaitENS_9EventModeEj
-        BL       _ZNK9OsWrapper5Event4WaitENS_9EventModeEj
-        CMP      R0,#+0
-        BEQ.N    ??Execute_3
-        LDR      R0,[R4, #+2144]
-          CFI FunCall _ZN4Temp12SetNextUnitsEv
-        BL       _ZN4Temp12SetNextUnitsEv
-??Execute_3:
-        LDR      R0,[R4, #+2148]
-          CFI FunCall _ZN8TempSens8TakeMeasEv
-        BL       _ZN8TempSens8TakeMeasEv
-        ADDW     R0,R4,#+2152
-        VSTR     S0,[R0, #0]
-        B.N      ??Execute_2
+          CFI FunCall _ZN3PinI4PortI5GPIOCELh2E11PinReadableE3GetIS3_vEEDav
+        BL       _ZN3PinI4PortI5GPIOCELh2E11PinReadableE3GetIS3_vEEDav
+        CMP      R0,#+1
+        BNE.N    ??IsBusy_0
+        MOVS     R0,#+1
+        B.N      ??IsBusy_1
+??IsBusy_0:
+        MOVS     R0,#+0
+??IsBusy_1:
+        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+        POP      {R1,PC}          ;; return
           CFI EndBlock cfiBlock168
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZN15TemperatureTask8GetValueEv
+        SECTION_GROUP _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE13WaitUntilBusyEv
           CFI Block cfiBlock169 Using cfiCommon0
-          CFI Function _ZN15TemperatureTask8GetValueEv
+          CFI Function _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE13WaitUntilBusyEv
         THUMB
-// __interwork __vfp char *TemperatureTask::GetValue()
-_ZN15TemperatureTask8GetValueEv:
-        PUSH     {R4,LR}
+// __interwork __vfp void ElinkDriver<Spi<SPI2>, Pin<Port<GPIOC>, (uint8_t)'\003', PinWriteable>, Pin<Port<GPIOB>, (uint8_t)'\002', PinWriteable>, Pin<Port<GPIOB>, (uint8_t)'\001', PinWriteable>, Pin<Port<GPIOC>, (uint8_t)'\002', PinReadable>, Attributes<BlackAndWhite>>::WaitUntilBusy()
+_ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE13WaitUntilBusyEv:
+        PUSH     {R7,LR}
           CFI R14 Frame(CFA, -4)
-          CFI R4 Frame(CFA, -8)
           CFI CFA R13+8
-        MOVS     R4,R0
-        LDR      R0,[R4, #+2152]
-        VMOV     S0,R0
-        LDR      R0,[R4, #+2144]
-          CFI FunCall _ZN4Temp21GetTempInCurrentUnitsEf
-        BL       _ZN4Temp21GetTempInCurrentUnitsEf
-        STR      R0,[R4, #+2156]
-        LDR      R0,[R4, #+2156]
-        POP      {R4,PC}          ;; return
+        B.N      ??WaitUntilBusy_0
+??WaitUntilBusy_1:
+        MOVS     R0,#+10
+          CFI FunCall _ZN11SystemClock10SetDelayMsEj
+        BL       _ZN11SystemClock10SetDelayMsEj
+??WaitUntilBusy_0:
+          CFI FunCall _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE6IsBusyEv
+        BL       _ZN11ElinkDriverI3SpiI4SPI2E3PinI4PortI5GPIOCELh3E12PinWriteableES3_IS4_I5GPIOBELh2ES7_ES3_ISA_Lh1ES7_ES3_IS6_Lh2E11PinReadableE10AttributesIJ13BlackAndWhiteEEE6IsBusyEv
+        CMP      R0,#+0
+        BEQ.N    ??WaitUntilBusy_1
+        POP      {R0,PC}          ;; return
           CFI EndBlock cfiBlock169
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
