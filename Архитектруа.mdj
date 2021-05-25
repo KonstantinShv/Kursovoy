@@ -5698,7 +5698,7 @@
 											"top": 447,
 											"width": 249.63427734375,
 											"height": 13,
-											"text": "-pCurrentUnits: IUnits*",
+											"text": "-pCurrentUnits[3]: IUnits*",
 											"horizontalAlignment": 0
 										},
 										{
@@ -9474,7 +9474,7 @@
 											"width": 391.98046875,
 											"height": 13,
 											"underline": true,
-											"text": "+DrawString(point: Point, *str: char)",
+											"text": "+DrawString(point: Point, *str: char): void",
 											"horizontalAlignment": 0
 										},
 										{
@@ -13518,6 +13518,15 @@
 													},
 													"name": "*str",
 													"type": "char"
+												},
+												{
+													"_type": "UMLParameter",
+													"_id": "AAAAAAF5pIo9GXjRLSY=",
+													"_parent": {
+														"$ref": "AAAAAAF5ipLGr1a3W20="
+													},
+													"type": "void",
+													"direction": "return"
 												}
 											]
 										},
@@ -15040,7 +15049,7 @@
 													"_parent": {
 														"$ref": "AAAAAAF4Tik4RjwfpNY="
 													},
-													"name": "pCurrentUnits",
+													"name": "pCurrentUnits[3]",
 													"visibility": "private",
 													"type": "IUnits*"
 												},
